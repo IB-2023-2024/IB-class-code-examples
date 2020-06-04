@@ -1,15 +1,7 @@
-# PAI Lab assignment (lab, class presentation with slides) structure
+# Universidad de La Laguna
+# Escuela Superior de Ingeniería y Tecnología
+# Grado en Ingeniería Informática
+# Informática Básica
 
-This directory is organised as follows:
-
-      .
-      ├── coverage   # Code coverage reports files
-      ├── docs       # All kind of project documentation, including JSDoc files
-      ├── image      # Image resources 
-      ├── tests      # Source code for tests
-      ├── src        # Source code, including JS, CSS, HTML
-
-For each assignment there should be a markdown file with the assignment description.
-Find that file and follow the instructions on it.
-
-**Before** the evaluation session of the assignment, **do not forget** to upload the (git) link to your repository to the Moodle classroom.
+This repository hosts the code examples used in the lessons
+The codes are classified into different lectures
