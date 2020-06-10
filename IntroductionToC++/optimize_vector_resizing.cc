@@ -16,7 +16,6 @@
  * @see http://www.cplusplus.com/reference/vector/vector/reserve/
  */
 
-// vector::reserve
 #include <iostream>
 #include <vector> 
 #include <string> 
@@ -24,10 +23,10 @@
 int main () {
   std::vector<std::string> my_vector;
 
-  const int VEC_SIZE = 100;
-  // Always call reserve when you know the size.
-  my_vector.reserve (VEC_SIZE);
-  for (int i = 0; i < VEC_SIZE ; ++i) {
+  const int kVecSize = 100;
+  // Always call reserve when you know the size
+  my_vector.reserve (kVecSize);
+  for (int i = 0; i < kVecSize; ++i) {
     my_vector.emplace_back("hello");
   }
 }
