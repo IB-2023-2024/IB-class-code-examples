@@ -1,0 +1,13 @@
+first_project
+├── CMakeLists.txt
+├── README.md				# How to use your code
+├── bin
+├── build						# All generated build files
+├── lib
+├── src
+│   ├── tools.cc
+│   ├── tools.h
+│   └── tools_main.cc
+└── tests						# Tests for your code
+
+5 directories, 5 files
