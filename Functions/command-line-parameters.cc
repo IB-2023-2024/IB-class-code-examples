@@ -1,0 +1,39 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Informática Básica
+ *
+ * @author F. de Sande
+ * @date 23 Jun 2020
+ * @brief The use of command line parameters
+ *
+ * Two-argument variant of the main function allows arbitrary number of C-style strings 
+ * to be passed to program from environment in which program run
+ *    argc: number of C-style strings provided to program
+ *    argv: array of pointers to C-style strings
+ *    argv[0] is name by which program invoked
+ *    argv[argc] is guaranteed to be 0 (i.e., null pointer)
+ *    argv[1] , argv[2] , . . . , argv[argc - 1] typically correspond to command line options
+ *
+ * Run this program: a.exe <NAME>
+ *
+ * @see http://www.cplusplus.com/articles/DEN36Up4/
+ */
+
+#include <iostream>
+
+int main(int argc, char* argv[]) {
+  // Check the number of parameters
+  if (argc < 2) {
+    // Tell the user how to run the program
+    std::cerr << "Usage: " << argv[0] << " NAME" << std::endl;
+    /* "Usage messages" are a conventional way of telling the user
+    * how to run a program if they enter the command incorrectly.
+    */
+    return 1;
+  }
+  // Print the user's name:
+  std::cout << argv[0] << "says hello, " << argv[1] << "!" << std::endl;
+  return 0;
+}
