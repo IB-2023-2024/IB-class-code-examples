@@ -13,18 +13,19 @@
  * Normally, we do not explicitly write “this”, however
  *
  * @see http://www.cplusplus.com/doc/tutorial/classes/
+ * @see http://www.cplusplus.com/doc/tutorial/templates/#this
  * @see https://en.cppreference.com/w/cpp/language/this
  */
 
 class MyClass {
   public:
   int UpdateValue (int newValue ) {
-    int oldValue = value;
-    value = newValue;		// "value" means "this->value"
+    int oldValue = value_;
+    value_ = newValue;		// "value_" means "this->value_"
     return oldValue;
   }
   private:
-    int value;			// Data member
+    int value_;			// Data member
 };
 
 void Func() {

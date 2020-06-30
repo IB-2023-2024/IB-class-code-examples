@@ -35,7 +35,7 @@ class Image {
     int cols_ = 0;
 };
 
-// Implementation omitted here.
+// Implementation omitted here
 
 int main() {
   Image image("some_image.pgm");

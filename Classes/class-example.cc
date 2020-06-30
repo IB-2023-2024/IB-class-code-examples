@@ -13,28 +13,29 @@
 
 class MyClass {
   public:
-    int SetValue (int newValue ) {		// member function
-      int oldValue = value;// save old value
-      value = newValue;// change value to new value
-      return oldValue;// return old value
-  }
+    int SetValue(int newValue ) {			// member function
+      int oldValue = value_;					// save old value
+      value_ = newValue;							// change value to new value
+      return oldValue;								// return old value
+  	}
   private:
-  friend void WasteTime ();
-  void DoNothing () {}
-  int value;							// data member
+	  friend void WasteTime();
+		void DoNothing() {}
+	  int value_;							// data member
 };
 
-void WasteTime () {
+void WasteTime() {
   MyClass x;
-  x.DoNothing ();					// OK: friend
-  x.value = 5; 						//OK: friend
+  x.DoNothing();					// OK: friend
+  x.value_ = 5; 					// OK: friend
 }
-void func () {
+
+void Func() {
   MyClass x;							// x is object of type MyClass
-  x.SetValue (5);					// call MyClass’s SetValue member
-  												// (sets x.value to 5)
-  x.value = 5;						// ERROR: value is private
-  x.DoNothing ();				// ERROR: doNothing is private
+  x.SetValue(5);					// call MyClass’s SetValue member
+  												// (sets x.value_ to 5)
+  x.value_ = 5;						// ERROR: value_ is private
+  x.DoNothing();					// ERROR: doNothing is private
 }
 
 int main() {
