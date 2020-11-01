@@ -25,10 +25,10 @@
 # include <string>
 
 int main () {
-  std::string hello = "Hello!";
-	
-	for (auto c: hello)
-		std::cout << "[" << c << "]";
-	std::cout << std::endl;
+  const std::string kHello{"Hello!"};
+
+  for (auto c: kHello)
+    std::cout << "[" << c << "]";
+  std::cout << std::endl;
   return 0;
 }

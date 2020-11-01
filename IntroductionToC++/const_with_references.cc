@@ -21,8 +21,8 @@
 using namespace std;
 
 int main () {
-  int num = 42; 
-	int another_num = 7;
+  int num{42}; 
+  int another_num{7};
   int& ref = num;
   const int& kRef = num;
   ref = 0;
@@ -30,8 +30,8 @@ int main () {
   num = 24;
   cout << ref << " " << num << " " << kRef << endl;
 
-	ref = another_num;     // You can change the value of ref
-	// kRef = another_num;    // But you can't change (it's const) the value of kRef
+  ref = another_num;     // You can change the value of ref
+  // kRef = another_num;    // But you can't change (it's const) the value of kRef
   cout << ref << " " << another_num << " " << kRef << endl;
 
   return 0;

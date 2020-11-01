@@ -16,10 +16,10 @@
 #include <iostream>
 
 int main () {
-	const int kNumberOfIterations = 10;  // Play modifying this value
+  const int kNumberOfIterations{10};  // Play modifying this value
 
   for (int i = kNumberOfIterations; i > 0; i--) {
-		std::cout << i << ", ";
+    std::cout << i << ", ";
   }
-	std::cout << "liftoff!" << std::endl;
+  std::cout << "liftoff!" << std::endl;
 }

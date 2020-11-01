@@ -22,20 +22,20 @@
 # include <string>
 
 int main () {
-	const int kNumberOfIterations = 10;  // Play modifying this value
+  const int kNumberOfIterations{10};  // Play modifying this value
 
   // Let's skip number 5 in our countdown:
   for (int i = kNumberOfIterations; i > 0; i--) {
     if (i == 5) continue;
-		std::cout << i << ", ";
+      std::cout << i << ", ";
   }
-	std::cout << "liftoff!" << std::endl;
+  std::cout << "liftoff!" << std::endl;
 
-	// Let's stop the countdown before its natural end:
+  // Let's stop the countdown before its natural end:
   for (int i = kNumberOfIterations; i > 0; i--) {
-		std::cout << i << ", ";
+    std::cout << i << ", ";
     if (i == 3) {
-			std::cout << "countdown aborted!";
+      std::cout << "countdown aborted!";
       break;
     }
   }

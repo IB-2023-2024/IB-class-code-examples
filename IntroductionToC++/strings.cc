@@ -20,11 +20,11 @@
 # include <string>
 
 int main () {
-  std::string hello = "Hello";
+  const std::string kHello{"Hello"};
   std::cout << "Type your name:" << std :: endl;
   std::string name = "";   // Init empty 
   std::cin >> name;
   // Read name
-  std::cout << hello + ", " + name + "!" << std :: endl;
+  std::cout << kHello + ", " + name + "!" << std :: endl;
   return 0;
 }

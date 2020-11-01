@@ -18,7 +18,7 @@
  */
 
 int main () { // Start of main scope
-  float some_float = 13.13 f; // Create variable
+  float some_float = 13.13f; // Create variable
   { // New inner scope
     auto another_float = some_float ; // Copy variable 
   } // another_float dies

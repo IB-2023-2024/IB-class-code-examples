@@ -25,26 +25,26 @@
 #include <iostream>
 
 int main () {
-	const int kNumber = 1;  // Play modifying this value
+  const int kNumber{1};  // Play modifying this value
 
-	switch (kNumber) {
+  switch (kNumber) {
   case 1:
-		std::cout << "The number is 1" << std::endl;
+    std::cout << "The number is 1" << std::endl;
     break;
   case 2:
-		std::cout << "The number is 2" << std::endl;
+    std::cout << "The number is 2" << std::endl;
     break;
   default:
-		std::cout << "Unknown number" << std::endl;
+    std::cout << "Unknown number" << std::endl;
   }
 
 switch (kNumber) {
   case 1:
   case 2:
   case 3:
-		std::cout << "The number is 1, 2 or 3" << std::endl;
+    std::cout << "The number is 1, 2 or 3" << std::endl;
     break;
   default:
-		std::cout << "The number is not 1, 2 nor 3" << std::endl;
+    std::cout << "The number is not 1, 2 nor 3" << std::endl;
   }
 }
