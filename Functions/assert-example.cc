@@ -27,11 +27,11 @@ double sqrt(double x) {
   assert (x >= 0);
   std::cout << "Execution in sqrt function\n";
 
-	return x;
+  return x;
 }
 
 int main() {
-	double param = -1.0;
+  double param = -1.0;
   double result = sqrt(param);
 
   std::cout << "param: " << param << " result: " << result << std::endl;

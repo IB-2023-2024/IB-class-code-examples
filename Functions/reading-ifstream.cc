@@ -15,7 +15,7 @@
 #include <iostream>
 #include <string>
 
-using namespace std;		// Saving space
+using namespace std;    // Saving space
 
 int main() {
   int my_int;
@@ -27,6 +27,6 @@ int main() {
   // Read data, until it is there
   while (in >> my_int >> my_doub1 >> my_string >> my_doub2) {
     cerr << my_int << ", " << my_doub1 << ", " << my_string << ", " << my_doub2 << endl;
-	}
+  }
   return (0);
 }

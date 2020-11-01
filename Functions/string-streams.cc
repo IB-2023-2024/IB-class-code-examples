@@ -27,9 +27,9 @@ using namespace std;
 
 int main() {
   stringstream s_out;
-  const string kExt = ".txt";		// Filename extension
-	string file_name = "";
-	const int kLimit = 500;
+  const string kExt = ".txt";  // Filename extension
+  string file_name = "";
+  const int kLimit = 500;
 
   for (int i = 0; i < kLimit; ++i) {
   // Combine variables into a stringstream 
@@ -40,7 +40,7 @@ int main() {
   }
   stringstream s_in(file_name);
   int i; 
-	string rest;
+  string rest;
   s_in >> i >> rest;
   cerr << "Number :" << i << " rest is: " << rest << endl;
   return 0;

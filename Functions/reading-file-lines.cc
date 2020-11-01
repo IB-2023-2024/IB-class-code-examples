@@ -15,14 +15,14 @@
  * @see https://en.cppreference.com/w/cpp/string/basic_string/substr
  */
 
-#include <fstream>		// For the file streams
+#include <fstream>    // For the file streams
 #include <iostream>
 
 using namespace std;
 
 int main() {
   string line, file_name;
-	const string kInputFilename = "test_bel.txt";
+  const string kInputFilename = "test_bel.txt";
   ifstream input(kInputFilename, ios_base::in);
 
   // Read data line-wise

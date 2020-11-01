@@ -18,11 +18,11 @@
 using namespace std;
 
 string Func(int num) { 
-	return "int"; 
+  return "int"; 
 }
 
 string Func(const string& str) { 
-	return "string "; 
+  return "string "; 
 }
 
 int main () {

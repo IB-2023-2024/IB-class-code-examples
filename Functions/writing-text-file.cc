@@ -15,17 +15,17 @@
  */
 
 #include <iomanip> // For setprecision 
-#include <fstream>		// For the file streams
+#include <fstream>    // For the file streams
 
 using namespace std;
 
 int main() {
-	const string kFilename = "out.txt";
+  const string kFilename = "out.txt";
   ofstream outfile (kFilename);
 
   if (!outfile.is_open()) { 
-		return EXIT_FAILURE; 
-	}
+    return EXIT_FAILURE; 
+  }
   double my_number = 1.123123123;
   outfile << "Just string" << endl;
   outfile << setprecision (20) << my_number << endl;

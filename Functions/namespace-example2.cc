@@ -32,8 +32,8 @@ namespace fred {
 }
 
 int main() {
-	mike::Initialize();    // call Initialize in namespace mike
-	fred::Initialize();    // call Initialize in namespace fred
+  mike::Initialize();    // call Initialize in namespace mike
+  fred::Initialize();    // call Initialize in namespace fred
 
   using mike::Initialize;
   Initialize();          // call Initialize in mike namespace

@@ -23,15 +23,15 @@ using namespace std;
 
 vector <int> Func(int a, bool b) {
   if (b) { 
-		return vector<int>(10, a); 
-	}
+    return vector<int>(10, a); 
+  }
   vector<int> vec(a);
   for (int i = 0; i < a; ++i) { 
-		vec[i] = a * i; 
-	}
+    vec[i] = a * i; 
+  }
   if (vec.size() > a * 2) { 
-		vec[a] /= 2.0f; 
-	}
+    vec[a] /= 2.0f; 
+  }
   return vec;
 }
 
