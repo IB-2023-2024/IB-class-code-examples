@@ -18,19 +18,19 @@
 using namespace std; // std namespace is used
 
 // Self - defined function power shadows std::pow
-double pow(double x, int exp) {
-  double res = 1.0;
+double pow(double base, int exp) {
+  double result = 1.0;
   for (int i = 0; i < exp; i++) { 
-    res *= x; 
+    result *= base; 
   }
   cout << "Our cool power function \n";
-  return (res);
+  return (result);
 }
 
 int main () {
-  double x = 2.0;
-  int power = 2;
-  double res = pow(x, power);
-  cout << x << " ^ " << power << " = " << res << endl;
+  double my_var{2.0};
+  int power{2};
+  double res = pow(my_var, power);
+  cout << my_var << " ^ " << power << " = " << res << endl;
   return 0;
 }

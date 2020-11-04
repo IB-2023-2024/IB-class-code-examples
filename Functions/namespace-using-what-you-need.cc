@@ -19,19 +19,19 @@ using std::cout; // Explicitly use cout
 using std::endl; // Explicitly use endl
 
 // Self - defined function power shadows std::pow
-double pow(double x, int exp) {
-  double res = 1.0;
+double pow(double base, int exp) {
+  double result{1.0};
   for (int i = 0; i < exp; i++) { 
-    res *= x; 
+    result *= base; 
   }
   cout << "Our cool power function\n";
-  return (res);
+  return (result);
 }
 
 int main () {
-  double x = 2.0;
-  int power = 2;
-  double res = pow(x, power);
-  cout << x << " ^ " << power << " = " << res << endl;
+  double x{2.0};
+  int power{2};
+  double result = pow(x, power);
+  cout << x << " ^ " << power << " = " << result << endl;
   return 0;
 }
