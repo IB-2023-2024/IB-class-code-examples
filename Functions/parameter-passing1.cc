@@ -34,8 +34,8 @@ void SwapRef(int& _val1, int& _val2) {
 
 
 int main() {
-  int val1 = 10;
-  int val2 = 20;
+  int val1{10};
+  int val2{20};
 
   SwapVal(val1, val2);   // No effect
   std::cout << "val1: " << val1 << " val2: " << val2 << std::endl;

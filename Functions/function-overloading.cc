@@ -22,7 +22,7 @@ string Func(int num) {
 }
 
 string Func(const string& str) { 
-  return "string "; 
+  return "string"; 
 }
 
 int main () {

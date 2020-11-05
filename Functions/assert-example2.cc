@@ -14,30 +14,22 @@
  * If assertion fails, program is terminated by calling std::abort
  * If NDEBUG preprocessor symbol is defined at time cassert header file included, all assertions are disabled (i.e., not checked)
  *
- * The assert macro checks for the validity of the assertions or assumptions. 
- * If the assertion results to be FALSE then the macro writes information about the call that 
- * failed on stderr and then calls abort(). 
- * abort() raises the SIGABRT signal and this results in an abnormal termination of the process.
- *
  * @see https://en.cppreference.com/w/cpp/error/assert
  */
 
 #include <iostream> // std::cout, std::endl
 
-// uncomment next line to disable assert()
-#define NDEBUG
+// uncomment to disable assert()
+// #define NDEBUG
 #include <cassert>
-
-double sqrt(double x) {
-  assert (x >= 0);
-  std::cout << "Execution in sqrt function" << std::endl;
-  return x;
-}
-
+ 
+// Use (void) to silent unused warnings.
+#define assertm(exp, msg) assert(((void)msg, exp))
+ 
 int main() {
-  double param = -1.0;
-  double result = sqrt(param);
-
-  std::cout << "param: " << param << " result: " << result << std::endl;
+    assert(2 + 2 == 4);
+    std::cout << "Execution continues past the first assert" << std::endl;
+    assertm(2 + 2 == 5, "There are five lights");
+    std::cout << "Execution continues past the second assert" << std::endl;
+    assert((2 * 2 == 4) && "Yet another way to add assert message");
 }
-

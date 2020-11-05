@@ -19,6 +19,10 @@
  * Run this program: a.exe <NAME>
  *
  * @see http://www.cplusplus.com/articles/DEN36Up4/
+ * 
+ * The std::string constructor allow to create a std::string from a C-string:
+ * @see http://www.cplusplus.com/reference/string/string/string/
+ *
  */
 
 #include <iostream>
@@ -34,6 +38,10 @@ int main(int argc, char* argv[]) {
     return 1;
   }
   // Print the user's name:
-  std::cout << argv[0] << "says hello, " << argv[1] << "!" << std::endl;
+  std::cout << argv[0] << " says hello, " << argv[1] << "!" << std::endl;
+
+	std::string name(argv[1]);  // Create a string object from the C-style (char* string)
+  std::cout << "The name is: " << name << std::endl;
+
   return 0;
 }
