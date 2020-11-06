@@ -23,9 +23,7 @@
 #include <vector>
 #include <cmath>
 
-using namespace std;
-
-vector<int> CreateVectorOfFullSquares(int size);     // Declaration
+std::vector<int> CreateVectorOfFullSquares(int size);     // Declaration
 
 int main () {
   double experiment = sin(0);
@@ -40,8 +38,8 @@ int main () {
 }
 
 
-vector<int> CreateVectorOfFullSquares(int size) {
-  vector<int> result(size);     // Vector of size `size `
+std::vector<int> CreateVectorOfFullSquares(int size) {
+	std::vector<int> result(size);     // Vector of size `size `
 
   for (int i = 0; i < size; ++i) {
     result[i] = i * i;
