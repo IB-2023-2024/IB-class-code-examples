@@ -8,6 +8,7 @@
  * @date 30 Jun 2020
  * @brief Class constructor
  *
+ * @see https://www.geeksforgeeks.org/constructors-c/
  * @see http://www.cplusplus.com/doc/tutorial/classes2/#default_constructor
  * @see http://www.cplusplus.com/doc/tutorial/classes/
  * @see http://www.cplusplus.com/doc/tutorial/classes2/
