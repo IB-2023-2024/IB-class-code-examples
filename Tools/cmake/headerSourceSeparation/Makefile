@@ -16,7 +16,8 @@ TARGET  = myprog
 
 # Select Compiler and flags
 CC=g++
-CFLAGS=-O0 -g
+CFLAGS=-std=c++14 -g -Wall   # Compiler options (C++14, preserve debug symbols and warn all)
+
 
 SRC = $(wildcard *.cc)
 OBJ = $(SRC:.cc=.o)

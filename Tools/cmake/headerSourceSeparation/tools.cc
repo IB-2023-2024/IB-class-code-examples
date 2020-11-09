@@ -16,9 +16,9 @@
 
 void MakeItRain () {
   // important weather manipulation code
-  std::cout << "Here! Now it rains! Happy ?\n";
+  std::cout << "Here! Now it rains! Happy ?" << std::endl;
 }
 
 void MakeItSunny () { 
-	std::cerr << "Not available \n"; 
+	std::cerr << "Not available" << std::endl; 
 }
