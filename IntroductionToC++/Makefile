@@ -17,7 +17,7 @@ LDFLAGS =						# The linker options (if any)
 # The all target builds all of the programs handled by the makefile.
 # This target has the dependency chain:
 #     all -> hello -> hello.o -> hello.cpp
-all: hello_world
+all: hello_world if_statement 
 
 # The hello_world target builds the hello_world executable.
 hello_world: hello_world.o

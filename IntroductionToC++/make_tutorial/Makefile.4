@@ -14,12 +14,12 @@
 #
 # @see http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
 
-CC=gcc
+CC=g++
 CFLAGS=-O0 -g
 DEPS = hellomake.h
 OBJ = hellomake.o hellofunc.o
 
-%.o: %.c $(DEPS)
+%.o: %.cc $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 hellomake: $(OBJ)

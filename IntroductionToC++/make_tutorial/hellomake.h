@@ -1,3 +1,4 @@
+
 /**
  * Universidad de La Laguna
  * Escuela Superior de Ingeniería y Tecnología
@@ -6,16 +7,12 @@
  *
  * @author F. de Sande
  * @date 8 Jun 2020
- * @brief hellomake.c Source code for make tutorial
+ * @brief hellomake.h Header source code for make tutorial
+ *        Contains the declaration of the MyPrintHelloMake function
+ *
+ * Example include file
  * 
  * @see http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
  */
 
-#include "hellomake.h"
-
-int main() {
-  // call a function in another file
-  myPrintHelloMake();
-
-  return(0);
-}
+void MyPrintHelloMake(void);

@@ -7,11 +7,15 @@
  *
  * @author F. de Sande
  * @date 8 Jun 2020
- * @brief hellomake.h Header source code for make tutorial
- *
- * Example include file
+ * @brief hellofunc.c Source code for make tutorial
  * 
  * @see http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
  */
 
-void myPrintHelloMake(void);
+#include <iostream>
+#include "hellomake.h"
+
+void MyPrintHelloMake(void) {
+	std::cout << "Hello makefiles!" << std::endl;
+  return;
+}
