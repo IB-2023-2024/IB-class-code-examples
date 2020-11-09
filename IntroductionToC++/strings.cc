@@ -16,11 +16,12 @@
  * @see https://www.w3schools.com/cpp/cpp_strings.asp
  */
 
-# include <iostream>
-# include <string>
+#include <iostream>
+#include <string>
 
 int main () {
   const std::string kHello{"Hello"};
+
   std::cout << "Type your name:" << std :: endl;
   std::string name = "";   // Init empty 
   std::cin >> name;
