@@ -14,8 +14,8 @@
  * @see https://en.cppreference.com/w/cpp/io/basic_ofstream
  */
 
-#include <iomanip> // For setprecision 
-#include <fstream>    // For the file streams
+#include <iomanip>  // For setprecision 
+#include <fstream>  // For the file streams
 
 using namespace std;
 

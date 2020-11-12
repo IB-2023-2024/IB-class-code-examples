@@ -11,7 +11,7 @@
  * @see https://en.cppreference.com/w/cpp/io/manip
  */
 
-#include <fstream> // For the file streams .
+#include <fstream> // For the file streams
 #include <iostream>
 #include <string>
 
@@ -30,3 +30,9 @@ int main() {
   }
   return (0);
 }
+
+
+// Content of the test_cols.txt file
+// 1 2.34 One 0.21
+// 2 2.004 two 0.23
+// 3 -2.34 string 0.22
