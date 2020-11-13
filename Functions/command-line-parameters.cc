@@ -29,6 +29,7 @@
 
 int main(int argc, char* argv[]) {
   // Check the number of parameters
+  std::cout << "No. of parameters: " << argc << std::endl;
   if (argc < 2) {
     // Tell the user how to run the program
     std::cerr << "Usage: " << argv[0] << " NAME" << std::endl;
@@ -40,8 +41,11 @@ int main(int argc, char* argv[]) {
   // Print the user's name:
   std::cout << argv[0] << " says hello, " << argv[1] << "!" << std::endl;
 
-	std::string name(argv[1]);  // Create a string object from the C-style (char* string)
+  std::string name{argv[1]};  // Create a string object from the C-style (char* string)
   std::cout << "The name is: " << name << std::endl;
+
+  // How to convert a std::string into a number
+  // https://www.geeksforgeeks.org/converting-strings-numbers-cc/
 
   return 0;
 }
