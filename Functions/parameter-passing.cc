@@ -20,15 +20,18 @@
 void Increment0(int x) {
   ++x;        
 }
+
 void Increment(int& x) {
   ++x;      
 }
 
 int main() {
-  int local_var= 0;
+  int local_var{0};
+
   Increment0(local_var);    // local_var is passed by value
                             // local_var still equals 0 (local_var was not incremented)
   std::cout << "local_var: " << local_var << std::endl;
+
   Increment(local_var);     // local_var is passed by reference
                             // local_var equals 1 (local_var was incremented)
   std::cout << "local_var: " << local_var << std::endl;
