@@ -47,7 +47,7 @@ size_t Factorial(size_t number) {
 }
 
 int main (int argc, char* argv[]) {
-	Usage(argc, argv);
+  Usage(argc, argv);
   std::string limit{argv[1]};
   const size_t kLimit = stoi(limit);
   for (size_t i = 1; i <= kLimit; ++i) {

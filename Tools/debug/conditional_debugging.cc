@@ -23,10 +23,10 @@ int getUserInput() {
 #ifdef ENABLE_DEBUG
 std::cerr << "getUserInput() called" << std::endl;
 #endif
-	std::cout << "Enter a number: ";
-	int x{};
-	std::cin >> x;
-	return x;
+  std::cout << "Enter a number: ";
+  int x{};
+  std::cin >> x;
+  return x;
 }
 
 int main() {
