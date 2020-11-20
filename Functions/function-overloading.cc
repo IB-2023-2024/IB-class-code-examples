@@ -25,8 +25,13 @@ string Func(const string& str) {
   return "string"; 
 }
 
+string Func(double number) { 
+  return "It's a double"; 
+}
+
 int main () {
-  cout << Func (1) << endl;
+  cout << Func(1) << endl;
   cout << Func("hello") << endl;
+  cout << Func(1.0) << endl;
   return 0;
 }

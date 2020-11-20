@@ -25,18 +25,18 @@
 #include <iostream> // std::cout, std::endl
 
 // uncomment next line to disable assert()
-#define NDEBUG
+// #define NDEBUG 
 #include <cassert>
 
-double sqrt(double x) {
+double Mysqrt(double x) {
   assert (x >= 0);
-  std::cout << "Execution in sqrt function" << std::endl;
+  std::cout << "Execution in Mysqrt function" << std::endl;
   return x;
 }
 
 int main() {
   double param = -1.0;
-  double result = sqrt(param);
+  const double result{Mysqrt(param)};
 
   std::cout << "param: " << param << " result: " << result << std::endl;
 }
