@@ -17,7 +17,7 @@
 
 #include <iostream>
 
-#define ENABLE_DEBUG // comment out to disable debugging
+//#define ENABLE_DEBUG // comment out to disable debugging
 
 int getUserInput() {
 #ifdef ENABLE_DEBUG

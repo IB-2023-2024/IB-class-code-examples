@@ -17,6 +17,6 @@
 #include <iostream>
 
 int main() {
-  std::cout < "Hi there"; << x; 
+  std::cout < "Hi there" << x;
   return 0
 }
