@@ -4,6 +4,9 @@
 #
 ##### Linux
 *~
+a.out
+.vscode
+
 
 # temporary files which can be created if a process still has a handle open of a deleted file
 .fuse_hidden*
@@ -582,7 +585,7 @@ compile_commands.json
 mono_crash.*
 
 # Build results
-[Dd]ebug/
+#[Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
