@@ -38,8 +38,8 @@ size_t Factorial(size_t number) {
     case 1:
       return 1;
     default:
-      size_t factorial;
-      for (size_t i = 1; i < number; ++i) {
+      size_t factorial{1};
+      for (size_t i = 1; i <= number; ++i) {
         factorial *= i;
       }
       return factorial;
