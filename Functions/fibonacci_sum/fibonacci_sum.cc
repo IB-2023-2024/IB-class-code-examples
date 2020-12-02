@@ -22,7 +22,14 @@
 
 #include "fibonacci_sum.h"    
 
-/// Usage: the program requires a single numeric parameter
+/** Muestra el modo de uso correcto del programa
+ *  En caso de que el uso no sea el correcto, muestra el mensaje y finaliza
+ *  la ejecución del programa.
+ *  El programa precisa un único número natural para su ejecución.
+ *
+ *  @param[in] argc Number of command line parameters
+ *  @param[in] argv Vector containing (char*) the parameters
+ */
 void Usage(int argc, char *argv[]) {
   if (argc != 2) {
     std::cout << argv[0] << ": Falta un número natural como parámetro" << std::endl;

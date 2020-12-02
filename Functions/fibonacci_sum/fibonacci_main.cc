@@ -18,7 +18,7 @@
  */
 
 #include <iostream>
-#include <cstdlib>    // exit
+#include <cstdlib>    /// exit
 
 #include "fibonacci_sum.h"    
 

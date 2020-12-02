@@ -32,7 +32,7 @@ fibonacci_sum: fibonacci_sum.o fibonacci_main.o
 # and object files produced by the build process
 # We can use it for additional housekeeping purposes
 clean :
-	rm -f hello_world *.o
+	rm -f *.o fibonacci_sum doc
 	rm -rf *~ basura b i
 	rm -rf a.out
 	find . -name '*~' -exec rm {} \;
