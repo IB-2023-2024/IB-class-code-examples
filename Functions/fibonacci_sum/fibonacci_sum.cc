@@ -22,7 +22,7 @@
 
 #include "fibonacci_sum.h"    
 
-// Usage: the program requires a single numeric parameter
+/// Usage: the program requires a single numeric parameter
 void Usage(int argc, char *argv[]) {
   if (argc != 2) {
     std::cout << argv[0] << ": Falta un número natural como parámetro" << std::endl;
@@ -36,6 +36,12 @@ void Usage(int argc, char *argv[]) {
   }
 }
 
+/** Devuelve el valor de la suma de todos los términos de valor par de la serie de
+ *  Fibonacci menores que kLimit
+ *
+ *  @param[in] kLimit. Se suman los términos pares menores que kLimit
+ *  @return La suma de los términos pares menores que kLimit
+ */
 size_t fibonacci_sum(const size_t kLimit) {
   size_t second_to_last{0},  // Second to last term
            last{1},          // Last term generated
