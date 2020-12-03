@@ -22,20 +22,20 @@
 using namespace std;
 
 class Vector2 {      // Two-dimensional vector class
-  public:
-    double x;        // The x component of the vector
-    double y;        // The y component of the vector
-    void Initialize (double x_, double y_);
+ public:
+  double x_;        // The x component of the vector
+  double y_;        // The y component of the vector
+  void Initialize (double x, double y);
 };
 
-void Vector2::initialize (double x_, double y_){
-  x = x_;
-  y = y_;
+void Vector2::Initialize (double x, double y) {
+  x_ = x;
+  y_ = y;
 }
 
 void Func() {
   Vector2 v;                 // Create an instance of Vector2 called v
-  v.initialize(1.0, 2.0);    // Initialize v to (1.0, 2.0)
+  v.Initialize(1.0, 2.0);    // Initialize v to (1.0, 2.0)
 }
 
 int main() {
