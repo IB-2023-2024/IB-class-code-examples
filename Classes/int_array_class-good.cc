@@ -6,9 +6,7 @@
  *
  * @author F. de Sande
  * @date 25 Jun 2020
- * @brief Benefit: Encapsulated classes help protect your data and prevent misuse
-
-
+ * @brief Encapsulated classes help protect your data and prevent misuse
  *
  * @see https://www.learncpp.com/cpp-tutorial/84-access-functions-and-encapsulation/
  */

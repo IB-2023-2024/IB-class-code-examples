@@ -6,9 +6,9 @@
  *
  * @author F. de Sande
  * @date 25 Jun 2020
- * @brief Benefit: Encapsulated classes help protect your data and prevent misuse
- * If users can access the array directly, they could subscript the array with 
- * an invalid index, producing unexpected results
+ * @brief Encapsulated classes help protect your data and prevent misuse
+ *        If users can access the array directly, they could subscript the array with 
+ *        an invalid index, producing unexpected results
  *
  * @see https://www.learncpp.com/cpp-tutorial/84-access-functions-and-encapsulation/
  */
