@@ -22,11 +22,11 @@ class Hmm {
   Hmm(Hmm&& other) { cout << "Move constructor" << endl; }
   Hmm& operator=(const Hmm& other) {
     cout << "Copy operator " << endl; 
-		return *this;
+    return *this;
   }
   Hmm& operator=(Hmm&& other) {
     cout << "Move operator " << endl; 
-		return *this;
+    return *this;
   }
 };
 

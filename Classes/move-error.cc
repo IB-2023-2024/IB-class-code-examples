@@ -30,8 +30,8 @@ using std::vector;
 int main () {
   string hello = "hello";
   vector<string> owner;
-  owner.emplace_back(hello);					// Copy
-  owner.emplace_back(move(hello));		// Move
-  cout << hello << endl;							// Undefined
+  owner.emplace_back(hello);          // Copy
+  owner.emplace_back(move(hello));    // Move
+  cout << hello << endl;              // Undefined
   return 0;
 }

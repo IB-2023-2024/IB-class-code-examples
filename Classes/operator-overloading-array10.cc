@@ -19,7 +19,7 @@ using std::cout; using std::endl;
 
 class Array10 { // Ten-element real array class
   public:
-		static const int kArraySize = 10;
+    static const int kArraySize = 10;
     Array10 () {
       for (int i = 0; i < kArraySize; ++i) {  // Zero array
         data_[i] = 0;
@@ -48,6 +48,6 @@ void Func () {
 }
 
 int main () {
-	Func();
-	return 0;
+  Func();
+  return 0;
 }

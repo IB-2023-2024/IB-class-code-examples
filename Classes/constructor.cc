@@ -23,7 +23,7 @@ class Vector {          // Two-dimensional vector class
     Vector() {          // Default constructor
       x_ = 0.0;
       y_ = 0.0;
-			cout << "Class constructor has been called" << endl;
+      cout << "Class constructor has been called" << endl;
     }
   // ...
   private:
@@ -36,5 +36,5 @@ int main() {
   Vector my_vector1;      // calls Vector(); my_vector1 set to (0,0)
   cout << "After object declaration" << endl;
   Vector Func();          // declares function Func that returns Vector
-	return 0;
+  return 0;
 }

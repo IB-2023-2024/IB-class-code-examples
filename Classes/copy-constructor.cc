@@ -22,13 +22,13 @@ class Vector {          // Two-dimensional vector class
     Vector() {          // Default constructor
       x_ = 0.0;
       y_ = 0.0;
-			cout << "Class constructor has been called" << endl;
+      cout << "Class constructor has been called" << endl;
     }
 
-		Vector(const Vector& v) { // Copy constructor
+    Vector(const Vector& v) { // Copy constructor
       x_ = v.x_; 
-			y_ = v.y_;
-			cout << "Copy constructor has been called" << endl;
+      y_ = v.y_;
+      cout << "Copy constructor has been called" << endl;
     }
 
   // ...
@@ -40,10 +40,10 @@ class Vector {          // Two-dimensional vector class
 
 int main() {
   cout << "Previous to object v declaration" << endl;
-	Vector v;
+  Vector v;
   cout << "After object v declaration" << endl;
   Vector w(v);         // calls Vector(const Vector&)
   Vector u = v;        // calls Vector(const Vector&)
-	return 0;
+  return 0;
 }
 

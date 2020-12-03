@@ -11,7 +11,7 @@
  * @see http://www.cplusplus.com/doc/tutorial/classes/
  */
 
-class Point2 {		// Two-dimensional point class
+class Point2 {    // Two-dimensional point class
   public:
     typedef double Coordinate ; // Coordinate type
     Coordinate x; // The x coordinate of the point
@@ -27,5 +27,5 @@ void Func () {
 
 int main() {
   Func();
-	return 0;
+  return 0;
 }

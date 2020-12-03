@@ -18,7 +18,7 @@ using std::cout; using std::endl;
 
 class Vector { // 2D vector class
   public:
-    Vector() : x_ (0.0), y_ (0.0) {}				// Initializer list
+    Vector() : x_ (0.0), y_ (0.0) {}        // Initializer list
     Vector(double x, double y) : x_ (x), y_ (y) {}
     double x() const { return x_; }
     double y() const { return y_; }
@@ -29,12 +29,12 @@ class Vector { // 2D vector class
 
 // Vector addition
 Vector operator+(const Vector& u, const Vector& v) {
-	return Vector (u.x() + v.x(), u.y() + v.y());
+  return Vector (u.x() + v.x(), u.y() + v.y());
 }
 
 // Dot product
 double operator*(const Vector& u, const Vector& v) {
-	return u.x() * v.x() + u.y() * v.y();
+  return u.x() * v.x() + u.y() * v.y();
 }
 
 void Func () {
@@ -48,6 +48,6 @@ void Func () {
 }
 
 int main () {
-	Func();
-	return 0;
+  Func();
+  return 0;
 }

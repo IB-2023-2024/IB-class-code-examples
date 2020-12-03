@@ -25,25 +25,25 @@ class Vector {          // Two-dimensional vector class
     Vector() {          // Default constructor
       x_ = 0.0;
       y_ = 0.0;
-			cout << "Class constructor has been called" << endl;
+      cout << "Class constructor has been called" << endl;
     }
 
-		Vector(const Vector& v) { // Copy constructor
+    Vector(const Vector& v) { // Copy constructor
       x_ = v.x_; 
-			y_ = v.y_;
-			cout << "Copy constructor has been called" << endl;
+      y_ = v.y_;
+      cout << "Copy constructor has been called" << endl;
     }
 
-		Vector(Vector&& v) {           // Move constructor
+    Vector(Vector&& v) {           // Move constructor
       x_ = v.x_; 
-			y_ = v.y_;
-			cout << "Move constructor has been called" << endl;
+      y_ = v.y_;
+      cout << "Move constructor has been called" << endl;
     }
 
-		Vector(double x, double y) {   // constructor with parameters
+    Vector(double x, double y) {   // constructor with parameters
       x_ = x; 
-			y_ = y;
-			cout << "Parameters constructor has been called" << endl;
+      y_ = y;
+      cout << "Parameters constructor has been called" << endl;
     }
 
     // ...
@@ -53,11 +53,11 @@ class Vector {          // Two-dimensional vector class
     double y_ ;         // The y component of the vector
 };
 
-Vector Func() {					// Func returns a Vector object
+Vector Func() {          // Func returns a Vector object
   cout << "Previous to local_vec declaration" << endl;
-	Vector local_vec(7.0, 4.0);
+  Vector local_vec(7.0, 4.0);
   cout << "After local_vec declaration" << endl;
-	return local_vec;
+  return local_vec;
 }
 
 int main() {
@@ -66,5 +66,5 @@ int main() {
   Vector w(v);           // calls Copy constructor
   Vector z = u;          // calls Copy constructor
   Vector y = Func();     // calls Vector(Vector&&) if move not elided
-	return 0;
+  return 0;
 }

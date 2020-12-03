@@ -44,13 +44,13 @@ class FibonacciGenerator {
 };
 
 int main() {
-	const unsigned kLimit{1000};
+  const unsigned kLimit{1000};
 
   FibonacciGenerator fibgen;
   unsigned sum = 0;
   for(unsigned term = fibgen(); term < kLimit; term = fibgen()) {
     if(term % 2 == 0) 
-			sum += term;
+      sum += term;
   }
   std::cout << sum << std::endl;
 }

@@ -37,11 +37,11 @@ Matrix::Matrix(unsigned rows, unsigned cols)
   , cols_ (cols)
 //, data_ ← initialized below after the if...throw statement
 {
-	assert(((rows != 0) && (cols != 0)) && "Matrix constructor has 0 size");
+  assert(((rows != 0) && (cols != 0)) && "Matrix constructor has 0 size");
   data_ = new double[rows * cols];
 }
 
-	inline
+  inline
 Matrix::~Matrix()
 {
   delete[] data_;
@@ -49,13 +49,13 @@ Matrix::~Matrix()
 
 inline
 double& Matrix::operator() (unsigned row, unsigned col) {
-	assert((row < rows_ && col < cols_) && "Matrix subscript out of bounds");
+  assert((row < rows_ && col < cols_) && "Matrix subscript out of bounds");
   return data_[cols_*row + col];
 }
 
 inline
 double Matrix::operator() (unsigned row, unsigned col) const {
-	assert((row < rows_ && col < cols_) && "const Matrix subscript out of bounds");
+  assert((row < rows_ && col < cols_) && "const Matrix subscript out of bounds");
   return data_[cols_*row + col];
 }
 

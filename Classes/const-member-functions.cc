@@ -25,25 +25,25 @@
 using namespace std;
 
 class Counter {
-	public:
-		Counter(int newCount) {
+  public:
+    Counter(int newCount) {
       count_ = newCount;
-		}
-		int count() const { return count_; }
-		void IncrementCount() { ++count_; }
-	private:
-		int count_;
+    }
+    int count() const { return count_; }
+    void IncrementCount() { ++count_; }
+  private:
+    int count_;
 };
 
 void Func () {
-	Counter my_counter(0);						// An instance of the class
-	int count = my_counter.count();
+  Counter my_counter(0);            // An instance of the class
+  int count = my_counter.count();
 
-	const Counter& my_counter2 = my_counter;
-	count = my_counter2.count();			// count better be const!
+  const Counter& my_counter2 = my_counter;
+  count = my_counter2.count();      // count better be const!
 }
 
 int main() {
   Func();
-	return 0;
+  return 0;
 }

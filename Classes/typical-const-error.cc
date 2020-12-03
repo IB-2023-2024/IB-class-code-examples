@@ -37,10 +37,10 @@ using namespace std;
 
 class Student {
   public:
-		Student(string name): name_{name} {}    // Constructor uniform initializer syntax (body is empty)
+    Student(string name): name_{name} {}    // Constructor uniform initializer syntax (body is empty)
     const string& name() { return name_; }
   private:
-		string name_;
+    string name_;
 };
 
 void Print(const Student& student) {
@@ -48,7 +48,7 @@ void Print(const Student& student) {
 }
 
 int main() {
-	Student my_student("Albert Einstein");
-	Print(my_student);
-	return 0;
+  Student my_student("Albert Einstein");
+  Print(my_student);
+  return 0;
 }

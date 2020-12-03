@@ -38,26 +38,26 @@ class MyClass {
     MyClass (int bufferSize) {              // Constructor
       // allocate some memory for buffer
       bufferPtr = new char[bufferSize];
-			cout << "The constructor has been called. Memory allocated" << endl;
+      cout << "The constructor has been called. Memory allocated" << endl;
     }
 
     ~MyClass () {                           // Destructor
        // free memory previously allocated
       delete [] bufferPtr;
-			cout << "The destructor has been called. Memory allocated" << endl;
+      cout << "The destructor has been called. Memory allocated" << endl;
     }
 
     // copy constructor, assignment operator, ...
 
-	private:
+  private:
     char* bufferPtr;                       // pointer to start of buffer
 };
 
 
 int main() {
-	const int kMb = 1024 * 1024;
+  const int kMb = 1024 * 1024;
 
-	MyClass my_object(8 * kMb);
-	// Some important code that Works with the object
-	return 0;
+  MyClass my_object(8 * kMb);
+  // Some important code that Works with the object
+  return 0;
 }

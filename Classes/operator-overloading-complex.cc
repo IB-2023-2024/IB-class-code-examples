@@ -56,6 +56,6 @@ void Func() {
 }
 
 int main () {
-	Func();
-	return 0;
+  Func();
+  return 0;
 }

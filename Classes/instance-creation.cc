@@ -21,27 +21,27 @@ using namespace std;
 class SomeClass {
   public:
     SomeClass() {                // Default constructor
-	    a_ = 0.0;
-    	b_ = 0.0;
-		}
+      a_ = 0.0;
+      b_ = 0.0;
+    }
 
     SomeClass(int a) {           // Custom constructor
-	    a_ = a;
-    	b_ = 0.0;
-		}
+      a_ = a;
+      b_ = 0.0;
+    }
 
     SomeClass(int a, float b) { // Custom constructor
-	    a_ = a;
-    	b_ = b;
-		}
+      a_ = a;
+      b_ = b;
+    }
 
     ~SomeClass() {               // Destructor
-			return;
-		}
+      return;
+    }
 
-	private:
-		float a_;
-		float b_;
+  private:
+    float a_;
+    float b_;
 };
 
 // How to use them?

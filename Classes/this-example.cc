@@ -21,11 +21,11 @@ class MyClass {
   public:
   int UpdateValue (int newValue ) {
     int oldValue = value_;
-    value_ = newValue;		// "value_" means "this->value_"
+    value_ = newValue;    // "value_" means "this->value_"
     return oldValue;
   }
   private:
-    int value_;			// Data member
+    int value_;      // Data member
 };
 
 void Func() {
@@ -36,5 +36,5 @@ void Func() {
 
 int main() {
   Func();
-	return 0;
+  return 0;
 }

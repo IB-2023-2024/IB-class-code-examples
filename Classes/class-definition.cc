@@ -27,12 +27,12 @@
  */
 
 class Image {
-  public:
-    Image(const std::string& file_name);
-    void Draw();      // Function Member
-  private:
-    int rows_ = 0;    // Data members
-    int cols_ = 0;
+ public:
+  Image(const std::string& file_name);
+  void Draw();      // Function Member
+ private:
+  int rows_ = 0;    // Data members
+  int cols_ = 0;
 };
 
 // Implementation omitted here
