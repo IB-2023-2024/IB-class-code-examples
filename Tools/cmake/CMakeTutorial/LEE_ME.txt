@@ -1,0 +1,6 @@
+Tutorial 
+Getting started with cmake
+
+https://riptutorial.com/cmake/example/7501/simple--hello-world--project
+
+https://riptutorial.com/cmake
