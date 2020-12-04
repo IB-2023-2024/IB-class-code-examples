@@ -22,6 +22,10 @@
 
 #include "fibonacci_sum.h"    
 
+/** Main function
+ *  @param[in] argc Number of command line parameters
+ *  @param[in] argv Vector containing (char*) the parameters
+ */
 int main (int argc, char* argv[]) {
   Usage(argc, argv);
   std::string limit = argv[1];
