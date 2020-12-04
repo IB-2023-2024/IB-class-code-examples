@@ -32,9 +32,10 @@ int main() {
   while (getline(input, line)) {
     cout << "Read: " << line << endl;
     // String has a find method
-    unsigned loc = line.find("filename", 0);
+    size_t loc = line.find("filename", 0);
     if (loc != string::npos) {
       file_name = line.substr (line.find("=", 0) + 1, string::npos);
+			cout << "loc: " << loc << endl;
     }
   }
   cout << "Filename found: " << file_name << endl;
