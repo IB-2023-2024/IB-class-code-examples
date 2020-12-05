@@ -1,0 +1,4 @@
+Introduction to modern CMake for beginners
+
+https://www.internalpointers.com/post/modern-cmake-beginner-introduction
+
