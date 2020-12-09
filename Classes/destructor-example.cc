@@ -31,20 +31,18 @@
 
 #include <iostream>
 
-using namespace std;
-
 class MyClass {
   public:
     MyClass (int bufferSize) {              // Constructor
       // allocate some memory for buffer
       bufferPtr = new char[bufferSize];
-      cout << "The constructor has been called. Memory allocated" << endl;
+			std::cout << "The constructor has been called. Memory allocated" << std::endl;
     }
 
     ~MyClass () {                           // Destructor
        // free memory previously allocated
       delete [] bufferPtr;
-      cout << "The destructor has been called. Memory allocated" << endl;
+			std::cout << "The destructor has been called. Memory allocated" << std::endl;
     }
 
     // copy constructor, assignment operator, ...
@@ -52,7 +50,6 @@ class MyClass {
   private:
     char* bufferPtr;                       // pointer to start of buffer
 };
-
 
 int main() {
   const int kMb = 1024 * 1024;
