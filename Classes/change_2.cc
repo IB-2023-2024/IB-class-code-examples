@@ -21,12 +21,12 @@ class Something {
   int value3_;
  
  public:
-  void setValue1(int value) { value1_ = value; }
-  int getValue1() { return value1_; }
+  void SetValue1(int value) { value1_ = value; }
+  int GetValue1() { return value1_; }
 };
  
 int main() {
   Something something;
-  something.setValue1(5);
-  std::cout << something.getValue1() << '\n';
+  something.SetValue1(5);
+  std::cout << something.GetValue1() << '\n';
 }

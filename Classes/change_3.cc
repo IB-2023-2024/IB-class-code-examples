@@ -20,13 +20,13 @@ private:
  
 public:
   // We have to update any member functions to reflect the new implementation
-  void setValue1(int value) { value_[0] = value; }
-  int getValue1() { return value_[0]; }
+  void SetValue1(int value) { value_[0] = value; }
+  int GetValue1() { return value_[0]; }
 };
  
 int main() {
   // But our program still works just fine!
   Something something;
-  something.setValue1(5);
-  std::cout << something.getValue1() << '\n';
+  something.SetValue1(5);
+  std::cout << something.GetValue1() << '\n';
 }

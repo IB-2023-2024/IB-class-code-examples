@@ -25,19 +25,19 @@ class Employee {
   double wage_{};
  
   /// Print employee information to the screen
-  void print() {
+  void Print() {
     std::cout << "Name: " << name_ <<
         "  Id: " << id_ << 
-        "  Wage: $" << wage_ << '\n'; 
+        "  Wage: " << wage_ << "€" << std::endl; 
   }
 };
  
 int main() {
   /// Declare two employees
-  Employee alex { "Alex", 1, 25.00 };
-  Employee joe { "Joe", 2, 22.25 };
+  Employee alex { "Alex", 1, 2500.0};
+  Employee joe { "Joe", 2, 2225.0 };
   /// Print out the employee information
-  alex.print();
-  joe.print();
+  alex.Print();
+  joe.Print();
   return 0;
 } 

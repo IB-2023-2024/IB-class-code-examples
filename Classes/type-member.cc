@@ -14,7 +14,7 @@
 
 class Point2 {    // Two-dimensional point class
  public:
-	using Coordinate = double;  // Coordinate type
+  using Coordinate = double;  // Coordinate type
   // typedef double Coordinate ; // Coordinate type
   Coordinate x_; // The x coordinate of the point
   Coordinate y_; // The y coordinate of the point

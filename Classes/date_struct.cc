@@ -21,13 +21,13 @@ struct DateStruct {
   int day{};
 };
 
-void print(const DateStruct &date) {
-  std::cout << date.year << '/' << date.month << '/' << date.day;
+void Print(const DateStruct &date) {
+  std::cout << date.day << '/' << date.month << '/' << date.year << std::endl;
 }
 
 int main() {
   DateStruct today { 2020, 12, 4 }; // use uniform initialization
-  today.day = 5; // use member selection operator to select a member of the struct
-  print(today);
+  today.day = 11; // use member selection operator to select a member of the struct
+  Print(today);
   return 0;
 }

@@ -19,7 +19,7 @@
 
 class MyClass {
   public:
-  int UpdateValue (int newValue ) {
+  int UpdateValue(int newValue) {
     int oldValue = value_;
     value_ = newValue;    // "value_" means "this->value_"
     return oldValue;

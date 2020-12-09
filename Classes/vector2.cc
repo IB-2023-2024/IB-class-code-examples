@@ -19,8 +19,6 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 class Vector2 {      // Two-dimensional vector class
  public:
   double x_;        // The x component of the vector
@@ -28,7 +26,7 @@ class Vector2 {      // Two-dimensional vector class
   void Initialize (double x, double y);
 };
 
-void Vector2::Initialize (double x, double y) {
+void Vector2::Initialize(double x, double y) {
   x_ = x;
   y_ = y;
 }

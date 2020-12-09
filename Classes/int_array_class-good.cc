@@ -15,16 +15,16 @@
 
 class IntArray {
  private:
-	static const int kSize = 10;
+  static const int kSize = 10;
   int store_[kSize]; // user can not access this directly any more
 
  public:
-  void setValue(int index, int value) {
+  void SetValue(int index, int value) {
     // If the index is invalid, do nothing
     if (index < 0 || index >= kSize) {
-			std::cerr << "An error message..." << std::endl;
+      std::cerr << "An error message..." << std::endl;
       return;
-		}
+    }
     store_[index] = value;
   }
 };
@@ -32,5 +32,5 @@ class IntArray {
 int main() {
   IntArray my_array;
   // array.store_[16] = 2; // This generates a compiler error
-	my_array.setValue(16, 2);
+  my_array.SetValue(16, 2);
 }

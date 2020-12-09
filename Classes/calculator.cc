@@ -25,7 +25,7 @@ class Calculator {
 
   std::vector<Number> result_history_{};
 
-  Number add(Number a, Number b) {
+  Number Add(Number a, Number b) {
     auto result{ a + b };
     result_history_.push_back(result);
     return result;
@@ -34,10 +34,10 @@ class Calculator {
 
 int main() {
   Calculator calculator{};
-  std::cout << calculator.add(3, 4) << '\n'; // 7
-  std::cout << calculator.add(99, 24) << '\n'; // 123
+  std::cout << calculator.Add(3, 4) << '\n'; // 7
+  std::cout << calculator.Add(99, 24) << '\n'; // 123
   for (Calculator::Number result : calculator.result_history_) {
-    std::cout << result << '\n';
+    std::cout << result << std::endl;
   }
   return 0;
 }

@@ -21,24 +21,24 @@ class DateClass {
   int day_{};
  
  public:
-  void print() {
-    std::cout << year_ << '/' << month_ << '/' << day_;
+  void Print() {
+    std::cout << day_ << '/' << month_ << '/' << year_ << std::endl;
   }
-  int getMonth() { return month_; } // getter for month
-  void setMonth(int month) { month_ = month; } // setter for month
+  int GetMonth() { return month_; } // getter for month
+  void SetMonth(int month) { month_ = month; } // setter for month
  
-  int getDay() { return day_; } // getter for day
-  void setDay(int day) { day_ = day; } // setter for day
+  int GetDay() { return day_; } // getter for day
+  void SetDay(int day) { day_ = day; } // setter for day
  
-  int getYear() { return year_; } // getter for year
-  void setYear(int year) { year_ = year; } // setter for year
+  int GetYear() { return year_; } // getter for year
+  void SetYear(int year) { year_ = year; } // setter for year
 };
  
 int main() {
   DateClass today;
-	today.setDay(3);
-	today.setMonth(12);
-	today.setYear(2020);
-  today.print(); 
+  today.SetDay(10);
+  today.SetMonth(12);
+  today.SetYear(2020);
+  today.Print(); 
   return 0;
 }

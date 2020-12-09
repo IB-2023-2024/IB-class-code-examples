@@ -26,6 +26,8 @@
  * @see http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#c-classes-and-class-hierarchies
  */
 
+#include <iostream>
+
 class Image {
  public:
   Image(const std::string& file_name);
@@ -38,7 +40,7 @@ class Image {
 // Implementation omitted here
 
 int main() {
-  Image image("some_image.pgm");
+  Image image("some_image.jpg");
   image.Draw ();
   return 0;
 }

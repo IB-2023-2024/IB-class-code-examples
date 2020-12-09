@@ -22,14 +22,14 @@ class DateClass {
   int month_{};
   int day_{};
  
-  void print() {
-    std::cout << year_ << '/' << month_ << '/' << day_;
+  void Print() {
+    std::cout << day_ << '/' << month_ << '/' << year_ << std::endl;
   }
 };
  
 int main() {
   DateClass today { 2020, 12, 1 };
   today.day_ = 3; // use member selection operator to select a member variable of the class
-  today.print(); // use member selection operator to call a member function of the class
+  today.Print(); // use member selection operator to call a member function of the class
   return 0;
 }
