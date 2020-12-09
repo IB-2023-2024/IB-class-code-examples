@@ -32,20 +32,20 @@
 #include <iostream>
 
 class MyClass {
-  public:
-    MyClass (int bufferSize) {              // Constructor
-      // allocate some memory for buffer
-      bufferPtr = new char[bufferSize];
-			std::cout << "The constructor has been called. Memory allocated" << std::endl;
-    }
+ public:
+  MyClass (int bufferSize) {              // Constructor
+    // allocate some memory for buffer
+    bufferPtr = new char[bufferSize];
+    std::cout << "The constructor has been called. Memory allocated" << std::endl;
+  }
 
-    ~MyClass () {                           // Destructor
-       // free memory previously allocated
-      delete [] bufferPtr;
-			std::cout << "The destructor has been called. Memory allocated" << std::endl;
-    }
+  ~MyClass () {                           // Destructor
+    // free memory previously allocated
+    delete [] bufferPtr;
+    std::cout << "The destructor has been called. Memory allocated" << std::endl;
+  }
 
-    // copy constructor, assignment operator, ...
+  // copy constructor, assignment operator, ...
 
   private:
     char* bufferPtr;                       // pointer to start of buffer
