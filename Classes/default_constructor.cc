@@ -20,8 +20,8 @@ class Date {
   int day_{ 10 };
 
  public:
-  // Tell the compiler to create a default constructor, even if
-  // there are other user-provided constructors.
+  /// Tell the compiler to create a default constructor, even if
+  /// there are other user-provided constructors.
   Date() = default;
 
   Date(int year, int month, int day) { // normal non-default constructor

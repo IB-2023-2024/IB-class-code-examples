@@ -35,7 +35,7 @@ class Something {
 
  public:
   Something(int value1, double value2, char value3 = 'c')
-     : value1_{ value1 }, value2_{ value2 }, value3_{ value3 } { // directly initialize our member variables
+     : value1_{ value1 }, value2_{ value2 }, value3_{ value3 } { /// directly initialize member variables
   // No need for assignment here
   }
 
@@ -45,7 +45,7 @@ class Something {
 };
 
 int main() {
-  Something something{ 1, 2.2 }; // value1 = 1, value2=2.2, value3 gets default value 'c'
+  Something something{ 1, 2.2 }; /// value1 = 1, value2=2.2, value3 gets default value 'c'
   something.Print();
   return 0;
 }

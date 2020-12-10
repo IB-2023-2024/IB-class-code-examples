@@ -16,9 +16,9 @@
  
 class Something {
  private:
-  int value1_;
-  int value2_;
-  int value3_;
+  int value1_{0};
+  int value2_{0};
+  int value3_{0};
  
  public:
   void SetValue1(int value) { value1_ = value; }

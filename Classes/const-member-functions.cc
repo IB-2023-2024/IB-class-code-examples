@@ -17,30 +17,29 @@
  * @see http://www.cplusplus.com/doc/tutorial/templates/#const_member_functions
  * @see http://www.cplusplus.com/doc/tutorial/classes/
  * @see https://isocpp.org/wiki/faq/const-correctness
+ * @see https://www.learncpp.com/cpp-tutorial/810-const-class-objects-and-member-functions/
  */
 
 #include <string>
 #include <iostream>
 
-using namespace std;
-
 class Counter {
-  public:
-    Counter(int newCount) {
-      count_ = newCount;
-    }
-    int count() const { return count_; }
-    void IncrementCount() { ++count_; }
-  private:
-    int count_;
+ public:
+  Counter(int newCount) {
+    count_ = newCount;
+  }
+  int Count() const { return count_; }  // note addition of const keyword after parameter list, but before function body
+  void IncrementCount() { ++count_; }
+ private:
+  int count_{0};
 };
 
 void Func () {
   Counter my_counter(0);            // An instance of the class
-  int count = my_counter.count();
+  int count = my_counter.Count();
 
   const Counter& my_counter2 = my_counter;
-  count = my_counter2.count();      // count better be const!
+  count = my_counter2.Count();      // count better be const!
 }
 
 int main() {

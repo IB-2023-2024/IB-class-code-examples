@@ -16,7 +16,7 @@
 class IntArray {
  private:
   static const int kSize = 10;
-  int store_[kSize]; // user can not access this directly any more
+  int store_[kSize]; /// user can not access this directly any more
 
  public:
   void SetValue(int index, int value) {
@@ -31,6 +31,6 @@ class IntArray {
 
 int main() {
   IntArray my_array;
-  // array.store_[16] = 2; // This generates a compiler error
+  // array.store_[16] = 2; /// This generates a compiler error
   my_array.SetValue(16, 2);
 }

@@ -16,7 +16,7 @@
 #include <iostream>
 
 struct DateStruct {
-  int year{};  // Initialize to 0
+  int year{};  /// Initialize to 0
   int month{};
   int day{};
 };
@@ -26,8 +26,8 @@ void Print(const DateStruct &date) {
 }
 
 int main() {
-  DateStruct today { 2020, 12, 4 }; // use uniform initialization
-  today.day = 11; // use member selection operator to select a member of the struct
+  DateStruct today { 2020, 12, 4 }; /// use uniform initialization
+  today.day = 11; /// use member selection operator to select a member of the struct
   Print(today);
   return 0;
 }

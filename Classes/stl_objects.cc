@@ -22,9 +22,9 @@
 #include <iostream>
  
 int main() {
-  std::string my_string { "Hello, world!" };   // instantiate a string class object
-  std::array<int, 3> my_array { 1, 2, 3 };   // instantiate an array class object
-  std::vector<double> my_vector { 1.1, 2.2, 3.3 };   // instantiate a vector class object
-  std::cout << "length: " << my_string.length() << '\n';   // call a member function
+  std::string my_string { "Hello, world!" };   /// instantiate a string class object
+  std::array<int, 3> my_array { 1, 2, 3 };   /// instantiate an array class object
+  std::vector<double> my_vector { 1.1, 2.2, 3.3 };   /// instantiate a vector class object
+  std::cout << "length: " << my_string.length() << '\n';   /// call a member function
   return 0;
 }

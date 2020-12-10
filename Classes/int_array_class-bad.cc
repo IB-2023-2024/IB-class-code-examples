@@ -20,5 +20,5 @@ class IntArray {
 
 int main() {
   IntArray my_array;
-  my_array.store_[16] = 2; // invalid array index, now we overwrote memory that we don't own
+  my_array.store_[16] = 2; /// invalid array index, now we overwrote memory that we don't own
 }

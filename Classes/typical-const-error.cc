@@ -17,9 +17,9 @@
  *     46  cout << "Student: " << student.name() << endl;
  *
  * The problem is that the Print function parameter is a const reference
- * and Print calls student.name() but it has to be guaranteed that the object will not be modified
+ * and Print calls student.Name() but it has to be guaranteed that the object will not be modified
  * The solution is to declare const the name getter:
- *    const string& name() const { return name_; }
+ *    const string& Name() const { return name_; }
  *
  * In this example, note the member initialization in the constructor
  * It uses the uniform initializer syntax, using braces {} 
@@ -33,18 +33,16 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
-
 class Student {
   public:
-    Student(string name): name_{name} {}    // Constructor uniform initializer syntax (body is empty)
-    const string& name() { return name_; }
+    Student(std::string name): name_{name} {}    // Constructor uniform initializer syntax (body is empty)
+    const std::string& Name() { return name_; }
   private:
-    string name_;
+    std::string name_{""};
 };
 
 void Print(const Student& student) {
-  cout << "Student: " << student.name() << endl;
+  std::cout << "Student: " << student.Name() << std::endl;
 }
 
 int main() {

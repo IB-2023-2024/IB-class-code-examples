@@ -18,10 +18,10 @@ class Date {
   int year_{ 2020 };
   int month_{ 12 };
   int day_{ 10 };
-  // No constructor provided, so C++ creates a public default constructor for us
+  /// No constructor provided, so C++ creates a public default constructor for us
 };
 
 int main() {
-  Date date{}; // calls implicit constructor
+  Date date{}; /// calls implicit constructor
   return 0;
 }

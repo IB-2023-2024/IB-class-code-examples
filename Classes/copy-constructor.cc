@@ -15,35 +15,33 @@
 
 #include <iostream>
 
-using namespace std;
-
-class Vector {          // Two-dimensional vector class
+class Vector {          /// Two-dimensional vector class
   public:
-    Vector() {          // Default constructor
+    Vector() {          /// Default constructor
       x_ = 0.0;
       y_ = 0.0;
-      cout << "Class constructor has been called" << endl;
+      std::cout << "Class constructor has been called" << std::endl;
     }
 
-    Vector(const Vector& v) { // Copy constructor
+    Vector(const Vector& v) { /// Copy constructor
       x_ = v.x_; 
       y_ = v.y_;
-      cout << "Copy constructor has been called" << endl;
+      std::cout << "Copy constructor has been called" << std::endl;
     }
 
   // ...
 
   private:
-    double x_ ;         // The x component of the vector
-    double y_ ;         // The y component of the vector
+    double x_ ;         /// The x component of the vector
+    double y_ ;         /// The y component of the vector
 };
 
 int main() {
-  cout << "Previous to object v declaration" << endl;
+  std::cout << "Previous to object v declaration" << std::endl;
   Vector v;
-  cout << "After object v declaration" << endl;
-  Vector w(v);         // calls Vector(const Vector&)
-  Vector u = v;        // calls Vector(const Vector&)
+  std::cout << "After object v declaration" << std::endl;
+  Vector w(v);         /// calls Vector(const Vector&)
+  Vector u = v;        /// calls Vector(const Vector&)
   return 0;
 }
 

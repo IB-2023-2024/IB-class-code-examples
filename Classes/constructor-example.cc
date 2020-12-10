@@ -23,25 +23,25 @@ class Vector {          // Two-dimensional vector class
     Vector() {          // Default constructor
       x_ = 0.0;
       y_ = 0.0;
-			std::cout << "Class constructor has been called" << std::endl;
+      std::cout << "Class constructor has been called" << std::endl;
     }
 
     Vector(const Vector& v) { // Copy constructor
       x_ = v.x_; 
       y_ = v.y_;
-			std::cout << "Copy constructor has been called" << std::endl;
+      std::cout << "Copy constructor has been called" << std::endl;
     }
 
     Vector(Vector&& v) {           // Move constructor
       x_ = v.x_; 
       y_ = v.y_;
-			std::cout << "Move constructor has been called" << std::endl;
+      std::cout << "Move constructor has been called" << std::endl;
     }
 
     Vector(double x, double y) {   // constructor with parameters
       x_ = x; 
       y_ = y;
-			std::cout << "Parameters constructor has been called" << std::endl;
+      std::cout << "Parameters constructor has been called" << std::endl;
     }
 
     // ...
@@ -52,9 +52,9 @@ class Vector {          // Two-dimensional vector class
 };
 
 Vector Func() {          // Func returns a Vector object
-	std::cout << "Previous to local_vec declaration" << std::endl;
+  std::cout << "Previous to local_vec declaration" << std::endl;
   Vector local_vec(7.0, 4.0);
-	std::cout << "After local_vec declaration" << std::endl;
+  std::cout << "After local_vec declaration" << std::endl;
   return local_vec;
 }
 

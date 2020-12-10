@@ -21,16 +21,14 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 // Define a structure 
 struct NamedInt {
   int num;
-  string name;
+	std::string name;
 };
 
 void PrintStruct (const NamedInt& s) {
-  cout << s.name << " " << s.num << endl;
+  std::cout << s.name << " " << s.num << std::endl;
 }
 
 int main() {
