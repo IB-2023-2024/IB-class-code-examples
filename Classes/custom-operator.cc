@@ -16,6 +16,7 @@
  * @see https://en.cppreference.com/w/cpp/language/operators
  */
 
+#include <iostream>
 #include <algorithm>
 #include <vector>
 
@@ -30,7 +31,7 @@ class Human {
 };
 
 int main () {
-	std::vector<Human> humans = {Human{0}, Human{10}};
+  std::vector<Human> humans = {Human{0}, Human{10}};
   std::sort(humans.begin(), humans.end());
   return 0;
 }
