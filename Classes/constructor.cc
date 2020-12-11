@@ -33,6 +33,6 @@ int main() {
   std::cout << "Previous to object declaration" << std::endl;
   Vector my_vector1;      // calls Vector(); my_vector1 set to (0,0)
   std::cout << "After object declaration" << std::endl;
-  Vector Func();          // declares function Func that returns Vector
+  // Vector Func();          // declares function Func that returns Vector
   return 0;
 }

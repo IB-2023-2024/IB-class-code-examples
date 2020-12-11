@@ -24,8 +24,8 @@ public:
 int main() {
   Something s1{1, 2.4 };  /// List initialization, calls Something(int, double)
   Something s2(7, 4.8);   /// Direct initialization, also calls Something(int, double)
-  Something s3{1}; /// calls Something(int, double)
-  Something s4{}; /// calls Something(int, double)
+  Something s3{1}; /// calls Something(int)
+  Something s4{}; /// calls Something()
 
   Something s5 = Something {2, 4.8}; /// Copy initialize a Something, will call Something(2, 4.8)
   Something s6 = s5;

@@ -41,6 +41,6 @@ class Image {
 
 int main() {
   Image image("some_image.jpg");
-  image.Draw ();
+  image.Draw();
   return 0;
 }

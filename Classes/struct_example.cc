@@ -24,7 +24,7 @@
 // Define a structure 
 struct NamedInt {
   int num;
-	std::string name;
+  std::string name;
 };
 
 void PrintStruct (const NamedInt& s) {
@@ -33,7 +33,7 @@ void PrintStruct (const NamedInt& s) {
 
 int main() {
   NamedInt my_int = {1, "hello"};
-  PrintStruct (my_int);
-  PrintStruct ({10 , "world"});
+  PrintStruct(my_int);
+  PrintStruct({10 , "world"});
   return 0;
 }

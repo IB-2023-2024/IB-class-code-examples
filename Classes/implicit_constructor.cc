@@ -15,9 +15,9 @@
 
 class Date {
  private:
-  int year_{ 2020 };
-  int month_{ 12 };
-  int day_{ 10 };
+  int year_;
+  int month_;
+  int day_;
   /// No constructor provided, so C++ creates a public default constructor for us
 };
 

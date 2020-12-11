@@ -23,7 +23,7 @@ class Vector2 {      // Two-dimensional vector class
  public:
   double x_;        // The x component of the vector
   double y_;        // The y component of the vector
-  void Initialize (double x, double y);
+  void Initialize(double x, double y);
 };
 
 void Vector2::Initialize(double x, double y) {
