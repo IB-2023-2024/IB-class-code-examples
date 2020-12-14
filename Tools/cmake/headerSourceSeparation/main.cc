@@ -10,6 +10,8 @@
  *
  * This is the main program
  * It is a "client" code that uses definitions in tools.h
+ *
+ * @see https://www.learncpp.com/cpp-tutorial/89-class-code-and-header-files/
  * 
  */
 
