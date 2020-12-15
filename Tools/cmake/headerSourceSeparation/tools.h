@@ -17,8 +17,11 @@
  * Standard approach to preventing multiple inclusion of the same header is by using include guards:
  *
  * @see https://en.cppreference.com/w/cpp/preprocessor/impl
+ * @see https://www.learncpp.com/cpp-tutorial/header-guards/
+ *
  */
 
 #pragma once       // Ensure file is included only once
+
 void MakeItSunny();
 void MakeItRain();
