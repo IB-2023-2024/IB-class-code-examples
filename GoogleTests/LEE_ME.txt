@@ -1,0 +1,10 @@
+https://developer.ibm.com/technologies/systems/articles/au-googletestingframework/
+
+https://www.bogotobogo.com/cplusplus/google_unit_test_gtest.php
+
+https://www.eriksmistad.no/getting-started-with-google-test-on-ubuntu/
+
+
+==================
+https://github.com/google/googletest
+https://github.com/google/googletest/blob/master/googletest/README.md
