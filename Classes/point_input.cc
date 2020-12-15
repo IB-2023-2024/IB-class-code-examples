@@ -31,15 +31,15 @@ class Point {
   friend std::istream& operator>> (std::istream &in, Point &point);
 };
 
+// Since operator<< is a friend of the Point class, we can access Point's members directly.
 std::ostream& operator<< (std::ostream &out, const Point &point) {
-  // Since operator<< is a friend of the Point class, we can access Point's members directly.
   out << "Point(" << point.x_ << ", " << point.y_ << ", " << point.z_ << ')';
   return out;
 }
 
+// Since operator>> is a friend of the Point class, we can access Point's members directly.
+// note that parameter point must be non-const so we can modify the class members with the input values
 std::istream& operator>> (std::istream &in, Point &point) {
-  // Since operator>> is a friend of the Point class, we can access Point's members directly.
-  // note that parameter point must be non-const so we can modify the class members with the input values
   in >> point.x_;
   in >> point.y_;
   in >> point.z_;

@@ -18,6 +18,7 @@
  * @see https://medium.com/@TheZaki/project-euler-2-even-fibonacci-numbers-2219e9438970
  * @see https://stackoverflow.com/questions/21360694/sum-of-even-fibonacci-numbers-under-1000
  * @see http://www.cplusplus.com/doc/tutorial/classes/
+ * @see Functors https://www.learncpp.com/cpp-tutorial/99-overloading-the-parenthesis-operator/
  */
 
 #include <iostream>
@@ -31,24 +32,24 @@
 //
 class FibonacciGenerator {
  public:
-  FibonacciGenerator(): f0{0}, f1{1} {}
-  unsigned operator()() {
-    unsigned f2{f0 + f1};  // computes a new term to be returned 'in the future'
-    f0 = f1;   
-    f1 = f2;
-    return f0;
+  FibonacciGenerator(): f0_{0}, f1_{1} {}
+  int operator()() {
+    int f2{f0_ + f1_};  // computes a new term to be returned 'in the future'
+    f0_ = f1_;   
+    f1_ = f2;
+    return f0_;
   }
  private:
-  unsigned f0;  // Term to be returned on each call
-  unsigned f1;  // Next term to be returned
+  int f0_;  // Term to be returned on each call
+  int f1_;  // Next term to be returned
 };
 
 int main() {
-  const unsigned kLimit{1000};
+  const int kLimit{1000};
 
   FibonacciGenerator fibgen;
-  unsigned sum = 0;
-  for(unsigned term = fibgen(); term < kLimit; term = fibgen()) {
+  int sum = 0;
+  for(int term = fibgen(); term < kLimit; term = fibgen()) {
     if(term % 2 == 0) 
       sum += term;
   }
