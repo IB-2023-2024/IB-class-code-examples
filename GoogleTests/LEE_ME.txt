@@ -8,6 +8,9 @@ http://mochan.info/c++/cmake/tutorial/2019/03/23/gtest-cmake.html
 
 https://github.com/google/googletest
 ==================
+Texto introductorio Unit testing:
+https://developers.google.com/edu/c++/cpp-in-depth
+==================
 https://github.com/google/googletest/blob/master/googletest/README.md
 
 

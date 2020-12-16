@@ -1,4 +1,6 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.10)
+project(ExampleProject)
+set(CMAKE_CXX_STANDARD 14)
  
 # Locate GTest
 find_package(GTest REQUIRED)
