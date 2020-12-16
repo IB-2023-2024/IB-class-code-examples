@@ -21,7 +21,7 @@ class IDGenerator {
   static int next_ID; // Here's the declaration for a static member
 
  public:
-   static int getNextID(); // Here's the declaration for a static function
+  static int getNextID(); // Here's the declaration for a static function
 };
 
 // Here's the definition of the static member outside the class.  Note we don't use the static keyword here.

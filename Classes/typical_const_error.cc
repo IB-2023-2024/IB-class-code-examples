@@ -21,7 +21,7 @@
  * The solution is to declare const the name getter:
  *    const string& Name() const { return name_; }
  *
- * In this example, note the member initialization in the constructor
+ * In this code, note the member initialization in the constructor
  * It uses the uniform initializer syntax, using braces {} 
  * @see http://www.cplusplus.com/doc/tutorial/classes/#member_initialization
  *
@@ -34,11 +34,11 @@
 #include <iostream>
 
 class Student {
-  public:
-    Student(std::string name): name_{name} {}    // Constructor uniform initializer syntax (body is empty)
-    const std::string& Name() { return name_; }
-  private:
-    std::string name_{""};
+ public:
+  Student(const std::string& name): name_{name} {}    // Constructor uniform initializer syntax (body is empty)
+  const std::string& Name() { return name_; }
+ private:
+  std::string name_{""};
 };
 
 void Print(const Student& student) {

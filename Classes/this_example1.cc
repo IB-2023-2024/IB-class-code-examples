@@ -47,8 +47,7 @@ private:
   int id_;
 
 public:
-  Simple(int id) : id_{ id } {
-  }
+  Simple(int id) : id_{ id } { }
 
   void setID(int id) { id_ = id; }
   int getID() { return id_; }

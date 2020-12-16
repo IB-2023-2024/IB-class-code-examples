@@ -9,8 +9,12 @@
  * @brief Overloading operator<<
  *        Overloading operator<< is similar to overloading operator+ 
  *        (they are both binary operators), except that the parameter types are different.
- *        Consider the expression std::cout << point If the operator is <<, what are the operands? 
- *        The left operand is the std::cout object, and the right operand is your Point class object
+ *        Consider the expression 
+ *
+ *            std::cout << point 
+ *
+ *        If the operator is <<, what are the operands? 
+ *        The left operand is the std::cout object, and the right operand is your Point class object.
  *        std::cout is actually an object of type std::ostream 
  *
  *        We return the left hand parameter as a reference. 
@@ -56,6 +60,8 @@ class Point {
   friend std::ostream& operator<< (std::ostream &out, const Point &point);
 };
 
+/// because C++ already knows how to output doubles using operator<<, and our members are 
+/// all doubles, we can simply use operator<< to output the member variables of our Point.
 std::ostream& operator<< (std::ostream &out, const Point &point) {
   // Since operator<< is a friend of the Point class, we can access Point's members directly.
   out << "Point(" << point.x_ << ", " << point.y_ << ", " << point.z_ << ')'; // actual output done here

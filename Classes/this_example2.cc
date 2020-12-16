@@ -18,14 +18,14 @@
  */
 
 class MyClass {
-  public:
+ public:
   int UpdateValue(int newValue) {
     int oldValue = value_;
     value_ = newValue;    // "value_" means "this->value_"
     return oldValue;
   }
-  private:
-    int value_;      // Data member
+ private:
+  int value_;      // Data member
 };
 
 void Func() {
