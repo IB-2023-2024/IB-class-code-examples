@@ -37,14 +37,12 @@ hello_world: hello_world.o
 # and object files produced by the build process
 # We can use it for additional housekeeping purposes
 clean :
-	rm -f hello_world *.o
-	rm -rf *~ basura b i
-	rm -rf a.out
+	rm -f a.out *.o *~ basura b i
 	find . -name '*~' -exec rm {} \;
 	find . -name basura -exec rm {} \;
 
 push:
 	git pull 
 	git add . 
-	git commit -m "Another example" 
+	git commit -m "Code Fixings" 
 	git push

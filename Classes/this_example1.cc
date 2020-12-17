@@ -13,9 +13,14 @@
  *        Normally, we do not explicitly write “this”, however
  *
  *        Although the call to function setID() looks like it only has one argument, it actually has two! 
- *        When compiled, the compiler converts simple.setID(2); into the following:
+ *        When compiled, the compiler converts 
+ *
+ *            simple.setID(2); 
+ *
+ *            into the following:
  *
  *            setID(&simple, 2); // note that simple has been changed from an object prefix to a function argument!
+ *
  *        Note that this is now just a standard function call, and the object simple 
  *        (which was formerly an object prefix) is now passed by address as an argument to the function.
  *
@@ -24,9 +29,11 @@
  *        accept (and use) this argument as a parameter. Consequently, the following member function:
  *
  *           void setID(int id) { m_id = id; }
- *        is converted by the compiler into:
+ *
+ *           is converted by the compiler into:
  *
  *           void setID(Simple* const this, int id) { this->m_id = id; }
+ *
  *        When the compiler compiles a normal member function, it implicitly adds a new parameter to the function named “this”. 
  *        The this pointer is a hidden const pointer that holds the address of the object the member function was called on.
  *
@@ -56,7 +63,7 @@ public:
 int main() {
   Simple simple{1};
   simple.setID(2);
-  std::cout << simple.getID() << '\n';
+  std::cout << simple.getID() << std::endl;
 
   Simple A{1}; // this = &A inside the Simple constructor
   Simple B{2}; // this = &B inside the Simple constructor
@@ -65,4 +72,3 @@ int main() {
 
   return 0;
 }
-

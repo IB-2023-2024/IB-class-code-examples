@@ -15,9 +15,9 @@
 
 class Date {
  private:
-  int year_{ 2020 };
-  int month_{ 12 };
-  int day_{ 10 };
+  int year_;
+  int month_;
+  int day_;
 
  public:
   /// Tell the compiler to create a default constructor, even if
@@ -30,10 +30,16 @@ class Date {
     day_ = day;
     std::cout << "Non-default constructor called" << std::endl;
   }
+  /// getters 
+  int year() { return year_; }
+  int month() { return month_; }
+  int day() { return day_; }
 };
 
 int main() {
   Date date{}; // calls implicit constructor
+  std::cout << "Día: " << date.day() << " Mes: " << date.month() << " Año: " << date.year() << std::endl;
   Date another_date{ 2020, 12, 10 };
+  std::cout << "Día: " << another_date.day() << " Mes: " << another_date.month() << " Año: " << another_date.year() << std::endl;
   return 0;
 }

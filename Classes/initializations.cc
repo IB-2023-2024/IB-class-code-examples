@@ -34,7 +34,7 @@ std::ostream& operator<< (std::ostream &out, const Point &point) {
 }
 
 int main() {
-  int my_var1 (1); // Direct initialize an integer
+  int my_var1(1); // Direct initialize an integer
   Point my_point1(1.0, 1.0, 1.0); // Direct initialize a Point, calls Point(double, double, double) constructor
   std::cout << "my_point1 is: " << my_point1 << std::endl;
 

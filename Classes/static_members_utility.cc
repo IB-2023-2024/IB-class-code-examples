@@ -27,11 +27,11 @@
 #include <iostream>
 
 class Something {
-private:
+ private:
   static int id_Generator_;
   int id_;
 
-public:
+ public:
   Something() { id_ = id_Generator_++; } // grab the next value from the id generator
   int GetID() const { return id_; }
 };
@@ -50,4 +50,3 @@ int main() {
   std::cout << third.GetID() << '\n';
   return 0;
 }
-

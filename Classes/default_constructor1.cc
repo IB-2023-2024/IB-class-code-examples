@@ -19,9 +19,16 @@ class Date {
   int month_;
   int day_;
   /// No constructor provided, so C++ creates a public default constructor for us
+ public:
+  /// getters 
+  /// Google Style:  accessors and mutators may be named like variables.
+  int year() { return year_; }
+  int month() { return month_; }
+  int day() { return day_; }
 };
 
 int main() {
   Date date{}; /// calls implicit constructor
+  std::cout << "Día: " << date.day() << " Mes: " << date.month() << " Año: " << date.year() << std::endl;
   return 0;
 }

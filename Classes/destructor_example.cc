@@ -32,6 +32,8 @@
 #include <iostream>
 
 class MyClass {
+ private:
+    char* bufferPtr;                       // pointer to start of buffer
  public:
   MyClass (int bufferSize) {              // Constructor
     // allocate some memory for buffer
@@ -45,10 +47,7 @@ class MyClass {
     std::cout << "The destructor has been called. Memory de-allocated" << std::endl;
   }
 
-  // copy constructor, assignment operator, ...
-
-  private:
-    char* bufferPtr;                       // pointer to start of buffer
+  // Additional methods here
 };
 
 int main() {

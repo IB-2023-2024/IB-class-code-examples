@@ -21,8 +21,8 @@ int main() {
   today.Print();  /// use member selection operator to call a member function of the class
 
   const Date date1{}; // initialize using default constructor
-  const Date date2(2020, 12, 10); // initialize using parameterized constructor
-  const Date date3{ 2020, 12, 10 }; 
+  const Date date2(2020, 12, 18); // initialize using parameterized constructor
+  const Date date3{ 2020, 12, 18 }; 
 
   return 0;
 }

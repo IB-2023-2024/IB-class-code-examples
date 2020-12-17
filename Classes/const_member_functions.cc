@@ -20,7 +20,6 @@
  * @see https://www.learncpp.com/cpp-tutorial/810-const-class-objects-and-member-functions/
  */
 
-#include <string>
 #include <iostream>
 
 class Counter {
@@ -28,18 +27,18 @@ class Counter {
   Counter(int newCount) {
     count_ = newCount;
   }
-  int Count() const { return count_; }  // note addition of const keyword after parameter list, but before function body
+  int count() const { return count_; }  // note addition of const keyword after parameter list, but before function body
   void IncrementCount() { ++count_; }
  private:
   int count_{0};
 };
 
 void Func () {
-  Counter my_counter(0);            // An instance of the class
-  int count = my_counter.Count();
+  Counter my_counter{0};            // An instance of the class
+  int my_value = my_counter.count();
 
   const Counter& my_counter2 = my_counter;
-  count = my_counter2.Count();      // count better be const!
+  my_value = my_counter2.count();      // If count() is not const you get an error: count() better be const!
 }
 
 int main() {

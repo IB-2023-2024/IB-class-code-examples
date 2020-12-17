@@ -12,8 +12,8 @@
  * @see https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rs-guards
  */
 
-// #include "square.h"
-#include "square-guards.h"
+#include "square.h"
+//#include "square-guards.h"
 
 #include "geometry.h"
 
