@@ -23,3 +23,9 @@ https://developer.ibm.com/technologies/systems/articles/au-googletestingframewor
 https://www.bogotobogo.com/cplusplus/google_unit_test_gtest.php
 https://www.eriksmistad.no/getting-started-with-google-test-on-ubuntu/
 http://mochan.info/c++/cmake/tutorial/2019/03/23/gtest-cmake.html
+==================
+Diversos:
+- CMake: Project structure with unit tests
+  https://stackoverflow.com/questions/14446495/cmake-project-structure-with-unit-tests
+- CMake testing
+  https://cliutils.gitlab.io/modern-cmake/chapters/testing.html
