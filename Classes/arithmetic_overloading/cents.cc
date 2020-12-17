@@ -16,5 +16,5 @@
 Cents operator+(const Cents &c1, const Cents &c2) {
   // use the Cents constructor and operator+(int, int)
   // we don't need direct access to private members here
-  return { c1.GetCents() + c2.GetCents() };
+  return { c1.cents() + c2.cents() };
 }

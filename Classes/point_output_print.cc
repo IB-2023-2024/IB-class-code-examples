@@ -35,8 +35,10 @@ int main() {
   std::cout << "Mi punto es: ";
   point.Print();
   std::cout << " en el espacio 3D" << std::endl;
-  // Sería deseable hacer:
+  // Sería deseable escribir:
+	//
   // std::cout << "Mi punto es: " << point.Print() << " en el espacio 3D" << std::endl;
+	//
   // Ello no es posible porque Print devuelve void
   return 0;
 }

@@ -21,14 +21,14 @@ class Point {
   Point(double x = 0.0, double y = 0.0, double z = 0.0): x_{x}, y_{y}, z_{z} { 
 		std::cout << "The constructor has been called..." << std::endl;
 	}
-  friend std::ostream& operator<< (std::ostream &out, const Point &point);
+  friend std::ostream& operator<<(std::ostream &out, const Point &point);
   double getX() const { return x_; }
   double getY() const { return y_; }
   double getZ() const { return z_; }
 };
 
 // Overloaded operator << (insertion)
-std::ostream& operator<< (std::ostream &out, const Point &point) {
+std::ostream& operator<<(std::ostream &out, const Point &point) {
   out << "Point(" << point.x_ << ", " << point.y_ << ", " << point.z_ << ')'; // actual output done here
   return out; // return std::ostream so we can chain calls to operator<<
 }

@@ -22,7 +22,9 @@
 
 #include <iostream>
 
-/// This is a class prototype that tells the compiler that we are going to define a class called Humidity in the future. 
+/// This (class Humidity) is a class prototype that tells the compiler 
+//  that we are going to define a class called Humidity in the future. 
+//
 /// Without this line, the compiler would tell us it doesn’t know what a Humidity is when parsing the prototype 
 /// for PrintWeather() inside the Temperature class. 
 class Humidity;

@@ -45,8 +45,8 @@ Complex operator+(const double& b, const Complex& a) {
 }
 
 void Func() {
-  Complex a(1.0, 2.0);
-  Complex b(1.0, -2.0);
+  Complex a{1.0, 2.0};
+  Complex b{1.0, -2.0};
   double r = 2.0;
   Complex c = a + r;        // could use global or member function
                             // operator+(a, r) or a.operator+(r)

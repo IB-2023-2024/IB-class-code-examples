@@ -26,7 +26,8 @@ class Cents {
 
   // Overload Cents + int
   Cents operator+(int value);
-  int getCents() const { return cents_; }
+	// getter
+  int cents() const { return cents_; }
 };
 
 // note: this function is a member function!
@@ -36,9 +37,9 @@ Cents Cents::operator+(int value) {
 }
 
 int main() {
-	Cents cents1(6);
+	Cents cents1{6};
 	Cents cents2 = cents1 + 2;
-	std::cout << "I have " << cents2.getCents() << " cents.\n";
+	std::cout << "I have " << cents2.cents() << " cents.\n";
 
 	return 0;
 }

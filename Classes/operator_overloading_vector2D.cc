@@ -22,6 +22,7 @@ class Vector { // 2D vector class
     Vector(double x, double y) : x_ (x), y_ (y) {}
     double x() const { return x_; }
     double y() const { return y_; }
+    friend std::ostream& operator<< (std::ostream &out, const Vector &vector);
   private:
     double x_; // The x component
     double y_; // The y component
@@ -37,12 +38,20 @@ double operator*(const Vector& u, const Vector& v) {
   return u.x() * v.x() + u.y() * v.y();
 }
 
+/// Insertion overload
+std::ostream& operator<< (std::ostream &out, const Vector &vector) {
+  out << "(" << vector.x_ << ", " << vector.y_ << ")"; // actual output done here
+  return out;
+}
+
 void Func () {
-  Vector u(1.0, 2.0);
-  Vector v(u);
-  Vector w;
-  w = u + v;             // w.operator=(operator+(u, v))
-  double c = u * v;      // calls operator*(u, v)
+  Vector vector1(1.0, 2.0);
+	std::cout << vector1 << std::endl;
+  Vector vector2{vector1};
+  Vector vector3;
+  vector3 = vector1 + vector2;             // vector3.operator=(operator+(vector1, vector2))
+	std::cout << vector3 << std::endl;
+  double c = vector1 * vector2;      // calls operator*(vector1, vector2)
                          // since c is built-in type, assignment operator
                          // does not require function call
 }

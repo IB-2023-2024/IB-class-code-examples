@@ -7,11 +7,11 @@
  * @author F.de Sande
  * @date 01 Jul 2020
  * @brief Custom operators
- * Operators are functions with a signature:
- *   <RETURN_TYPE> operator<NAME>(<PARAMS>)
- * <NAME> represents the target operation, e.g. >, <, =, ==, << etc.
- * Have all attributes of functions
- * Always contain word operator in name
+ *        Operators are functions with a signature:
+ *          <RETURN_TYPE> operator<NAME>(<PARAMS>)
+ *        <NAME> represents the target operation, e.g. >, <, =, ==, << etc.
+ *        Have all attributes of functions
+ *        Always contain word operator in name
  *
  * @see https://en.cppreference.com/w/cpp/language/operators
  */

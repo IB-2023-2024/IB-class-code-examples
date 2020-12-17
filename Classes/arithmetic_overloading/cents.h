@@ -17,7 +17,7 @@ class Cents {
   Cents(int cents) : cents_{ cents } 
 	{}
 
-  int GetCents() const { return cents_; }
+  int cents() const { return cents_; }
 };
 
 // Need to explicitly provide prototype for operator+ so uses of operator+ in other files know this overload exists
