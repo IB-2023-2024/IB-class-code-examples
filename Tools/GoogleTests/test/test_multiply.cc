@@ -1,3 +1,7 @@
+/**
+ *  @see https://stackoverflow.com/questions/26030700/unit-testing-c-setup-and-teardown
+ */
+
 #include <gtest/gtest.h>
 
 #include "multiply.h"
@@ -6,7 +10,7 @@ class MultiplyTest : public ::testing::Test {
  protected:
   virtual void SetUp() {
   }
- 
+  
   virtual void TearDown() {
   }
 };

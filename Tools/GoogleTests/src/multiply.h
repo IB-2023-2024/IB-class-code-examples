@@ -2,7 +2,7 @@
 #define MULTIPLY_H
 
 class Multiply {
-public:
+ public:
   static int TwoValues(const int x, const int y);  
 };
 

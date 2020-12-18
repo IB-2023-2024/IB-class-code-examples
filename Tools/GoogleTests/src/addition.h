@@ -2,7 +2,7 @@
 #define ADDITION_H
 
 class Addition {
-public:
+ public:
   static int TwoValues(const int x, const int y);  
 };
 

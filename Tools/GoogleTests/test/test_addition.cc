@@ -1,3 +1,7 @@
+/**
+ *  @see https://stackoverflow.com/questions/26030700/unit-testing-c-setup-and-teardown
+ */
+
 #include <gtest/gtest.h>
 
 #include "addition.h"
