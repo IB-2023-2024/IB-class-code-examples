@@ -79,6 +79,8 @@ add_executable(user_program
     src/multiply.cc
     src/square_root.h
     src/square_root.cc
+    src/date.h
+    src/date.cc
 		src/main_program.cc)
 
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
