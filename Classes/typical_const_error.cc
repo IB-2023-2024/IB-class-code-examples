@@ -36,13 +36,13 @@
 class Student {
  public:
   Student(const std::string& name): name_{name} {}    // Constructor uniform initializer syntax (body is empty)
-  const std::string& Name() { return name_; }
+  const std::string& name() { return name_; }
  private:
   std::string name_{""};
 };
 
 void Print(const Student& student) {
-  std::cout << "Student: " << student.Name() << std::endl;
+  std::cout << "Student: " << student.name() << std::endl;
 }
 
 int main() {
