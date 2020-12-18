@@ -17,7 +17,7 @@
 #include "date.h"
  
 int main() {
-  Date today { 2020, 12, 1 };  // initialize using parameterized constructor (C++11)
+  Date today{2020, 12, 1};  // initialize using parameterized constructor (C++11)
   today.Print();  /// use member selection operator to call a member function of the class
 
   const Date date1{}; // initialize using default constructor
@@ -26,4 +26,3 @@ int main() {
 
   return 0;
 }
-

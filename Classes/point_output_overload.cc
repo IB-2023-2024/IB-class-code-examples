@@ -57,7 +57,7 @@ class Point {
   {
   }
 
-  friend std::ostream& operator<< (std::ostream &out, const Point &point);
+  friend std::ostream& operator<<(std::ostream &out, const Point &point);
 };
 
 /// because C++ already knows how to output doubles using operator<<, and our members are 

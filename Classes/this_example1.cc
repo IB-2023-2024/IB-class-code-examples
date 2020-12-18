@@ -52,7 +52,6 @@
 class Simple {
 private:
   int id_;
-
 public:
   Simple(int id) : id_{ id } { }
 
@@ -65,10 +64,10 @@ int main() {
   simple.setID(2);
   std::cout << simple.getID() << std::endl;
 
-  Simple A{1}; // this = &A inside the Simple constructor
-  Simple B{2}; // this = &B inside the Simple constructor
-  A.setID(3); // this = &A inside member function setID
-  B.setID(4); // this = &B inside member function setID
+  Simple a{1}; // this = &a inside the Simple constructor
+  Simple b{2}; // this = &b inside the Simple constructor
+  a.setID(3); // this = &a inside member function setID
+  b.setID(4); // this = &b inside member function setID
 
   return 0;
 }

@@ -35,7 +35,7 @@ class MyClass {
  private:
     char* bufferPtr;                       // pointer to start of buffer
  public:
-  MyClass (int bufferSize) {              // Constructor
+  MyClass(int bufferSize) {              // Constructor
     // allocate some memory for buffer
     bufferPtr = new char[bufferSize];
     std::cout << "The constructor has been called. Memory allocated" << std::endl;

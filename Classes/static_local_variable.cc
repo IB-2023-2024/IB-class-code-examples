@@ -22,6 +22,7 @@
 
 #include <iostream>
 
+
 void IncrementAndPrint() {
   static int value{1};  // static duration via static keyword.  This initializer is only executed once.
   ++value;
