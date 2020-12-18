@@ -1,7 +1,9 @@
-#ifndef _MULTIPLY_HPP_
-#define _MULTIPLY_HPP_
+#ifndef MULTIPLY_H
+#define MULTIPLY_H
+
 class Multiply {
 public:
-  static int twoValues(const int x, const int y);  
+  static int TwoValues(const int x, const int y);  
 };
+
 #endif

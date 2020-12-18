@@ -3,5 +3,5 @@
 # include "cubic.h"
 
 TEST(testMath, myCubeTest) {
-    EXPECT_EQ(1000, cubic(10));	
+    EXPECT_EQ(1000, Cubic(10));	
 }

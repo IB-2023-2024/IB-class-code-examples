@@ -1,9 +1,9 @@
-#ifndef EXAMPLEPROJECT_FORMULA_H
-#define EXAMPLEPROJECT_FORMULA_H
+#ifndef FORMULA_H
+#define FORMULA_H
 
 class Formula {
  public:
-  static int bla(int arg1);
+  static int Bla(int arg1);
 };
 
-#endif //EXAMPLEPROJECT_FORMULA_H
+#endif 

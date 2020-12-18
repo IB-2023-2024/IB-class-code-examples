@@ -1,7 +1,9 @@
-#ifndef _ADDITION_HPP_
-#define _ADDITION_HPP_
+#ifndef ADDITION_H
+#define ADDITION_H
+
 class Addition {
 public:
-  static int twoValues(const int x, const int y);  
+  static int TwoValues(const int x, const int y);  
 };
+
 #endif
