@@ -20,6 +20,7 @@
 #include "multiply.h"
 #include "square_root.h"
 #include "date.h"
+#include "sample2.h"
 
 int main(int argc, char **argv) {
   const int kValue1{4};
@@ -45,5 +46,10 @@ int main(int argc, char **argv) {
 	  std::cout << date3 << " <= " << date2 << std::endl;
 	}
 	std::cout << "Date: " << date2 << std::endl;
+
+
+	MyString cadena{"12"};
+	std::cout << "Longitud: " << cadena.Length() << std::endl;
+
   return 0;
 }

@@ -62,6 +62,9 @@ add_executable(runTests
     src/square_root.h
     src/square_root.cc
     test/test_square_root.cc
+    src/sample2.h
+    src/sample2.cc
+    test/sample2_unittest.cc
     src/cubic.h
     src/cubic.cc
 		test/test_cubic.cc)
@@ -81,6 +84,7 @@ add_executable(user_program
     src/square_root.cc
     src/date.h
     src/date.cc
+		src/sample2.cc
 		src/main_program.cc)
 
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
