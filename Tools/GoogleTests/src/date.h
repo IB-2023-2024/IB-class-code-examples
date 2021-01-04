@@ -22,7 +22,7 @@
 
 #ifndef DATE_H
 #define DATE_H
- 
+
 class Date {
  private:
   int year_{};
@@ -39,5 +39,7 @@ class Date {
 	friend bool operator== (const Date &d1, const Date &d2);
 	friend bool operator> (const Date &d1, const Date &d2);
 };
+
+std::string ToString(const Date $date);
  
 #endif

@@ -17,15 +17,15 @@
 using std::cout; using std::endl;
 
 class Vector { // 2D vector class
-  public:
-    Vector() : x_ (0.0), y_ (0.0) {}        // Initializer list
-    Vector(double x, double y) : x_ (x), y_ (y) {}
-    double x() const { return x_; }
-    double y() const { return y_; }
-    friend std::ostream& operator<< (std::ostream &out, const Vector &vector);
-  private:
-    double x_; // The x component
-    double y_; // The y component
+ public:
+  Vector() : x_ (0.0), y_ (0.0) {}        // Initializer list
+  Vector(double x, double y) : x_ (x), y_ (y) {}
+  double x() const { return x_; }
+  double y() const { return y_; }
+  friend std::ostream& operator<< (std::ostream &out, const Vector &vector);
+ private:
+  double x_; // The x component
+  double y_; // The y component
 };
 
 // Vector addition

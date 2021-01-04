@@ -8,23 +8,23 @@
  * @date 15 Dec 2020
  * @brief Illustrate different initializations supported in C++
  *
- * @see https://www.learncpp.com/cpp-tutorial/911-the-copy-constructor/
+ * @see https://www.learncpp.com/cpp-tutorial/the-copy-constructor/
  */
 
 #include <iostream>
 
 class Point {
  private:
-  double x_, y_, z_;    // Point coordinates
+  double x_, y_, z_;    // 3D Point coordinates
 
  public:
   Point(double x = 0.0, double y = 0.0, double z = 0.0): x_{x}, y_{y}, z_{z} { 
 		std::cout << "The constructor has been called..." << std::endl;
 	}
   friend std::ostream& operator<<(std::ostream &out, const Point &point);
-  double getX() const { return x_; }
-  double getY() const { return y_; }
-  double getZ() const { return z_; }
+  double x() const { return x_; }
+  double y() const { return y_; }
+  double z() const { return z_; }
 };
 
 // Overloaded operator << (insertion)
@@ -38,7 +38,7 @@ int main() {
   Point my_point1(1.0, 1.0, 1.0); // Direct initialize a Point, calls Point(double, double, double) constructor
   std::cout << "my_point1 is: " << my_point1 << std::endl;
 
-	int my_var2 { 2 }; // Uniform initialization of an integer
+	int my_var2 {2}; // Uniform initialization of an integer
   Point my_point2 {2.0, 2.0, 2.0}; // Uniform initialization of a Point, calls Point(double, double, double) constructor
   std::cout << "my_point2 is: " << my_point2 << std::endl;
 
@@ -50,7 +50,7 @@ int main() {
   std::cout << "my_point3 is: " << my_point3 << std::endl;
   std::cout << "my_point4 is: " << my_point4 << std::endl;
 
-  Point my_point5{}; // use default constructor to set to (0.0, 0.0, 0.0)
+  Point my_point5{1.0, 2.0, 3.0}; // use default constructor to set to (1.0, 2.0, 3.0)
   std::cout << "my_point5 is: " << my_point5 << std::endl;
   Point p_copy(my_point5);
   std::cout << "p_copy is: " << p_copy << std::endl;

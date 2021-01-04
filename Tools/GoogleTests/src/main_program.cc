@@ -47,9 +47,10 @@ int main(int argc, char **argv) {
 	}
 	std::cout << "Date: " << date2 << std::endl;
 
-
 	MyString cadena{"12"};
 	std::cout << "Longitud: " << cadena.Length() << std::endl;
+  
+	std::cout << "ToString: " << ToString(date1) << std::endl;
 
   return 0;
 }

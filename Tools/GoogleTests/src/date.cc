@@ -18,6 +18,8 @@
  */
 
 #include <iostream>
+#include <sstream>
+#include <string>
 
 #include "date.h"
 
@@ -25,6 +27,19 @@
 std::ostream& operator<< (std::ostream &out, const Date& date) {
  out << date.day() << "/" << date.month() << "/" << date.year(); // actual output done here
  return out; // return std::ostream so we can chain calls to operator<<
+}
+
+
+// Convierte una Fecha en string
+std::string ToString(const Date date) {
+	std::string resultado{""};
+  std::stringstream os;
+
+	// resultado = resultado + date.day() + "/" + date.month() + "/" + date.year();
+	os << date.day() << "/" << date.month() << "/" << date.year();
+  os >> resultado;
+
+	return resultado;
 }
 
 bool operator== (const Date &d1, const Date &d2) {

@@ -65,6 +65,9 @@ add_executable(runTests
     src/sample2.h
     src/sample2.cc
     test/sample2_unittest.cc
+    src/date.h
+    src/date.cc
+    test/test_date.cc
     src/cubic.h
     src/cubic.cc
 		test/test_cubic.cc)

@@ -19,14 +19,14 @@
 using std::cout; using std::endl;
 
 class Complex {     // Complex number type
-  public:
-    Complex(double re, double im) : re_(re), im_(im) {}
-    double real() const { return re_; }
-    double imag() const { return im_; }
-    Complex operator+(const double&);
-  private:
-    double re_;       // The real part
-    double im_;       // The imaginary part
+ public:
+  Complex(double re, double im) : re_(re), im_(im) {}
+  double real() const { return re_; }
+  double imag() const { return im_; }
+  Complex operator+(const double&);
+ private:
+  double re_;       // The real part
+  double im_;       // The imaginary part
 };
 
 // Overload as global function

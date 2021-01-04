@@ -13,6 +13,7 @@
  *        Inside the function body, all references to the left parameter can be removed 
  *
  * @see https://www.learncpp.com/cpp-tutorial/94-overloading-operators-using-member-functions/
+ * @see https://www.learncpp.com/cpp-tutorial/overloading-operators-using-member-functions/
  */
 
 #include <iostream>
@@ -36,6 +37,10 @@ Cents Cents::operator+(int value) {
   return Cents(cents_ + value);
 }
 
+// The expression cents1 + 2 becomes function call cents1.operator+(2). 
+// Note that there is now only one explicit function parameter, and cents1 has become an object prefix. 
+// However, we know that the compiler implicitly converts an object prefix into a hidden leftmost parameter named *this. 
+// So in actuality, cents1.operator+(2) becomes operator+(&cents1, 2).
 int main() {
 	Cents cents1{6};
 	Cents cents2 = cents1 + 2;

@@ -15,7 +15,7 @@
  *        The overloaded operator! for this class returns the boolean value “true” 
  *        if the Point is set to the default value at coordinate (0.0, 0.0, 0.0). 
  *
- * @see https://www.learncpp.com/cpp-tutorial/95-overloading-unary-operators/
+ * @see https://www.learncpp.com/cpp-tutorial/overloading-unary-operators/
  */
 
 #include <iostream>

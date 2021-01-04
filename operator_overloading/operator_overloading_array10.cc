@@ -18,24 +18,24 @@
 using std::cout; using std::endl;
 
 class Array10 { // Ten-element real array class
-  public:
-    static const int kArraySize = 10;
-    Array10 () {
-      for (int i = 0; i < kArraySize; ++i) {  // Zero array
-        data_[i] = 0;
-      }
+ public:
+  static const int kArraySize = 10;
+  Array10 () {
+    for (int i = 0; i < kArraySize; ++i) {  // Zero array
+      data_[i] = 0;
     }
+  }
 
-    const double& operator[](int index) const {
-      return data_[index];
-    }
+  const double& operator[](int index) const {
+    return data_[index];
+  }
 
-    double& operator[](int index) {
-      return data_[index];
-    }
+  double& operator[](int index) {
+    return data_[index];
+  }
 
-  private:
-    double data_[kArraySize]; // array data
+ private:
+  double data_[kArraySize]; // array data
 };
 
 void Func () {

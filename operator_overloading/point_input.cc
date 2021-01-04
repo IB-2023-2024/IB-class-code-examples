@@ -12,6 +12,8 @@
  *        The key thing you need to know is that std::cin is an object of type std::istream
  *
  * @see https://www.learncpp.com/cpp-tutorial/93-overloading-the-io-operators/
+ * @see https://www.learncpp.com/cpp-tutorial/overloading-the-io-operators/
+ *
  */
 
 #include <iostream>
@@ -32,14 +34,14 @@ class Point {
 };
 
 // Since operator<< is a friend of the Point class, we can access Point's members directly.
-std::ostream& operator<< (std::ostream &out, const Point &point) {
+std::ostream& operator<<(std::ostream &out, const Point &point) {
   out << "Point(" << point.x_ << ", " << point.y_ << ", " << point.z_ << ')';
   return out;
 }
 
-// Since operator>> is a friend of the Point class, we can access Point's members directly.
+// Again, since operator>> is a friend of the Point class, we can access Point's members directly.
 // note that parameter point must be non-const so we can modify the class members with the input values
-std::istream& operator>> (std::istream &in, Point &point) {
+std::istream& operator>>(std::istream &in, Point &point) {
   in >> point.x_;
   in >> point.y_;
   in >> point.z_;

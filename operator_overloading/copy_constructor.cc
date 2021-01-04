@@ -8,6 +8,7 @@
  * @date 30 Jun 2020
  * @brief Copy constructor
  *
+ * @see https://www.learncpp.com/cpp-tutorial/the-copy-constructor/
  * @see http://www.cplusplus.com/doc/tutorial/classes2/#copy_constructor
  * @see http://www.cplusplus.com/doc/tutorial/classes/
  * @see http://www.cplusplus.com/doc/tutorial/classes2/
@@ -23,9 +24,9 @@ class Vector {   /// Two-dimensional vector class
     std::cout << "Class constructor has been called" << std::endl;
   }
 
-  Vector(const Vector& v) { /// Copy constructor
-    x_ = v.x_; 
-    y_ = v.y_;
+  Vector(const Vector& other) { /// Copy constructor
+    x_ = other.x_; 
+    y_ = other.y_;
     std::cout << "Copy constructor has been called" << std::endl;
   }
 
@@ -38,10 +39,9 @@ class Vector {   /// Two-dimensional vector class
 
 int main() {
   std::cout << "Previous to object v declaration" << std::endl;
-  Vector v;
+  ector v;
   std::cout << "After object v declaration" << std::endl;
   Vector w(v);    /// calls Vector(const Vector&)
   Vector u = v;   /// calls Vector(const Vector&)
   return 0;
 }
-

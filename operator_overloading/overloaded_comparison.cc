@@ -11,7 +11,7 @@
  *        that do not modify their left operands, we will make our 
  *        overloaded comparison operators friend functions
  *    
- * @see https://www.learncpp.com/cpp-tutorial/96-overloading-the-comparison-operators/
+ * @see https://www.learncpp.com/cpp-tutorial/overloading-the-comparison-operators/
  */
 
 
@@ -24,19 +24,21 @@ class Coche {
   std::string modelo_;
 
  public:
-  Coche(const std::string& make, const std::string& model)
-        : marca_{ make }, modelo_{ model }
+  Coche(const std::string& marca, const std::string& modelo)
+        : marca_{ marca }, modelo_{ modelo }
   { }
 
-  friend bool operator== (const Coche &c1, const Coche &c2);
-  friend bool operator!= (const Coche &c1, const Coche &c2);
+  friend bool operator==(const Coche &c1, const Coche &c2);
+  friend bool operator!=(const Coche &c1, const Coche &c2);
 };
 
-bool operator== (const Coche &c1, const Coche &c2) {
+bool operator==(const Coche &c1, const Coche &c2) {
   return (c1.marca_ == c2.marca_ && c1.modelo_ == c2.modelo_);
 }
 
-bool operator!= (const Coche &c1, const Coche &c2) {
+// Because the result of operator!= is the opposite of operator==, we define operator!= in terms of operator==, 
+// which helps keep things simpler, more error free, and reduces the amount of code we have to write.
+bool operator!=(const Coche &c1, const Coche &c2) {
   return !(c1 == c2);
 }
 
