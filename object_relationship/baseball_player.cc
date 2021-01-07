@@ -18,8 +18,8 @@ class Person {
   std::string name_{};
   int age_{};
 
-  const std::string& getName() const { return name_; }
-  int getAge() const { return age_; }
+  const std::string& name() const { return name_; }
+  int age() const { return age_; }
 
   Person(const std::string& name = "", int age = 0) : name_{name}, age_{age} {
   }
@@ -41,7 +41,7 @@ int main() {
   // Assign it a name (we can do this directly because m_name is public. It should not be!)
   joe.name_ = "Joe";
   // Print out the name
-  std::cout << joe.getName() << '\n'; // use the getName() function we've acquired from the Person base class
+  std::cout << joe.name() << '\n'; // use the name() function we've acquired from the Person base class
 
   return 0;
 }

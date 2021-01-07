@@ -35,7 +35,7 @@ std::ostream& operator<<(std::ostream &out, const Doctor &doctor) {
 
 	out << doctor.name_ << " está llevando a los pacientes: ";
 	for (const auto& patient : doctor.patient_)
-		out << patient.get().getName() << ", ";
+		out << patient.get().name() << ", ";
 
 	return out;
 }

@@ -32,7 +32,7 @@ int main() {
 
   // sande still exists here, but the department doesn't
 
-  std::cout << einstein.getName() << " still exists!\n";
+  std::cout << einstein.name() << " still exists!\n";
 
   return 0;
 }

@@ -25,13 +25,13 @@ void Patient::addDoctor(const Doctor& doctor) {
 
 std::ostream& operator<<(std::ostream &out, const Patient &patient) {
 	if (patient.doctor_.empty()) {
-		out << patient.getName() << " No tiene doctores en este momento";
+		out << patient.name() << " No tiene doctores en este momento";
 		return out;
 	}
 
 	out << patient.name_ << " está viendo a los doctores: ";
 	for (const auto& doctor : patient.doctor_)
-		out << doctor.get().getName() << ", ";
+		out << doctor.get().name() << ", ";
 
 	return out;
 }

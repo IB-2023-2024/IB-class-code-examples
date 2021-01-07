@@ -20,13 +20,12 @@
 #include <string>
 
 class Teacher {
- private:
-  std::string name_{};
- 
  public:
   Teacher(const std::string& name) : name_{ name } {
   }
  
-  const std::string& getName() const { return name_; }
+  const std::string& name() const { return name_; }
+ private:
+  std::string name_{};
 };
 #endif

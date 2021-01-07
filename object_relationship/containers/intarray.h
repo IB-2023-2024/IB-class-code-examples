@@ -16,9 +16,6 @@
 #include <cassert> // for assert()
 
 class IntArray {
- private:
-  int length_{};
-  int *data_{};
  public:
   IntArray() = default;
   IntArray(int length);
@@ -33,6 +30,9 @@ class IntArray {
   void insertAtBeginning(int value);
   void insertAtEnd(int value); 
   int getLength() const;
+ private:
+  int length_{};
+  int *data_{};
 };
 
 #endif

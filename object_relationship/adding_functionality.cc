@@ -15,14 +15,13 @@
 #include <iostream>
 
 class Base {
- protected:
-  int value_;
-
  public:
   Base(int value) : value_(value) {
   }
 
   void identify() { std::cout << "I am a Base\n"; }
+ protected:
+  int value_;
 };
 
 class Derived: public Base {
@@ -30,7 +29,7 @@ class Derived: public Base {
   Derived(int value) : Base(value) {
   }
 
-  int getValue() { return value_; }
+  int value() { return value_; }
 
   void identify() { 
 		Base::identify(); // call Base::identify() first

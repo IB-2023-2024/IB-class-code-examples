@@ -22,27 +22,25 @@
 #include <iostream>
 
 class Base {
- private:
-  int id_;
-
  public:
   Base(int id = 0) : id_{id} {
 		std::cout << "Constructor Base(int) llamado" << std::endl;
   }
 
   int getId() const { return id_; }
+ private:
+  int id_;
 };
 
 class Derived: public Base {
- private:
-  double cost_;
-  
  public:
  Derived(double cost = 0.0, int id = 0) : Base{ id }, cost_{ cost } {
 		std::cout << "Constructor Derived (double, int) llamado" << std::endl;
  }
 
   double getCost() const { return cost_; }
+ private:
+  double cost_;
 };
 
 int main() {

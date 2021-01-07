@@ -20,15 +20,14 @@
 #include "point2D.h"
 
 class Creature {
- private:
-  std::string name_;
-  Point2D location_;
-
  public:
   Creature(const std::string &name, const Point2D &location) : name_{ name }, location_{ location } {
   }
 
   friend std::ostream& operator<<(std::ostream& out, const Creature &creature);
   void moveTo(int x, int y);
+ private:
+  std::string name_;
+  Point2D location_;
 };
 #endif

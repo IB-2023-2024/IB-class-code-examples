@@ -22,14 +22,13 @@
 #include <iostream>
 
 class Base {
- protected:
-  int value_;
-
  public:
   Base(int value) : value_(value) {
   }
 
   void identify() { std::cout << "I am a Base\n"; }
+ protected:
+  int value_;
 };
 
 class Derived: public Base {

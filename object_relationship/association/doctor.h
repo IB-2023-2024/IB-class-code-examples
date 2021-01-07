@@ -19,17 +19,16 @@
 class Patient;
 
 class Doctor {
- private:
-	std::string name_{};
-	std::vector<std::reference_wrapper<const Patient>> patient_{};
-
  public:
 	Doctor(const std::string& name) : name_{ name } {
 	}
 
 	void addPatient(Patient& patient);
 	friend std::ostream& operator<<(std::ostream &out, const Doctor &doctor);
-	const std::string& getName() const { return name_; }
+	const std::string& name() const { return name_; }
+ private:
+	std::string name_{};
+	std::vector<std::reference_wrapper<const Patient>> patient_{};
 };
 
 #endif

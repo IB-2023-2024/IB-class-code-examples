@@ -17,10 +17,6 @@
 #include <iostream>
 
 class Point2D {
- private:
-  int x_;
-  int y_;
-
  public:
   // A default constructor
   Point2D() : x_{ 0 }, y_{ 0 } { 
@@ -35,6 +31,9 @@ class Point2D {
 
   // Access functions
   void setPoint(int x, int y);
+ private:
+  int x_;
+  int y_;
 };
 
 #endif

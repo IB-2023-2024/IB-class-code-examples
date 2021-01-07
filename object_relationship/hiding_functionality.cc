@@ -27,15 +27,14 @@ class Base {
 };
 
 class Derived : public Base {
- private:
-	using Base::value_;
-
  public:
 	// We can't initialize value_, since it's a Base member (Base must initialize it)
 	// But we can assign it a value
 	Derived(int value) {
 		value_ = value;
 	}
+ private:
+	using Base::value_;
 };
 
 int main() {

@@ -18,8 +18,8 @@ class Person {
   std::string name_{};
   int age_{};
 
-  const std::string& getName() const { return name_; }
-  int getAge() const { return age_; }
+  const std::string& name() const { return name_; }
+  int age() const { return age_; }
 
   Person(const std::string& name = "", int age = 0) : name_{name}, age_{age} {
   }

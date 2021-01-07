@@ -25,13 +25,13 @@
 #include <iostream>
 
 class Base {
- private:
-  int value_;
  public:
   Base(int value) : value_(value) {
   }
  protected:
   void printValue() { std::cout << value_ << std::endl; }
+ private:
+  int value_;
 };
 
 /**

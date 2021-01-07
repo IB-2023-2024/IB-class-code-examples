@@ -18,7 +18,6 @@
 class Base {
  protected:
   int value_;
-
  public:
   Base(int value) : value_(value) {
   }
@@ -31,7 +30,7 @@ class Derived: public Base {
   Derived(int value) : Base(value) {
   }
 
-  int getValue() { return value_; }
+  int value() { return value_; }
 
   // Here's our modified function
   void identify() { std::cout << "I am a Derived\n"; }

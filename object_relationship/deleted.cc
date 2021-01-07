@@ -17,12 +17,12 @@
 #include <iostream>
 
 class Base {
- private:
-	int value_;
  public:
 	Base(int value) : value_(value) {
 	}
-	int getValue() { return value_; }
+	int value() { return value_; }
+ private:
+	int value_;
 };
 
 class Derived : public Base {
@@ -30,14 +30,14 @@ class Derived : public Base {
 	Derived(int value) : Base(value) {
 	}
 
-	int getValue() = delete; // mark this function as inaccessible
+	int value() = delete; // mark this function as inaccessible
 };
 
 int main() {
 	Derived derived(7);
 
-	// The following won't work because getValue() has been deleted!
-	std::cout << derived.getValue();
+	// The following won't work because value() has been deleted!
+	std::cout << derived.value();
 
 	return 0;
 }
