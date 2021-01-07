@@ -14,11 +14,6 @@
 #include <iostream>
 
 class Date {
- private:
-  int year_;
-  int month_;
-  int day_;
-
  public:
   /// Tell the compiler to create a default constructor, even if
   /// there are other user-provided constructors.
@@ -34,6 +29,10 @@ class Date {
   int year() { return year_; }
   int month() { return month_; }
   int day() { return day_; }
+ private:
+  int year_;
+  int month_;
+  int day_;
 };
 
 int main() {

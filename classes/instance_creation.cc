@@ -17,9 +17,6 @@
 #include <iostream>
 
 class SomeClass {
- private:
-  float a_{0.0};               /// Because of in-place initialization
-  float b_{0.0};               /// Default constructor is not needed
  public:
   SomeClass() {                /// Default constructor
     a_ = 0.0;
@@ -43,6 +40,9 @@ class SomeClass {
     std::cout << "Destructor has been called" << std::endl;
     return;
   }
+ private:
+  float a_{0.0};               /// Because of in-place initialization
+  float b_{0.0};               /// Default constructor is not needed
 };
 
 // How to use them?

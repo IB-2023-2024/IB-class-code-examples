@@ -30,19 +30,19 @@
 class Humidity;
 
 class Temperature {
- private:
-  int temp_;
  public:
   Temperature(int temp = 0) { temp_ = temp; }
   friend void PrintWeather(const Temperature &temperature, const Humidity &humidity);
+ private:
+  int temp_;
 };
 
 class Humidity {
- private:
-  int humidity_;
  public:
   Humidity(int humidity=0) { humidity_ = humidity; }
   friend void PrintWeather(const Temperature &temperature, const Humidity &humidity);
+ private:
+  int humidity_;
 };
 
 void PrintWeather(const Temperature &temperature, const Humidity &humidity) {

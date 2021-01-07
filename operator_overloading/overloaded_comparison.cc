@@ -19,10 +19,6 @@
 #include <string>
 
 class Coche {
- private:
-  std::string marca_;
-  std::string modelo_;
-
  public:
   Coche(const std::string& marca, const std::string& modelo)
         : marca_{ marca }, modelo_{ modelo }
@@ -30,6 +26,9 @@ class Coche {
 
   friend bool operator==(const Coche &c1, const Coche &c2);
   friend bool operator!=(const Coche &c1, const Coche &c2);
+ private:
+  std::string marca_;
+  std::string modelo_;
 };
 
 bool operator==(const Coche &c1, const Coche &c2) {

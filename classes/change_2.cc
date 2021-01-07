@@ -15,14 +15,13 @@
 #include <iostream>
  
 class Something {
+ public:
+  void SetValue1(int value) { value1_ = value; }
+  int GetValue1() { return value1_; }
  private:
   int value1_{0};
   int value2_{0};
   int value3_{0};
- 
- public:
-  void SetValue1(int value) { value1_ = value; }
-  int GetValue1() { return value1_; }
 };
  
 int main() {

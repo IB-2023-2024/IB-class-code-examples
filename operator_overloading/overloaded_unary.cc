@@ -21,9 +21,6 @@
 #include <iostream>
 
 class Point {
- private:
-  double x_, y_, z_;
-
  public:
   Point(double x = 0.0, double y = 0.0, double z = 0.0): x_{x}, y_{y}, z_{z}
   { }
@@ -31,24 +28,32 @@ class Point {
   Point operator- () const;
   bool operator! () const;
 
-  double getX() const { return x_; }
-  double getY() const { return y_; }
-  double getZ() const { return z_; }
+  double x() const { return x_; }
+  double y() const { return y_; }
+  double z() const { return z_; }
+ private:
+  double x_, y_, z_;
 };
 
 // Convert a Point into its negative equivalent
-Point Point::operator- () const {
+Point Point::operator-() const {
   return Point(-x_, -y_, -z_);
 }
 
 // Return true if the point is set at the origin, false otherwise
-bool Point::operator! () const {
+bool Point::operator!() const {
   return (x_ == 0.0 && y_ == 0.0 && z_ == 0.0);
 }
 
 int main() {
-  Point point{}; // use default constructor to set to (0.0, 0.0, 0.0)
+  Point point{1.0, 2.0, 3.0}; // use default constructor to set to (1.0, 2.0, 3.0)
   if (!point)
+    std::cout << "point is set at the origin.\n";
+  else
+    std::cout << "point is not set at the origin.\n";
+  
+  Point point2{-point};
+  if (!point2)
     std::cout << "point is set at the origin.\n";
   else
     std::cout << "point is not set at the origin.\n";

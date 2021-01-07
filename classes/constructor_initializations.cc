@@ -15,7 +15,7 @@
 #include <iostream>
 
 class Something {
-public:
+ public:
   /// Default constructor
   Something(int n = 0, double d = 1.2) { // allows us to construct a Something(int, double), Something(int), or Something()
   }

@@ -17,11 +17,10 @@
 #include <iostream>
 
 class IDGenerator {
- private:
-  static int next_ID; // Declaration for a static member
-
  public:
   static int getNextID(); // Declaration for a static function
+ private:
+  static int next_ID; // Declaration for a static member
 };
 
 // Here's the definition of the static member outside the class.  

@@ -19,9 +19,6 @@
 #include <iostream>
 
 class Cents {
- private:
-  int cents_;
-
  public:
   Cents(int cents) { cents_ = cents; }
 
@@ -29,10 +26,12 @@ class Cents {
   Cents operator+(int value);
 	// getter
   int cents() const { return cents_; }
+ private:
+  int cents_;
 };
 
 // note: this function is a member function!
-// the cents parameter in the friend version is now the implicit *this parameter
+// the cents parameter we used in the friend version is now the implicit *this parameter
 Cents Cents::operator+(int value) {
   return Cents(cents_ + value);
 }

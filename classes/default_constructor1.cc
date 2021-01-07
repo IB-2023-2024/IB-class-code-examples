@@ -13,18 +13,18 @@
 
 #include <iostream>
 
+/// No constructor provided, so C++ creates a public default constructor for us
 class Date {
- private:
-  int year_;
-  int month_;
-  int day_;
-  /// No constructor provided, so C++ creates a public default constructor for us
  public:
   /// getters 
   /// Google Style:  accessors and mutators may be named like variables.
   int year() { return year_; }
   int month() { return month_; }
   int day() { return day_; }
+ private:
+  int year_;
+  int month_;
+  int day_;
 };
 
 int main() {

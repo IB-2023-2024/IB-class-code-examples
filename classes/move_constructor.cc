@@ -17,30 +17,30 @@
 #include <iostream>
 
 class Vector {          /// Two-dimensional vector class
-  public:
-    Vector() {          /// Default constructor
-      x_ = 0.0;
-      y_ = 0.0;
-      std::cout << "Class constructor has been called" << std::endl;
-    }
+ public:
+  Vector() {          /// Default constructor
+    x_ = 0.0;
+    y_ = 0.0;
+    std::cout << "Class constructor has been called" << std::endl;
+  }
 
-    Vector(const Vector& v) { /// Copy constructor
-      x_ = v.x_; 
-      y_ = v.y_;
-      std::cout << "Copy constructor has been called" << std::endl;
-    }
+  Vector(const Vector& v) { /// Copy constructor
+    x_ = v.x_; 
+    y_ = v.y_;
+    std::cout << "Copy constructor has been called" << std::endl;
+  }
 
-    Vector(Vector&& v) {     /// Move constructor
-      x_ = v.x_; 
-      y_ = v.y_;
-      std::cout << "Move constructor has been called" << std::endl;
-    }
+  Vector(Vector&& v) {     /// Move constructor
+    x_ = v.x_; 
+    y_ = v.y_;
+    std::cout << "Move constructor has been called" << std::endl;
+  }
 
   // ...
 
-  private:
-    double x_{0.0} ;         /// The x component of the vector
-    double y_{0.0} ;         /// The y component of the vector
+ private:
+  double x_{0.0} ;         /// The x component of the vector
+  double y_{0.0} ;         /// The y component of the vector
 };
 
 Vector Func() {          // Func returns a Vector object

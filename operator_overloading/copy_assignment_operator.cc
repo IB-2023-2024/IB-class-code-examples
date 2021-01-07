@@ -15,10 +15,6 @@
 #include <iostream>
 
 class Fraction {
- private:
-  int numerator_{0};
-  int denominator_{1};  // Should not be 0
-
  public:
   // Default constructor
   Fraction(int numerator = 0, int denominator = 1) : numerator_(numerator), denominator_(denominator) {
@@ -35,6 +31,9 @@ class Fraction {
   Fraction& operator= (const Fraction &other_fraction);
 
   friend std::ostream& operator<<(std::ostream& out, const Fraction &f1);
+ private:
+  int numerator_{0};
+  int denominator_{1};  // Should not be 0
 };
 
 std::ostream& operator<<(std::ostream& out, const Fraction &f1) {

@@ -27,13 +27,12 @@
 #include <iostream>
 
 class Something {
- private:
-  static int id_Generator_;
-  int id_;
-
  public:
   Something() { id_ = id_Generator_++; } // grab the next value from the id generator
   int GetID() const { return id_; }
+ private:
+  static int id_Generator_;
+  int id_;
 };
 
 // Note that we're defining and initializing s_idGenerator even though it is declared as private above.

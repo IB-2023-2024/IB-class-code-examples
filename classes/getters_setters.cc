@@ -15,11 +15,6 @@
 #include <iostream>
  
 class DateClass {
- private:
-  int year_{};  // Initialize to 0
-  int month_{};
-  int day_{};
- 
  public:
   void Print() {
     std::cout << day_ << '/' << month_ << '/' << year_ << std::endl;
@@ -32,6 +27,10 @@ class DateClass {
  
   int GetYear() { return year_; } // getter for year
   void SetYear(int year) { year_ = year; } // setter for year
+ private:
+  int year_{};  // Initialize to 0
+  int month_{};
+  int day_{};
 };
  
 int main() {

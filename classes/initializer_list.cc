@@ -28,11 +28,6 @@
 #include <iostream>
 
 class Something {
- private:
-  int value1_;
-  double value2_;
-  char value3_;
-
  public:
   Something() : value1_{ 1 }, value2_{ 2.2 }, value3_{ 'c' } {   // Initialize our member variables
   // No need for assignment here
@@ -42,6 +37,10 @@ class Something {
   void Print() {
     std::cout << "Something(" << value1_ << ", " << value2_ << ", " << value3_ << ")\n";
   }
+ private:
+  int value1_;
+  double value2_;
+  char value3_;
 };
 
 int main() {

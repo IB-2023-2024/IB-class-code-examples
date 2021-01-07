@@ -50,13 +50,13 @@
 #include <iostream>
 
 class Simple {
-private:
-  int id_;
-public:
+ public:
   Simple(int id) : id_{ id } { }
 
   void setID(int id) { id_ = id; }
   int getID() { return id_; }
+ private:
+  int id_;
 };
 
 int main() {

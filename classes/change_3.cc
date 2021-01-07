@@ -15,13 +15,12 @@
 #include <iostream>
  
 class Something {
-private:
-  int value_[3]; // note: we changed the implementation of this class!
- 
-public:
+ public:
   // We have to update any member functions to reflect the new implementation
   void SetValue1(int value) { value_[0] = value; }
   int GetValue1() { return value_[0]; }
+ private:
+  int value_[3]; // note: we changed the implementation of this class!
 };
  
 int main() {

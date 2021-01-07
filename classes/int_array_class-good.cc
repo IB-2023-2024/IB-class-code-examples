@@ -14,10 +14,6 @@
 #include <iostream>
 
 class IntArray {
- private:
-  static const int kSize = 10;
-  int store_[kSize]; /// user can not access this directly any more
-
  public:
   void SetValue(int index, int value) {
     // If the index is invalid, do nothing
@@ -27,6 +23,9 @@ class IntArray {
     }
     store_[index] = value;
   }
+ private:
+  static const int kSize = 10;
+  int store_[kSize]; /// user can not access this directly any more
 };
 
 int main() {

@@ -24,11 +24,6 @@
 #define DATE_H
  
 class Date {
- private:
-  int year_;
-  int month_;
-  int day_;
- 
  public:
   Date() = default;  /// Tell the compiler to create a default constructor
   Date(int year, int month, int day);
@@ -37,6 +32,10 @@ class Date {
   int getYear() { return year_; }
   int getMonth() { return month_; }
   int getDay()  { return day_; }
+ private:
+  int year_;
+  int month_;
+  int day_;
 };
  
 #endif

@@ -46,18 +46,16 @@
 #include <iostream>
 
 class Point {
+ public:
+  Point(double x = 0.0, double y = 0.0, double z = 0.0) : x_{x}, y_{y}, z_{z} {
+    std::cout << "Point constructor has been called" << std::endl;
+  }
+
+  friend std::ostream& operator<<(std::ostream &out, const Point &point);
  private:
   double x_{};
   double y_{};
   double z_{};
-
- public:
-  Point(double x = 0.0, double y = 0.0, double z = 0.0)
-    : x_{x}, y_{y}, z_{z}
-  {
-  }
-
-  friend std::ostream& operator<<(std::ostream &out, const Point &point);
 };
 
 /// because C++ already knows how to output doubles using operator<<, and our members are 

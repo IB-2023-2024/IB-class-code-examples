@@ -32,8 +32,6 @@
 #include <iostream>
 
 class MyClass {
- private:
-    char* bufferPtr;                       // pointer to start of buffer
  public:
   MyClass(int bufferSize) {              // Constructor
     // allocate some memory for buffer
@@ -48,6 +46,8 @@ class MyClass {
   }
 
   // Additional methods here
+ private:
+    char* bufferPtr;                       // pointer to start of buffer
 };
 
 int main() {

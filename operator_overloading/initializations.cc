@@ -14,9 +14,6 @@
 #include <iostream>
 
 class Point {
- private:
-  double x_, y_, z_;    // 3D Point coordinates
-
  public:
   Point(double x = 0.0, double y = 0.0, double z = 0.0): x_{x}, y_{y}, z_{z} { 
 		std::cout << "The constructor has been called..." << std::endl;
@@ -25,6 +22,8 @@ class Point {
   double x() const { return x_; }
   double y() const { return y_; }
   double z() const { return z_; }
+ private:
+  double x_, y_, z_;    // 3D Point coordinates
 };
 
 // Overloaded operator << (insertion)

@@ -19,18 +19,16 @@
 #include <iostream>
 
 class Point {
- private:
-  double x_{};
-  double y_{};
-  double z_{};
-
  public:
-  Point(double x= 0.0, double y = 0.0, double z = 0.0) : x_{x}, y_{y}, z_{z}
-  {
+  Point(double x = 0.0, double y = 0.0, double z = 0.0) : x_{x}, y_{y}, z_{z} {
   }
 
   friend std::ostream& operator<< (std::ostream &out, const Point &point);
   friend std::istream& operator>> (std::istream &in, Point &point);
+ private:
+  double x_{};
+  double y_{};
+  double z_{};
 };
 
 // Since operator<< is a friend of the Point class, we can access Point's members directly.

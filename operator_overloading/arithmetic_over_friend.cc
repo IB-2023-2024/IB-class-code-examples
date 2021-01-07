@@ -19,19 +19,18 @@
 #include <iostream>
 
 class Cents {
- private:
-	int cents_;
-
  public:
 	Cents(int cents) { cents_ = cents; }
 
-	// add Cents + Cents using a friend function
+	// Add Cents + Cents using a friend function
 	friend Cents operator+(const Cents &c1, const Cents &c2);
 
-	// subtract Cents - Cents using a friend function
+	// Subtract Cents - Cents using a friend function
 	friend Cents operator-(const Cents &c1, const Cents &c2);
 
 	int cents() const { return cents_; }
+ private:
+	int cents_;
 };
 
 // note: this function is not a member function!
