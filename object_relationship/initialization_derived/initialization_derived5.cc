@@ -46,7 +46,7 @@ class Derived: public Base {
 int main() {
   Base base{5}; // use Base(int) constructor
 
-  Derived derived{1.3}; // use Derived(double) constructor
+  Derived derived{1.3, 99}; // use Derived(double) constructor
 	std::cout << "Derived Id: " << derived.getId() << '\n';
   std::cout << "Derived Cost: " << derived.getCost() << '\n';
 
