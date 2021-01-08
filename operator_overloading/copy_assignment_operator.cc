@@ -30,20 +30,20 @@ class Fraction {
   // Overloaded assignment
   Fraction& operator= (const Fraction &other_fraction);
 
-  friend std::ostream& operator<<(std::ostream& out, const Fraction &f1);
+  friend std::ostream& operator<<(std::ostream& out, const Fraction& f1);
  private:
   int numerator_{0};
   int denominator_{1};  // Should not be 0
 };
 
-std::ostream& operator<<(std::ostream& out, const Fraction &f1) {
+std::ostream& operator<<(std::ostream& out, const Fraction& f1) {
   out << f1.numerator_ << "/" << f1.denominator_;
   return out;
 }
 
 // C++ allows self-assignment
 // So we need to deal (take care) with it
-Fraction& Fraction::operator=(const Fraction &other_fraction) {
+Fraction& Fraction::operator=(const Fraction& other_fraction) {
   // self-assignment guard
   if (this == &other_fraction)
     return *this;

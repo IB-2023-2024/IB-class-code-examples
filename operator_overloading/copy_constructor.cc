@@ -38,10 +38,10 @@ class Vector {   /// Two-dimensional vector class
 };
 
 int main() {
-  std::cout << "Previous to object v declaration" << std::endl;
-  ector v;
-  std::cout << "After object v declaration" << std::endl;
-  Vector w(v);    /// calls Vector(const Vector&)
-  Vector u = v;   /// calls Vector(const Vector&)
+  std::cout << "Previous to object my_vec declaration" << std::endl;
+  Vector my_vec;
+  std::cout << "After object my_vec declaration" << std::endl;
+  Vector second(my_vec);    /// calls Vector(const Vector&)
+  Vector third = my_vec;   /// calls Vector(const Vector&)
   return 0;
 }

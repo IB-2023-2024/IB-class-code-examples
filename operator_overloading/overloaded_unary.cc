@@ -25,8 +25,8 @@ class Point {
   Point(double x = 0.0, double y = 0.0, double z = 0.0): x_{x}, y_{y}, z_{z}
   { }
 
-  Point operator- () const;
-  bool operator! () const;
+  Point operator-() const;
+  bool operator!() const;
 
   double x() const { return x_; }
   double y() const { return y_; }

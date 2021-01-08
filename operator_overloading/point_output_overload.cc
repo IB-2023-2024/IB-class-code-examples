@@ -60,7 +60,7 @@ class Point {
 
 /// because C++ already knows how to output doubles using operator<<, and our members are 
 /// all doubles, we can simply use operator<< to output the member variables of our Point.
-std::ostream& operator<< (std::ostream &out, const Point &point) {
+std::ostream& operator<< (std::ostream& out, const Point& point) {
   // Since operator<< is a friend of the Point class, we can access Point's members directly.
   out << "Point(" << point.x_ << ", " << point.y_ << ", " << point.z_ << ')'; // actual output done here
   return out; // return std::ostream so we can chain calls to operator<<
