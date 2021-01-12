@@ -19,7 +19,7 @@
 
 class Timer {
  public:
-  Timer() : start_(clock_t::now()) {
+  Timer() : start_{clock_t::now()} {
   }
  
   void reset();
