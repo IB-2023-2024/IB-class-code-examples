@@ -27,7 +27,7 @@ struct NamedInt {
   std::string name;
 };
 
-void PrintStruct (const NamedInt& s) {
+void PrintStruct(const NamedInt& s) {
   std::cout << s.name << " " << s.num << std::endl;
 }
 
