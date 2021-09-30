@@ -1,0 +1,29 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Operaciones con lenguajes}
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+				Las operaciones de conjuntos se pueden extender a lenguajes (los lenguajes son conjuntos...)
+
+        \pause
+			  Sean $L_1$ y $L_2$ lenguajes sobre un alfabeto $\Sigma$
+      \pause
+
+      \begin{defi}
+			\textbf{Concatenación} (producto cartesiano): 
+			
+			$L_1 \cdot L_2 = L_1 L_2 = \{xy | x \in L_1 \wedge y \in L_2\}$
+
+			$L_1 L_2$ está formado por todas las cadenas formadas concatenando una cadena de $L_1$ con otra de $L_2$
+			\end{defi}
+
+      \pause
+      \begin{block}{Si $L_1 = \{ ni$ñ@$, chic$@$ \}$ y  $L_2 = \{ buen$@$, mal$@$ \}$}
+           \begin{itemize}[<+->]
+           \item $L_1 L_2 = \{ ni$ñ@$buen$@$, ni$ñ@$mal$@$, chic$@$buen$@$, chic$@$mal$ @ $ \}$
+           \item Si $L_1$ es un lenguaje sobre $\Sigma_1$ y $L_2$ es un lenguaje sobre $\Sigma_2$, $L_1 L_2$ es un lenguaje
+					       sobre $\Sigma_1 \cup \Sigma_2$
+           \end{itemize}
+			\end{block}
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

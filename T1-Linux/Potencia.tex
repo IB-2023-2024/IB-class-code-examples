@@ -1,0 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Operaciones con cadenas}
+	   Sea $w \in \Sigma^*$, sea $n \in \mathbb{N}$
+      \begin{defi}
+                   \begin{displaymath}
+                   w^n = \left\{ \begin{array}{ll}
+                                  \epsilon & \textrm{si $n = 0$} \\
+                                  ww^{n-1} & \textrm{si $n > 0$} \\
+                                  \end{array} \right.
+                   \end{displaymath}
+      \end{defi}
+
+      \pause
+			\begin{block}{Ejemplo}
+			  Sea $\Sigma=\{0, 1\}$ y $w=101$
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+           \begin{itemize}[<+->]
+           \item $w^0 = \epsilon$
+           \item $w^1 = w = 101$
+           \item $w^2 = ww = 101101$
+           \item $w^3 = www = 101101101$
+           \item $\ldots$
+           \end{itemize}
+			\end{block}
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

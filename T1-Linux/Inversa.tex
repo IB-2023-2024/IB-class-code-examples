@@ -1,0 +1,34 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Inversa}
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      \begin{defi}
+			Dada una cadena $w\in \Sigma^*$ se define su inversa como:
+
+
+                   \begin{displaymath}
+                   w^i = \left\{ \begin{array}{ll}
+                                  w & \textrm{si $w = \epsilon$} \\
+                                  y^ia & \textrm{si $w=ay$, con $a \in \Sigma, y \in \Sigma^*$} \\
+                                  \end{array} \right.
+                   \end{displaymath}
+      \end{defi}
+      \pause
+
+
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      \begin{block}{Ejemplo. Sea $w = arroz$}
+           \begin{itemize}[<+->]
+           \item $w^i = (arroz)^i =$
+           \item $= (rroz)^i a =$
+           \item $= (roz)^i ra =$
+           \item $= (oz)^i rra =$
+           \item $= (z)^i orra =$
+           \item $= (\epsilon)^i zorra =$
+           \item $= \epsilon zorra =$
+           \item $= zorra =$
+           \end{itemize}
+			\end{block}
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

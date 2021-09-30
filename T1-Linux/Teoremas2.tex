@@ -1,0 +1,23 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Operaciones con Lenguajes}
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      \begin{teor}
+			$\forall A \subseteq \Sigma^*: \; \; A^+ = AA^* = A^*A$
+      \end{teor}
+
+      Veamos el inverso:
+			\pause
+      \begin{demo}
+					 \uncover<2-> {Sea $x \in AA^* = A  \displaystyle\bigcup_{n=0}^{\infty} A^n =$}
+
+					 \uncover<3-> {$= \displaystyle\bigcup_{n=0}^{\infty} (AA^n) \Rightarrow$}
+
+					 \uncover<4-> {$\Rightarrow \exists j \geq 0 | \; x \in AA^j = A^{j+1} \subseteq  \displaystyle\bigcup_{n=1}^{\infty} A^k = A^+ \Rightarrow$}
+
+					 \uncover<5-> {$\Rightarrow AA^* \subseteq A^+$}
+
+					 \uncover<6-> {La demostración del otro teorema es similar a ésta}
+      \end{demo}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

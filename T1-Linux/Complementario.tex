@@ -1,0 +1,30 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Operaciones con lenguajes}
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      \begin{block}{Propiedades de las operaciones de cierre}
+           \begin{itemize}[<+->]
+           \item Si $L$ es un lenguaje sobre $\Sigma$, $L \subseteq \Sigma^*$
+           \item Si $L$ es un lenguaje sobre $\Sigma$, $L^n \subseteq \Sigma^* \; \; \forall n \in \mathbb{N}$
+           \item $L^* \subseteq \Sigma^*$
+           \item $L^+ \subseteq \Sigma^*$
+           \item $\emptyset^0 = \{ \epsilon \}$ y $\emptyset^n = \emptyset \; \; \forall n \geq 1$
+           \item Por lo tanto: $\emptyset ^* =  \{ \epsilon \}$ y $\emptyset ^+ = \emptyset$
+           \end{itemize}
+			\end{block}
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+      \pause
+			Sean $L_1, L_2 \subseteq \Sigma^*$
+      \begin{defi}
+			$L_1 - L_2 = \{w \in \Sigma^* | w \in L_1 \wedge w \not \in L_2\}$
+      \end{defi}
+      \pause
+
+      \pause
+			Sean $L \subseteq \Sigma^*$
+      \begin{defi}
+			\textbf{Complementario}: $\bar L = \Sigma^* - L$
+      \end{defi}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

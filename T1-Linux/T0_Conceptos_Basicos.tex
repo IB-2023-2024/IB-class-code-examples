@@ -1,0 +1,92 @@
+\documentclass{beamer}
+%\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usefonttheme{professionalfonts} % Font de LaTeX
+\usetheme{Boadilla}
+\usepackage{amsmath,amssymb}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[spanish]{babel}
+\usepackage{graphicx,verbatim,fancyvrb,array,listings,lastpage,eurosym}
+\graphicspath{{/usr/local/texmf/logos/}{../imgs/}{FIGURES/png/}}
+\usepackage{tikz}
+%\usepackage[linesnumbered,algonl,boxed]{algorithm2e}
+\usepackage[algonl,noend]{algorithm2e}
+\usepackage{algpseudocode}
+%%%%%%%%%%%%%% Tipo de letra %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{comicsans}
+%\renewcommand{\sfdefault}{comic}
+%%\usepackage{helvet}
+%%\renewcommand{\familydefault}{\sfdefault}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usetikzlibrary{snakes,arrows,shapes}
+\usetikzlibrary{automata}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{teor}{Teorema}
+\newtheorem{coro}{Corolario}
+\newtheorem{demo}{Demostración}
+\newtheorem{ejem}{Ejemplo}
+\newtheorem{defi}{Definición}
+\newtheorem{lema}{Lema}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{marron}     {rgb}{0.496, 0.203, 0.152}
+\definecolor{verde-claro}{rgb}{0.600, 0.980, 0.600}
+\definecolor{oscuro}     {rgb}{0.187, 0.141, 0.285}
+\definecolor{gris}     	 {rgb}{0.500, 0.500, 0.500}
+\definecolor{pastel1}     {rgb}{1.000, 1.000, 0.800}
+\definecolor{pastel}    {rgb}{0.990, 0.960, 0.900}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings}
+\lstloadlanguages{C,[90]Fortran}
+\lstset{
+ language=C,                              % C
+ language=[90]Fortran,                    % Fortran90
+ backgroundcolor=\color{pastel},         % Códigos sobre fondo amarillo
+ %frame=lines,                            % Línea arriba y abajo de cada listado de código
+ basicstyle=\small,                       % Tamaño de letra en listados
+ captionpos=b,
+ emph={pragma,omp,parallel},              % BGD: Resaltar las palabras pragma y omp 
+ extendedchars=true,                      % BGD: Utiliza caracteres extendidos (tildes, etc.) 
+ tabsize=2,                               % BGD: Tamaño de tabulador para indentaciones = 2
+ breaklines=true,                         % BGD: Cortar líneas si son muy grandes
+ breakautoindent=true,                    % BGD: Autoindentar líneas cortadas
+ keywordstyle=\color{black}\textbf,       % BGD: Palabras clave en verde y negrita
+ identifierstyle=\color{black}\ttfamily,
+ commentstyle=\color{blue}\ttfamily,      % comentarios en marron
+ stringstyle=\color{marron},              % cadenas en verde
+ directivestyle=\color{black}\textbf,     % directivas
+ showstringspaces=false
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Conceptos Básicos}
+%\author{F. de Sande}
+%\date{2011--2012}
+\begin{document}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Alfabetos1}
+\input{Alfabetos_ejemplos}
+\input{Alfabetos2}
+\input{Alfabetos3}
+\input{Lenguajes1}
+\input{Lenguajes2}
+\input{Universal}
+\input{Concatenacion}
+\input{Potencia}
+\input{Igualdad}
+\input{Sufijos_prefijos}
+\input{Subcadena}
+\input{Subsecuencia}
+\input{Inversa}
+\input{Concatenacion_lenguajes}
+\input{Potencia_lenguaje}
+\input{Union_interseccion}
+\input{Distributividad}
+\input{Cierres}
+\input{Cierres2}
+\input{Complementario}
+\input{Teoremas}
+\input{Teoremas2}
+\input{Propiedades}
+\input{Inverso_lenguaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

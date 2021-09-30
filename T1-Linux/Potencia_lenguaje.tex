@@ -1,0 +1,31 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Operaciones con lenguajes}
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			  Sea $L$ un lenguaje sobre un alfabeto $\Sigma$
+      \pause
+
+      \begin{defi}
+                   \begin{displaymath}
+                   L^n = \left\{ \begin{array}{ll}
+                                  \{\epsilon\} & \textrm{si $n = 0$} \\
+                                  LL^{n-1} & \textrm{si $n > 0$} \\
+                                  \end{array} \right.
+                   \end{displaymath}
+      \end{defi}
+      \pause
+      \begin{block}{Ejemplo. Si $L = \{ 0 , 1 \}$ }
+           \begin{itemize}[<+->]
+           \item $L^0 = \{ \epsilon \}$
+           \item $L^1 = L =  \{ 0 , 1 \}$
+           \item $L^2 = LL = \{ 00, 01, 10, 11 \}$
+           \item $L^3 = LL^2 = \{ 000, 001, 010, 011, 100, 101, 110, 111 \}$
+           \item $\ldots$
+           \item Obsérvese que $\emptyset ^ 0 =  \{ \epsilon \}$
+           \item $\emptyset ^ n = \emptyset \; \; \forall n \geq 1$
+           \item $\emptyset ^ 1 = \emptyset \emptyset^0 = \{xy | x \in \emptyset \wedge y \in \{\epsilon\} \} = \emptyset$
+           \end{itemize}
+			\end{block}
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
