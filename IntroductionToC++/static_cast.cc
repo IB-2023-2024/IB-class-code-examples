@@ -22,7 +22,7 @@
 int main () {
   // First way:
   char character {97} ;
-  int i_var {character}; // initialize an integer with the value of character
+  int i_var{character}; // initialize an integer with the value of character
   std::cout << i_var << std::endl << std::endl; // print the integer value
 
   // Alternative: a type cast:
