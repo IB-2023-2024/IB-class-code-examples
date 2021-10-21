@@ -46,5 +46,5 @@ clean :
 push:
 	git pull 
 	git add . 
-	git commit -m "Another example" 
+	git commit -m "Minor changes" 
 	git push
