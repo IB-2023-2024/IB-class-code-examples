@@ -19,7 +19,7 @@
  * (including those under any other labels) are also executed, until the end 
  * of the switch block or a jump statement (such as break) is reached.
  *
- * @see http://www.cplusplus.com/doc/tutorial/control/
+ * @see https://www.learncpp.com/cpp-tutorial/switch-statement-basics/
  */
 
 #include <iostream>

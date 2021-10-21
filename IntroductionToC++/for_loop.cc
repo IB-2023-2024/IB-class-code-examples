@@ -7,10 +7,9 @@
  * @author F. de Sande
  * @date 8 Jun 2020
  * @brief for loop
- *
  * Countdown using for
  *
- * @see http://www.cplusplus.com/doc/tutorial/control/
+ * @see https://www.learncpp.com/cpp-tutorial/for-statements/
  */
 
 #include <iostream>
@@ -18,8 +17,8 @@
 int main () {
   const int kNumberOfIterations{10};  // Play modifying this value
 
-  for (int i = kNumberOfIterations; i > 0; i--) {
-    std::cout << i << ", ";
+  for (int number{kNumberOfIterations}; number > 0; --number) {
+    std::cout << number << ", ";
   }
   std::cout << "liftoff!" << std::endl;
 }

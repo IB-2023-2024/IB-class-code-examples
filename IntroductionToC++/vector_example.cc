@@ -29,6 +29,7 @@ using namespace std;
 int main () {
   vector<int> numbers = {1, 2, 3};
   vector<string> names = {"Albert", " Alan"};
+
   names.push_back ("another_string ");
   cout << "First name: " << names.front () << endl;
   cout << "Last number: " << numbers.back () << endl;

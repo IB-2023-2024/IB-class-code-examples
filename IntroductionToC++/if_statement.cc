@@ -10,7 +10,7 @@
  *
  * Modify the code to study different versions of the Conditional Statement
  *
- * @see http://www.cplusplus.com/doc/tutorial/control/
+ * @see https://www.learncpp.com/cpp-tutorial/if-statements-and-blocks/
  */
 
 #include <iostream>
@@ -25,14 +25,16 @@ int main () {
   // Version 2: if-else
   if (kNumber > 0)
     std::cout << "V2 The number is positive" << std::endl;
-  else if (kNumber < 0)
-    std::cout << "V2 The number is negative" << std::endl;
+  else 
+    if (kNumber < 0)
+      std::cout << "V2 The number is negative" << std::endl;
 
   // Version 3: if-else-if
   if (kNumber > 0)
     std::cout << "V3 The number is positive" << std::endl;
-  else if (kNumber < 0)
-    std::cout << "V3 The number is negative" << std::endl;
-  else
-    std::cout << "V3 The number is 0";
+  else 
+    if (kNumber < 0)
+      std::cout << "V3 The number is negative" << std::endl;
+    else
+      std::cout << "V3 The number is 0";
 }
