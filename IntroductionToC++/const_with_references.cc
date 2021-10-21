@@ -11,28 +11,29 @@
  * References are fast but reduce control
  * To avoid unwanted changes use const
  *
- * In this example, num, ref and kRef all reference the same value
+ * In this example, number, ref and kRef all reference the same value
  * They are all 'alias'
  *
  * @see https://www.tutorialspoint.com/cplusplus/cpp_references.htm
  */
 
 # include <iostream>
-using namespace std;
 
 int main () {
-  int num{42}; 
-  int another_num{7};
-  int& ref = num;
-  const int& kRef = num;
-  ref = 0;
-  cout << ref << " " << num << " " << kRef << endl;
-  num = 24;
-  cout << ref << " " << num << " " << kRef << endl;
+  int number{42}; 
+  int another_number{7};
+  int& ref{number};
+  const int& kRef{number};
 
-  ref = another_num;     // You can change the value of ref
-  // kRef = another_num;    // But you can't change (it's const) the value of kRef
-  cout << ref << " " << another_num << " " << kRef << endl;
+  ref = 0;
+  std::cout << ref << " " << number << " " << kRef << std::endl;
+
+  number = 24;
+  std::cout << ref << " " << number << " " << kRef << std::endl;
+
+  ref = another_number;        // You can change the value of ref
+  // kRef = another_number;    // But YOU CAN'T CHANGE (it's const) the value of kRef
+  std::cout << ref << " " << another_number << " " << kRef << std::endl;
 
   return 0;
 }
