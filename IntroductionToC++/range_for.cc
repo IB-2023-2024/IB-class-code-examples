@@ -7,6 +7,9 @@
  * @author F. de Sande
  * @date Oct 21 2021
  * @brief Example of range for (also called for-each)
+ *        Best Practice: In for-each loops element declarations, if your elements 
+ *        are non-fundamental types, use references or const references for 
+ *        performance reasons.
  * @see http://www.cplusplus.com/reference/vector/vector/
  */
 
