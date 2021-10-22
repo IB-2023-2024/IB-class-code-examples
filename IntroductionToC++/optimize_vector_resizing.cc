@@ -26,7 +26,7 @@ int main () {
 
   // Always call reserve when you know the size
   my_vector.reserve(kVecSize);
-  for (int i = 0; i < kVecSize; ++i) {
+  for (int i{0}; i < kVecSize; ++i) {
     my_vector.emplace_back("hello");
   }
 }

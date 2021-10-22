@@ -8,6 +8,7 @@
  * @date Oct 21 2021
  * @brief Reference Example
  * @see https://www.learncpp.com/cpp-tutorial/references/
+ *      https://mayankj08.github.io/2017/08/20/References-In-C++/
  */
 
 #include <iostream>
@@ -17,7 +18,7 @@ int main() {
   int i{42};
   int &j = i; // In this context, & does not mean “address of”, it means “reference to”.
 
-  std::cout << i << '\n'; // print the value of variable i
+  std::cout << i << '\n'; // print the value of i
   std::cout << j << '\n'; // print the value of the reference
 
   assert(j == 42);  // If the assertion is not true, it will halt the program
