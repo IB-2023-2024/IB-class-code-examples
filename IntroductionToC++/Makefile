@@ -38,7 +38,7 @@ hello_world: hello_world.o
 # We can use it for additional housekeeping purposes
 clean :
 	rm -f hello_world *.o
-	rm -rf *~ basura b i
+	rm -rf *~ basura* b i
 	rm -rf a.out
 	find . -name '*~' -exec rm {} \;
 	find . -name basura -exec rm {} \;
