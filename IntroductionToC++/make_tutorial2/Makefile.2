@@ -1,0 +1,8 @@
+blah: blah.o
+	g++ blah.o -o blah # Runs 3rd
+
+blah.o: blah.cc
+	g++ -c blah.cc -o blah.o # Runs 2nd
+
+blah.cc:
+	echo "int main() { return 0; }" > blah.cc # Runs 1st
