@@ -10,14 +10,14 @@
 # @see https://www.gnu.org/software/make/
 # @see http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
 
-CXX = g++						             # The C++ compiler command
-CXXFLAGS = -std=c++14 -g -Wall	 # The C++ compiler options (C++14, preserve debug symbols and warn all)
-LDFLAGS =						             # The linker options (if any)
+CXX = g++						         # The C++ compiler command
+CXXFLAGS = -std=c++14 -Wall	 # The C++ compiler options (C++14, and warn all)
+LDFLAGS =						         # The linker options (if any)
 
 # The all target builds all of the programs handled by the makefile.
 # This target has the dependency chain:
 #     all -> hello -> hello.o -> hello.cc
-all: hello_world if_statement 
+all: hello_world 
 
 # The hello_world target builds the hello_world executable.
 hello_world: hello_world.o
