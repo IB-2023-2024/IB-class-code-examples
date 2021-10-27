@@ -11,7 +11,7 @@
 # @see http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
 
 CXX = g++						# The C++ compiler command
-CXXFLAGS = -g -O0		# The C++ compiler options (preserve debug symbols and No optimization)
+CXXFLAGS = -O0		  # The C++ compiler options (preserve debug symbols and No optimization)
 LDFLAGS =						# The linker options (if any)
 
 # The all target builds all of the programs handled by the makefile.
