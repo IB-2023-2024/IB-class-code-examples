@@ -24,23 +24,21 @@
 
 using namespace std;
 
+// Creates a vector with full squares and return it
 vector<int> CreateVectorOfFullSquares(int size) {
   vector<int> result(size);     // Vector of size `size `
 
-  for (int i = 0; i < size; ++i) {
+  for (int i{0}; i < size; ++i) {
     result[i] = i * i;
   }
   return result;
 }
 
-int main () {
+int main() {
   auto squares = CreateVectorOfFullSquares(20);
-  for (int i = 0; i < 20; ++i) {
+  for (int i{0}; i < 20; ++i) {
     std::cout << squares[i] << ", ";
   }
   std::cout << std::endl;
   return 0;
 }
-
-
-

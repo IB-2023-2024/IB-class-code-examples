@@ -28,7 +28,7 @@ double pow(double base, int exp) {
   return (result);
 }
 
-int main () {
+int main() {
   double x{2.0};
   int power{2};
   double result = pow(x, power);

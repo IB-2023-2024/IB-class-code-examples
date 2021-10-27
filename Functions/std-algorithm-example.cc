@@ -18,7 +18,7 @@
 
 using namespace std;
 
-int main () {
+int main() {
   std::vector<float>my_vector{8.0, 4.0, 6.0, 8.0, 19.0, 21.0, 35.0, 74.0, 88.0};
   //std::vector<float>my_vector{1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
 

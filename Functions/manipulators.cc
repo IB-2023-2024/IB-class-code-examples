@@ -26,7 +26,7 @@
 #include <iostream>
 #include <iomanip>
 
-int main (int argc, char** argv) {
+int main(int argc, char** argv) {
   const double kPi = 3.1415926535;
   const double kBig = 123456789.0;
   const char kRet = '\n';

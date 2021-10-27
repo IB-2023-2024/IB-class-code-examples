@@ -15,7 +15,7 @@
 #include <iostream>
 #include <iomanip>
 
-int main () {
+int main() {
   std::string input_string;
   std::cout << "Introduzca una cadena de texto (solo leerá 9 caracteres): ";
   std::cin >> std::setw(5) >> input_string;

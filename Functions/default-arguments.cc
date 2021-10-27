@@ -22,7 +22,7 @@ string SayHello(const string& to_whom = "World ") {
  return "Hello " + to_whom + "!";
 }
 
-int main () {
+int main() {
   cout << SayHello() << endl;
   cout << SayHello("Students") << endl;
   return 0;

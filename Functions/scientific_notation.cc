@@ -19,7 +19,7 @@
 
 const double kValue = 123.456;
 
-int main () {
+int main() {
   std::cout << std::fixed << std::endl;
   std::cout << std::setprecision(3) << kValue << std::endl;
   std::cout << std::setprecision(4) << kValue << std::endl;

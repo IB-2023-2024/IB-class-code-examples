@@ -35,7 +35,7 @@ vector <int> Func(int a, bool b) {
   return vec;
 }
 
-int main () {
+int main() {
   auto my_vector = Func(5, false);
   return 0;
 }

@@ -21,6 +21,6 @@ int Min(int x, int y) {
   return x < y ? x : y;
 }
 
-int main () {
+int main() {
   std::cout << Min(3, 4) << std::endl;
 }

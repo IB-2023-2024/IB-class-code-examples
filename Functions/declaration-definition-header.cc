@@ -25,7 +25,7 @@
 
 std::vector<int> CreateVectorOfFullSquares(int size);     // Declaration
 
-int main () {
+int main() {
   double experiment = sin(0);
 
   std::cout << experiment;
