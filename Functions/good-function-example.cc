@@ -24,6 +24,18 @@
 
 using namespace std;
 
+vector<int> CreateVectorOfFullSquares(int size);
+
+int main() {
+  const int kSize = 100;
+  auto squares = CreateVectorOfFullSquares(kSize);
+  for (int i{0}; i < kSize; ++i) {
+    std::cout << squares[i] << ", ";
+  }
+  std::cout << std::endl;
+  return 0;
+}
+
 // Creates a vector with full squares and return it
 vector<int> CreateVectorOfFullSquares(int size) {
   vector<int> result(size);     // Vector of size `size `
@@ -34,11 +46,4 @@ vector<int> CreateVectorOfFullSquares(int size) {
   return result;
 }
 
-int main() {
-  auto squares = CreateVectorOfFullSquares(20);
-  for (int i{0}; i < 20; ++i) {
-    std::cout << squares[i] << ", ";
-  }
-  std::cout << std::endl;
-  return 0;
-}
+

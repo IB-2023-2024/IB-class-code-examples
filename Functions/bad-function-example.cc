@@ -26,7 +26,7 @@ vector <int> Func(int a, bool b) {
     return vector<int>(10, a); 
   }
   vector<int> vec(a);
-  for (int i = 0; i < a; ++i) { 
+  for (int i{0}; i < a; ++i) { 
     vec[i] = a * i; 
   }
   if (vec.size() > a * 2) { 

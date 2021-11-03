@@ -30,7 +30,7 @@ int main() {
 
   std::cout << experiment;
   auto squares = CreateVectorOfFullSquares(20);
-  for (int i = 0; i < 20; ++i) {
+  for (int i{0}; i < 20; ++i) {
     std::cout << squares[i] << ", ";
   }
   std::cout << std::endl;
@@ -41,7 +41,7 @@ int main() {
 std::vector<int> CreateVectorOfFullSquares(int size) {
 	std::vector<int> result(size);     // Vector of size `size `
 
-  for (int i = 0; i < size; ++i) {
+  for (int i{0}; i < size; ++i) {
     result[i] = i * i;
   }
   return result;
