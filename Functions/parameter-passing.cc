@@ -15,7 +15,7 @@
  *
  */
 
-# include <iostream>
+#include <iostream>
 
 void Increment0(int x) {
   ++x;        
@@ -36,4 +36,3 @@ int main() {
                             // local_var equals 1 (local_var was incremented)
   std::cout << "local_var: " << local_var << std::endl;
 }
-
