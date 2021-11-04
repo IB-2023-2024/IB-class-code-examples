@@ -17,11 +17,14 @@
  *        Fortunately, your compiler will probably give you a warning or error if you try to do this.
  *        This program has undefined behavior, although it may appear to work and print 42 in some cases.
  *
- *        The compiler generates a warning message:
+ *        The compiler generates a WARNING message:
  *        dangling_reference.cc: In function ‘int& GetX()’:
- *        dangling_reference.cc::10: warning: reference to local variable ‘x’ returned [-Wreturn-local-addr]
- *              |   return x;
- *              |          ^
+ *        dangling_reference.cc:34:10: warning: reference to local variable ‘local’ returned [-Wreturn-local-addr]
+ *           34 |   return local;
+ *              |          ^~~~~
+ *        dangling_reference.cc:33:7: note: declared here
+ *           33 |   int local = 42;
+ *              |       ^~~~~
  *
  * @see https://www.learncpp.com/cpp-tutorial/74a-returning-values-by-value-reference-and-address/
  * @see https://stackoverflow.com/questions/46011510/what-is-a-dangling-reference
@@ -30,11 +33,11 @@
 #include <iostream>
 
 int& GetX() {
-  int x = 42;
-  return x;
+  int local = 42;
+  return local;
 }
 
 int main() {
-  int& r = GetX();
-  std::cout << r << "\n";
+  int& my_var = GetX();
+  std::cout << my_var << "\n";
 }
