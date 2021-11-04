@@ -16,14 +16,12 @@
 
 #include <iostream> // std::cout, std::endl
 
-using namespace std;
-
-string SayHello(const string& to_whom = "World ") {
+std::string SayHello(const std::string& to_whom = "World ") {
  return "Hello " + to_whom + "!";
 }
 
 int main() {
-  cout << SayHello() << endl;
-  cout << SayHello("Students") << endl;
+  std::cout << SayHello() << std::endl;
+  std::cout << SayHello("Students") << std::endl;
   return 0;
 }
