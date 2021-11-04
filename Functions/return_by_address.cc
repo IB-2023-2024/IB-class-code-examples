@@ -28,7 +28,7 @@ int* AllocateArray(int size) {
 }
 
 int main() {
-  int *array{ allocateArray(25) };
+  int *array{AllocateArray(25)};
     // do stuff with array
 
   delete[] array;
