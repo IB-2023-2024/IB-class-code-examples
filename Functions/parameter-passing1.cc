@@ -17,19 +17,17 @@
 #include <iostream>
 
 // Pass by value
-void SwapVal(int _val1, int _val2) {
-  int temp;
-  temp = _val1;
-  _val1 = _val2;
-  _val2 = temp;
+void SwapVal(int param1, int param2) {
+  int temp{param1};
+  param1 = param2;
+  param2 = temp;
 }
 
 // Pass by reference
-void SwapRef(int& _val1, int& _val2) {
-  int temp;
-  temp = _val1;
-  _val1 = _val2;
-  _val2 = temp;
+void SwapRef(int& param1, int& param2) {
+  int temp{param1};
+  param1 = param2;
+  param2 = temp;
 }
 
 
