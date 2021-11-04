@@ -18,7 +18,14 @@
  * @see https://www.learncpp.com/cpp-tutorial/74a-returning-values-by-value-reference-and-address/
  */
 
+#include <iostream>
+
 int DoubleValue(int x) {
-    int value{ x * 2 };
-    return value;  // A copy of value will be returned here
+  int value{x * 2};
+  return value;  // A copy of value will be returned here
 } // value goes out of scope here
+
+int main() {
+  int local{8};
+  std::cout << "Double value: " << DoubleValue(local) << std::endl;
+}
