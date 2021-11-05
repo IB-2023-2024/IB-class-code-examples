@@ -22,7 +22,9 @@ void Increment0(int x) {
 }
 
 void Increment(int& x) {
-  ++x;      
+  int local_to_increment{99};  // Lifetime of this var finishes with Increment()
+  ++x;
+  --local_to_increment;
 }
 
 int main() {
