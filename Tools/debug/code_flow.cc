@@ -17,13 +17,13 @@
 
 #include <iostream>
  
-int getValue() {
-std::cerr << "getValue() called" << std::endl;
+int GetValue() {
+std::cerr << "GetValue() called" << std::endl;
   return 4;
 }
  
 int main() {
 std::cerr << "main() called" << std::endl;
-  std::cout << getValue;
+  std::cout << GetValue;
   return 0;
 }

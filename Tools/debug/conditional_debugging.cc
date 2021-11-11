@@ -19,9 +19,9 @@
 
 //#define ENABLE_DEBUG // comment out to disable debugging
 
-int getUserInput() {
+int GetUserInput() {
 #ifdef ENABLE_DEBUG
-std::cerr << "getUserInput() called" << std::endl;
+std::cerr << "GetUserInput() called" << std::endl;
 #endif
   std::cout << "Enter a number: ";
   int x{};
@@ -33,7 +33,7 @@ int main() {
 #ifdef ENABLE_DEBUG
 std::cerr << "main() called" << std::endl;
 #endif
-  int x{ getUserInput() };
+  int x{GetUserInput()};
   std::cout << "You entered: " << x << std::endl;
 
   return 0;

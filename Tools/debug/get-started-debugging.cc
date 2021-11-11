@@ -25,7 +25,7 @@ int main() {
   std::vector<int> a(10);
   std::wstring key = L"";
 
-  for (int i = 0; i < letters.size(); i++) {
+  for (int i{0}; i < letters.size(); ++i) {
     name += letters[i];
     a[i] = i + 1;
     SendMessage(name, a[i]);

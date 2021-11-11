@@ -13,13 +13,13 @@
 
 #include <iostream>
 
-void printValue(int value) {
+void PrintValue(int value) {
   std::cout << value << std::endl;
 }
 
 int main() {
-  printValue(5);
-  printValue(6);
-  printValue(7);
+  PrintValue(5);
+  PrintValue(6);
+  PrintValue(7);
   return 0;
 }

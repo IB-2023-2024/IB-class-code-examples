@@ -13,15 +13,15 @@
 
 #include <iostream>
 
-int add(int x, int y) {
+int Add(int x, int y) {
   return x + y;
 }
 
-void printResult(int z) {
+void PrintResult(int z) {
   std::cout << "The answer is: " << z << std::endl;
 }
 
-int getUserInput() {
+int GetUserInput() {
   std::cout << "Enter a number: ";
   int x{};
   std::cin >> x;
@@ -29,11 +29,11 @@ int getUserInput() {
 }
 
 int main() {
-  int x{ getUserInput() };
-  int y{ getUserInput() };
+  int x{GetUserInput()};
+  int y{GetUserInput()};
 
-  int z { add(x, y) };
-  printResult(z);
+  int z{Add(x, y)};
+  PrintResult(z);
 
   return 0;
 }
