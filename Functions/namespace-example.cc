@@ -22,6 +22,6 @@ namespace boring {
 } // namespace boring
 
 int main() {
-  std::cout << "The answer to everything is not " << boring::GetMeaningOfLife () << " but " << fun::GetMeaningOfLife () << std::endl;
+  std::cout << "The answer to everything is not " << boring::GetMeaningOfLife() << " but " << fun::GetMeaningOfLife() << std::endl;
   return 0;
 }

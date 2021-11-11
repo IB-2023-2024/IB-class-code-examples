@@ -21,13 +21,13 @@ using namespace std;
 
 int main() {
   const string kFilename = "out.txt";
-  ofstream outfile (kFilename);
+  ofstream output_file{kFilename};
 
-  if (!outfile.is_open()) { 
+  if (!output_file.is_open()) { 
     return EXIT_FAILURE; 
   }
   double my_number = 1.123123123;
-  outfile << "Just string" << endl;
-  outfile << setprecision (20) << my_number << endl;
+  output_file << "Just string" << endl;
+  output_file << setprecision (20) << my_number << endl;
   return 0;
 }

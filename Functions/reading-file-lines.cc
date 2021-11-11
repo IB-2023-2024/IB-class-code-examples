@@ -36,10 +36,10 @@ using namespace std;
 int main() {
   string line, file_name;
   const string kInputFilename = "test_bel.txt";
-  ifstream input(kInputFilename, ios_base::in);
+  ifstream input_file{kInputFilename, ios_base::in};
 
   // Read data line-wise
-  while (getline(input, line)) {
+  while (getline(input_file, line)) {
     cout << "Read: " << line << endl;
     // String has a find method
     size_t loc = line.find("filename", 0);

@@ -17,20 +17,20 @@
 int main() {
   // ofstream is used for writing files
   // We'll make a file called Sample.txt
-  std::ofstream outf{"Sample.txt"};
+  std::ofstream output_file{"Sample.txt"};
 
   // If we couldn't open the output file stream for writing
-  if (!outf) {
+  if (!output_file) {
     std::cerr << "Uh oh, Sample.txt could not be opened for writing!" << std::endl;
     return 1;
   }
 
   // We'll write two lines into this file
-  outf << "This is line 1" << std::endl;
-  outf << "This is line 2" << std::endl;
+  output_file << "This is line 1" << std::endl;
+  output_file << "This is line 2" << std::endl;
 
   return 0;
-  // When outf goes out of scope, the ofstream
+  // When output_file goes out of scope, the ofstream
   // destructor will close the file
 }
 
