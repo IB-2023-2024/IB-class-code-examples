@@ -25,7 +25,7 @@
 #include <iostream>
  
 // Returns a reference to the index element of array
-int& GetElement(std::array<int, 25> &array, int index) {
+int& GetElement(std::array<int, 25>& array, int index) {
   // we know that array[index] will not be destroyed when we return to the caller (since the caller passed in the array in the first place!)
   // so it's okay to return it by reference
   return array[index];
