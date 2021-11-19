@@ -26,7 +26,7 @@ int main() {
   ifstream input_file{"test_cols.txt", ios_base::in};
   // Read data, until it is there
   while (input_file >> my_var1 >> my_var2 >> my_string >> my_var3) {
-    cerr << my_var1 << ", " << my_var2 << ", " << my_string << ", " << my_var3 << endl;
+    cout << my_var1 << ", " << my_var2 << ", " << my_string << ", " << my_var3 << endl;
   }
   return (0);
 }

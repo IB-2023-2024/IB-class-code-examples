@@ -17,7 +17,7 @@ LDFLAGS =						# The linker options (if any)
 # The all target builds all of the programs handled by the makefile.
 # This target has the dependency chain:
 #     all -> hello -> hello.o -> hello.cc
-all: hello_world
+all: file_append
 
 # The hello_world target builds the hello_world executable.
 hello_world: hello_world.o
@@ -37,8 +37,8 @@ hello_world: hello_world.o
 # and object files produced by the build process
 # We can use it for additional housekeeping purposes
 clean :
-	rm -f hello_world *.o
-	rm -rf *~ basura b i
+	rm -f *.o
+	rm -rf *~ basura* b i
 	rm -rf a.out
 	find . -name '*~' -exec rm {} \;
 	find . -name basura -exec rm {} \;
