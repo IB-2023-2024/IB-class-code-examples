@@ -49,7 +49,7 @@ void Usage(int argc, char *argv[]) {
  *  @param[in] kLimit. Se suman los términos pares menores que kLimit
  *  @return La suma de los términos pares menores que kLimit
  */
-size_t fibonacci_sum(const size_t kLimit) {
+size_t FibonacciSum(const size_t kLimit) {
   size_t second_to_last{0},  // Second to last term
            last{1},          // Last term generated
            new_term{0};      // New term of the serie

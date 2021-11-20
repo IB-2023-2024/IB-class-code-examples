@@ -17,4 +17,4 @@ serie de Fibonacci que sean menores que un valor, que el usuario \
 ha de introducir por línea de comandos para la ejecución del programa";
 
 void Usage(int argc, char *argv[]);
-size_t fibonacci_sum(const size_t kLimit);
+size_t FibonacciSum(const size_t kLimit);

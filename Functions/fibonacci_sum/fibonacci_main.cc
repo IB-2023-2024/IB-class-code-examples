@@ -30,6 +30,6 @@ int main (int argc, char* argv[]) {
   Usage(argc, argv);
   std::string limit = argv[1];
   const size_t kLimit = stoi(limit);
-  std::cout << "Sum: " << fibonacci_sum(kLimit) << std::endl; 
+  std::cout << "Sum: " << FibonacciSum(kLimit) << std::endl; 
   return 0;
 }
