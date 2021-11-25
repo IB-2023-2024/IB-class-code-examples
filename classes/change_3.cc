@@ -24,7 +24,7 @@ class Something {
 };
  
 int main() {
-  // But our program still works just fine!
+  // But our (client) program still works just fine!
   Something something;
   something.SetValue1(5);
   std::cout << something.GetValue1() << '\n';
