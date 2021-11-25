@@ -20,7 +20,7 @@ class Point2 {    // Two-dimensional point class
   Coordinate y_; // The y coordinate of the point
 };
 
-void Func () {
+void Func() {
   Point2 p;
   // ...
   Point2::Coordinate x = p.x_;

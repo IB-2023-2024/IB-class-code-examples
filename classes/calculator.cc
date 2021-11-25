@@ -26,7 +26,7 @@ class Calculator {
   std::vector<Number> result_history_{};
 
   Number Add(Number a, Number b) {
-    auto result{ a + b };
+    auto result{a + b};
     result_history_.push_back(result);
     return result;
   }

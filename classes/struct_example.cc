@@ -21,18 +21,18 @@
 #include <iostream>
 #include <string>
 
-// Define a structure 
+// Define a structure
 struct NamedInt {
   int num;
   std::string name;
 };
 
-void PrintStruct(const NamedInt& s) {
-  std::cout << s.name << " " << s.num << std::endl;
+void PrintStruct(const NamedInt& named_int) {
+  std::cout << named_int.name << " " << named_int.num << std::endl;
 }
 
 int main() {
-  NamedInt my_int = {1, "hello"};
+  NamedInt my_int{1, "hello"};
   PrintStruct(my_int);
   PrintStruct({10 , "world"});
   return 0;

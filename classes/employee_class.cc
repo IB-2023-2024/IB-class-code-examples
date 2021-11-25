@@ -34,8 +34,8 @@ class Employee {
  
 int main() {
   /// Declare two employees
-  Employee alex { "Alex", 1, 2500.0};
-  Employee joe { "Joe", 2, 2225.0 };
+  Employee alex{"Alex", 1, 2500.0};
+  Employee joe{"Joe", 2, 2225.0};
   /// Print out the employee information
   alex.Print();
   joe.Print();
