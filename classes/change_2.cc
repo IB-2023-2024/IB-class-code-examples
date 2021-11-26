@@ -16,7 +16,7 @@
  
 class Something {
  public:
-  void SetValue1(int value) { value1_ = value; }
+  void SetValue1(const int value) { value1_ = value; }
   int GetValue1() { return value1_; }
  private:
   int value1_{0};

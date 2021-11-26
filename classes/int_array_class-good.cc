@@ -15,7 +15,7 @@
 
 class IntArray {
  public:
-  void SetValue(int index, int value) {
+  void SetValue(const int index, const int value) {
     // If the index is invalid, do nothing
     if (index < 0 || index >= kSize) {
       std::cerr << "An error message..." << std::endl;
