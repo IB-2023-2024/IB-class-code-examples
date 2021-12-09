@@ -34,13 +34,13 @@
  *
  *           void setID(Simple* const this, int id) { this->m_id = id; }
  *
- *        When the compiler compiles a normal member function, it implicitly adds a new parameter to the function named “this”. 
+ *        When the compiler compiles a normal member function, it implicitly adds a new parameter to the function named "this". 
  *        The this pointer is a hidden const pointer that holds the address of the object the member function was called on.
  *
  *        There’s just one more detail to take care of. 
  *        Inside the member function, any class members (functions and variables) also need to be updated so they refer to the 
  *        object the member function was called on. 
- *        This is easily done by adding a “this->” prefix to each of them. 
+ *        This is easily done by adding a "this->" prefix to each of them. 
  *        Thus, in the body of function setID(), id_ (which is a class member variable) has been converted to this->id_. 
  *        Thus, when “this” points to the address of simple, this->id_ will resolve to simple.id_
  *
@@ -51,7 +51,7 @@
 
 class Simple {
  public:
-  Simple(int id) : id_{ id } { }
+  Simple(int id) : id_{id} { }
 
   void setID(int id) { id_ = id; }
   int getID() { return id_; }
