@@ -39,8 +39,8 @@ void Func() {
   Counter my_counter{0};            // An instance of the class
   int my_value = my_counter.count();
 
-  const Counter& my_counter2 = my_counter;
-  my_value = my_counter2.count();      // If count() is not const you get an error: count() better be const!
+  const Counter another_counter(25);
+  my_value = another_counter.count();      // If count() is not const you get an error: count() better be const!
 }
 
 int main() {
