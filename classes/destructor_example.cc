@@ -35,6 +35,7 @@ class MyClass {
  public:
   MyClass(int bufferSize) {              // Constructor
     // allocate some memory for buffer
+    // Notice: we will usually not use destructors as we do not use dynamic allocation of memory
     bufferPtr = new char[bufferSize];
     std::cout << "The constructor has been called. Memory allocated" << std::endl;
   }

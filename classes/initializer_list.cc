@@ -29,7 +29,7 @@
 
 class Something {
  public:
-  Something() : value1_{ 1 }, value2_{ 2.2 }, value3_{ 'c' } {   // Initialize our member variables
+  Something() : value1_{1}, value2_{2.2}, value3_{'c'} {   // Initialize our member variables
   // No need for assignment here
   // Empty body
   }
