@@ -10,7 +10,7 @@
  *
  * Member functions always has object of class as implicit parameter
  * Implicit parameter passed in form of pointer using special variable called this
- * Normally, we do not explicitly write “this”, however
+ * Normally, we do not explicitly write "this", however
  *
  * @see http://www.cplusplus.com/doc/tutorial/classes/
  * @see http://www.cplusplus.com/doc/tutorial/templates/#this
