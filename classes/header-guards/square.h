@@ -13,6 +13,6 @@
 
 // We shouldn't be including function definitions in header files
 // But for the sake of this example, we will
-int getSquareSides() {
+int GetSquareSides() {
   return 4;
 }

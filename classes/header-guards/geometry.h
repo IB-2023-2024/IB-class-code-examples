@@ -17,5 +17,5 @@
  *
  */
 
-//#include "square.h"
-#include "square-guards.h"
+#include "square.h"
+//#include "square-guards.h"
