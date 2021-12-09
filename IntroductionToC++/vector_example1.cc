@@ -34,7 +34,9 @@ int main () {
   numbers.push_back(7);
   numbers.push_back(8);
   numbers.push_back(9);
+  numbers.push_back(99);
 
+  cout << "Size: " << numbers.size() << endl;
   cout << "Last number: " << numbers.back() << endl;
   return 0;
 }

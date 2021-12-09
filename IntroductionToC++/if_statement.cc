@@ -16,7 +16,7 @@
 #include <iostream>
 
 int main () {
-  const int kNumber{100};  // Play modifying this value
+  const int kNumber{-100};  // Play modifying this value
 
   // Version 1
   if (kNumber > 0) {

@@ -1,0 +1,7 @@
+&  --- rechazada
+a  --- rechazada
+b b  --- rechazada
+a b b  --- rechazada
+b a b  --- rechazada
+b b b b  --- rechazada
+a b a b a a  --- rechazada
