@@ -46,7 +46,7 @@ class SomeClass {
 };
 
 // How to use them?
-int main () {
+int main() {
   SomeClass var_1;               /// Default constructor
   SomeClass var_2(10);           /// Custom constructor
   // Type is checked when using {} braces. Use them!
