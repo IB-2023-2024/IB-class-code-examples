@@ -24,16 +24,18 @@
 
 class Counter {
  public:
-  Counter(int newCount) {
+  Counter(const int newCount) {
     count_ = newCount;
   }
-  int count() const { return count_; }  // note addition of const keyword after parameter list, but before function body
+  int count() const { return count_; }  // Getter. Note addition of const keyword after parameter list, but before function body
+                                        // As it is a const function we can call it on any const object,
+                                        // otherwise it would not be allowed
   void IncrementCount() { ++count_; }
  private:
   int count_{0};
 };
 
-void Func () {
+void Func() {
   Counter my_counter{0};            // An instance of the class
   int my_value = my_counter.count();
 
