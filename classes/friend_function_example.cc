@@ -39,7 +39,7 @@ class Temperature {
 
 class Humidity {
  public:
-  Humidity(int humidity=0) { humidity_ = humidity; }
+  Humidity(int humidity = 0) { humidity_ = humidity; }
   friend void PrintWeather(const Temperature &temperature, const Humidity &humidity);
  private:
   int humidity_;

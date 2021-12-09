@@ -26,7 +26,7 @@ class IDGenerator {
 // Here's the definition of the static member outside the class.  
 // Note we don't use the static keyword here.
 // We'll start generating IDs at 1
-int IDGenerator::next_ID{ 1 };
+int IDGenerator::next_ID{1};
 
 // Here's the definition of the static function outside of the class.  
 // Note we don't use the static keyword here.

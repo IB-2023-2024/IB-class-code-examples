@@ -28,7 +28,7 @@
  *        of the class, in the global scope.
  *
  *        In this code the static member is defined in the line: i
- *            int Something::s_value_{ 1 };
+ *            int Something::s_value_{1};
  *
  * @see https://www.learncpp.com/cpp-tutorial/811-static-member-variables/
  */
@@ -40,7 +40,7 @@ class Something {
   static int s_value_;        // A data member should not be public!
 };
 
-int Something::s_value_{ 1 };
+int Something::s_value_{1};
 
 int main() {
   Something first;
