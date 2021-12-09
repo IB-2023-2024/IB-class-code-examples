@@ -16,11 +16,11 @@
 
 class Cents {
  public:
-  Cents(int cents) : cents_{ cents } {
+  Cents(int cents) : cents_{cents} {
     std::cout << "Cents constructor has been called" << std::endl;
   }
 
-  int cents() const { return cents_; }
+  int cents() const { return cents_; }  // getter
  private:
   int cents_{};
 };
