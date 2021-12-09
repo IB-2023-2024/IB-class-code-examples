@@ -20,7 +20,7 @@
 
 class Cents {
  public:
-	Cents(int cents) { cents_ = cents; }
+	Cents(const int cents) { cents_ = cents; }
 
 	// Add Cents + Cents using a friend function
 	friend Cents operator+(const Cents &c1, const Cents &c2);

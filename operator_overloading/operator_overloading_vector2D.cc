@@ -39,12 +39,12 @@ double operator*(const Vector& u, const Vector& v) {
 }
 
 /// Insertion overload
-std::ostream& operator<< (std::ostream &out, const Vector &vector) {
+std::ostream& operator<<(std::ostream &out, const Vector &vector) {
   out << "(" << vector.x_ << ", " << vector.y_ << ")"; // actual output done here
   return out;
 }
 
-void Func () {
+void Func() {
   Vector vector1(1.0, 2.0);
 	std::cout << vector1 << std::endl;
   Vector vector2{vector1};

@@ -23,8 +23,8 @@ class Point {
   Point(double x = 0.0, double y = 0.0, double z = 0.0) : x_{x}, y_{y}, z_{z} {
   }
 
-  friend std::ostream& operator<< (std::ostream& out, const Point& point);
-  friend std::istream& operator>> (std::istream& in, Point& point);
+  friend std::ostream& operator<<(std::ostream& out, const Point& point);
+  friend std::istream& operator>>(std::istream& in, Point& point);
  private:
   double x_{};
   double y_{};
