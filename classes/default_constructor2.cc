@@ -19,7 +19,7 @@ class Date {
   /// there are other user-provided constructors.
   Date() = default;
 
-  Date(int year, int month, int day) { // normal non-default constructor
+  Date(const int year, const int month, const int day) { // normal non-default constructor
     year_ = year;
     month_ = month;
     day_ = day;
