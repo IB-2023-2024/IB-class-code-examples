@@ -26,9 +26,9 @@
 class Date {
  public:
   Date() = default;  /// Tell the compiler to create a default constructor
-  Date(int year, int month, int day);
+  Date(const int year, const int month, const int day);
   void Print();
-  void SetDate(int year, int month, int day);
+  void SetDate(const int year, const int month, const int day);
   int getYear() { return year_; }
   int getMonth() { return month_; }
   int getDay()  { return day_; }

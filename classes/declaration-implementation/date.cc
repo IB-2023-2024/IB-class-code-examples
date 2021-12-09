@@ -22,12 +22,12 @@
 #include "date.h"
 
 /// Date constructor
-Date::Date(int year, int month, int day) {
+Date::Date(const int year, const int month, const int day) {
   SetDate(year, month, day);
 }
 
 /// Date member function
-void Date::SetDate(int year, int month, int day) {
+void Date::SetDate(const int year, const int month, const int day) {
   month_ = month;
   day_ = day;
   year_ = year;
