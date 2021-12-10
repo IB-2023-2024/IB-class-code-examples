@@ -16,23 +16,23 @@
 
 #include <iostream>
 
-class Vector {          // Two-dimensional vector class
-  public:
-    Vector() {          // Default constructor
-      x_ = 0.0;
-      y_ = 0.0;
-      std::cout << "Class constructor has been called" << std::endl;
-    }
+class Vector {        // Two-dimensional vector class
+ public:
+  Vector() {          // Default constructor
+    x_ = 0.0;
+    y_ = 0.0;
+    std::cout << "Class constructor has been called" << std::endl;
+  }
   // ...
-  private:
-    double x_ ;         // The x component of the vector
-    double y_ ;         // The y component of the vector
+ private:
+  double x_ ;         // The x component of the vector
+  double y_ ;         // The y component of the vector
 };
 
 int main() {
   std::cout << "Previous to object declaration" << std::endl;
-  Vector my_vector1;      // calls Vector(); my_vector1 set to (0, 0)
+  Vector my_vector;   // calls Vector(); my_vector1 set to (0, 0)
   std::cout << "After object declaration" << std::endl;
-  // Vector Func();          // declares function Func that returns Vector
+  // Vector Func();     // declares function Func that returns Vector
   return 0;
 }
