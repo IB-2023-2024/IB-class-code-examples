@@ -46,9 +46,9 @@ class MyClass {
     std::cout << "The destructor has been called. Memory de-allocated" << std::endl;
   }
 
-  // Additional methods here
+ // Additional methods here
  private:
-    char* bufferPtr;                       // pointer to start of buffer
+  char* bufferPtr;                       // pointer to start of buffer
 };
 
 int main() {
