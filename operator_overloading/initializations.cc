@@ -15,14 +15,16 @@
 
 class Point {
  public:
+  // Default constructor
+  // A default constructor is a constructor that either has no parameters, 
+  // or if it has parameters, all the parameters have default values. 
   Point(double x = 0.0, double y = 0.0, double z = 0.0): x_{x}, y_{y}, z_{z} { 
-		std::cout << "The constructor has been called..." << std::endl;
+		std::cout << "The default constructor has been called..." << std::endl;
 	}
   // Getters:
   double x() const { return x_; }
   double y() const { return y_; }
   double z() const { return z_; }
-
   friend std::ostream& operator<<(std::ostream& out, const Point& point);
  private:
   double x_, y_, z_;    // 3D Point coordinates
@@ -52,10 +54,30 @@ int main() {
 											 // which will invoke the Point(4, 0.0, 0.0) constructor.
   std::cout << "my_point4 is: " << my_point4 << std::endl << std::endl;
 
-  Point my_point5{5.0, 6.0, 7.0}; // use default constructor to set to (1.0, 2.0, 3.0)
+  Point my_point5{5.0, 6.0, 7.0}; // use default constructor to set to (5.0, 6.0, 7.0)
   std::cout << "my_point5 is: " << my_point5 <<  std::endl << std::endl;
   Point my_point6(my_point5);
   std::cout << "my_point6 is: " <<  my_point6 << std::endl << std::endl;
 
   return 0;
 }
+
+/* Output of this program:
+  
+The constructor has been called...
+my_point1 is: Point(1, 1, 1)
+
+The constructor has been called...
+my_point2 is: Point(2, 2, 2)
+
+The constructor has been called...
+my_point3 is: Point(3, 0, 0)
+
+The constructor has been called...
+my_point4 is: Point(4, 0, 0)
+
+The constructor has been called...
+my_point5 is: Point(5, 6, 7)
+
+my_point6 is: Point(5, 6, 7)
+*/
