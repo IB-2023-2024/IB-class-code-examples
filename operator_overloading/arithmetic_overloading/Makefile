@@ -8,9 +8,9 @@
 # @brief A Makefile for the Cents class code
 # 
 
-CXX = g++						             # The C++ compiler command
-CXXFLAGS = -std=c++14 -g -Wall	 # The C++ compiler options (C++14, preserve debug symbols and warn all)
-LDFLAGS =						             # The linker options (if any)
+CXX = g++						                             # The C++ compiler command
+CXXFLAGS = -std=c++17 -Wall -pedantic -Weffc++ 	 # The C++ compiler options (C++14, preserve debug symbols and warn all)
+LDFLAGS =						                             # The linker options (if any)
 
 # The all target builds all of the programs handled by the makefile.
 all: money
@@ -32,7 +32,7 @@ money: money.o cents.o
 # and object files produced by the build process
 # We can use it for additional housekeeping purposes
 clean :
-	rm -f *.o money doc
+	rm -f *.o money
 	rm -rf *~ basura b i
 	rm -rf a.out
 	find . -name '*~' -exec rm {} \;

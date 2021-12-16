@@ -33,7 +33,7 @@ class Cents {
 // note: this function is a member function!
 // the cents parameter we used in the friend version is now the implicit *this parameter
 Cents Cents::operator+(int value) {
-  return Cents(cents_ + value);
+  return Cents{cents_ + value};
 }
 
 // The expression cents1 + 2 becomes function call cents1.operator+(2). 

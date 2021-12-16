@@ -20,9 +20,7 @@
 
 class Point {
  public:
-  Point(double x = 0.0, double y = 0.0, double z = 0.0) : x_{x}, y_{y}, z_{z} {
-  }
-
+  Point(double x = 0.0, double y = 0.0, double z = 0.0) : x_{x}, y_{y}, z_{z} { }
   friend std::ostream& operator<<(std::ostream& out, const Point& point);
   friend std::istream& operator>>(std::istream& in, Point& point);
  private:

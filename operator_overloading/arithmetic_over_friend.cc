@@ -7,6 +7,7 @@
  * @author F. de Sande
  * @date 10 Dec 2020
  * @brief Overloading of arithmetic operators
+ *        The Cents class hold an amount of cents (money)
  *        Overloading the plus operator (+) is as simple as: 
  *         1. Declaring a function named operator+, giving it two parameters of the type of the operands we want to add
  *         2. Picking an appropriate return type
