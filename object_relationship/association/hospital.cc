@@ -25,7 +25,6 @@ int main() {
 	Patient alvarez{ "Alvarez" };
 	Patient diaz{ "Díaz" };
 	Patient gonzalez{ "González" };
-
 	Doctor barrera{ "Barrera" };
 	Doctor simon{ "Simón" };
 

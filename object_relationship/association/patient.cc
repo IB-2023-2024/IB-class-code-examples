@@ -28,8 +28,7 @@ std::ostream& operator<<(std::ostream &out, const Patient &patient) {
 		out << patient.name() << " No tiene doctores en este momento";
 		return out;
 	}
-
-	out << patient.name_ << " está viendo a los doctores: ";
+	out << patient.name_ << " está consultando a los doctores: ";
 	for (const auto& doctor : patient.doctor_)
 		out << doctor.get().name() << ", ";
 

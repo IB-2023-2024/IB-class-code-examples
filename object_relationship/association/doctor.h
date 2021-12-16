@@ -20,9 +20,7 @@ class Patient;
 
 class Doctor {
  public:
-	Doctor(const std::string& name) : name_{ name } {
-	}
-
+	Doctor(const std::string& name) : name_{ name } { } 
 	void addPatient(Patient& patient);
 	friend std::ostream& operator<<(std::ostream &out, const Doctor &doctor);
 	const std::string& name() const { return name_; }
