@@ -22,7 +22,7 @@
 
 class Human {
  public:
-  Human(int kindness): kindness_{ kindness} {}
+  Human(int kindness) : kindness_{kindness} {}
   bool operator<(const Human& other) const {
     return kindness_ < other.kindness_;
   }
