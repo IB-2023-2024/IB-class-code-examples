@@ -8,9 +8,9 @@
 # @brief Makefile for the Object Composition example
 # 
 
-CXX = g++						             # The C++ compiler command
-CXXFLAGS = -std=c++14 -g -Wall	 # The C++ compiler options (C++14, preserve debug symbols and warn all)
-LDFLAGS =						             # The linker options (if any)
+CXX = g++						                           # The C++ compiler command
+CXXFLAGS = -std=c++14 -pedantic -Wall	-Weffc++ # The C++ compiler options (C++14, preserve debug symbols and warn all)
+LDFLAGS =						                           # The linker options (if any)
 
 # The all target builds all of the programs handled by the makefile.
 all: faculty
