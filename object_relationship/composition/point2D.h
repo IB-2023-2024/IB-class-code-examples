@@ -19,18 +19,16 @@
 class Point2D {
  public:
   // A default constructor
-  Point2D() : x_{ 0 }, y_{ 0 } { 
-  }
+  Point2D() : x_{ 0 }, y_{ 0 } { }
 
   // A specific constructor
-  Point2D(int x, int y) : x_{ x }, y_{ y } {
-  }
+  Point2D(const int x, const int y) : x_{ x }, y_{ y } { }
 
   // An overloaded output operator
   friend std::ostream& operator<<(std::ostream& out, const Point2D &point);
 
   // Access functions
-  void setPoint(int x, int y);
+  void setPoint(const int x, const int y);
  private:
   int x_;
   int y_;

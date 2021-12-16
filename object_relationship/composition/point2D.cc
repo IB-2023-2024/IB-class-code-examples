@@ -22,7 +22,7 @@ std::ostream& operator<<(std::ostream& out, const Point2D &point) {
 }
 
 // Setter
-void Point2D::setPoint(int x, int y) {
+void Point2D::setPoint(const int x, const int y) {
   x_ = x;
   y_ = y;
 }

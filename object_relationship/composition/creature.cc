@@ -21,6 +21,6 @@ std::ostream& operator<<(std::ostream& out, const Creature &creature) {
   return out;
 }
 
-void Creature::moveTo(int x, int y) {
+void Creature::moveTo(const int x, const int y) {
   location_.setPoint(x, y);
 }
