@@ -56,7 +56,7 @@ int main() {
 
   Point my_point5{5.0, 6.0, 7.0}; // use default constructor to set to (5.0, 6.0, 7.0)
   std::cout << "my_point5 is: " << my_point5 <<  std::endl << std::endl;
-  Point my_point6(my_point5);
+  Point my_point6{my_point5};
   std::cout << "my_point6 is: " <<  my_point6 << std::endl << std::endl;
 
   return 0;

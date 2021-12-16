@@ -11,18 +11,18 @@
  * @see https://www.learncpp.com/cpp-tutorial/overloading-the-assignment-operator/
  */
 
-#include <cassert>
 #include <iostream>
+#include <cassert>   // assert
 
 class Fraction {
  public:
   // Default constructor
-  Fraction(int numerator = 0, int denominator = 1) : numerator_(numerator), denominator_(denominator) {
+  Fraction(int numerator = 0, int denominator = 1) : numerator_{numerator}, denominator_{denominator} {
     assert(denominator != 0);
   }
 
   // Copy constructor
-  Fraction(const Fraction &other) : numerator_(other.numerator_), denominator_(other.denominator_) {
+  Fraction(const Fraction &other) : numerator_{other.numerator_}, denominator_{other.denominator_} {
     // no need to check for a denominator of 0 here since other must already be a valid Fraction
     std::cout << "Copy constructor called\n"; // just to prove it works
   }
@@ -57,7 +57,7 @@ Fraction& Fraction::operator=(const Fraction& other_fraction) {
 }
 
 int main() {
-  Fraction fiveThirds(5, 3);
+  Fraction fiveThirds{5, 3};
   Fraction my_fraction;
   my_fraction = fiveThirds; // calls overloaded assignment
   std::cout << my_fraction << std::endl;

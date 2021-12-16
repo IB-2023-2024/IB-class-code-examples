@@ -21,7 +21,7 @@ class Vector {   /// Two-dimensional vector class
   Vector() {     /// Default constructor
     x_ = 0.0;
     y_ = 0.0;
-    std::cout << "Class constructor has been called" << std::endl;
+    std::cout << "Class default constructor has been called" << std::endl;
   }
 
   Vector(const Vector& other) { /// Copy constructor
@@ -41,7 +41,8 @@ int main() {
   std::cout << "Previous to object my_vec declaration" << std::endl;
   Vector my_vec;
   std::cout << "After object my_vec declaration" << std::endl;
-  Vector second(my_vec);    /// calls Vector(const Vector&)
+  Vector second(my_vec);   /// calls Vector(const Vector&)
   Vector third = my_vec;   /// calls Vector(const Vector&)
+  Vector fourth{my_vec};   /// calls Vector(const Vector&)
   return 0;
 }
