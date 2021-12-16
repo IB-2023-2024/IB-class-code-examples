@@ -27,7 +27,7 @@ class Array10 { // Ten-element real array class
   const double& operator[](int index) const { return data_[index]; }
   double& operator[](int index) { return data_[index]; }
  private:
-  std::array<double, 10> data_;  // array data
+  std::array<double, kArraySize> data_;  // array data
 };
 
 void Func() {

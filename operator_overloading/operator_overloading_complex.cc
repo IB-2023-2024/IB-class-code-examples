@@ -16,17 +16,18 @@
 
 #include <iostream>
 
-using std::cout; using std::endl;
-
-class Complex {     // Complex number type
+/**
+ * @brief Comple number type
+ */
+class Complex {
  public:
-  Complex(double re, double im) : re_(re), im_(im) {}
-  double real() const { return re_; }
-  double imag() const { return im_; }
+  Complex(double re, double im) : real_(re), imag_(im) {}
+  double real() const { return real_; }
+  double imag() const { return imag_; }
   Complex operator+(const double&);
  private:
-  double re_;       // The real part
-  double im_;       // The imaginary part
+  double real_;       /// The real part
+  double imag_;       /// The imaginary part
 };
 
 // Overload as global function

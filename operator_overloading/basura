@@ -1,4 +1,0 @@
-// Puesto que el resultado de operator!= es el opuesto de operator==, 
-// se definirá operator!= en función de operator==, esto es:
-// Dos coches son distinsot si no son iguales
-// Esta aproximación hace todo más simple, libre de error y reduce la cantidad de código a escribir.

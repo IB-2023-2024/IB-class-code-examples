@@ -16,7 +16,7 @@
 
 class Vector { // 2D vector class
  public:
-  Vector() : x_ (0.0), y_ (0.0) {}        // Initializer list
+  Vector() : x_{0.0}, y_{0.0} {}        // Initializer list
   Vector(double x, double y) : x_{x}, y_{y} {}
   double x() const { return x_; }
   double y() const { return y_; }
