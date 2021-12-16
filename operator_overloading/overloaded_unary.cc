@@ -22,12 +22,9 @@
 
 class Point {
  public:
-  Point(double x = 0.0, double y = 0.0, double z = 0.0): x_{x}, y_{y}, z_{z}
-  { }
-
+  Point(double x = 0.0, double y = 0.0, double z = 0.0): x_{x}, y_{y}, z_{z} { } 
   Point operator-() const;
   bool operator!() const;
-
   double x() const { return x_; }
   double y() const { return y_; }
   double z() const { return z_; }
@@ -37,7 +34,7 @@ class Point {
 
 // Convert a Point into its negative equivalent
 Point Point::operator-() const {
-  return Point(-x_, -y_, -z_);
+  return Point{-x_, -y_, -z_};
 }
 
 // Return true if the point is set at the origin, false otherwise
