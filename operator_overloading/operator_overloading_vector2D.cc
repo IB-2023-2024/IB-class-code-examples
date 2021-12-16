@@ -14,15 +14,13 @@
 
 #include <iostream>
 
-using std::cout; using std::endl;
-
 class Vector { // 2D vector class
  public:
   Vector() : x_ (0.0), y_ (0.0) {}        // Initializer list
-  Vector(double x, double y) : x_ (x), y_ (y) {}
+  Vector(double x, double y) : x_{x}, y_{y} {}
   double x() const { return x_; }
   double y() const { return y_; }
-  friend std::ostream& operator<< (std::ostream &out, const Vector &vector);
+  friend std::ostream& operator<<(std::ostream &out, const Vector &vector);
  private:
   double x_; // The x component
   double y_; // The y component
@@ -49,11 +47,11 @@ void Func() {
 	std::cout << vector1 << std::endl;
   Vector vector2{vector1};
   Vector vector3;
-  vector3 = vector1 + vector2;             // vector3.operator=(operator+(vector1, vector2))
+  vector3 = vector1 + vector2;       // vector3.operator=(operator+(vector1, vector2))
 	std::cout << vector3 << std::endl;
   double c = vector1 * vector2;      // calls operator*(vector1, vector2)
-                         // since c is built-in type, assignment operator
-                         // does not require function call
+                                     // since c is built-in type, assignment operator
+                                     // does not require function call
 }
 
 int main () {
