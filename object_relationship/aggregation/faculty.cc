@@ -25,13 +25,11 @@ int main() {
 	// Create a teacher outside the scope of the Department
   Teacher einstein{"Albert Einstein"}; // create a teacher
 
-  {
-    // Create a department and use the constructor parameter to pass the teacher to it.
+  { // Create a department and use the constructor parameter to pass the teacher to it.
     Department department{einstein};
   } // department goes out of scope here and is destroyed
 
-  // sande still exists here, but the department doesn't
-
+  // einstein still exists here, but the department doesn't
   std::cout << einstein.name() << " still exists!\n";
 
   return 0;

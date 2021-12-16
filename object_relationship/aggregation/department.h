@@ -20,9 +20,7 @@
 #include "teacher.h"
 
 class Department {
- public:
-  Department(const Teacher& teacher) : teacher_{ teacher } {
-  }
+ public: Department(const Teacher& teacher) : teacher_{ teacher } { }
  private:
   const Teacher& teacher_; // This dept holds only one teacher for simplicity, but it could hold many teachers
 };

@@ -21,9 +21,7 @@
 
 class Teacher {
  public:
-  Teacher(const std::string& name) : name_{ name } {
-  }
- 
+  Teacher(const std::string& name) : name_{ name } { }
   const std::string& name() const { return name_; }
  private:
   std::string name_{};
