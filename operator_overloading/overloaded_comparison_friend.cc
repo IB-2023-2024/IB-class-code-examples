@@ -43,6 +43,7 @@ bool operator!=(const Coche& c1, const Coche& c2) {
 int main() {
   Coche ateca{"Seat", "Ateca"};
   Coche ibiza{"Seat", "Ibiza"};
+  
   if (ateca == ibiza)
     std::cout << "Un Ateca y un Ibiza son el mismo coche.\n";
   if (ateca != ibiza)
