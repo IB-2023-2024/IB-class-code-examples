@@ -48,7 +48,7 @@ void Func() {
   Vector vector2{vector1};
   Vector vector3;
   vector3 = vector1 + vector2;       // vector3.operator=(operator+(vector1, vector2))
-	std::cout << vector3 << std::endl;
+  std::cout << vector3 << std::endl;
   double c = vector1 * vector2;      // calls operator*(vector1, vector2)
                                      // since c is built-in type, assignment operator
                                      // does not require function call

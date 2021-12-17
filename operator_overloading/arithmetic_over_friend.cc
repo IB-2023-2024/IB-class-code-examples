@@ -21,38 +21,37 @@
 
 class Cents {
  public:
-	Cents(const int cents) { cents_ = cents; }
+  Cents(const int cents) { cents_ = cents; }
 
-	// Add Cents + Cents using a friend function
-	friend Cents operator+(const Cents &c1, const Cents &c2);
+  // Add Cents + Cents using a friend function
+  friend Cents operator+(const Cents &c1, const Cents &c2);
 
-	// Subtract Cents - Cents using a friend function
-	friend Cents operator-(const Cents &c1, const Cents &c2);
+  // Subtract Cents - Cents using a friend function
+  friend Cents operator-(const Cents &c1, const Cents &c2);
 
-	int cents() const { return cents_; }
+  int cents() const { return cents_; }
  private:
-	int cents_;
+  int cents_;
 };
 
 // note: this function is not a member function!
 Cents operator+(const Cents &c1, const Cents &c2) {
-	// use the Cents constructor and operator+(int, int)
-	// we can access cents_ directly because this is a friend function
-	return Cents(c1.cents_ + c2.cents_);
+  // use the Cents constructor and operator+(int, int)
+  // we can access cents_ directly because this is a friend function
+  return Cents(c1.cents_ + c2.cents_);
 }
 
 // note: this function is not a member function!
 Cents operator-(const Cents &c1, const Cents &c2) {
-	// use the Cents constructor and operator-(int, int)
-	// we can access cents_ directly because this is a friend function
-	return Cents(c1.cents_ - c2.cents_);
+  // use the Cents constructor and operator-(int, int)
+  // we can access cents_ directly because this is a friend function
+  return Cents(c1.cents_ - c2.cents_);
 }
 
 int main() {
-	Cents cents1{6};
-	Cents cents2{2};
-	Cents centsSum{cents1 + cents2};
-	std::cout << "I have " << centsSum.cents() << " cents.\n";
-
-	return 0;
+  Cents cents1{6};
+  Cents cents2{2};
+  Cents centsSum{cents1 + cents2};
+  std::cout << "I have " << centsSum.cents() << " cents.\n";
+  return 0;
 }
