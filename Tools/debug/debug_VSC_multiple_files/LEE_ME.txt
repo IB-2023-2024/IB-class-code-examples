@@ -1,0 +1,6 @@
+Un ejemplo de un proyecto realizado con varios ficheros de código fuente (*.cc)
+cuya compilación se gestiona con un fichero Makefile
+El directorio contiene los ficheros (subdirectorio .vscode) para realizar la compilación
+usando VSC y la utilidad make.
+
+Véase el fichero .vscode/tasks.json   que invoca make en lugar de usar directamente g++.
