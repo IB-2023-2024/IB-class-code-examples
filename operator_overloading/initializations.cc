@@ -41,7 +41,7 @@ int main() {
   Point my_point1(1.0, 1.0, 1.0); // Direct initialize a Point, calls Point(double, double, double) constructor
   std::cout << "my_point1 is: " << my_point1 << std::endl << std::endl;
 
-	int my_var2 {2}; // Uniform initialization of an integer
+	int my_var2{2}; // Uniform initialization of an integer
   Point my_point2 {2.0, 2.0, 2.0}; // Uniform initialization of a Point, calls Point(double, double, double) constructor
   std::cout << "my_point2 is: " << my_point2 << std::endl << std::endl;
 

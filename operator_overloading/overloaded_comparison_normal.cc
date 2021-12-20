@@ -21,7 +21,7 @@ class Coche {
   Coche(const std::string& marca, const std::string& modelo) : marca_{ marca }, modelo_{ modelo } { }
   // Getters
   std::string marca() const { return marca_; } 
-  std::string modelo() const { return marca_; } 
+  std::string modelo() const { return modelo_; } 
  private:
   std::string marca_;
   std::string modelo_;

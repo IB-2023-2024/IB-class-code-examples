@@ -26,6 +26,6 @@ class Cents {
 };
 
 // Need to explicitly provide prototype for operator+ so uses of operator+ in other files know this overload exists
-Cents operator+(const Cents &c1, const Cents &c2);
+Cents operator+(const Cents& c1, const Cents& c2);
 
 #endif

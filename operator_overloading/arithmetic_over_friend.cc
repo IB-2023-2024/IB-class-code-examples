@@ -24,10 +24,10 @@ class Cents {
   Cents(const int cents) { cents_ = cents; }
 
   // Add Cents + Cents using a friend function
-  friend Cents operator+(const Cents &c1, const Cents &c2);
+  friend Cents operator+(const Cents& c1, const Cents& c2);
 
   // Subtract Cents - Cents using a friend function
-  friend Cents operator-(const Cents &c1, const Cents &c2);
+  friend Cents operator-(const Cents& c1, const Cents& c2);
 
   int cents() const { return cents_; }
  private:
@@ -35,14 +35,14 @@ class Cents {
 };
 
 // note: this function is not a member function!
-Cents operator+(const Cents &c1, const Cents &c2) {
+Cents operator+(const Cents& c1, const Cents& c2) {
   // use the Cents constructor and operator+(int, int)
   // we can access cents_ directly because this is a friend function
   return Cents(c1.cents_ + c2.cents_);
 }
 
 // note: this function is not a member function!
-Cents operator-(const Cents &c1, const Cents &c2) {
+Cents operator-(const Cents& c1, const Cents& c2) {
   // use the Cents constructor and operator-(int, int)
   // we can access cents_ directly because this is a friend function
   return Cents(c1.cents_ - c2.cents_);

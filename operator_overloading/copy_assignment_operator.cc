@@ -22,13 +22,13 @@ class Fraction {
   }
 
   // Copy constructor
-  Fraction(const Fraction &other) : numerator_{other.numerator_}, denominator_{other.denominator_} {
+  Fraction(const Fraction& other) : numerator_{other.numerator_}, denominator_{other.denominator_} {
     // no need to check for a denominator of 0 here since other must already be a valid Fraction
     std::cout << "Copy constructor called\n"; // just to prove it works
   }
 
   // Overloaded assignment
-  Fraction& operator= (const Fraction &other_fraction);
+  Fraction& operator= (const Fraction& other_fraction);
 
   friend std::ostream& operator<<(std::ostream& out, const Fraction& f1);
  private:
