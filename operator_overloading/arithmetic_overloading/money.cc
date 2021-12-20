@@ -18,6 +18,5 @@ int main() {
   Cents cents2{8};
   Cents total{cents1 + cents2}; // without the prototype in cents.h, this would fail to compile
   std::cout << "I have " << total.cents() << " cents." << std::endl;
-
   return 0;
 }

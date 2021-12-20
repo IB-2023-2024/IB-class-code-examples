@@ -24,6 +24,7 @@ class Cents {
 
   // Overload Cents + int
   Cents operator+(int value);
+  
 	// getter
   int cents() const { return cents_; }
  private:
@@ -44,6 +45,5 @@ int main() {
 	Cents cents1{6};
 	Cents cents2 = cents1 + 2;
 	std::cout << "I have " << cents2.cents() << " cents.\n";
-
 	return 0;
 }
