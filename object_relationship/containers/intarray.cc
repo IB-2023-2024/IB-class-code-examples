@@ -38,7 +38,7 @@ IntArray::~IntArray() {
 /**
  *  Erases the array and set the length to 0.
  */
-void IntArray::erase() {
+void IntArray::Erase() {
   delete[] data_;
   // We need to make sure we set data_ to nullptr here, otherwise it will
   // be left pointing at deallocated memory!
@@ -51,7 +51,7 @@ void IntArray::erase() {
  * @param index. Index of the element to return
  * @return the array element at index
  */
-int& IntArray::operator[](int index) {
+int& IntArray::operator[](const int index) {
   assert(index >= 0 && index < length_);
   return data_[index];
 }
@@ -62,9 +62,9 @@ int& IntArray::operator[](int index) {
  * This function operates quickly.
  * @param newLength. New size of the array
  */
-void IntArray::reallocate(int newLength) {
+void IntArray::Reallocate(const int newLength) {
   // First we delete any existing elements
-  erase();
+  Erase();
 
   // If our array is going to be empty now, return here
   if (newLength <= 0)
@@ -81,14 +81,14 @@ void IntArray::reallocate(int newLength) {
  * This function operates slowly.
  * @param newLength. New size of the array
  */
-void IntArray::resize(int newLength) {
+void IntArray::Resize(const int newLength) {
   // if the array is already the right length, we're done
   if (newLength == length_)
     return;
 
   // If we are resizing to an empty array, do that and return
   if (newLength <= 0) {
-    erase();
+    Erase();
     return;
   }
 
@@ -108,7 +108,7 @@ void IntArray::resize(int newLength) {
     int elementsToCopy{ (newLength > length_) ? length_ : newLength };
 
     // Now copy the elements one by one
-    for (int index{ 0 }; index < elementsToCopy ; ++index)
+    for (int index{0}; index < elementsToCopy ; ++index)
       data[index] = data_[index];
   }
 
@@ -127,7 +127,7 @@ void IntArray::resize(int newLength) {
  * @param value Value to insert
  * @param index. The value is inserted just before this index
  */
-void IntArray::insertBefore(int value, int index) {
+void IntArray::InsertBefore(const int value, const int index) {
   // Sanity check our index value
   assert(index >= 0 && index <= length_);
 
@@ -155,13 +155,13 @@ void IntArray::insertBefore(int value, int index) {
  * 
  * @param index. Index of the element to remove
  */
-void IntArray::remove(int index) {
+void IntArray::Remove(const int index) {
   // Sanity check our index value
   assert(index >= 0 && index < length_);
 
   // If we're removing the last element in the array, we can just erase the array and return early
   if (length_ == 1) {
-    erase();
+    Erase();
     return;
   }
 
@@ -186,20 +186,20 @@ void IntArray::remove(int index) {
  * Inserts a value at the first position of the array 
  * @param value to insert
  */
-void IntArray::insertAtBeginning(int value) { 
-  insertBefore(value, 0); 
+void IntArray::InsertAtBeginning(const int value) { 
+  InsertBefore(value, 0); 
 }
 
 /**
  * Inserts a value at the last position of the array
  * @param value to insert
  */
-void IntArray::insertAtEnd(int value) { insertBefore(value, length_); }
+void IntArray::InsertAtEnd(int value) { InsertBefore(value, length_); }
 
 /**
  * Getter
  * @return the number of elements in the array
  */
-int IntArray::getLength() const { 
+int IntArray::length() const { 
   return length_; 
 }

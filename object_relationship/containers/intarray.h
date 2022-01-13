@@ -20,16 +20,16 @@ class IntArray {
   IntArray() = default;
   IntArray(int length);
   ~IntArray();
-  void erase();
-  int& operator[](int index);
-  void reallocate(int newLength);
-  void resize(int newLength);
-  void insertBefore(int value, int index);
-  void remove(int index);
+  void Erase();
+  int& operator[](const int index);
+  void Reallocate(const int newLength);
+  void Resize(const int newLength);
+  void InsertBefore(const int value, const int index);
+  void Remove(const int index);
   // A couple of additional functions just for convenience
-  void insertAtBeginning(int value);
-  void insertAtEnd(int value); 
-  int getLength() const;
+  void InsertAtBeginning(const int value);
+  void InsertAtEnd(const int value); 
+  int length() const;
  private:
   int length_{};
   int *data_{};

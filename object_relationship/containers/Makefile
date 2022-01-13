@@ -33,7 +33,7 @@ test_array: test_array.o intarray.o
 # We can use it for additional housekeeping purposes
 clean :
 	rm -f *.o test_array
-	rm -rf *~ basura b i
+	rm -rf *~ basura* b i
 	rm -rf a.out
 	find . -name '*~' -exec rm {} \;
 	find . -name basura -exec rm {} \;
