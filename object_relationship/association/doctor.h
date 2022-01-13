@@ -31,7 +31,7 @@ class Doctor {
 	const std::string& name() const { return name_; }
  private:
 	std::string name_{};
-	std::vector<std::reference_wrapper<const Patient>> patient_{};
+	std::vector<std::reference_wrapper<const Patient>> patients_{};
 };
 
 #endif

@@ -20,19 +20,19 @@
 
 void Doctor::addPatient(Patient& patient) {
 	// Our doctor will add this patient
-	patient_.push_back(patient);
+	patients_.push_back(patient);
  
 	// and the patient will also add this doctor
 	patient.addDoctor(*this);
 }
 
 std::ostream& operator<<(std::ostream &out, const Doctor &doctor) {
-	if (doctor.patient_.empty()) {
+	if (doctor.patients_.empty()) {
 		out << doctor.name_ << " no tiene pacientes en este momento";
 		return out;
 	}
 	out << doctor.name_ << " está supervisando a los pacientes: ";
-	for (const auto& patient : doctor.patient_)
+	for (const auto& patient : doctor.patients_)
 		out << patient.get().name() << ", ";
 	return out;
 }
