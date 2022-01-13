@@ -9,6 +9,8 @@
  * @brief Patient class declaration
  *
  * @see https://www.learncpp.com/cpp-tutorial/association/
+ * @see https://en.cppreference.com/w/cpp/utility/functional/reference_wrapper
+ * @see https://www.tutorialspoint.com/reference-wrapper-in-cplusplus
  */
 
 #ifndef PATIENT_H
