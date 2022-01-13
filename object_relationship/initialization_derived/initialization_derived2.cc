@@ -32,12 +32,8 @@ class Base {
 class Derived: public Base {
  public:
   double cost_;
-  
 	// does not work
-  Derived(double cost = 0.0, int id = 0) : cost_{ cost }, id_{ id } 
-  {
-  }
-
+  Derived(double cost = 0.0, int id = 0) : cost_{ cost }, id_{ id } { }
   double getCost() const { return cost_; }
 };
 

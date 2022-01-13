@@ -26,7 +26,6 @@ class Base {
   Base(int id = 0) : id_{id} {
 		std::cout << "Constructor Base(int) llamado" << std::endl;
   }
-
   int getId() const { return id_; }
  private:
   int id_;
@@ -37,7 +36,6 @@ class Derived: public Base {
  Derived(double cost = 0.0, int id = 0) : Base{ id }, cost_{ cost } {
 		std::cout << "Constructor Derived (double, int) llamado" << std::endl;
  }
-
   double getCost() const { return cost_; }
  private:
   double cost_;

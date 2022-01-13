@@ -16,9 +16,11 @@
  *        While this actually works in this case, it wouldn’t work if id_ were a 
  *        const or a reference (because const values and references have to be 
  *        initialized in the initialization list of the constructor). 
+ *
  *        It’s also inefficient because id_ gets assigned a value twice: 
  *        once in the initialization list of the Base class constructor, and then 
  *        again in the body of the Derived class constructor. 
+ *
  *        And finally, what if the Base class needed access to this value during construction? 
  *        It has no way to access it, since it’s not set until the Derived constructor is executed (which pretty much happens last).
  *
@@ -42,7 +44,7 @@ class Derived: public Base {
  public:
   double cost_;
   
-	Derived(double cost=0.0, int id=0) : cost_{ cost } {
+	Derived(double cost = 0.0, int id = 0) : cost_{ cost } {
     id_ = id;
 		std::cout << "Constructor Derived (int) llamado" << std::endl;
   }
