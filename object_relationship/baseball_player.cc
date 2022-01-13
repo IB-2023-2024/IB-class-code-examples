@@ -8,6 +8,7 @@
  * @date 05 Jan 2021
  * @brief Example to illustrate inheritance
  * @see https://www.learncpp.com/cpp-tutorial/basic-inheritance-in-c/
+ * @see https://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm
  */
 
 #include <iostream>
