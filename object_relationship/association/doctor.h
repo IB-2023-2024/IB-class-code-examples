@@ -7,13 +7,18 @@
  * @author F.de Sande
  * @date 05 Jan 2021
  * @brief Doctor class declaration
+ *        A doctor holds a vector of patients
+ *
  * @see https://www.learncpp.com/cpp-tutorial/association/
+ * @see https://en.cppreference.com/w/cpp/utility/functional/reference_wrapper
+ * @see https://www.tutorialspoint.com/reference-wrapper-in-cplusplus
  */
 
 #ifndef DOCTOR_H
 #define DOCTOR_H
 
 #include <string>
+#include <functional> // reference_wrapper
 
 // Since Doctor and Patient have a circular dependency, we're going to forward declare Patient
 class Patient;

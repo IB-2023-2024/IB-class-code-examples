@@ -15,6 +15,7 @@
 #define PATIENT_H
 
 #include <string>
+#include <functional> // reference_wrapper
 
 class Patient {
 public:

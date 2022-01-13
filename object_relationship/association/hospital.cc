@@ -12,7 +12,6 @@
  */
 
 #include <cstdint>
-#include <functional> // reference_wrapper
 #include <iostream>
 #include <string>
 #include <vector>
