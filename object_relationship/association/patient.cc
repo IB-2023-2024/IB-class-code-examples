@@ -19,17 +19,16 @@
 #include "patient.h"
 
 void Patient::addDoctor(const Doctor& doctor) {
-  doctor_.push_back(doctor);
+  doctors_.push_back(doctor);
 }
 
 std::ostream& operator<<(std::ostream &out, const Patient &patient) {
-	if (patient.doctor_.empty()) {
+	if (patient.doctors_.empty()) {
 		out << patient.name() << " No tiene doctores en este momento";
 		return out;
 	}
 	out << patient.name_ << " está consultando a los doctores: ";
-	for (const auto& doctor : patient.doctor_)
+	for (const auto& doctor : patient.doctors_)
 		out << doctor.get().name() << ", ";
-
 	return out;
 }

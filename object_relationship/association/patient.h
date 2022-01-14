@@ -28,7 +28,7 @@ public:
 	friend void Doctor::addPatient(Patient& patient);
 private:
 	std::string name_{};
-	std::vector<std::reference_wrapper<const Doctor>> doctor_{}; // so that we can use it here
+	std::vector<std::reference_wrapper<const Doctor>> doctors_{}; // so that we can use it here
 	// We're going to make addDoctor private because we don't want the public to use it.
 	// They should use Doctor::addPatient() instead, which is publicly exposed
 	void addDoctor(const Doctor& doctor);
