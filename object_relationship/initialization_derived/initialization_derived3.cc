@@ -31,25 +31,21 @@
 
 class Base {
  public:
-  int id_;
-
-  Base(int id = 0) : id_{ id } {
+  Base(int id = 0) : id_{id} {
 		std::cout << "Constructor Base(int) llamado" << std::endl;
   }
-
   int getId() const { return id_; }
+  int id_;
 };
 
 class Derived: public Base {
  public:
-  double cost_;
-  
-	Derived(double cost = 0.0, int id = 0) : cost_{ cost } {
+	Derived(double cost = 0.0, int id = 0) : cost_{cost} {
     id_ = id;
 		std::cout << "Constructor Derived (int) llamado" << std::endl;
   }
-
   double getCost() const { return cost_; }
+  double cost_;
 };
 
 int main() {

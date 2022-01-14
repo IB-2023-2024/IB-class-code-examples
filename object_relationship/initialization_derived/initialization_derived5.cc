@@ -33,7 +33,7 @@ class Base {
 
 class Derived: public Base {
  public:
- Derived(double cost = 0.0, int id = 0) : Base{ id }, cost_{ cost } {
+ Derived(double cost = 0.0, int id = 0) : Base{id}, cost_{cost} {
 		std::cout << "Constructor Derived (double, int) llamado" << std::endl;
  }
   double getCost() const { return cost_; }
