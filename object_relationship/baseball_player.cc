@@ -16,24 +16,19 @@
 
 class Person {
  public:
-  std::string name_{};
-  int age_{};
-
+  Person(const std::string& name = "", int age = 0) : name_{name}, age_{age} { }
   const std::string& name() const { return name_; }
   int age() const { return age_; }
 
-  Person(const std::string& name = "", int age = 0) : name_{name}, age_{age} {
-  }
+  std::string name_{};
+  int age_{};
 };
 
-// BaseballPlayer publicly inheriting Person
-class BaseballPlayer : public Person {
+class BaseballPlayer : public Person { // Publicly inheriting Person
 public:
+  BaseballPlayer(double battingAverage = 0.0, int homeRuns = 0) : batting_average_{battingAverage}, home_runs_{homeRuns} { }
   double batting_average_{};
   int home_runs_{};
-
-  BaseballPlayer(double battingAverage = 0.0, int homeRuns = 0) : batting_average_{battingAverage}, home_runs_{homeRuns} {
-  }
 };
 
 int main() {
