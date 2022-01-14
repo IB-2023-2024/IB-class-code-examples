@@ -28,7 +28,7 @@ class Point2D {
   friend std::ostream& operator<<(std::ostream& out, const Point2D &point);
 
   // Access functions
-  void setPoint(const int x, const int y);
+  void SetPoint(const int x, const int y);
  private:
   int x_;
   int y_;

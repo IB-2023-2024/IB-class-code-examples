@@ -15,14 +15,12 @@
 
 #include "point2D.h"
 
-// Output operator
 std::ostream& operator<<(std::ostream& out, const Point2D &point) {
   out << '(' << point.x_ << ", " << point.y_ << ')';
   return out;
 }
 
-// Setter
-void Point2D::setPoint(const int x, const int y) {
+void Point2D::SetPoint(const int x, const int y) {
   x_ = x;
   y_ = y;
 }
