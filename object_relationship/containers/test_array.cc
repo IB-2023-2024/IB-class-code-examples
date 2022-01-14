@@ -40,7 +40,6 @@ int main() {
   // Print out all the numbers
   for (int i{0}; i < array.length(); ++i)
     std::cout << array[i] << ' ';
-
   std::cout << '\n';
 
   return 0;

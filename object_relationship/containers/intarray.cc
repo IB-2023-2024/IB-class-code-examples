@@ -105,7 +105,7 @@ void IntArray::Resize(const int newLength) {
   // array to the new array.  We want to copy as many elements as there are
   // in the smaller of the two arrays.
   if (length_ > 0) {
-    int elementsToCopy{ (newLength > length_) ? length_ : newLength };
+    int elementsToCopy{(newLength > length_) ? length_ : newLength};
 
     // Now copy the elements one by one
     for (int index{0}; index < elementsToCopy ; ++index)

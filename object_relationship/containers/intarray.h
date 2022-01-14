@@ -13,7 +13,7 @@
 #ifndef INT_ARRAY_H
 #define INT_ARRAY_H
 
-#include <cassert> // for assert()
+#include <cassert> // assert()
 
 class IntArray {
  public:
