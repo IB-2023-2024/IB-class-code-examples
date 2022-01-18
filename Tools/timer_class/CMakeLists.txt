@@ -4,7 +4,7 @@
 # Informática Básica
 #
 # @author F. de Sande
-# @date 11 Jan 2020
+# @date Jan 11 2020
 # @brief CMakeLists.txt for the Timer class
 #
 # Build process:
@@ -48,14 +48,12 @@ add_executable(runTests
     src/utils.h
     src/utils.cc
     src/timer.h
-    src/timer.cc
     test/test_timer.cc)
 
 add_executable(timer_program
     src/utils.h
     src/utils.cc
     src/timer.h
-    src/timer.cc
 		src/timer_program.cc)
 
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
