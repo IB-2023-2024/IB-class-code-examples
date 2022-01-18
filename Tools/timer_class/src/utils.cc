@@ -14,6 +14,7 @@
 #include <chrono>   // std::chrono::seconds
 #include <thread>   // std::this_thread::sleep_for
 #include <iostream>
+#include <thread>  // sleep_for
 
 #include "utils.h"
 
@@ -34,7 +35,7 @@ void Usage(int argc, char *argv[]) {
   }
   std::string parameter{argv[1]};
   if (parameter == "--help") {
-    const std::string kHelpText = "El programa mide el tiempo de ejecución de un bucle, cuyo número de iteraciones se requiere como parámetro";
+    const std::string kHelpText = "El programa mide el tiempo de ejecución de diversos fragmentos de código. Se requiere como parámetro el número de iteraciones para un bucle";
     std::cout << kHelpText << std::endl;
     exit(EXIT_SUCCESS);
   }
@@ -74,4 +75,10 @@ void DelaySeconds(const int delay_seconds) {
   std::this_thread::sleep_for (std::chrono::seconds(delay_seconds));
 }
 
-
+/**
+ * @brief Waits (stops execution) the time inticated by the parameter
+ * @param[in] milliseconds to wait
+ */
+void WaitMilliSeconds(const int milliseconds) {
+  std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
+}
