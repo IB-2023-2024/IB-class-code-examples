@@ -1,0 +1,7 @@
+Compilar y ejecutar: 
+
+ javac ProgramaDeConversion.java 
+ java ProgramaDeConversion 
+
+ En el programa principal (ProgramaDeConversion.java) hay dos versiones (una
+ de ellas comentadas) para usar una "vista" textual o gráfica

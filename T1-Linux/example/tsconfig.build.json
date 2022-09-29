@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "es2020",
+    "moduleResolution": "Node",
+    "preserveSymlinks": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "outDir": "dist"
+  },
+  "exclude": ["node_modules", "src/app.ts"],
+  "include": ["src/*"]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "2021-2022_p13_poker",
+  "version": "1.0.0",
+  "description": "PAI Lab assignment #12. HML Canvas API. Event driven Programming. Poker Game",
+  "main": "src/app.ts",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.5.0",
+    "@types/node": "^17.0.31",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsdoc": "^39.2.9",
+    "jest": "^28.1.0",
+    "prettier": "^2.6.2",
+    "ts-jest": "^28.0.1",
+    "ts-node": "^10.7.0",
+    "typedoc": "^0.22.15",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "dev": "tsc --project tsconfig.build.json --watch",
+    "test": "jest",
+    "watch": "jest --watchAll --verbose",
+    "coverage": "jest --coverage --verbose",
+    "docs": "typedoc src/*.ts",
+    "start": "npm run build && ts-node src/app.ts",
+    "stop": "kill $(lsof -t -i:8080)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-p12-mvc-poker-alu0101329093.git"
+  },
+  "keywords": [
+    "Javascript",
+    "HTML",
+    "canvas",
+    "events",
+    "Poker"
+  ],
+  "author": "Jaime Armas Rivero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-p12-mvc-poker-alu0101329093/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-p12-mvc-poker-alu0101329093#readme"
+}
