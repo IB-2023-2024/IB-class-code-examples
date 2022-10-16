@@ -13,7 +13,7 @@
 #include <vector>
 #include <iostream>
 
-int main () {
+int main() {
   int variable{7};     // Declaration of 2 variables
   int another_var{5};
 
