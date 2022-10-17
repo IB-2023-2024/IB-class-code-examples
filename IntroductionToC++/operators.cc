@@ -10,7 +10,6 @@
  * @see https://www.learncpp.com/cpp-tutorial/increment-decrement-operators-and-side-effects/
  */
 
-#include <vector>
 #include <iostream>
 
 int main() {
