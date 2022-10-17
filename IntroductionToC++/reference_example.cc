@@ -15,6 +15,11 @@
 #include <cassert>
 
 int main() {
+  // DISCLAIMIER: Take into account that identifiers should always be meaningful
+  //              The use of identifiers with a single character (i, p, etc.) is a Bad Practice
+  //              Here we use such identifiers for the sake of simplicity and to relate this code
+  //              with the slides used in the classes
+  
   int i{42};
   int &j = i; // In this context, & does not mean “address of”, it means “reference to”.
 
