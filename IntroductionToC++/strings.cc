@@ -24,8 +24,7 @@ int main () {
 
   std::cout << "Type your name:" << std :: endl;
   std::string name = "";   // Init empty 
-  std::cin >> name;
-  // Read name
+  std::cin >> name;        // Read name
   std::cout << kHello + ", " + name + "!" << std :: endl;
   return 0;
 }
