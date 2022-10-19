@@ -19,7 +19,7 @@
 
 #include <iostream>
 
-int main () {
+int main() {
   // First way:
   char character {97} ;
   int i_var{character}; // initialize an integer with the value of character
