@@ -21,23 +21,23 @@ int main() {
   //              Here we use such identifiers for the sake of simplicity and to relate this code
   //              with the slides used in the classes
   
-  int x{0};
+  int x{0};      // Practice changing the value and trying to guess the result
   int y{0};
   int* p{&x};
   double d{0.0};
 
   // We print the value of different expressions
   // Remember that false/true are printed as 0/1 respectively
-  std::cout << (x)             << '\n'; 
-  std::cout << (y = x)         << '\n'; 
-  std::cout << (x + 1)         << '\n'; 
-  std::cout << (x * x + 2 * x) << '\n'; 
-  std::cout << (y = x * x)     << '\n'; 
-  std::cout << (x == 42)       << '\n'; 
-  std::cout << (*p)            << '\n'; 
-  std::cout << (p == &x)       << '\n'; 
-  std::cout << (x > 2 * y)     << '\n'; 
-  std::cout << (std::sin(d))   << '\n'; 
+  std::cout << "1: "  << (x)             << '\n'; 
+  std::cout << "2: "  << (y = x)         << '\n'; 
+  std::cout << "3: "  << (x + 1)         << '\n'; 
+  std::cout << "4: "  << (x * x + 2 * x) << '\n'; 
+  std::cout << "5: "  << (y = x * x)     << '\n'; 
+  std::cout << "6: "  << (x == 42)       << '\n'; 
+  std::cout << "7: "  << (*p)            << '\n'; 
+  std::cout << "8: "  << (p == &x)       << '\n'; 
+  std::cout << "9: "  << (x > 2 * y)     << '\n'; 
+  std::cout << "10: " << (std::sin(d))   << '\n'; 
 
   return 0;
 }
