@@ -21,9 +21,9 @@ int main() {
   //              with the slides used in the classes
   
   int i{42};
-  int &j = i; // In this context, & does not mean “address of”, it means “reference to”.
+  int& j = i; // In this context, & does not mean “address of”, it means “reference to”.
 
-  std::cout << i << '\n'; // print the value of i
+  // std::cout << i << '\n'; // print the value of i
   std::cout << j << '\n'; // print the value of the reference
 
   assert(j == 42);  // If the assertion is not true, it will halt the program
