@@ -30,8 +30,8 @@ int main() {
 
   std::cout << experiment;
   auto squares = CreateVectorOfFullSquares(20);
-  for (int i{0}; i < 20; ++i) {
-    std::cout << squares[i] << ", ";
+  for (auto number: squares) {
+    std::cout << number << ", ";
   }
   std::cout << std::endl;
   return 0;
@@ -46,6 +46,3 @@ std::vector<int> CreateVectorOfFullSquares(int size) {
   }
   return result;
 }
-
-
-
