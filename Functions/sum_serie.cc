@@ -14,8 +14,6 @@
 
 #include <iostream>
 
-using namespace std;
-
 // Computes the sum 1+2+3+...+num_terms
 int SumSerie(int num_terms) {
   const int result{num_terms * (num_terms + 1) / 2};
