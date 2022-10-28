@@ -26,6 +26,7 @@ int main() {
   int num_terms;
   std::cin >> num_terms;
   std::cout << "La suma de los " << num_terms << " primeros términos es: " << SumSerie(num_terms) << std::endl;
+
   for(int i{1}; i < num_terms; ++i) {
     std::cout << i << " + ";
   }

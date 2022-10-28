@@ -29,20 +29,14 @@
 
 int main(int argc, char* argv[]) {
   // Check the number of parameters
-  std::cout << "No. of parameters: " << argc << std::endl;
-  if (argc < 2) {
-    // Tell the user how to run the program
-    std::cerr << "Usage: " << argv[0] << " NAME" << std::endl;
-    /* "Usage messages" are a conventional way of telling the user
-    * how to run a program if they enter the command incorrectly.
-    */
-    return 1;
+  std::cout << "No. of parameters passed: " << argc << std::endl;
+  std::cout << "Parameters: " << std::endl;
+  for(int i = 0; i < argc; ++i) {
+    std::cout << i << " - " << argv[i]  << std::endl;
   }
-  // Print the user's name:
-  std::cout << argv[0] << " says hello, " << argv[1] << "!" << std::endl;
 
-  std::string name{argv[1]};  // Create a string object from the C-style (char* string)
-  std::cout << "The name is: " << name << std::endl;
+  std::string program_name {argv[0]};  // Create a string object from the C-style (char* string)
+  std::cout << "The program name is: " << program_name << std::endl;
 
   // How to convert a std::string into a number
   // https://www.geeksforgeeks.org/converting-strings-numbers-cc/
