@@ -26,7 +26,7 @@
 
 using namespace std;
 
-int main () {
+int main() {
   vector<int> numbers = {1, 2, 3};
   vector<string> names = {"Albert", " Alan"};
 

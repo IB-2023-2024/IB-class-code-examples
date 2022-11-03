@@ -19,7 +19,7 @@
 #include <iostream>
 #include <string>
 
-int main () {
+int main() {
   const std::string kHello{"Hello"};
 
   std::cout << "Type your name:" << std :: endl;

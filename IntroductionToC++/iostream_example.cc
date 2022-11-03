@@ -12,7 +12,7 @@
 
 #include <iostream>
 
-int main () {
+int main() {
   int some_number;
 
   std::cout << "Input a number: ";

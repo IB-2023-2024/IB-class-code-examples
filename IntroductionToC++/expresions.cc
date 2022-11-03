@@ -21,7 +21,7 @@ int main() {
   //              Here we use such identifiers for the sake of simplicity and to relate this code
   //              with the slides used in the classes
   
-  int x{0};      // Practice changing the value and trying to guess the result
+  int x{9};      // Practice changing the value and trying to guess the result
   int y{0};
   int* p{&x};
   double d{0.0};

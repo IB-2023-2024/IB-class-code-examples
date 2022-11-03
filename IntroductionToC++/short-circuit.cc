@@ -18,7 +18,7 @@
 
 using namespace std;
 
-int main () {
+int main() {
   int variable{0};
 
   // First example:

@@ -20,7 +20,7 @@
 #include <vector> 
 #include <string> 
 
-int main () {
+int main() {
   std::vector<std::string> my_vector;
   const int kVecSize{100};
 

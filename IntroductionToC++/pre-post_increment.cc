@@ -15,7 +15,7 @@
 #include <vector>
 #include <iostream>
 
-int main () {
+int main() {
   int variable{5};
   int another_var= variable++; // variable is incremented to 6, copy of original variable 
                                // is evaluated to the value 5, and 5 is assigned to another_var

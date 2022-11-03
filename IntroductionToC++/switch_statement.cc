@@ -24,7 +24,7 @@
 
 #include <iostream>
 
-int main () {
+int main() {
   const int kNumber{1};  // Play modifying this value
 
   switch (kNumber) {

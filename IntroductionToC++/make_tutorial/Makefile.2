@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-I.
+CFLAGS=-I. -Wall -std=c++17
 
 hellomake: hellomake.o hellofunc.o
 	$(CC) -o hellomake hellomake.o hellofunc.o

@@ -14,7 +14,7 @@
 
 #include <iostream>
 
-int main () {
+int main() {
   const int kNumberOfIterations{10};  // Play modifying this value
 
   for (int number{kNumberOfIterations}; number > 0; --number) {

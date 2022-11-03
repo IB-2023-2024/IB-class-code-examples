@@ -26,7 +26,7 @@
 
 using namespace std;
 
-int main () {
+int main() {
   vector<int> numbers; // Declare a vector but we don't initialize it
 
   numbers.push_back(5);

@@ -15,8 +15,8 @@
 
 #include <iostream>
 
-int main () {
-  int number_of_iterations{0};  // Play modifying this value
+int main() {
+  int number_of_iterations{5};  // Play modifying this value
 
   while (number_of_iterations > 0) {
     std::cout << number_of_iterations << ", ";

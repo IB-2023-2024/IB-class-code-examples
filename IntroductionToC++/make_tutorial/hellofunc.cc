@@ -17,5 +17,6 @@
 
 void MyPrintHelloMake(void) {
 	std::cout << "Hello makefiles!" << std::endl;
+
   return;
 }

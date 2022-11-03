@@ -19,7 +19,7 @@
 
 # include <iostream>
 
-int main () {
+int main() {
   int number{42}; 
   int another_number{4};
   int& ref{number};

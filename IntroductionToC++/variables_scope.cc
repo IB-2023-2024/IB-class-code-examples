@@ -17,10 +17,10 @@
  * @see http://www.cplusplus.com/doc/tutorial/namespaces/
  */
 
-int main () { // Start of main scope
-  float some_float = 13.13f; // Create variable
+int main() { // Start of main scope
+  double my_variable = 13.13f; // Create variable
   { // New inner scope
-    auto another_float = some_float ; // Copy variable 
-  } // another_float dies
+    auto another_variable = my_variable; // Copy variable 
+  } // another_variable dies
   return 0;
-} // some_float dies
+} // my_variable dies

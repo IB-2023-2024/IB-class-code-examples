@@ -15,7 +15,7 @@
 
 #include <iostream>
 
-int main () {
+int main() {
   const int kNumber{-100};  // Play modifying this value
 
   // Version 1
