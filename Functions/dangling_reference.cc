@@ -33,7 +33,7 @@
 #include <iostream>
 
 int& GetX() {
-  int local = 42;
+  int local{42};
   return local;
 }
 

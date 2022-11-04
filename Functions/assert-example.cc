@@ -29,14 +29,14 @@
 //
 #include <cassert>
 
-double Mysqrt(double x) {
-  assert(x >= 0);
+double Mysqrt(double number) {
+  assert(number >= 0);
   std::cout << "Execution in Mysqrt function" << std::endl;
-  return x;
+  return number;
 }
 
 int main() {
-  double param = -1.0;
+  double param = -11.0;
   const double result{Mysqrt(param)};
 
   std::cout << "param: " << param << " result: " << result << std::endl;

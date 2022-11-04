@@ -21,8 +21,8 @@ void Increment0(int x) {
   ++x;        
 }
 
-void Increment(int& x) {
-  int local_to_increment{99};  // Lifetime of this var finishes with Increment()
+void Increment1(int& x) {
+  int local_to_increment{99};  // Lifetime of this var finishes with Increment1()
   ++x;
   --local_to_increment;
 }
@@ -34,7 +34,7 @@ int main() {
                             // local_var still equals 0 (local_var was not incremented)
   std::cout << "local_var: " << local_var << std::endl;
 
-  Increment(local_var);     // local_var is passed by reference
+  Increment1(local_var);     // local_var is passed by reference
                             // local_var equals 1 (local_var was incremented)
   std::cout << "local_var: " << local_var << std::endl;
 }

@@ -20,8 +20,8 @@
 
 #include <iostream>
 
-int DoubleValue(int x) {
-  int value{x * 2};
+int DoubleValue(int number) {
+  int value{number * 2};
   return value;  // A copy of value will be returned here
 } // value goes out of scope here
 

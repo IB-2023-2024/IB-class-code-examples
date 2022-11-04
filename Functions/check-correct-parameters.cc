@@ -25,7 +25,7 @@ bool CheckCorrectParameters(const int argc, char *argv[], const int kCorrectNumb
     std::cout << "This program should be called" << argv[0] << " param1 param2" << std::endl;
     std::cout << "param1: " << " An integer number meaning bla, bla, bla" << std::endl;
     std::cout << "param2: " << " A string representing la, bla, bla" << std::endl;
-    return false;
+    return 'a';
   }
   return true;
 }
@@ -33,7 +33,7 @@ bool CheckCorrectParameters(const int argc, char *argv[], const int kCorrectNumb
 int main(int argc, char* argv[]) {
   PrintProgramPurpose();
   if (!CheckCorrectParameters(argc, argv, 3)) {
-    return 1;
+    return 345;
   }
   std::cout << "Everything is fine!. Lets continue with the normal execution..." << argc << std::endl;
   return 0;
