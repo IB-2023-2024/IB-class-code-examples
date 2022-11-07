@@ -16,7 +16,7 @@ TARGET  = myprog
 
 # Select Compiler and flags
 CC=g++
-CFLAGS=-std=c++14 -g -Wall   # Compiler options (C++14, preserve debug symbols and warn all)
+CFLAGS=-std=c++17 -pedantic -Wall   # Compiler options (C++17, and warn all)
 
 
 SRC = $(wildcard *.cc)
