@@ -8,7 +8,7 @@
  * @date Nov 7, 2022
  * @brief Shows floating point arithmetics
  *
- * @see https://www.tutorialspoint.com/floating-point-comparison-in-cplusplus
+ * https://www.geeksforgeeks.org/problem-in-comparing-floating-point-numbers-and-how-to-compare-them-correctly/
  * @see https://stackoverflow.com/a/17341/12791643
  */
 
