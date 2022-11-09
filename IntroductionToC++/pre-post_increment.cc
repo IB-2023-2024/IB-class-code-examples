@@ -17,8 +17,8 @@
 
 int main() {
   int variable{5};
-  int another_var= variable++; // variable is incremented to 6, copy of original variable 
-                               // is evaluated to the value 5, and 5 is assigned to another_var
+  int another_var = variable++; // variable is incremented to 6, copy of original variable 
+                                // is evaluated to the value 5, and 5 is assigned to another_var
   std::cout << variable << ' ' << another_var << std::endl;
 
   variable = 10;
