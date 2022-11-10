@@ -31,23 +31,22 @@
 #include <fstream>    // For the file streams
 #include <iostream>
 
-using namespace std;
+// using namespace std;   // You could try this...
 
 int main() {
-  string line, file_name;
-  const string kInputFilename = "test_bel.txt";
-  ifstream input_file{kInputFilename, ios_base::in};
-
+  const std::string kInputFilename = "test_bel.txt";
+  std::ifstream input_file{kInputFilename, std::ios_base::in};
+  std::string line, file_name;
   // Read data line-wise
   while (getline(input_file, line)) {
-    cout << "Read: " << line << endl;
+    std::cout << "Read: " << line << std::endl;
     // String has a find method
     size_t loc = line.find("filename", 0);
-    if (loc != string::npos) {
-      file_name = line.substr (line.find("=", 0) + 1, string::npos);
+    if (loc != std::string::npos) {
+      file_name = line.substr (line.find("=", 0) + 1, std::string::npos);
     }
   }
-  cout << "Filename found: " << file_name << endl;
+  std::cout << "Filename found: " << file_name << std::endl;
   return (0);
 }
 
