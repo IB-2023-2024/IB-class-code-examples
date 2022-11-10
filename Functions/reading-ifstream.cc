@@ -18,12 +18,10 @@
 using namespace std;    // Saving space
 
 int main() {
+  ifstream input_file{"test_cols.txt", ios_base::in};     // Create an input file stream
   int my_var1;
   double my_var2, my_var3;
   string my_string;
-
-  // Create an input file stream
-  ifstream input_file{"test_cols.txt", ios_base::in};
   // Read data, until it is there
   while (input_file >> my_var1 >> my_var2 >> my_string >> my_var3) {
     cout << my_var1 << ", " << my_var2 << ", " << my_string << ", " << my_var3 << endl;
