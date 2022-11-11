@@ -13,6 +13,6 @@
 
 #include <iostream>
 
-void myFcn(int x) {
+void MyFcn(int x) {
   std::cout << x;
 }
