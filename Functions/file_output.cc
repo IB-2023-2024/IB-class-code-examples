@@ -17,7 +17,7 @@
 int main() {
   // ofstream is used for writing files
   // We'll make a file called Sample.txt
-  std::ofstream output_file{"Sample.txt"};
+  std::ofstream output_file{"Manolito.txt"};
 
   // If we couldn't open the output file stream for writing
   if (!output_file) {

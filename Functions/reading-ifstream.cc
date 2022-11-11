@@ -26,6 +26,8 @@ int main() {
   while (input_file >> my_var1 >> my_var2 >> my_string >> my_var3) {
     cout << my_var1 << ", " << my_var2 << ", " << my_string << ", " << my_var3 << endl;
   }
+
+  input_file.close();
   return (0);
 }
 

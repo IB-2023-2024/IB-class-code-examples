@@ -18,6 +18,8 @@
 #include <iomanip>
 
 const double kValue = 123.456;
+const int kAscii_a = static_cast<int>('a');
+const int kSegundosEnHora = 60 * 60;
 
 int main() {
   std::cout << std::fixed << std::endl;

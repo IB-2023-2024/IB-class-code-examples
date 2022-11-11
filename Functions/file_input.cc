@@ -23,7 +23,7 @@
 int main() {
   // ifstream is used for reading files
   // We'll read from a file called Sample.txt
-  std::ifstream input_file{ "Sample.txt" };
+  std::ifstream input_file{ "ManolitA.txt" };
  
   // If we couldn't open the input file stream for reading
   if (!input_file) {
