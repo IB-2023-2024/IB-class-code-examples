@@ -13,8 +13,8 @@
 
 #include <iostream>
 
-void MyFcn(int x) {
-  std::cout << 2 * x;
+void MyFunction(int param) {
+  std::cout << 2 * param;
 }
 
 int main() {

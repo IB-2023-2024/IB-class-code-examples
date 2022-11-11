@@ -13,6 +13,6 @@
 
 #include <iostream>
 
-void MyFcn(int x) {
-  std::cout << x;
+void MyFunction(int param) {
+  std::cout << param;
 }
