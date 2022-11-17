@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 25 Jun 2020
+ * @date Jun 25 2020
  * @brief A simple class for 2D vectors
  *
  * The Vector2 class has member function Initialize
@@ -21,9 +21,10 @@
 
 class Vector2 {      // Two-dimensional vector class
  public:
+  void Initialize(const double x, const double y);
+ private:
   double x_;        // The x component of the vector
   double y_;        // The y component of the vector
-  void Initialize(const double x, const double y);
 };
 
 void Vector2::Initialize(const double x, const double y) {
@@ -31,12 +32,12 @@ void Vector2::Initialize(const double x, const double y) {
   y_ = y;
 }
 
-void Func() {
-  Vector2 v;                 // Create an instance of Vector2 called v
-  v.Initialize(1.0, 2.0);    // Initialize v to (1.0, 2.0)
+void MyFunction() {
+  Vector2 vector;                 // Create an instance of Vector2 called v
+  vector.Initialize(1.0, 2.0);    // Initialize v to (1.0, 2.0)
 }
 
 int main() {
-  Func();
+  MyFunction();
   return 0;
 }

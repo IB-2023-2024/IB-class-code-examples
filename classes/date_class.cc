@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 25 Jun 2020
+ * @date Jun 25 2020
  * @brief Date class Example
  *        In addition to holding data, classes can also contain functions! 
  *        Functions defined inside of a class are called member functions (or sometimes methods). 

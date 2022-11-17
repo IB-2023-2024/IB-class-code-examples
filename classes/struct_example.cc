@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 25 Jun 2020
+ * @date Jun 25 2020
  * @brief struct example
  *
  * struct is a class where everything is public
@@ -23,12 +23,12 @@
 
 // Define a structure
 struct NamedInt {
-  int num;
+  int number;
   std::string name;
 };
 
 void PrintStruct(const NamedInt& named_int) {
-  std::cout << named_int.name << " " << named_int.num << std::endl;
+  std::cout << named_int.name << " " << named_int.number << std::endl;
 }
 
 int main() {

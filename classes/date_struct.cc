@@ -26,7 +26,7 @@ void Print(const DateStruct &date) {
 }
 
 int main() {
-  DateStruct today{2021, 11, 26}; /// use uniform initialization
+  DateStruct today{2022, 11, 18}; /// use uniform initialization
   today.day = 11; /// use member selection operator to select a member of the struct
   Print(today);
   return 0;

@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 25 Jun 2020
+ * @date Jun 25 2020
  * @brief Encapsulated classes are easier to change
  *        While this program works fine, what would happen if we 
  *        decided to rename m_value1, or change its type? 

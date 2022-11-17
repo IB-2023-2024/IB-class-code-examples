@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 25 Jun 2020
+ * @date Jun 25 2020
  * @brief Date class Example with getters and setters
  *        The Date class is essentially an encapsulated data struct with a trivial implementation, 
  *        and a user of the class might reasonably expect to be able to get or set the day, month, or year.
@@ -21,13 +21,13 @@ class DateClass {
     std::cout << day_ << '/' << month_ << '/' << year_ << std::endl;
   }
   int GetMonth() { return month_; } // getter for month
-  void SetMonth(int month) { month_ = month; } // setter for month
+  void SetMonth(const int month) { month_ = month; } // setter for month
  
   int GetDay() { return day_; } // getter for day
-  void SetDay(int day) { day_ = day; } // setter for day
+  void SetDay(const int day) { day_ = day; } // setter for day
  
   int GetYear() { return year_; } // getter for year
-  void SetYear(int year) { year_ = year; } // setter for year
+  void SetYear(const int year) { year_ = year; } // setter for year
  private:
   int year_{};  // Initialize to 0
   int month_{};

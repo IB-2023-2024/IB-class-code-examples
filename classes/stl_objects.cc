@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 25 Jun 2020
+ * @date Jun 25 2020
  * @brief Using STL
  *        You have already been using classes without knowing it
  *        The C++ standard library is full of classes that have been created for your benefit. 
