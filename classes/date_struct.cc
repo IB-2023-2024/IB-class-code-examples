@@ -21,13 +21,13 @@ struct DateStruct {
   int day{};
 };
 
-void Print(const DateStruct &date) {
+void Print(const DateStruct& date) {
   std::cout << date.day << '/' << date.month << '/' << date.year << std::endl;
 }
 
 int main() {
-  DateStruct today{2022, 11, 18}; /// use uniform initialization
-  today.day = 11; /// use member selection operator to select a member of the struct
-  Print(today);
+  DateStruct mi_fecha{2022, 11, 1}; /// use uniform initialization
+  mi_fecha.day= 18; /// use member selection operator to select a member of the struct
+  Print(mi_fecha);
   return 0;
 }
