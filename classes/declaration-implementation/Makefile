@@ -4,13 +4,13 @@
 # Informática Básica
 #
 # @author F. de Sande
-# @date 10 Dec 2020
+# @date Dec 10 2020
 # @brief A Makefile for the Date class code
 # 
 
-CXX = g++						             # The C++ compiler command
-CXXFLAGS = -std=c++14 -g -Wall	 # The C++ compiler options (C++14, preserve debug symbols and warn all)
-LDFLAGS =						             # The linker options (if any)
+CXX = g++						                   # The C++ compiler command
+CXXFLAGS = -std=c++17 -Wall -pedantic	 # The C++ compiler options (C++14, preserve debug symbols and warn all)
+LDFLAGS =						                   # The linker options (if any)
 
 # The all target builds all of the programs handled by the makefile.
 all: date_client_program

@@ -17,12 +17,12 @@
 #include "date.h"
  
 int main() {
-  Date today{2021, 12, 10};  // initialize using parameterized constructor (C++11)
+  Date today{2022, 11, 25};  // initialize using parameterized constructor (C++11)
   today.Print();  /// use member selection operator to call a member function of the class
 
   const Date date1{}; // initialize using default constructor
-  const Date christmas(2021, 12, 25); // initialize using parameterized constructor
-  const Date year_end{2021, 12, 31}; 
+  const Date christmas(2022, 12, 25); // initialize using parameterized constructor
+  const Date year_end{2022, 12, 31}; 
 
   return 0;
 }
