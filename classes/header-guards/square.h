@@ -11,7 +11,7 @@
  * @see https://www.learncpp.com/cpp-tutorial/header-guards/
  */
 
-// We shouldn't be including function definitions in header files
+// NOTICE! We shouldn't be including function definitions in header files
 // But for the sake of this example, we will
 int GetSquareSides() {
   return 4;
