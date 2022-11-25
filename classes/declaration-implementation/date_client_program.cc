@@ -13,10 +13,6 @@
  */
 
 #include <iostream>
-#include <iostream>
-#include <iostream>
-#include <iostream>
-#include <iostream>
 
 #include "date.h"
 
@@ -26,6 +22,5 @@ int main() {
   const Date date1{}; // initialize using default constructor
   const Date christmas(2022, 12, 25); // initialize using parameterized constructor
   const Date year_end{2022, 12, 31}; 
-
   return 0;
 }

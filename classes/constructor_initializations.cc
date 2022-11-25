@@ -29,9 +29,8 @@ int main() {
   Something something4{}; /// calls Something()
 
   Something something5 = Something{2, 4.8}; /// Copy initialize a Something, will call Something(2, 4.8)
-  Something something6 = s5;
+  Something something6 = something5;
 
-  // Something sX{2.4}; /// will not compile, as there's no constructor to handle Something(double)
-
+  // Something something7{2.4}; /// will not compile, as there's no constructor to handle Something(double)
   return 0;
 }

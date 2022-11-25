@@ -53,7 +53,7 @@ class Simple {
  public:
   Simple(int id) : id_{id} { }
 
-  void setID(int id) { id_ = id; }
+  void setID(const int id) { id_ = id; }
   int getID() { return id_; }
  private:
   int id_;

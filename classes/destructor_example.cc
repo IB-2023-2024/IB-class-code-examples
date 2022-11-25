@@ -40,7 +40,7 @@ class MyClass {
     std::cout << "The constructor has been called. Memory allocated" << std::endl;
   }
 
-  ~MyClass () {                           // Destructor
+  ~MyClass() {                           // Destructor
     // free memory previously allocated
     delete [] bufferPtr;
     std::cout << "The destructor has been called. Memory de-allocated" << std::endl;
