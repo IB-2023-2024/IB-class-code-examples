@@ -28,7 +28,10 @@ class Date {
 };
 
 int main() {
-  Date date{}; /// calls implicit constructor
-  std::cout << "Día: " << date.day() << " Mes: " << date.month() << " Año: " << date.year() << std::endl;
+  Date date1;   /// Default initializadion. Calls implicit (default) constructor
+  Date date2{}; /// Value initialization. calls implicit (default) constructor
+                /// Best practice: Favor value-initialization over default-initialization for class objects.
+  std::cout << "Día: " << date1.day() << " Mes: " << date1.month() << " Año: " << date1.year() << std::endl;
+  std::cout << "Día: " << date2.day() << " Mes: " << date2.month() << " Año: " << date2.year() << std::endl;
   return 0;
 }

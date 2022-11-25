@@ -23,7 +23,7 @@ class Something {
 };
 
 int main() {
-  Something something1{1, 2.4 };  /// Uniform initialization, calls Something(int, double)
+  Something something1{1, 2.4};  /// Uniform initialization, calls Something(int, double)
   Something something2(7, 4.8);   /// Direct initialization, also calls Something(int, double)
   Something something3{1}; /// calls Something(int)
   Something something4{}; /// calls Something()

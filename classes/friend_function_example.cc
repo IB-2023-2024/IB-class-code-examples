@@ -51,9 +51,9 @@ void PrintWeather(const Temperature &temperature, const Humidity &humidity) {
 }
 
 int main() {
-  Humidity hum(10);
-  Temperature temp(12);
-  PrintWeather(temp, hum);
+  Humidity humidity(10);
+  Temperature temperature(12);
+  PrintWeather(temperature, humidity);
 
   return 0;
 }

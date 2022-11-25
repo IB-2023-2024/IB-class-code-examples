@@ -28,11 +28,11 @@
  *        Since the function call now has an added argument, the member function definition needs to be modified to 
  *        accept (and use) this argument as a parameter. Consequently, the following member function:
  *
- *           void setID(int id) { m_id = id; }
+ *           void setID(int id) { id_ = id; }
  *
  *           is converted by the compiler into:
  *
- *           void setID(Simple* const this, int id) { this->m_id = id; }
+ *           void setID(Simple* const this, int id) { this->id_ = id; }
  *
  *        When the compiler compiles a normal member function, it implicitly adds a new parameter to the function named "this". 
  *        The this pointer is a hidden const pointer that holds the address of the object the member function was called on.
@@ -64,10 +64,10 @@ int main() {
   simple.setID(2);
   std::cout << simple.getID() << std::endl;
 
-  Simple a{1}; // this = &a inside the Simple constructor
-  Simple b{2}; // this = &b inside the Simple constructor
-  a.setID(3); // this = &a inside member function setID
-  b.setID(4); // this = &b inside member function setID
+  Simple simple1{1}; // this = &simple1 inside the Simple constructor
+  Simple simple2{2}; // this = &simple2 inside the Simple constructor
+  simple1.setID(3); // this = &simple1 inside member function setID
+  simple2.setID(4); // this = &simple2 inside member function setID
 
   return 0;
 }

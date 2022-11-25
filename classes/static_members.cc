@@ -37,10 +37,10 @@
 
 class Something {
  public:
-  static int s_value_;        // A data member should not be public!
+  static int s_value_;        // A data member SHOULD NOT BE PUBLIC!!!
 };
 
-int Something::s_value_{1};
+int Something::s_value_{1};   // You can't initialize in the declaration
 
 int main() {
   Something first;

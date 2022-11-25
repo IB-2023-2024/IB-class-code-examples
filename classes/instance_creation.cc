@@ -30,7 +30,7 @@ class SomeClass {
     std::cout << "Custom constructor 1 has been called" << std::endl;
   }
 
-  SomeClass(int a, float b) { /// Custom constructor
+  SomeClass(int a, double b) { /// Custom constructor
     a_ = a;
     b_ = b;
     std::cout << "Custom constructor 2 has been called" << std::endl;
@@ -41,8 +41,8 @@ class SomeClass {
     return;
   }
  private:
-  float a_{0.0};               /// Because of in-place initialization
-  float b_{0.0};               /// Default constructor is not needed
+  double a_{0.0};               /// Because of in-place initialization
+  double b_{0.0};               /// Default constructor is not needed
 };
 
 // How to use them?
