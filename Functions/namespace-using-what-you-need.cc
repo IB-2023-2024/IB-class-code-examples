@@ -7,31 +7,31 @@
  * @author F. de Sande
  * @date 25 Jun 2020
  * @brief namespace example
- * Avoid using namespace <name>
+ *        Avoid using namespace <name>
  *
  * @see http://www.cplusplus.com/doc/tutorial/namespaces/
  */
 
-#include <cmath>
 #include <iostream>
+#include <cmath>
 
 using std::cout; // Explicitly use cout
 using std::endl; // Explicitly use endl
 
 // Self - defined function power shadows std::pow
-double pow(double base, int exp) {
+double pow(double base, int exponent) {
   double result{1.0};
-  for (int i = 0; i < exp; i++) { 
+  for (int i{0}; i < exponent; ++i) { 
     result *= base; 
   }
   cout << "Our cool power function\n";
-  return (result);
+  return result;
 }
 
 int main() {
-  double x{2.0};
-  int power{2};
-  double result = pow(x, power);
-  cout << x << " ^ " << power << " = " << result << endl;
+  double base{2.0};
+  int exponent{10};
+  double result = pow(base, exponent);
+  cout << base << " ^ " << exponent << " = " << result << endl;
   return 0;
 }

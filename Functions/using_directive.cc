@@ -5,7 +5,8 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 3 Dec 2020
+ * @date Dec 3 2020
+ * Updated Nov 29 2022 
  * @brief The using directive
  *        A using directive tells the compiler to check a specified 
  *        namespace when trying to resolve an identifier that has no namespace prefix. 
@@ -29,6 +30,7 @@
  *        They violate the reason why namespaces were added in the first place.
  *
  * @see https://www.learncpp.com/cpp-tutorial/2-9-naming-collisions-and-an-introduction-to-namespaces/
+ * @see https://isocpp.org/wiki/faq/coding-standards#using-namespace-std
  */
 
 #include <iostream> // imports the declaration of std::cout
