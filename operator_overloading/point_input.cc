@@ -49,6 +49,5 @@ int main() {
   Point point{};
   std::cin >> point;
   std::cout << "You entered: " << point << '\n';
-
   return 0;
 }

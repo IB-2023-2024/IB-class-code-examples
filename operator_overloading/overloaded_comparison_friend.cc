@@ -44,10 +44,7 @@ int main() {
   Coche ateca{"Seat", "Ateca"};
   Coche ibiza{"Seat", "Ibiza"};
   
-  if (ateca == ibiza)
-    std::cout << "Un Ateca y un Ibiza son el mismo coche.\n";
-  if (ateca != ibiza)
-    std::cout << "Un Ateca y un Ibiza no son el mismo coche.\n";
-
+  if (ateca == ibiza) std::cout << "Un Ateca y un Ibiza son el mismo coche.\n";
+  if (ateca != ibiza) std::cout << "Un Ateca y un Ibiza no son el mismo coche.\n";
   return 0;
 }

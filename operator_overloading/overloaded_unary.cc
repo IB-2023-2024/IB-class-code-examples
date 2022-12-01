@@ -44,16 +44,12 @@ bool Point::operator!() const {
 
 int main() {
   Point point{1.0, 2.0, 3.0}; // use default constructor to set to (1.0, 2.0, 3.0)
-  if (!point)
-    std::cout << "point is set at the origin.\n";
-  else
-    std::cout << "point is not set at the origin.\n";
+  if (!point) std::cout << "point is set at the origin.\n";
+  else std::cout << "point is not set at the origin.\n";
   
   Point point2{-point};
-  if (!point2)
-    std::cout << "point is set at the origin.\n";
-  else
-    std::cout << "point is not set at the origin.\n";
+  if (!point2) std::cout << "point is set at the origin.\n";
+  else std::cout << "point is not set at the origin.\n";
 
   return 0;
 }

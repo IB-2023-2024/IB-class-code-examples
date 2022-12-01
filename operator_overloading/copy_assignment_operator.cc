@@ -61,6 +61,5 @@ int main() {
   Fraction my_fraction;
   my_fraction = fiveThirds; // calls overloaded assignment
   std::cout << my_fraction << std::endl;
-
   return 0;
 }

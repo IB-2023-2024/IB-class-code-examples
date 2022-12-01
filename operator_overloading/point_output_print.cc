@@ -7,7 +7,7 @@
  * @author F. de Sande
  * @date 10 Dec 2020
  * @brief Overloading operator<<
- *        Se puede escribir un método Print() encargado de escribir el objeto
+ *        In this approach we write a Print() method (member function) that prints the object
  *
  * @see https://www.learncpp.com/cpp-tutorial/93-overloading-the-io-operators/
  */

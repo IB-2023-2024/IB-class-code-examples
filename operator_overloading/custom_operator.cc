@@ -27,7 +27,7 @@ class Human {
     return kindness_ < other.kindness_;
   }
  private:
-  int kindness_ = 100;
+  int kindness_{100};
 };
 
 int main () {
