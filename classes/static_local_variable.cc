@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 10 Dec 2020
+ * @date Dec 10 2020
  * @brief static local variables
  *        Local variables have automatic duration by default, which means they are 
  *        created at the point of definition, and destroyed when the block is exited.
@@ -32,6 +32,5 @@ int main() {
   IncrementAndPrint();
   IncrementAndPrint();
   IncrementAndPrint();
-
   return 0;
 }

@@ -18,7 +18,7 @@
 
 class IDGenerator {
  public:
-  static int GetNextID(); // Declaration for a static function
+  static int next_ID(); // Declaration for a static function
  private:
   static int next_ID; // Declaration for a static member
 };
@@ -30,11 +30,11 @@ int IDGenerator::next_ID{1};
 
 // Here's the definition of the static function outside of the class.  
 // Note we don't use the static keyword here.
-int IDGenerator::GetNextID() { return next_ID++; }
+int IDGenerator::next_ID() { return next_ID++; }
 
 int main() {
   for (int count{0}; count < 5; ++count) {
-    std::cout << "The next ID is: " << IDGenerator::GetNextID() << '\n';
+    std::cout << "The next ID is: " << IDGenerator::next_ID() << '\n';
   // The method is called without any object instance
 	}
   return 0;
