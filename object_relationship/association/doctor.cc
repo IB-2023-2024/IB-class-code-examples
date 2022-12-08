@@ -20,7 +20,7 @@
 
 void Doctor::addPatient(Patient& patient) {
 	// Our doctor will add this patient
-	patients_.push_back(patient);
+	patients_.emplace_back(patient);
  
 	// and the patient will also add this doctor
 	patient.addDoctor(*this);

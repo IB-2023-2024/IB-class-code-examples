@@ -19,7 +19,7 @@
 #include "patient.h"
 
 void Patient::addDoctor(const Doctor& doctor) {
-  doctors_.push_back(doctor);
+  doctors_.emplace_back(doctor);
 }
 
 std::ostream& operator<<(std::ostream &out, const Patient &patient) {
