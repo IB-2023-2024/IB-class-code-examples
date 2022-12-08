@@ -23,25 +23,23 @@
 
 class Base {
  public:
-	int value_;
+  int value_;
 };
 
 class Derived : public Base {
  public:
-	// We can't initialize value_, since it's a Base member (Base must initialize it)
-	// But we can assign it a value
-	Derived(int value) {
-		value_ = value;
-	}
+  // We can't initialize value_, since it's a Base member (Base must initialize it)
+  // But we can assign it a value
+  Derived(const int value) {
+    value_ = value;
+  }
  private:
-	using Base::value_;
+  using Base::value_;
 };
 
 int main() {
-	Derived derived(7);
-
-	// The following won't work because value_ has been redefined as private
-	std::cout << derived.value_;
-
-	return 0;
+  Derived derived(7);
+  // The following won't work because value_ has been redefined as private
+  std::cout << derived.value_;
+return 0;
 }

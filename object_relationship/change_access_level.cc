@@ -26,35 +26,31 @@
 
 class Base {
  public:
-  Base(int value) : value_(value) {
-  }
+  Base(int value) : value_(value) { }
  protected:
-  void printValue() { std::cout << value_ << std::endl; }
+  void PrintValue() { std::cout << value_ << std::endl; }
  private:
   int value_;
 };
 
 /**
- * Because Base::printValue() has been declared as protected, 
+ * Because Base::PrintValue() has been declared as protected, 
  * it can only be called by Base or its derived classes. 
  * The public can not access it.
- * Let’s define a Derived class that changes the access specifier of printValue() to public:
+ * Let’s define a Derived class that changes the access specifier of PrintValue() to public:
  */
 class Derived: public Base {
  public:
-  Derived(int value) : Base(value) {
-  }
+  Derived(int value) : Base(value) { }
 
-  // Base::printValue was inherited as protected, so the public has no access
+  // Base::PrintValue was inherited as protected, so the public has no access
   // But we're changing it to public via a using declaration
-  using Base::printValue; // note: no parenthesis here
+  using Base::PrintValue; // note: no parenthesis here
 };
 
 int main() {
   Derived derived(7);
- 
-  // printValue is public in Derived, so this is okay
-  derived.printValue(); // prints 7
-
+  // PrintValue is public in Derived, so this is okay
+  derived.PrintValue(); // prints 7
   return 0;
 }

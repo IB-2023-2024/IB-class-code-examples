@@ -7,7 +7,6 @@
  * @author F.de Sande
  * @date 05 Jan 2021
  * @brief Illustrates adding functionality to an ancestor class 
- *        
  *
  * @see https://www.learncpp.com/cpp-tutorial/calling-inherited-functions-and-overriding-behavior/
  */
@@ -16,33 +15,26 @@
 
 class Base {
  public:
-  Base(int value) : value_(value) {
-  }
-
-  void identify() { std::cout << "I am a Base\n"; }
+  Base(int value) : value_(value) { }
+  void Identify() { std::cout << "I am a Base\n"; }
  protected:
   int value_;
 };
 
 class Derived: public Base {
  public:
-  Derived(int value) : Base(value) {
-  }
-
+  Derived(int value) : Base(value) { }
   int value() { return value_; }
-
-  void identify() { 
-		Base::identify(); // call Base::identify() first
-    std::cout << "I am a Derived\n"; // then identify ourselves
-	}
+  void Identify() { 
+    Base::Identify(); // call Base::Identify() first
+    std::cout << "I am a Derived\n"; // then Identify ourselves
+  }
 };
 
 int main() {
   Base base(5);
-  base.identify();
-
+  base.Identify();
   Derived derived(7);
-  derived.identify();
-
+  derived.Identify();
   return 0;
 }
