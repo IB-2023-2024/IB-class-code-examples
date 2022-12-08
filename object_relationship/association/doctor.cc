@@ -18,21 +18,21 @@
 #include "doctor.h"
 #include "patient.h"
 
-void Doctor::addPatient(Patient& patient) {
-	// Our doctor will add this patient
-	patients_.emplace_back(patient);
+void Doctor::AddPatient(Patient& patient) {
+  // Our doctor will add this patient
+  patients_.emplace_back(patient);
  
-	// and the patient will also add this doctor
-	patient.addDoctor(*this);
+  // and the patient will also add this doctor
+  patient.AddDoctor(*this);
 }
 
 std::ostream& operator<<(std::ostream &out, const Doctor &doctor) {
-	if (doctor.patients_.empty()) {
-		out << doctor.name_ << " no tiene pacientes en este momento";
-		return out;
-	}
-	out << doctor.name_ << " está supervisando a los pacientes: ";
-	for (const auto& patient : doctor.patients_)
-		out << patient.get().name() << ", ";
-	return out;
+  if (doctor.patients_.empty()) {
+    out << doctor.name_ << " no tiene pacientes en este momento";
+    return out;
+  }
+  out << doctor.name_ << " está supervisando a los pacientes: ";
+  for (const auto& patient : doctor.patients_)
+    out << patient.get().name() << ", ";
+  return out;
 }

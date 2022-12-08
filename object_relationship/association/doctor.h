@@ -25,13 +25,13 @@ class Patient;
 
 class Doctor {
  public:
-	Doctor(const std::string& name) : name_{ name } { } 
-	void addPatient(Patient& patient);
-	friend std::ostream& operator<<(std::ostream &out, const Doctor &doctor);
-	const std::string& name() const { return name_; }
+  Doctor(const std::string& name) : name_{ name } { } 
+  void AddPatient(Patient& patient);
+  friend std::ostream& operator<<(std::ostream &out, const Doctor &doctor);
+  const std::string& name() const { return name_; }
  private:
-	std::string name_{};
-	std::vector<std::reference_wrapper<const Patient>> patients_{};
+  std::string name_{};
+  std::vector<std::reference_wrapper<const Patient>> patients_{};
 };
 
 #endif

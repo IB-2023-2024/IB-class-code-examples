@@ -21,21 +21,21 @@
 
 int main() {
   // Create a Patient outside the scope of the Doctor
-	Patient alvarez{ "Alvarez" };
-	Patient diaz{ "Díaz" };
-	Patient gonzalez{ "González" };
-	Doctor barrera{ "Barrera" };
-	Doctor simon{ "Simón" };
+  Patient alvarez{"Alvarez"};
+  Patient diaz{"Díaz"};
+  Patient gonzalez{"González"};
+  Doctor barrera{"Barrera"};
+  Doctor simon{"Simón"};
 
-	barrera.addPatient(alvarez);
-	simon.addPatient(alvarez);
-	simon.addPatient(gonzalez);
+  barrera.AddPatient(alvarez);
+  simon.AddPatient(alvarez);
+  simon.AddPatient(gonzalez);
 
-	std::cout << barrera << '\n';
-	std::cout << simon << '\n';
-	std::cout << alvarez << '\n';
-	std::cout << diaz << '\n';
-	std::cout << gonzalez << '\n';
+  std::cout << barrera << '\n';
+  std::cout << simon << '\n';
+  std::cout << alvarez << '\n';
+  std::cout << diaz << '\n';
+  std::cout << gonzalez << '\n';
 
-	return 0;
+  return 0;
 }
