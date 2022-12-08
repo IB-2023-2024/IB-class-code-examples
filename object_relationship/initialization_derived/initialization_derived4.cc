@@ -34,28 +34,26 @@
 class Base {
  public:
   Base(int id = 0) : id_{ id } {
-		std::cout << "Constructor Base(int) llamado" << std::endl;
+    std::cout << "Constructor Base(int) llamado" << std::endl;
   }
-  int getId() const { return id_; }
+  int id() const { return id_; }
   int id_;
 };
 
 class Derived: public Base {
  public:
- // Call Base(int) constructor with value id!
- Derived(double cost = 0.0, int id = 0) : Base{id}, cost_{cost} {
-		std::cout << "Constructor Derived (double, int) llamado" << std::endl;
- }
-  double getCost() const { return cost_; }
+  // Call Base(int) constructor with value id!
+  Derived(double cost = 0.0, int id = 0) : Base{id}, cost_{cost} {
+    std::cout << "Constructor Derived (double, int) llamado" << std::endl;
+  }
+  double cost() const { return cost_; }
   double cost_;
 };
 
 int main() {
   Base base{5}; // use Base(int) constructor
-
   Derived derived{1.3}; // use Derived(double) constructor
-	std::cout << "Derived Id: " << derived.getId() << '\n';
-  std::cout << "Derived Cost: " << derived.getCost() << '\n';
-
+  std::cout << "Derived Id: " << derived.id() << '\n';
+  std::cout << "Derived Cost: " << derived.cost() << '\n';
   return 0;
 }
