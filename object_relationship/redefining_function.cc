@@ -16,32 +16,25 @@
 #include <iostream>
 
 class Base {
+ public:
+  Base(int value) : value_(value) { }
+  void Identify() { std::cout << "I am a Base\n"; }
  protected:
   int value_;
- public:
-  Base(int value) : value_(value) {
-  }
-
-  void identify() { std::cout << "I am a Base\n"; }
 };
 
 class Derived: public Base {
  public:
-  Derived(int value) : Base(value) {
-  }
-
+  Derived(int value) : Base(value) { }
   int value() { return value_; }
-
   // Here's our modified function
-  void identify() { std::cout << "I am a Derived\n"; }
+  void Identify() { std::cout << "I am a Derived\n"; }
 };
 
 int main() {
   Base base(5);
-  base.identify();
-
+  base.Identify();
   Derived derived(7);
-  derived.identify();
-
+  derived.Identify();
   return 0;
 }

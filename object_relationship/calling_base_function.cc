@@ -23,9 +23,7 @@
 
 class Base {
  public:
-  Base(int value) : value_(value) {
-  }
-
+  Base(int value) : value_(value) { }
   void Identify() { std::cout << "I am a Base\n"; }
  protected:
   int value_;
@@ -33,16 +31,13 @@ class Base {
 
 class Derived: public Base {
  public:
-  Derived(int value) : Base(value) {
-  }
+  Derived(int value) : Base(value) { }
 };
 
 int main() {
   Base base(5);
   base.Identify();
-
   Derived derived(7);
   derived.Identify();
-
   return 0;
 }
