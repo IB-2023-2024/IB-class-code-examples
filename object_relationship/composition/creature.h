@@ -21,7 +21,7 @@
 
 class Creature {
  public:
-  Creature(const std::string &name, const Point2D &location) : name_{ name }, position_{ location } { }
+  Creature(const std::string& name, const Point2D& location) : name_{ name }, position_{ location } { }
   friend std::ostream& operator<<(std::ostream& out, const Creature &creature);
   void moveTo(const int x, const int y);
  private:
