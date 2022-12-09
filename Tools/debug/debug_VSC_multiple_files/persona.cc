@@ -29,7 +29,7 @@ Persona::Persona() : nombre_{"Alan"}, apellido_{"Turing"}, edad_{41} {
  * @param[in] apellido: string con el apellido de la persona a crear
  * @param[in] edad: edad de la persona a crear
  */
-Persona::Persona(const std::string& nombre, const std::string apellido, const int edad) : nombre_{nombre}, apellido_{apellido}, edad_{edad} {
+Persona::Persona(const std::string& nombre, const std::string& apellido, const int edad) : nombre_{nombre}, apellido_{apellido}, edad_{edad} {
  std::cout << "DEBUG: Constructor persona ejecutado" << std::endl;
 }
 

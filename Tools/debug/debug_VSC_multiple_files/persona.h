@@ -23,7 +23,7 @@
 class Persona {
  public:
   Persona();
-  Persona(const std::string& nombre, const std::string apellido, const int edad);
+  Persona(const std::string& nombre, const std::string& apellido, const int edad);
   std::string nombre() const { return nombre_; }
   std::string apellido() const { return apellido_; }
   int edad() const { return edad_; }
