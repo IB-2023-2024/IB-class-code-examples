@@ -18,7 +18,7 @@
 class IntArray {
  public:
   IntArray() = default;
-  IntArray(int length);
+  IntArray(const int length);
   ~IntArray();
   void Erase();
   int& operator[](const int index);

@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5, 2021
  * @brief IntArray class definition
  *        In this example, we implement an integer array class from scratch 
  *        that implements most of the common functionality that containers should have. 
@@ -21,27 +21,22 @@
  * Constructor
  * @param length Number of elements in the array
  */
-IntArray::IntArray(int length): length_{ length } {
+IntArray::IntArray(const int length): length_{length} {
   assert(length >= 0);
   if (length > 0)
     data_ = new int[length]{};
 }
 
-/**
- * Destructor
- */
+/** Destructor */
 IntArray::~IntArray() {
   delete[] data_;
   // we don't need to set data_ to null or length_ to 0 here, since the object will be destroyed immediately after this function anyway
 }
 
-/**
- *  Erases the array and set the length to 0.
- */
+/** Erases the array and set the length to 0.  */
 void IntArray::Erase() {
   delete[] data_;
-  // We need to make sure we set data_ to nullptr here, otherwise it will
-  // be left pointing at deallocated memory!
+  // We need to make sure we set data_ to nullptr here, otherwise it will be left pointing at deallocated memory!
   data_ = nullptr;
   length_ = 0;
 }
@@ -50,6 +45,7 @@ void IntArray::Erase() {
  * Returns an array element
  * @param index. Index of the element to return
  * @return the array element at index
+ *         Note a return by reference
  */
 int& IntArray::operator[](const int index) {
   assert(index >= 0 && index < length_);
@@ -99,7 +95,7 @@ void IntArray::Resize(const int newLength) {
   // point to the new array.
 
   // First we have to allocate a new array
-  int *data{ new int[newLength] };
+  int *data{new int[newLength]};
 
   // Then we have to figure out how many elements to copy from the existing
   // array to the new array.  We want to copy as many elements as there are
@@ -132,7 +128,7 @@ void IntArray::InsertBefore(const int value, const int index) {
   assert(index >= 0 && index <= length_);
 
   // First create a new array one element larger than the old array
-  int *data{ new int[length_ + 1] };
+  int *data{new int[length_ + 1]};
 
   // Copy all of the elements up to the index
   for (int before{0}; before < index; ++before)
@@ -142,7 +138,7 @@ void IntArray::InsertBefore(const int value, const int index) {
   data[index] = value;
 
   // Copy all of the values after the inserted element
-  for (int after{ index }; after < length_; ++after)
+  for (int after{index}; after < length_; ++after)
     data[after + 1] = data_[after];
 
   // Finally, delete the old array, and use the new array instead
@@ -166,14 +162,14 @@ void IntArray::Remove(const int index) {
   }
 
   // First create a new array one element smaller than the old array
-  int *data{ new int[length_ - 1] };
+  int *data{new int[length_ - 1]};
 
   // Copy all of the elements up to the index
-  for (int before{ 0 }; before  < index; ++before)
+  for (int before{0}; before  < index; ++before)
     data[before] = data_[before];
 
   // Copy all of the values after the removed element
-  for (int after{ index + 1 }; after < length_; ++after)
+  for (int after{index + 1}; after < length_; ++after)
     data[after - 1] = data_[after];
 
   // Finally, delete the old array, and use the new array instead
@@ -186,7 +182,7 @@ void IntArray::Remove(const int index) {
  * Inserts a value at the first position of the array 
  * @param value to insert
  */
-void IntArray::InsertAtBeginning(const int value) { 
+void IntArray::InsertAtBeginning(const int value) {
   InsertBefore(value, 0); 
 }
 
@@ -194,12 +190,12 @@ void IntArray::InsertAtBeginning(const int value) {
  * Inserts a value at the last position of the array
  * @param value to insert
  */
-void IntArray::InsertAtEnd(int value) { InsertBefore(value, length_); }
+void IntArray::InsertAtEnd(int value) {InsertBefore(value, length_);}
 
 /**
  * Getter
  * @return the number of elements in the array
  */
-int IntArray::length() const { 
+int IntArray::length() const {
   return length_; 
 }
