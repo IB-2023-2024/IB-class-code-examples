@@ -34,7 +34,7 @@ public:
 int main() {
   // Create a new BaseballPlayer object
   BaseballPlayer joe{};
-  // Assign it a name (we can do this directly because m_name is public. It should not be!)
+  // Assign it a name (we can do this directly because name_ is public. It should not be!)
   joe.name_ = "Joe";
   // Print out the name
   std::cout << joe.name() << '\n'; // use the name() function we've acquired from the Person base class
