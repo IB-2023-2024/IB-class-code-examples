@@ -1,0 +1,12 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Informática Básica
+ *
+ * @author F. de Sande
+ * @date 18.nov.2020
+ * @brief Desarrolle en C++ un programa que imprima en pantalla el valor del factorial de los N primeros números.
+ * @see https://en.wikipedia.org/wiki/Factorial
+ */
+
