@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 7.nov.2020
+ * @date Nov 7, 2020
  * @brief This file declares the "Help Text" constant and two functions
  *
  */

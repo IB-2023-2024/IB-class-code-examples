@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 7.nov.2020
+ * @date Nov 7, 2020
  * @brief Cada nuevo término de la serie de Fibonacci se genera sumando los dos anteriores. 
  *        Comenzando con 0 y 1, los primeros 10 términos serán: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
  *        Desarrolle en C++ un programa que calcule la suma de todos los términos de valor par 
