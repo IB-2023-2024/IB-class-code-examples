@@ -38,6 +38,9 @@ void Usage(int argc, char *argv[]) {
   }
   std::string parameter{argv[1]};
   if (parameter == "--help") {
+    const std::string kHelpText = "Este programa calcula la suma de todos los términos pares de la \
+serie de Fibonacci que sean menores que un valor, que el usuario \
+ha de introducir por línea de comandos para la ejecución del programa";
     std::cout << kHelpText << std::endl;
     exit(EXIT_SUCCESS);
   }
@@ -53,7 +56,7 @@ size_t FibonacciSum(const size_t kLimit) {
   size_t second_to_last{0},  // Second to last term
            last{1},          // Last term generated
            new_term{0};      // New term of the serie
-  size_t sum{0};        // Accumulated sum of the terms
+  size_t sum{0};             // Accumulated sum of the terms
 
 	while (new_term < kLimit) {
     new_term = last + second_to_last;
