@@ -4,8 +4,14 @@
     {
       "type": "cppbuild",
       "label": "C/C++: g++ compilar usando Makefile",
-      "command": "/usr/bin/make",
-      "args": [],
+      "command": "/usr/bin/g++",
+      "args": [
+        "-g",
+        "${fileDirname}/*.h",
+        "${fileDirname}/*.cc",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
       "options": { "cwd": "${fileDirname}" },
       "problemMatcher": [ "$gcc" ],
       "group": {
