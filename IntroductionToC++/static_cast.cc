@@ -21,7 +21,7 @@
 
 int main() {
   // First way:
-  char character {97} ;
+  char character {'H'} ;
   int i_var{character}; // initialize an integer with the value of character
   std::cout << i_var << std::endl << std::endl; // print the integer value
 
