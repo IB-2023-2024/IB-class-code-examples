@@ -30,6 +30,9 @@ class Date {
   void Print();
   void SetDate(const int year, const int month, const int day);
   int getYear() { return year_; }
+
+  int year() const { return year_; }
+
   int getMonth() { return month_; }
   int getDay()  { return day_; }
  private:
