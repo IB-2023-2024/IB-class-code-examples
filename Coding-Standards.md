@@ -180,3 +180,12 @@ Utilice la palabra reservada `class` para objetos que tengan tanto datos como fu
 * Prefiera los miembros privados a los protegidos.
 * Utilice la herencia pública a menos que tenga una razón específica para hacer lo contrario.
 * Evite la herencia múltiple a menos que las alternativas conduzcan a una mayor complejidad.
+
+#### Referencias
+* [C++ Coding Standards: 101 Rules, Guidelines, and Best
+Practices](https://learning.oreilly.com/library/view/c-coding-standards/0321113586/)
+* [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
+* [C++ Programming Style Guidelines](https://geosoft.no/development/cppstyle.html)
+
+
+
