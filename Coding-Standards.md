@@ -5,15 +5,15 @@
 
 ### C++ C++ Coding Standards: Rules, Guidelines, & Best Practices
 
-Function Parameters
+#### Reglas de nombrado
+Nombre sus ficheros de código `algo.cc`, donde `algo` será un nombre significativo de su elección, y .cc es la extensión que indica que el fichero es un archivo fuente C++.
+
+#### Function Parameters
 * Always const-qualify all pointers or references to input-only parameters.
 
 
 
 
-Las mejores prácticas son cosas que deberías hacer, porque esa forma de hacer las cosas se considera generalmente un estándar o muy recomendable. Es decir, o todo el mundo lo hace así (y si lo haces de otra manera, estarás haciendo algo que la gente no espera), o es superior a las alternativas
-
-Nombra tus archivos de código algo.cc, donde algo es un nombre de tu elección, y .cc es la extensión que indica que el archivo es un archivo fuente C++.
 
 Crea un nuevo proyecto para cada nuevo programa que escribas.
 
