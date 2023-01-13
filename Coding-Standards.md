@@ -48,6 +48,7 @@ Las cabeceras definidas por el usuario deben seguir utilizando la extensión `.h
 2. Otras cabeceras de su proyecto
 3. Cabeceras de librerías de terceros
 4. Cabeceras de librerías estándar
+
 Las cabeceras de cada grupo deben ordenarse alfabéticamente.
 
 #### Parámetros de funciones
