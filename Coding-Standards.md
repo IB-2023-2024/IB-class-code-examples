@@ -44,10 +44,10 @@ Los bucles pueden usarse para ejecutar una sentencia más de una vez.
 * Cuando incluya un fichero de cabecera de la biblioteca estándar, utilice la versión sin la extensión `.h` si existe. 
 Las cabeceras definidas por el usuario deben seguir utilizando la extensión `.h`.
 * Para maximizar la posibilidad de que los includes que falten sean marcados por el compilador, ordene sus #includes como sigue:
-- El fichero de cabecera emparejado
-- Otras cabeceras de su proyecto
-- Cabeceras de librerías de terceros
-- Cabeceras de librerías estándar
+1. El fichero de cabecera emparejado
+2. Otras cabeceras de su proyecto
+3. Cabeceras de librerías de terceros
+4. Cabeceras de librerías estándar
 Las cabeceras de cada grupo deben ordenarse alfabéticamente.
 
 #### Parámetros de funciones
