@@ -185,7 +185,9 @@ Utilice la palabra reservada `class` para objetos que tengan tanto datos como fu
 * [C++ Coding Standards: 101 Rules, Guidelines, and Best
 Practices](https://learning.oreilly.com/library/view/c-coding-standards/0321113586/)
 * [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
+* [LLVM Coding Standards](https://llvm.org/docs/CodingStandards.html)
 * [C++ Programming Style Guidelines](https://geosoft.no/development/cppstyle.html)
+* [A comparison of common C++ style guides](https://github.com/motine/cppstylelineup)
 
 
 
