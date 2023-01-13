@@ -10,6 +10,7 @@
 * No deje que se acumulen los *warning*. Resuélvalos a medida que aparezcan (como si fueran errores). De lo contrario, una advertencia sobre un problema grave puede perderse entre advertencias sobre problemas no graves.
 * Configure al máximo los niveles de aviso en las opciones del compilador, sobre todo cuando esté aprendiendo. Le ayudará a identificar posibles problemas.
 * Active la opción de compilación "Tratar los avisos como errores" (`-Werror`). Esto le obligará a resolver todos los problemas que causen advertencias.
+* Cuando trate errores de compilación en sus programas, resuelva siempre primero el primer error producido y luego vuelva a compilar.
 * Escriba sus comentarios como si estuviera hablando con alguien que no tiene ni idea de lo que hace el código. No de por sentado que recordará por qué se tomaron determinadas decisiones.
 * Aunque el lenguaje lo permita, evite definir múltiples variables del mismo tipo en una misma sentencia. En su lugar, defina cada variable en una sentencia separada en su propia línea.
 * Inicialice las variables al crearlas.
@@ -21,57 +22,40 @@
 [`EXIT_SUCCESS`](https://en.cppreference.com/w/cpp/utility/program/EXIT_status)
 (`<cstdlib>`) si el programa se ejecuta normalmente
   y `EXIT_FAILURE` en caso contrario.
-
-* 
+* Asegúrese de que sus funciones con tipos de retorno no vacíos (no *void*) devuelven un valor en todos los casos.  No devolver un valor de una función de retorno de valor causará un comportamiento indefinido.
+* Siga la regla DRY: *Don't Repeat Yourself*. 
+Si necesita hacer algo más de una vez, considere cómo modificar su código para eliminar tanta redundancia como sea posible. 
+Las variables pueden usarse para almacenar los resultados de cálculos que necesitan usarse más de una vez (para no tener que repetir el cálculo). 
+Las funciones pueden usarse para definir una secuencia de sentencias que se necesita ejecutar más de una vez. 
+Los bucles pueden usarse para ejecutar una sentencia más de una vez.
+* Defina sus variables locales tan cerca de su primer uso como sea razonable.
+* Utilice prefijos de espacio de nombres explícitos (*namespace*) para acceder a identificadores definidos en un espacio de nombres.
 
 
 #### Reglas de nombrado
 * Nombre sus ficheros de código `algo.cc`, donde `algo` será un nombre significativo de su elección, y .cc es la extensión que indica que el fichero es un archivo fuente C++.
+* Utilice la extensión `.h` cuando nombre sus ficheros de cabecera.
+* Si un fichero de cabecera está emparejado con un fichero de código (por ejemplo, `add.h` con `add.cc`), ambos deben tener el mismo nombre base (`add`).
+* Los ficheros fuente deben #incluir el fichero de cabecera emparejado (si existe).
 
-#### Function Parameters
+#### Ficheros de cabecera (`*.h`)
+* Por lo general, los ficheros de cabecera no deben contener definiciones de funciones y variables, para no infringir la regla de una definición. 
+* Cada fichero debe `#incluir` explícitamente todos los ficheros de cabecera que necesite para compilar. 
+* Cuando incluya un fichero de cabecera de la biblioteca estándar, utilice la versión sin la extensión `.h` si existe. 
+Las cabeceras definidas por el usuario deben seguir utilizando la extensión `.h`.
+* Para maximizar la posibilidad de que los includes que falten sean marcados por el compilador, ordene sus #includes como sigue:
+** El fichero de cabecera emparejado
+** Otras cabeceras de su proyecto
+** Cabeceras de librerías de terceros
+** Cabeceras de librerías estándar
+** Las cabeceras de cada grupo deben ordenarse alfabéticamente.
+
+#### Parámetros de funciones
 * Always const-qualify all pointers or references to input-only parameters.
+* Mantenga los nombres de los parámetros en las declaraciones de las funciones.
 
 
 
-
-
-
-
-Asegúrate de que tus funciones con tipos de retorno no vacíos devuelven un valor en todos los casos.
-No devolver un valor de una función de retorno de valor causará un comportamiento indefinido.
-
-Siga la mejor práctica DRY: "no te repitas". Si necesitas hacer algo más de una vez, considera cómo modificar tu código para eliminar tanta redundancia como sea posible. Las variables pueden usarse para almacenar los resultados de cálculos que necesitan usarse más de una vez (para no tener que repetir el cálculo). Las funciones pueden usarse para definir una secuencia de sentencias que queremos ejecutar más de una vez. Y los bucles (que veremos en un capítulo posterior) pueden usarse para ejecutar una sentencia más de una vez.
-
-No pongas una sentencia return al final de una función que no devuelve valores.
-
-Defina sus variables locales tan cerca de su primer uso como sea razonable.
-
-Cuando trate errores de compilación en sus programas, resuelva siempre primero el primer error producido y luego vuelva a compilar.
-
-Mantenga los nombres de los parámetros en las declaraciones de las funciones.
-
-Cuando añadas nuevos archivos de código a tu proyecto, dales una extensión .cc.
-
-Utilice prefijos de espacio de nombres explícitos para acceder a identificadores definidos en un espacio de nombres.
-
-Por lo general, los archivos de cabecera no deben contener definiciones de funciones y variables, para no infringir la regla de una definición. Se hace una excepción con las constantes simbólicas (que cubrimos en la lección 4.13 -- Variables const y constantes simbólicas).
-
-Utilice un sufijo .h cuando nombre sus ficheros de cabecera.
-
-Si un fichero de cabecera está emparejado con un fichero de código (por ejemplo, add.h con add.cc), ambos deben tener el mismo nombre base (add).
-
-Los archivos fuente deben #incluir el archivo de cabecera emparejado (si existe).
-
-Cuando incluya un archivo de cabecera de la biblioteca estándar, utilice la versión sin la extensión .h si existe. Las cabeceras definidas por el usuario deben seguir utilizando la extensión .h.
-
-Cada fichero debe #incluir explícitamente todos los ficheros de cabecera que necesite para compilar. No confíe en cabeceras incluidas transitoriamente desde otras cabeceras.
-
-Para maximizar la posibilidad de que los includes que falten sean marcados por el compilador, ordene sus #includes como sigue:
-El fichero de cabecera emparejado
-Otras cabeceras de su proyecto
-Cabeceras de librerías de terceros
-Cabeceras de librerías estándar
-Las cabeceras de cada grupo deben ordenarse alfabéticamente.
 
 Prefiera los guardianes de cabecera a #pragma once para obtener la máxima portabilidad.
 
@@ -237,7 +221,7 @@ Favorezca los tipos de retorno explícitos sobre la deducción de tipo de retorn
 
 Utilice la sobrecarga de funciones para simplificar el programa.
 
-Si la función tiene una declaración hacia adelante (especialmente una en un archivo de cabecera), ponga el argumento por defecto allí. En caso contrario, coloque el argumento por defecto en la definición de la función.
+Si la función tiene una declaración hacia adelante (especialmente una en un fichero de cabecera), ponga el argumento por defecto allí. En caso contrario, coloque el argumento por defecto en la definición de la función.
 
 Utilice una sola letra mayúscula (empezando por T) para nombrar sus tipos de plantilla (por ejemplo, T, U, V, etc...)
 
@@ -281,8 +265,8 @@ Si desea un puntero const, vuelva a aplicar el calificador const incluso cuando 
 
 Nombra los tipos definidos por el programa empezando con mayúscula y sin sufijo.
 
-Un tipo definido por el programa utilizado en un solo archivo de código debe definirse en ese archivo de código lo más cerca posible del primer punto de uso.
-Un tipo definido por el programa utilizado en varios archivos de código debe definirse en un archivo de cabecera con el mismo nombre que el tipo definido por el programa y luego #incluirse en cada archivo de código según sea necesario.
+Un tipo definido por el programa utilizado en un solo fichero de código debe definirse en ese fichero de código lo más cerca posible del primer punto de uso.
+Un tipo definido por el programa utilizado en varios ficheros de código debe definirse en un fichero de cabecera con el mismo nombre que el tipo definido por el programa y luego #incluirse en cada fichero de código según sea necesario.
 
 Nombre sus tipos enumerados comenzando con una letra mayúscula. Nombre sus enumeradores comenzando con una letra minúscula.
 
