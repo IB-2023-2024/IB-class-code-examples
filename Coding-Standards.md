@@ -19,6 +19,7 @@
 * Existe cierto debate sobre si es necesario inicializar una variable inmediatamente antes de darle un valor proporcionado por el usuario a través de otra fuente (por ejemplo, `std::cin`), ya que el valor proporcionado por el usuario simplemente sobrescribirá el valor de inicialización. En línea con la recomendación anterior de que las variables deben ser siempre inicializadas, la mejor práctica es inicializar la variable primero.
 * Prefiera `'\n'` a `std::endl` cuando envíe texto a la consola.
 * **Los programadores noveles a menudo tratan de escribir un programa entero de una sola vez, y luego se sienten abrumados cuando produce un montón de errores. Una mejor estrategia es añadir una parte cada vez, asegurarse de que compila y probarlo. Entonces, cuando tenga seguridad de que funciona, pase a la siguiente pieza.**
+* **Escriba su programa en unidades pequeñas y bien definidas (funciones o clases), compile a menudo y pruebe su código sobre la marcha.**
 * Su función `main()`debe devolver el valor 
 [`EXIT_SUCCESS`](https://en.cppreference.com/w/cpp/utility/program/EXIT_status)
 (`<cstdlib>`) si el programa se ejecuta normalmente
@@ -35,7 +36,6 @@ Los bucles pueden usarse para ejecutar una sentencia más de una vez.
 * Evite las variables locales estáticas a menos que la variable nunca necesite ser reiniciada.
 * Prefiera los espacios de nombres explícitos a las sentencias `using`. 
 Evite el uso de directivas siempre que sea posible. 
-* **Escriba su programa en unidades pequeñas y bien definidas (funciones o clases), compile a menudo y pruebe su código sobre la marcha.**
 * Pruebe (*testing*) diferentes categorías de valores de entrada para asegurarse de que su unidad los maneja correctamente.
 * **Utilice aserciones para documentar casos que deberían ser lógicamente imposibles.**
 * Utilice `std::random_device` para sembrar sus PRNGs.
