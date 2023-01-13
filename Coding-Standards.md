@@ -50,213 +50,98 @@ Las cabeceras definidas por el usuario deben seguir utilizando la extensión `.h
 4. Cabeceras de librerías estándar
 
 Las cabeceras de cada grupo deben ordenarse alfabéticamente.
+* Prefiera los guardianes de cabecera (*header guards*) a `#pragma once` para maximizar la portabilidad de su código.
+
+#### Tipos de Datos
+* Prefiera `double` a `float`, ya que la falta de precisión en un `float` a menudo conducirá a imprecisiones.
+* Prefiera los números con signo a los números sin signo para almacenar cantidades (incluso cantidades que no deben ser negativas) y operaciones matemáticas. 
+Evite mezclar números con y sin signo.
+* Prefiera `int` cuando el tamaño del entero no importe (por ejemplo, el número siempre cabrá dentro del rango de un entero con signo de 2 bytes). 
+Por ejemplo, si está pidiendo al usuario que introduzca su edad, o que cuente del 1 al 10, no importa si `int` tiene 16 o 32 bits (los números cabrán de cualquier forma). 
+Esto cubrirá la gran mayoría de los casos con los que probablemente se encuentre.
+* Asegúrese siempre de que el tipo de sus literales coincide con el tipo de las variables a las que se asignan o que se utilizan para inicializar. 
+De lo contrario, se producirá una conversión innecesaria, posiblemente con pérdida de precisión.
+
+
+#### Constantes
+* Cualquier variable que no deba modificarse después de la inicialización y cuyo inicializador se conozca en tiempo de compilación debe declararse como `constexpr`.
+* XXX No use const cuando pase por valor.
+* Cualquier variable que no deba modificarse tras la inicialización y cuyo inicializador no se conozca en tiempo de compilación debe declararse como const.
+* Evite los números mágicos en su código (utilice variables `constexpr` en su lugar).
+
+#### Expresiones
+* Utilice paréntesis para dejar claro cómo debe evaluarse una expresión no trivial (aunque sean técnicamente innecesarios).
+* Aparte de las reglas de precedencia y asociatividad de operadores, asuma que las partes de una expresión pueden evaluarse en cualquier orden. 
+Asegúrese de que las expresiones que escribe no dependen del orden de evaluación de esas partes.
+* Prefiera la versión prefijada de los operadores de incremento y decremento, ya que generalmente son más eficaces y es menos probable que se encuentre con problemas extraños con ellos.
+* Ponga siempre entre paréntesis la parte condicional del operador condicional, y considere también la posibilidad de poner entre paréntesis el operador completo. `? :`
+* Utilice el operador condicional sólo para condicionales sencillas en las que utilice el resultado y mejoren la legibilidad.
+* No añada `==` o `!=` innecesarios a las condiciones. Dificultan la lectura sin aportar ningún valor adicional.
+* Cuando se mezclan los operadores lógicos AND y OR en una misma expresión, hay que poner explícitamente entre paréntesis cada operación para asegurarse de que se evalúan como se pretende.
+
+
+#### Sentencias
+* Considere la posibilidad de poner las sentencias individuales asociadas a un if o else en bloques (sobre todo mientras está aprendiendo). 
+Los desarrolladores de C++ más experimentados a veces ignoran esta práctica en favor de un espaciado vertical más ajustado.
+* Prefiera las sentencias `switch` a las cadenas `if-else` cuando pueda elegir.
+* **Coloque siempre el caso por defecto (`default`) en último lugar en el bloque `switch`**.
+* Cada conjunto de sentencias bajo una etiqueta debe terminar en una sentencia `break` o `return`. 
+Esto incluye las sentencias bajo la última etiqueta en el switch.
+* Si define variables utilizadas en una sentencia `case`, hágalo en un bloque dentro del `case`.
+* Evite las sentencias `goto`.
+* Prefiera while(true) para bucles infinitos intencionados.
+* Las variables de bucle deben ser de tipo `int` (con signo).
+* Prefiera los bucles `while` a los `do-while` en igualdad de condiciones.
+* Evite el operador `!= ` cuando realice comparaciones numéricas en la condición de un bucle  `for `.
+* Definir múltiples variables (en la sentencia init) y utilizar el operador coma (en la expresión final) es aceptable dentro de una sentencia for.
+* **Prefiera los bucles `for` a los bucles `while` cuando exista una variable de bucle obvia.**
+* Utilice break y continue cuando simplifiquen la lógica del bucle.
+* Utilice retornos anticipados cuando simplifiquen la lógica de su función.
+
+#### Funciones
+* Mantenga el nivel de anidamiento de sus funciones en 3 o menos. 
+Si su función necesita más niveles de anidamiento, considere la posibilidad de refactorizarla en subfunciones.
+* Defina las variables en el ámbito más limitado posible. 
+* Utilice variables locales en lugar de globales siempre que sea posible.
+* Si necesita constantes globales, prefiera definir variables globales `constexpr` inline en un fichero de cabecera.
+* Evite el uso de `inline` para funciones a menos que tenga una razón específica y convincente para hacerlo.
+* Utilice un tipo de retorno `constexpr` para funciones que necesiten devolver una constante en tiempo de compilación.
+* Utilice la sobrecarga de funciones para simplificar el programa.
+* Si la función tiene una declaración hacia adelante (*forward*) (especialmente una en un fichero de cabecera), ponga el argumento por defecto allí. 
+En caso contrario, coloque el argumento por defecto en la definición de la función.
+* Evite devolver referencias a variables estáticas locales no-`const`.
 
 #### Parámetros de funciones
 * Always const-qualify all pointers or references to input-only parameters.
 * Mantenga los nombres de los parámetros en las declaraciones de las funciones.
+* Utilice una lista de parámetros vacía en lugar de `void` para indicar que una función no tiene parámetros.
+* No pase `std::string` por valor, ya que hacer copias de std::string es costoso. Prefiera parámetros std::string_view.
+* Prefiera `std::string_view` a `std::string` cuando necesite una cadena de sólo lectura, especialmente para parámetros de funciones.
+* **Favorezca el paso por referencia const sobre el paso por referencia no-const a menos que tenga una razón específica para hacer lo contrario (por ejemplo, la función necesita cambiar el valor de un argumento).**
+* **Pase los tipos fundamentales por valor y los tipos de clase (o estructura) por referencia constante.**
+* Prefiera el paso por valor para los objetos que son baratos de copiar, y el paso por referencia `const` para los objetos que son caros de copiar. 
+Si no está seguro de si un objeto es barato o caro de copiar, prefiera el paso por referencia constante.
+* Prefiera el paso por referencia al paso por dirección a menos que tenga una razón específica para usar el paso por dirección.
+
+
+* Inicialice sus variables locales estáticas. Las variables locales estáticas sólo se inicializan la primera vez que se ejecuta el código, no en llamadas posteriores.
+* Evite las variables locales estáticas a menos que la variable nunca necesite ser reiniciada.
+* Prefiera los espacios de nombres explícitos a las sentencias `using`. 
+Evite el uso de directivas siempre que sea posible. 
+* **Escriba su programa en unidades pequeñas y bien definidas (funciones o clases), compile a menudo y pruebe su código sobre la marcha.**
+* Pruebe (*testing*) diferentes categorías de valores de entrada para asegurarse de que su unidad los maneja correctamente.
+* **Utilice aserciones para documentar casos que deberían ser lógicamente imposibles.**
+* Utilice `std::random_device` para sembrar sus PRNGs.
+* Siembre un generador de números pseudoaleatorios solo una vez, y no lo vuelva a sembrar.
+* Evite las conversiones de estrechamiento siempre que sea posible. Si necesita realizar una, utilice static_cast para que sea una conversión explícita.
+* **Utilice `static_cast` cuando necesite convertir un valor de un tipo a otro.**
+* Prefiera los alias de tipo a los typedefs.
+* Utilice la deducción de tipos para sus variables (`auto`), a menos que necesite comprometerse con un tipo específico.
+* Favorezca los tipos de retorno explícitos sobre la deducción de tipo de retorno de función para funciones normales.
+* **Cuando defina una referencia, coloque el ampersand junto al tipo (no junto al nombre de la variable de referencia).**
+* **Preferir las referencias a los punteros a menos que se necesiten las capacidades adicionales que proporcionan los punteros.**
 
 
-
-
-Prefiera los guardianes de cabecera a #pragma once para obtener la máxima portabilidad.
-
-Utilice una herramienta de análisis estático en sus programas para ayudar a encontrar áreas en las que su código no cumple con las mejores prácticas.
-
-Para una máxima compatibilidad, no debería asumir que las variables son mayores que el tamaño mínimo especificado.
-
-Prefiera los tipos abreviados que no utilizan el sufijo int ni el prefijo signed.
-Utilice una lista de parámetros vacía en lugar de void para indicar que una función no tiene parámetros.
-
-Prefiera los números con signo a los números sin signo para almacenar cantidades (incluso cantidades que no deben ser negativas) y operaciones matemáticas. Evite mezclar números con y sin signo.
-
-Prefiera int cuando el tamaño del entero no importe (por ejemplo, el número siempre cabrá dentro del rango de un entero con signo de 2 bytes). Por ejemplo, si está pidiendo al usuario que introduzca su edad, o que cuente del 1 al 10, no importa si int tiene 16 o 32 bits (los números cabrán de cualquier forma). Esto cubrirá la gran mayoría de los casos con los que probablemente te encuentres.
-Prefiera std::int#_t cuando almacene una cantidad que necesite un rango garantizado.
-Prefiera std::uint#_t cuando manipule bits o cuando necesite un comportamiento envolvente bien definido.
-Evite lo siguiente siempre que sea posible:
-Tipos sin signo para contener cantidades
-Los tipos enteros de ancho fijo de 8 bits
-Los tipos de ancho fijo rápido y mínimo
-Cualquier entero de ancho fijo específico del compilador -- por ejemplo, Visual Studio define __int8, __int16, etc...
-
-Asegúrese siempre de que el tipo de sus literales coincide con el tipo de las variables a las que se asignan o que se utilizan para inicializar. De lo contrario, se producirá una conversión innecesaria, posiblemente con pérdida de precisión.
-
-Prefiera double a float a menos que el espacio sea un bien escaso, ya que la falta de precisión en un float a menudo conducirá a imprecisiones.
-
-Evite por completo la división por 0, incluso si su compilador la admite.
-
-Ponga los caracteres independientes entre comillas simples (por ejemplo, 't' o '\n', no "t" o "\n"). De este modo, el compilador optimiza mejor.
-
-Evite los literales con varios caracteres (por ejemplo, '56').
-
-Coloque const antes del tipo (porque es más idiomático hacerlo).
-
-No use const cuando pase por valor.
-
-No utilice const cuando devuelva por valor.
-
-Prefiera las variables constantes a las macros tipo objeto con texto de sustitución.
-
-Cualquier variable que no deba modificarse después de la inicialización y cuyo inicializador se conozca en tiempo de compilación debe declararse como constexpr.
-Cualquier variable que no deba modificarse tras la inicialización y cuyo inicializador no se conozca en tiempo de compilación debe declararse como const.
-
-Prefiera el sufijo literal L (mayúsculas) a l (minúsculas).
-
-Evite los números mágicos en su código (utilice variables constexpr en su lugar).
-
-Si utiliza std::getline() para leer cadenas, utilice el manipulador de entrada std::cin >> std::ws para ignorar los espacios en blanco iniciales.
-
-No pase std::string por valor, ya que hacer copias de std::string es costoso. Prefiera parámetros std::string_view.
-
-Prefiera std::string_view a std::string cuando necesite una cadena de sólo lectura, especialmente para parámetros de funciones.
-
-Utilice paréntesis para dejar claro cómo debe evaluarse una expresión no trivial (aunque sean técnicamente innecesarios).
-
-Las expresiones con un único operador de asignación no necesitan tener el operando derecho de la asignación envuelto entre paréntesis.
-
-Aparte de las reglas de precedencia y asociatividad de operadores, asuma que las partes de una expresión pueden evaluarse en cualquier orden. Asegúrese de que las expresiones que escribe no dependen del orden de evaluación de esas partes.
-
-Prefiera la versión prefijada de los operadores de incremento y decremento, ya que generalmente son más eficaces y es menos probable que se encuentre con problemas extraños con ellos.
-
-Evite utilizar el operador coma, excepto en los bucles for.
-
-Ponga siempre entre paréntesis la parte condicional del operador condicional, y considere también la posibilidad de poner entre paréntesis el operador completo. ? :
-
-Utilice el operador condicional sólo para condicionales sencillas en las que utilice el resultado y mejoren la legibilidad.
-
-No añada == o != innecesarios a las condiciones. Dificultan la lectura sin aportar ningún valor adicional.
-
-Si se pretende que NOT lógico opere sobre el resultado de otros operadores, los otros operadores y sus operandos deben ir entre paréntesis.
-
-Cuando se mezclan los operadores lógicos AND y OR en una misma expresión, hay que poner explícitamente entre paréntesis cada operación para asegurarse de que se evalúan como se pretende.
-
-La manipulación de bits es una de las pocas ocasiones en las que debe utilizar sin ambigüedad enteros sin signo (o std::bitset).
-
-Para evitar sorpresas, utilice los operadores bit a bit con operandos sin signo o std::bitset.
-
-Mantenga el nivel de anidamiento de sus funciones en 3 o menos. Si su función necesita más niveles de anidamiento, considere la posibilidad de refactorizarla en subfunciones.
-
-Defina las variables en el ámbito más limitado posible. Evite crear nuevos bloques cuyo único propósito sea limitar el ámbito de las variables.
-
-Considere el uso de un prefijo "g" o "g_" al nombrar variables globales no-const, para ayudar a diferenciarlas de las variables locales y los parámetros de función.
-
-Evite la sombra de variables.
-
-Utilice variables locales en lugar de globales siempre que sea posible.
-
-Si necesitas constantes globales y tu compilador es compatible con C++17, prefiere definir variables globales constexpr inline en un fichero de cabecera.
-
-Inicializa tus variables locales estáticas. Las variables locales estáticas sólo se inicializan la primera vez que se ejecuta el código, no en llamadas posteriores.
-
-Evite las variables locales estáticas a menos que la variable nunca necesite ser reiniciada.
-
-Prefiera los espacios de nombres explícitos a las sentencias using. Evite el uso de directivas siempre que sea posible. Las declaraciones de uso están bien para usarlas dentro de bloques.
-
-No utilice la palabra clave inline para solicitar la expansión inline de sus funciones.
-
-Evite el uso de la palabra clave inline para funciones a menos que tenga una razón específica y convincente para hacerlo.
-
-Utilice un tipo de retorno constexpr para funciones que necesiten devolver una constante en tiempo de compilación.
-
-Utilice consteval si tiene una función que debe ejecutarse en tiempo de compilación por alguna razón (por ejemplo, rendimiento).
-
-Considere la posibilidad de poner las sentencias individuales asociadas a un if o else en bloques (sobre todo mientras está aprendiendo). Los desarrolladores de C++ más experimentados a veces ignoran esta práctica en favor de un espaciado vertical más ajustado.
-
-Prefiera las sentencias switch a las cadenas if-else cuando pueda elegir.
-
-Coloque el caso por defecto en último lugar en el bloque switch.
-
-Cada conjunto de sentencias bajo una etiqueta debe terminar en una sentencia break o return. Esto incluye las sentencias bajo la última etiqueta en el switch.
-
-Utilice el atributo [[fallthrough]] (junto con una sentencia null) para indicar un fallthrough intencionado.
-
-Si define variables utilizadas en una sentencia case, hágalo en un bloque dentro del case.
-
-Evite las sentencias goto (a menos que las alternativas sean significativamente peores para la legibilidad del código).
-
-Prefiera while(true) para bucles infinitos intencionados.
-
-Las variables de bucle deben ser de tipo int (con signo).
-
-Prefiera los bucles while a los do-while en igualdad de condiciones.
-
-Evite el operador!= cuando realice comparaciones numéricas en la condición del bucle for.
-
-Definir múltiples variables (en la sentencia init) y utilizar el operador coma (en la expresión final) es aceptable dentro de una sentencia for.
-
-Prefiera los bucles for a los bucles while cuando exista una variable de bucle obvia.
-Prefiera los bucles while a los for cuando no haya una variable de bucle obvia.
-
-Utilice break y continue cuando simplifiquen la lógica del bucle.
-
-Utilice retornos anticipados cuando simplifiquen la lógica de su función.
-
-Sólo use un halt si no hay una forma segura de retornar normalmente desde la función principal. Si no has desactiv
-
-Escriba su programa en unidades pequeñas y bien definidas (funciones o clases), compile a menudo y pruebe su código sobre la marcha.
-
-Procure que el código cubra el 100% de las ramas.
-
-Pruebe diferentes categorías de valores de entrada para asegurarse de que su unidad los maneja correctamente.
-
-Utilice aserciones para documentar casos que deberían ser lógicamente imposibles.
-
-Utilice std::random_device para sembrar sus PRNGs (a menos que no esté implementado correctamente para su compilador/arquitectura de destino).
-
-Sólo siembra un generador de números pseudoaleatorios una vez, y no lo vuelvas a sembrar.
-
-Evite las conversiones de estrechamiento siempre que sea posible. Si necesita realizar una, utilice static_cast para que sea una conversión explícita.
-
-Evite utilizar conversiones tipo C.
-
-Utilice static_cast cuando necesite convertir un valor de un tipo a otro.
-
-Nombra tus alias de tipo empezando con mayúscula y no uses un sufijo (a menos que tengas una razón específica para hacerlo de otra manera).
-
-Prefiera los alias de tipo a los typedefs.
-
-Use los alias de tipo con criterio, cuando proporcionen un beneficio claro para la legibilidad o el mantenimiento del código.
-
-Utilice la deducción de tipos para sus variables, a menos que necesite comprometerse con un tipo específico.
-
-Favorezca los tipos de retorno explícitos sobre la deducción de tipo de retorno de función para funciones normales.
-
-Utilice la sobrecarga de funciones para simplificar el programa.
-
-Si la función tiene una declaración hacia adelante (especialmente una en un fichero de cabecera), ponga el argumento por defecto allí. En caso contrario, coloque el argumento por defecto en la definición de la función.
-
-Utilice una sola letra mayúscula (empezando por T) para nombrar sus tipos de plantilla (por ejemplo, T, U, V, etc...)
-
-Favorezca la sintaxis normal de llamada a función cuando utilice plantillas de función.
-
-Utilice plantillas de funciones para escribir código genérico que pueda funcionar con una amplia variedad de tipos siempre que lo necesite.
-
-Siéntase libre de utilizar plantillas de función abreviadas con un único parámetro automático, o cuando cada parámetro automático deba ser un tipo independiente (y su estándar de lenguaje sea C++20 o más reciente).
-
-Cuando defina una referencia, coloque el ampersand junto al tipo (no junto al nombre de la variable de referencia).
-
-Prefiera las referencias lvalue a const sobre las referencias lvalue a no-const a menos que necesite modificar el objeto referenciado.
-
-Favorezca el paso por referencia const sobre el paso por referencia no-const a menos que tenga una razón específica para hacer lo contrario (por ejemplo, la función necesita cambiar el valor de un argumento).
-
-Pase los tipos fundamentales por valor y los tipos de clase (o estructura) por referencia constante.
-
-Prefiera el paso por valor para los objetos que son baratos de copiar, y el paso por referencia const para los objetos que son caros de copiar. Si no está seguro de si un objeto es barato o caro de copiar, prefiera el paso por referencia constante.
-
-Al declarar un tipo de puntero, coloque el asterisco junto al nombre del tipo.
-
-Inicialice siempre sus punteros.
-
-Inicialice con valor sus punteros (para que sean punteros nulos) si no los está inicializando con la dirección de un objeto válido.
-
-Utilice nullptr cuando necesite un literal de puntero nulo para inicializar, asignar o pasar un puntero nulo a una función.
-
-Un puntero debe contener la dirección de un objeto válido, o ser establecido a nullptr. De esta forma, sólo tendremos que comprobar si un puntero es nulo, y podremos asumir que cualquier puntero no nulo es válido.
-
-Preferir las referencias a los punteros a menos que se necesiten las capacidades adicionales que proporcionan los punteros.
-
-Prefiera el paso por referencia al paso por dirección a menos que tenga una razón específica para usar el paso por dirección.
-
-Evite devolver referencias a variables estáticas locales no-const.
 
 Prefiera devolver por referencia a devolver por dirección a menos que la capacidad de devolver "ningún objeto" (usando nullptr) sea importante.
 
