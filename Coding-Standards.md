@@ -1,9 +1,9 @@
-# Universidad de La Laguna
-## Escuela Superior de Ingeniería y Tecnología
-## Grado en Ingeniería Informática
+### Universidad de La Laguna
+### Escuela Superior de Ingeniería y Tecnología
+### Grado en Ingeniería Informática
 ### Informática Básica
 
-### C++ C++ Coding Standards: Rules, Guidelines, & Best Practices
+# C++ C++ Coding Standards: Rules, Guidelines, & Best Practices
 
 #### Reglas de nombrado
 Nombre sus ficheros de código `algo.cc`, donde `algo` será un nombre significativo de su elección, y .cc es la extensión que indica que el fichero es un archivo fuente C++.
