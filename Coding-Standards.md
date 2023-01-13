@@ -5,8 +5,28 @@
 
 # C++ C++ Coding Standards: Rules, Guidelines, & Best Practices
 
+* Cree un nuevo proyecto (y directorio) para cada nuevo programa que escriba.
+* Utilice al compilar la opción -std=c++17 de modo que sus programas (y sus prácticas de codificación) cumplen los estándares de C++ y funcionan en cualquier sistema.
+* No deje que se acumulen los *warning*. Resuélvalos a medida que aparezcan (como si fueran errores). De lo contrario, una advertencia sobre un problema grave puede perderse entre advertencias sobre problemas no graves.
+* Configure al máximo los niveles de aviso en las opciones del compilador, sobre todo cuando esté aprendiendo. Le ayudará a identificar posibles problemas.
+* Active la opción de compilación "Tratar los avisos como errores" (`-Werror`). Esto le obligará a resolver todos los problemas que causen advertencias.
+* Escriba sus comentarios como si estuviera hablando con alguien que no tiene ni idea de lo que hace el código. No de por sentado que recordará por qué se tomaron determinadas decisiones.
+* Aunque el lenguaje lo permita, evite definir múltiples variables del mismo tipo en una misma sentencia. En su lugar, defina cada variable en una sentencia separada en su propia línea.
+* Inicialice las variables al crearlas.
+* Siempre que sea posible, utilice llaves (*brace initialization*) para inicializar las variables.
+* Existe cierto debate sobre si es necesario inicializar una variable inmediatamente antes de darle un valor proporcionado por el usuario a través de otra fuente (por ejemplo, `std::cin`), ya que el valor proporcionado por el usuario simplemente sobrescribirá el valor de inicialización. En línea con la recomendación anterior de que las variables deben ser siempre inicializadas, la mejor práctica es inicializar la variable primero.
+* Prefiera `'\n'` a `std::endl` cuando envíe texto a la consola.
+* Los programadores noveles a menudo tratan de escribir un programa entero de una sola vez, y luego se sienten abrumados cuando produce un montón de errores. Una mejor estrategia es añadir una parte cada vez, asegurarse de que compila y probarlo. Entonces, cuando tenga seguridad de que funciona, pase a la siguiente pieza.
+* Su función `main()`debe devolver el valor 
+[`EXIT_SUCCESS`](https://en.cppreference.com/w/cpp/utility/program/EXIT_status)
+(`<cstdlib>`) si el programa se ejecuta normalmente
+  y `EXIT_FAILURE` en caso contrario.
+
+* 
+
+
 #### Reglas de nombrado
-Nombre sus ficheros de código `algo.cc`, donde `algo` será un nombre significativo de su elección, y .cc es la extensión que indica que el fichero es un archivo fuente C++.
+* Nombre sus ficheros de código `algo.cc`, donde `algo` será un nombre significativo de su elección, y .cc es la extensión que indica que el fichero es un archivo fuente C++.
 
 #### Function Parameters
 * Always const-qualify all pointers or references to input-only parameters.
@@ -15,41 +35,7 @@ Nombre sus ficheros de código `algo.cc`, donde `algo` será un nombre significa
 
 
 
-Crea un nuevo proyecto para cada nuevo programa que escribas.
 
-Utiliza la configuración de compilación de depuración cuando desarrolles tus programas. Cuando estés listo para liberar tu ejecutable a otros, o quieras probar el rendimiento, utiliza la configuración de compilación de liberación.
-
-Desactiva las extensiones del compilador para asegurarte de que tus programas (y tus prácticas de codificación) siguen cumpliendo los estándares de C++ y funcionan en cualquier sistema.
-
-No dejes que se acumulen las advertencias. Resuélvelas a medida que las encuentres (como si fueran errores). De lo contrario, una advertencia sobre un problema grave puede perderse entre advertencias sobre problemas no graves.
-
-Sube al máximo los niveles de aviso, sobre todo cuando estés aprendiendo. Le ayudará a identificar posibles problemas.
-
-Activa "Tratar los avisos como errores". Esto le obligará a resolver todos los problemas que causen advertencias.
-
-Comenta tu código abundantemente, y escribe tus comentarios como si estuvieras hablando con alguien que no tiene ni idea de lo que hace el código. No des por sentado que recordarás por qué tomaste determinadas decisiones.
-
-Aunque el lenguaje te lo permita, evita definir múltiples variables del mismo tipo en una misma sentencia. En su lugar, defina cada variable en una sentencia separada en su propia línea (y luego utilice un comentario de una sola línea para documentar para qué se utiliza).
-
-Siempre que sea posible, utilice llaves para inicializar las variables
-
-Inicialice las variables al crearlas.
-
-Escriba una nueva línea cada vez que termine una línea de salida.
-
-Prefiera '\n' a std::endl cuando envíe texto a la consola.
-
-Existe cierto debate sobre si es necesario inicializar una variable inmediatamente antes de darle un valor proporcionado por el usuario a través de otra fuente (por ejemplo, std::cin), ya que el valor proporcionado por el usuario simplemente sobrescribirá el valor de inicialización. En línea con nuestra recomendación anterior de que las variables deben ser siempre inicializadas, la mejor práctica es inicializar la variable primero.
-
-Cuando trabaje en un programa existente, utilice las convenciones de ese programa (incluso si no se ajustan a las mejores prácticas modernas). Utiliza las mejores prácticas modernas cuando escribas nuevos programas.
-
-Tus líneas no deben tener más de 80 caracteres de longitud.
-
-Es muy recomendable utilizar la función de formateo automático para mantener la coherencia del estilo de formateo del código.
-
-Los nuevos programadores a menudo tratan de escribir un programa entero de una sola vez, y luego se sienten abrumados cuando produce un montón de errores. Una mejor estrategia es añadir una parte cada vez, asegurarse de que compila y probarlo. Entonces, cuando estés seguro de que funciona, pasa a la siguiente pieza.
-
-Su función principal debe devolver el valor 0 si el programa se ejecuta normalmente.
 
 Asegúrate de que tus funciones con tipos de retorno no vacíos devuelven un valor en todos los casos.
 No devolver un valor de una función de retorno de valor causará un comportamiento indefinido.
