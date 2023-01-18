@@ -21,7 +21,7 @@
 
 using namespace std;
 
-vector <int> Func(int a, bool b) {
+vector<int> Func(int a, bool b) {
   if (b) { 
     return vector<int>(10, a); 
   }

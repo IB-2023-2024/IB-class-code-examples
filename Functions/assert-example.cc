@@ -29,7 +29,7 @@
 //
 #include <cassert>
 
-double Mysqrt(double number) {
+double Mysqrt(const double number) {
   assert(number >= 0);
   std::cout << "Execution in Mysqrt function" << std::endl;
   return number;
