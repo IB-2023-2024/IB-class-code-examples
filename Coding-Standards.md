@@ -88,7 +88,8 @@ De lo contrario, se producirá una conversión innecesaria, posiblemente con pé
 #### Constantes
 * Cualquier variable que no deba modificarse después de la inicialización y cuyo inicializador se conozca en tiempo de compilación debe declararse como `constexpr`.
 * Cualquier variable que no deba modificarse tras la inicialización y cuyo inicializador no se conozca en tiempo de compilación debe declararse como const.
-* **Evite los números mágicos en su código (utilice variables `constexpr` en su lugar).**
+* **Evite los números mágicos en su código (utilice variables `constexpr` en su lugar).** En su código debiera minimizar el número de constantes literales que aparecen. Estudie
+[esta referencia](https://isocpp.org/wiki/faq/newbie#naming-numeric-literals) para una explicación detallada.
 
 #### Expresiones
 * **Utilice paréntesis para dejar claro cómo debe evaluarse una expresión no trivial (aunque sean técnicamente innecesarios).**
