@@ -1,0 +1,22 @@
+# Universidad de La Laguna
+# Escuela Superior de Ingeniería y Tecnología
+# Grado en Ingeniería Informática
+# Informática Básica
+#
+# @author F. de Sande
+# @date 8 Jun 2020
+# @brief Makefile file for the video tutorial
+# 
+# @see https://www.youtube.com/watch?v=rJ-C8q7KOew
+
+target1: target2
+	echo "Este es el contenido del primer objetivo (1)" > file1.txt
+
+target2: target3
+	echo "Este es el contenido del segundo objetivo (2)" > file2.txt
+
+target3:
+	echo "Este es el contenido del tercer objetivo (3)" > file3.txt
+
+target4:
+	rm -f *.txt

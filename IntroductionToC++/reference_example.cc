@@ -26,7 +26,7 @@ int main() {
   // std::cout << i << '\n'; // print the value of i
   std::cout << j << '\n'; // print the value of the reference
 
-  assert(j == 42);  // If the assertion is not true, it will halt the program
+  // assert(j == 42);  // If the assertion is not true, it will halt the program
 
   return 0;
 }
