@@ -16,7 +16,6 @@
 #include "hellomake.h"
 
 void MyPrintHelloMake(void) {
-	std::cout << "Hello makefiles!" << std::endl;
-
+  std::cout << "Hello makefiles!" << std::endl;
   return;
 }

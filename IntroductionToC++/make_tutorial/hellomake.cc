@@ -20,5 +20,6 @@
 int main() {
   // call a function in another file
   MyPrintHelloMake();
+  // other sentense!
   return(0);
 }
