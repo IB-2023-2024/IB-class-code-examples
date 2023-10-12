@@ -43,7 +43,7 @@ int main() {
     // String has a find method
     size_t loc = line.find("filename", 0);
     if (loc != std::string::npos) {
-      file_name = line.substr (line.find("=", 0) + 1, std::string::npos);
+      file_name = line.substr (line.find("=", 0) + 2, std::string::npos);
     }
   }
   std::cout << "Filename found: " << file_name << std::endl;
