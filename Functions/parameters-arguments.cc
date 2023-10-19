@@ -12,8 +12,8 @@
 
 #include <iostream>
 
-int Square(int parameter) { 		        // parameter takes its value from argument
-  return parameter * parameter; 				// return value is parameter * parameter
+int Square(int parameter) { 		// parameter takes its value from argument
+  return parameter * parameter; // return value is parameter * parameter
 }
 
 void Compute() {
@@ -22,8 +22,8 @@ void Compute() {
 }
 
 
-int main(int argc, char* argv[]) {
+int main() {
   Compute();
-  std::cout << "Resultado: " << result << std::endl;  // Here result if out of scope
+  std::cout << "Resultado: " << result << std::endl;  // Here result is out of scope
   return 0;
 }

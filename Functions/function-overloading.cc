@@ -15,23 +15,21 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
-string Func(int num) { 
+std::string Func(int num) { 
   return "int"; 
 }
 
-string Func(const string& str) { 
+std::string Func(const std::string& str) { 
   return "string"; 
 }
 
-string Func(double number) { 
+std::string Func(double number) { 
   return "It's a double"; 
 }
 
 int main() {
-  cout << Func(1) << endl;
-  cout << Func("hello") << endl;
-  cout << Func(1.0) << endl;
+  std::cout << Func(1) << std::endl;
+  std::cout << Func("hello") << std::endl;
+  std::cout << Func(1.0) << std::endl;
   return 0;
 }

@@ -23,14 +23,14 @@ int SumSerie(int num_terms) {
 int main() {
   std::cout << "Este programa calcula la suma de los N primeros números naturales" << std::endl << std::endl;
   std::cout << "Introduzca el número de términos a sumar: ";
-  int num_terms;
-  std::cin >> num_terms;
-  std::cout << "La suma de los " << num_terms << " primeros términos es: " << SumSerie(num_terms) << std::endl;
+  int numero_de_terminos;
+  std::cin >> numero_de_terminos;
+  std::cout << "La suma de los " << numero_de_terminos << " primeros términos es: " << SumSerie(numero_de_terminos) << std::endl;
 
-  for(int i{1}; i < num_terms; ++i) {
+  for(int i{1}; i < numero_de_terminos; ++i) {
     std::cout << i << " + ";
   }
-  std::cout << num_terms << " = " << SumSerie(num_terms) << std::endl;
+  std::cout << numero_de_terminos << " = " << SumSerie(numero_de_terminos) << std::endl;
   return 0;
 }
 
