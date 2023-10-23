@@ -6,7 +6,8 @@ int main() {
   std::cout << "Ingrese un número entero: ";
   std::cin >> numero;
   // Verificar si el número es par o impar
-  if (numero % 2 == 0) {
+  int resto = numero % 2;
+  if (resto == 0) {
     std::cout << numero << " es un número par." << std::endl;
   } else {
     std::cout << numero << " es un número impar." << std::endl;
