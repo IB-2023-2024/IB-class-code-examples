@@ -20,7 +20,7 @@ int main() {
   // because ofstream defaults to std::ios::out
   std::ofstream output_file{"Manolito.txt", std::ios::app};
   if (!output_file) { // If we couldn't open the output file stream for writing
-    std::cerr << "Uh oh, Sample.txt could not be opened for writing!\n";
+    std::cerr << "Uh oh, Manolito.txt could not be opened for writing!\n";
     return 1;
   }
 
