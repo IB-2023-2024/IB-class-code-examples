@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @txte 23 Jun 2020
+ * @date Jun 23 2020
  * @brief File input. Read lines from file
  *        The extraction operator breaks on whitespace. 
  *        If you use:
@@ -22,12 +22,12 @@
 
 int main() {
   // ifstream is used for reading files
-  // We'll read from a file called Sample.txt
-  std::ifstream input_file{ "ManolitA.txt" };
+  // We'll read from a file called Manolito.txt
+  std::ifstream input_file{"Manolito.txt"};
  
   // If we couldn't open the input file stream for reading
   if (!input_file) {
-    std::cerr << "Uh oh, Sample.txt could not be opened for reading!\n";
+    std::cerr << "Uh oh, Manolito.txt could not be opened for reading!\n";
     return 1;
   }
  

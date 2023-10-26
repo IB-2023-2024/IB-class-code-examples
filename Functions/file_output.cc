@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 23 Jun 2020
+ * @date Jun 23 2020
  * @brief File output
  *
  * @see https://www.learncpp.com/cpp-tutorial/186-basic-file-io/
@@ -16,12 +16,12 @@
 
 int main() {
   // ofstream is used for writing files
-  // We'll make a file called Sample.txt
+  // We'll make a file called Manolito.txt
   std::ofstream output_file{"Manolito.txt"};
 
   // If we couldn't open the output file stream for writing
   if (!output_file) {
-    std::cerr << "Uh oh, Sample.txt could not be opened for writing!" << std::endl;
+    std::cerr << "Uh oh, Manolito.txt could not be opened for writing!" << std::endl;
     return 1;
   }
 
@@ -31,6 +31,5 @@ int main() {
 
   return 0;
   // When output_file goes out of scope, the ofstream
-  // destructor will close the file
+  // destructor (to be studied later) will close the file
 }
-
