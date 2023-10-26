@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 25 Jun 2020
+ * @date Jun 25 2020
  * @brief namespace example
  *        Avoid using namespace <name>
  *
@@ -24,7 +24,7 @@ double pow(double base, int exponent) {
   for (int i{0}; i < exponent; ++i) { 
     result *= base; 
   }
-  cout << "Our cool power function\n";
+  cout << "Executing our cool power function\n";
   return result;
 }
 
