@@ -5,10 +5,9 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 7.nov.2020
+ * @date Nov 7 2020
  * @brief Name collision
  * @see https://www.learncpp.com/cpp-tutorial/2-9-naming-collisions-and-an-introduction-to-namespaces/
- *
  */
 
 #include <iostream>

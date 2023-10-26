@@ -4,7 +4,7 @@
 # Informática Básica
 #
 # @author F. de Sande
-# @date 17 nov 2020
+# @date Nov 17 2020
 # @brief A Makefile example for HelloWorld program
 # 
 
@@ -15,7 +15,7 @@ LDFLAGS =                              # The linker options (if any)
 # The all target builds all of the programs handled by the makefile.
 all: main
 
-main: main.o a.o
+main: main.o another.o
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 # Indicate that the all and clean targets do not
