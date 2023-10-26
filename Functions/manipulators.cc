@@ -27,10 +27,10 @@
 #include <iomanip>
 
 int main(int argc, char** argv) {
-  const double kPi = 3.1415926535;
-  const double kBig = 123456789.0;
-  const char kRet = '\n';
-  const char kSpace = ' ';
+  const double kPi{3.1415926535};
+  const double kBig{123456789.0};
+  const char kRet{'\n'};
+  const char kSpace{' '};
 
   // default notation
   std::cout << kPi << kSpace << kBig << kRet;

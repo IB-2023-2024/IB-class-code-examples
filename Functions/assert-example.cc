@@ -36,7 +36,7 @@ double Mysqrt(const double number) {
 }
 
 int main() {
-  double param = -11.0;
+  double param = -9.0;
   const double result{Mysqrt(param)};
 
   std::cout << "param: " << param << " result: " << result << std::endl;
