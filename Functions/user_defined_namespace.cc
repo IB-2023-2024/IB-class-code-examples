@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 3 Dec 2020
+ * @date Dec 3 2020
  * @brief User-defined namespaces
  * @see https://www.learncpp.com/cpp-tutorial/user-defined-namespaces/
  */
@@ -14,15 +14,15 @@
 
 namespace foo {  // define a namespace named foo
   // This doSomething() belongs to namespace foo
-  int DoSomething(int x, int y) {
-    return x + y;
+  int DoSomething(int first, int second) {
+    return first + second;
   }
 }
 
 namespace goo { // define a namespace named goo
   // This doSomething() belongs to namespace goo
-  int DoSomething(int x, int y) {
-    return x - y;
+  int DoSomething(int first, int second) {
+    return first - second;
   }
 }
 

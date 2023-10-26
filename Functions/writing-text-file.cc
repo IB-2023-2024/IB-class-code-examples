@@ -20,7 +20,7 @@
 using namespace std;
 
 int main() {
-  const string kFilename = "out.txt";
+  const string kFilename{"out.txt"};
   ofstream output_file{kFilename};
 
   if (!output_file.is_open()) { 
