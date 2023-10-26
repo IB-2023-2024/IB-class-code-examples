@@ -34,7 +34,7 @@
 // using namespace std;   // You could try this...
 
 int main() {
-  const std::string kInputFilename = "test_bel.txt";
+  const std::string kInputFilename{"test_bel.txt"};
   std::ifstream input_file{kInputFilename, std::ios_base::in};
   std::string line, file_name;
   // Read data line-wise
