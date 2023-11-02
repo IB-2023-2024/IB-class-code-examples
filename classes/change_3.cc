@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date Jun 25 2020
+ * @date Nov 3 2023
  * @brief Encapsulated classes are easier to change
  *        Now, let’s change the class’s implementation:
  *        
@@ -13,6 +13,7 @@
  */
 
 #include <iostream>
+#include <array>
  
 class Something {
  public:
@@ -20,7 +21,7 @@ class Something {
   void SetValue1(const int value) { value_[0] = value; }
   int GetValue1() { return value_[0]; }
  private:
-  int value_[3]; // note: we changed the implementation of this class!
+  std::array<int, 3> value_; // note: we changed the implementation of this class!
 };
  
 int main() {
