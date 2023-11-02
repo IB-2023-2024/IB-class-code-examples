@@ -13,6 +13,8 @@
  *        So when you create an object of any of these types, you’re instantiating a class object
  *        And when you call a function using these objects, you’re calling a member function
  *
+ *        NOTICE: string (variable identifier) is different from std::string (a class in the std namespace)
+ *
  * @see https://www.learncpp.com/cpp-tutorial/82-classes-and-class-members/
  */
 
@@ -22,9 +24,10 @@
 #include <iostream>
  
 int main() {
-  std::string my_string{"Hello, world!"};   /// instantiate a string class object
-  std::array<int, 3> my_array{1, 2, 3};   /// instantiate an array class object
-  std::vector<double> my_vector{1.1, 2.2, 3.3};   /// instantiate a vector class object
-  std::cout << "length: " << my_string.length() << '\n';   /// call a member function
+  std::string string{"Hello, world!"};   /// instantiate a string class object
+  std::array<int, 3> array{1, 2, 3};   /// instantiate an array class object
+  std::vector<double> vector{1.1, 2.2, 3.3};   /// instantiate a vector class object
+  std::cout << "length: " << string.length() << '\n';   /// call a member function
+  std::cout << "Capacity: " << vector.size() << '\n';   /// call a member function
   return 0;
 }
