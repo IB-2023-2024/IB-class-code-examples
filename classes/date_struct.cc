@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 25 Jun 2020
+ * @date Jun 25 2020
  * @brief struct Example
  *         structs represent the traditional non-object-oriented programming world, 
  *         as they can only hold data. 
@@ -26,7 +26,7 @@ void Print(const DateStruct& date) {
 }
 
 int main() {
-  DateStruct mi_fecha{2022, 11, 1}; /// use uniform initialization
+  DateStruct mi_fecha{2023, 11, 2}; /// use uniform initialization
   mi_fecha.day= 18; /// use member selection operator to select a member of the struct
   Print(mi_fecha);
   return 0;
