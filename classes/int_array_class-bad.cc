@@ -13,9 +13,11 @@
  * @see https://www.learncpp.com/cpp-tutorial/84-access-functions-and-encapsulation/
  */
 
+#include <array>
+
 class IntArray {
  public:
-  int store_[10];
+  std::array<int, 10> store_;  
 };
 
 int main() {

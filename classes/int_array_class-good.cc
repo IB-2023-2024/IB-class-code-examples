@@ -5,13 +5,14 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date Jun 25 2020
+ * @date Nov 2 2023
  * @brief Encapsulated classes help protect your data and prevent misuse
  *
  * @see https://www.learncpp.com/cpp-tutorial/84-access-functions-and-encapsulation/
  */
 
 #include <iostream>
+#include <array>
 
 class IntArray {
  public:
@@ -25,11 +26,11 @@ class IntArray {
   }
  private:
   static const int kSize = 10;
-  int store_[kSize]; /// user can not access this directly any more
+  std::array<int, kSize> store_;  // int store_[kSize]; /// user can not access this directly any more
 };
 
 int main() {
   IntArray my_array;
-  // array.store_[16] = 2; /// This generates a compiler error
+  my_array.store_[16] = 2; /// This generates a compiler error
   my_array.SetValue(16, 2);
 }
