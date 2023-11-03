@@ -31,13 +31,13 @@ class Calculator {
 
   void PrintHistory() {
     for (Number result : result_history_) {
-      std::cout << result << std::endl;
+      std::cout << result << " ";
     }
+    std::cout << std::endl;
   }
 
  private:
   std::vector<Number> result_history_{};
-
 };
 
 int main() {

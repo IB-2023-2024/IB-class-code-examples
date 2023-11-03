@@ -32,8 +32,8 @@ void PrintStruct(const NamedInt& named_int) {
 }
 
 int main() {
-  NamedInt my_int{1, "hello"};
-  PrintStruct(my_int);
+  NamedInt number{1, "hello"};
+  PrintStruct(number);
   PrintStruct({10 , "world"});
   return 0;
 }
