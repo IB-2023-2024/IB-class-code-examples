@@ -22,10 +22,8 @@ class DateClass {
   }
   int GetMonth() { return month_; } // getter for month
   void SetMonth(const int month) { month_ = month; } // setter for month
- 
   int GetDay() { return day_; } // getter for day
   void SetDay(const int day) { day_ = day; } // setter for day
- 
   int GetYear() { return year_; } // getter for year
   void SetYear(const int year) { year_ = year; } // setter for year
  private:
@@ -37,8 +35,8 @@ class DateClass {
 int main() {
   DateClass today;
   today.SetDay(10);
-  today.SetMonth(12);
-  today.SetYear(2020);
+  today.SetMonth(11);
+  today.SetYear(2023);
   today.Print(); 
   return 0;
 }

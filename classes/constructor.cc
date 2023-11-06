@@ -25,8 +25,8 @@ class Vector {        // Two-dimensional vector class
   }
   // ...
  private:
-  double x_ ;         // The x component of the vector
-  double y_ ;         // The y component of the vector
+  double x_ ;         // x component of the vector
+  double y_ ;         // y component of the vector
 };
 
 int main() {
