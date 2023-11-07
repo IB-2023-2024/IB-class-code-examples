@@ -5,10 +5,13 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 09 Dec 2020
+ * @date Dec 9 2020
  * @brief Implicit constructor
  *
  * @see https://www.learncpp.com/cpp-tutorial/85-constructors/
+ * @see Does the default constructor initialize built-in types?
+ *      https://stackoverflow.com/a/2418195/12791643 
+ * @see https://www.learncpp.com/cpp-tutorial/default-member-initialization/
  */
 
 #include <iostream>
@@ -28,8 +31,9 @@ class Date {
 };
 
 int main() {
-  Date date1;   /// Default initializadion. Calls implicit (default) constructor
-  Date date2{}; /// Value initialization. calls implicit (default) constructor
+  Date date1;   /// Compiler-provided default constructor is used
+                /// Here date1.? contains garbage
+  Date date2{}; /// Value initialization. Calls implicit (default) constructor
                 /// Best practice: Favor value-initialization over default-initialization for class objects.
   std::cout << "Día: " << date1.day() << " Mes: " << date1.month() << " Año: " << date1.year() << std::endl;
   std::cout << "Día: " << date2.day() << " Mes: " << date2.month() << " Año: " << date2.year() << std::endl;

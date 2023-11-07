@@ -38,9 +38,9 @@ class Date {
 int main() {
   Date date1;
   std::cout << "Día: " << date1.day() << " Mes: " << date1.month() << " Año: " << date1.year() << std::endl;
-  Date date{}; // calls implicit constructor
-  std::cout << "Día: " << date.day() << " Mes: " << date.month() << " Año: " << date.year() << std::endl;
-  Date another_date{ 2020, 12, 10 };
+  Date date2{}; // calls implicit constructor
+  std::cout << "Día: " << date2.day() << " Mes: " << date2.month() << " Año: " << date2.year() << std::endl;
+  Date another_date{2023, 11, 10};
   std::cout << "Día: " << another_date.day() << " Mes: " << another_date.month() << " Año: " << another_date.year() << std::endl;
   return 0;
 }
