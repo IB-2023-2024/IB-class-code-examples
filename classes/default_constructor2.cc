@@ -40,7 +40,7 @@ int main() {
   std::cout << "Día: " << date1.day() << " Mes: " << date1.month() << " Año: " << date1.year() << std::endl;
   Date date2{}; // calls implicit constructor
   std::cout << "Día: " << date2.day() << " Mes: " << date2.month() << " Año: " << date2.year() << std::endl;
-  Date another_date{2023, 11, 10};
+  Date another_date{2023, 11, 10}; // Calls user provided constructor
   std::cout << "Día: " << another_date.day() << " Mes: " << another_date.month() << " Año: " << another_date.year() << std::endl;
   return 0;
 }
