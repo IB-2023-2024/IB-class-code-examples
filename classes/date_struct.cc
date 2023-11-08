@@ -19,7 +19,7 @@ struct DateStruct {
   int year{};  /// Initialize to 0
   int month{};
   int day{};
-}
+};
 
 void Print(const DateStruct& date) {
   std::cout << date.day << '/' << date.month << '/' << date.year << std::endl;

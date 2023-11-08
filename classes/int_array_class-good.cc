@@ -31,6 +31,6 @@ class IntArray {
 
 int main() {
   IntArray my_array;
-  my_array.store_[16] = 2; /// This generates a compiler error
+  // my_array.store_[16] = 2; /// This generates a compiler error
   my_array.SetValue(16, 2);
 }

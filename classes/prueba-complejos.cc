@@ -11,7 +11,9 @@
  * @see http://www.cplusplus.com/doc/tutorial/classes/
  */
 
-class MyClass {
+#include <iostream>
+
+class Complejo {
  public:
  private:
    double real_{0};
