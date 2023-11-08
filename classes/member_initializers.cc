@@ -30,7 +30,7 @@ class Foo {
  private:
   int memberx_{};  // default member initializer (will be ignored)
   int membery_{2}; // default member initializer (will be used)
-  int memberz_;    // no initializer
+  int memberz_;    // no initializer (Avoid this!!!)
 };
 
 int main() {
