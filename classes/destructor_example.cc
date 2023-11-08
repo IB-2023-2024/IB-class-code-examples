@@ -33,7 +33,7 @@
 
 class MyClass {
  public:
-  MyClass(int bufferSize) {              // Constructor
+  MyClass(const int bufferSize) {              // Constructor
     // allocate some memory for buffer
     // Notice: we will usually not use destructors as we do not use dynamic allocation of memory
     bufferPtr = new char[bufferSize];
@@ -52,7 +52,7 @@ class MyClass {
 };
 
 int main() {
-  const int kMb = 1024 * 1024;
+  constexpr int kMb = 1024 * 1024;
 
   MyClass my_object(8 * kMb);
   // Some important code that Works with the object
