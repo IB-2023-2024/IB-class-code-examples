@@ -20,12 +20,12 @@ class DateClass {
   void Print() {
     std::cout << day_ << '/' << month_ << '/' << year_ << std::endl;
   }
-  int GetMonth() { return month_; } // getter for month
+  int GetDay() { return day_; }      // getter for day
+  int GetMonth() { return month_; }  // getter for month
+  int GetYear() { return year_; }    // getter for year
+  void SetDay(const int day) { day_ = day; }         // setter for day
   void SetMonth(const int month) { month_ = month; } // setter for month
-  int GetDay() { return day_; } // getter for day
-  void SetDay(const int day) { day_ = day; } // setter for day
-  int GetYear() { return year_; } // getter for year
-  void SetYear(const int year) { year_ = year; } // setter for year
+  void SetYear(const int year) { year_ = year; }     // setter for year
  private:
   int year_{};  // Initialize to 0
   int month_{};

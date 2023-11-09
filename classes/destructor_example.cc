@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 30 Jun 2020
+ * @date Nov 9 2023
  * @brief A class with defined destructor
  *
  * When object reaches end of lifetime, typically some cleanup required before object passes out of existence
@@ -20,41 +20,50 @@
  * If no destructor is specified, destructor automatically provided that calls destructor for each data member of class type
  * Sometimes, automatically provided destructor will not have correct behavior
  *
- * In this example,
- * Without explicitly-provided destructor (i.e., with destructor automatically
- * provided by compiler), memory associated with bufferPtr would not be freed
- *
+ * In this example, if sendData() method is not called (for any reason) data would be lost
+ * 
+ * @see https://www.learncpp.com/cpp-tutorial/introduction-to-destructors/
  * @see http://www.cplusplus.com/doc/tutorial/classes2/#destructor
  * @see http://www.cplusplus.com/doc/tutorial/classes/
  * @see http://www.cplusplus.com/doc/tutorial/classes2/
  */
 
 #include <iostream>
+#include <string>
+#include <vector>
 
-class MyClass {
+class NetworkData {
  public:
-  MyClass(const int bufferSize) {              // Constructor
-    // allocate some memory for buffer
-    // Notice: we will usually not use destructors as we do not use dynamic allocation of memory
-    bufferPtr = new char[bufferSize];
-    std::cout << "The constructor has been called. Memory allocated" << std::endl;
-  }
-
-  ~MyClass() {                           // Destructor
-    // free memory previously allocated
-    delete [] bufferPtr;
-    std::cout << "The destructor has been called. Memory de-allocated" << std::endl;
-  }
-
- // Additional methods here
+	NetworkData(std::string_view serverName) : serverName_ { serverName } { }
+	void addData(const std::string& data) {
+		data_.push_back(data);
+	}
+	void sendData() {
+		// connect to server
+		// send all data
+		// clear data
+	}
  private:
-  char* bufferPtr;                       // pointer to start of buffer
+  std::string serverName_{};
+  std::vector<std::string> data_{};
 };
 
-int main() {
-  constexpr int kMb = 1024 * 1024;
+bool someFunction() {
+  NetworkData network("someipAddress");
+  network.addData("somedata1");
+  network.addData("somedata2");
+  if (true) {
+    return false;
+  }
+  network.sendData();
+  return true;
+}
 
-  MyClass my_object(8 * kMb);
-  // Some important code that Works with the object
+int main() {
+  NetworkData network("someipAddress");
+  network.addData("somedata1");
+  network.addData("somedata2");
+
+  network.sendData();
   return 0;
 }

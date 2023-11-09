@@ -29,18 +29,18 @@
 
 class Something {
  public:
-  Something() : value1_{1}, value2_{2.2}, value3_{'c'} {   // Initialize our member variables
+  Something() : member1_{1}, member2_{2.2}, member3_{'c'} {   // Initialize the member variables
   // No need for assignment here
   // Empty body
   }
 
   void Print() {
-    std::cout << "Something(" << value1_ << ", " << value2_ << ", " << value3_ << ")\n";
+    std::cout << "Something(" << member1_ << ", " << member2_ << ", " << member3_ << ")\n";
   }
  private:
-  int value1_;
-  double value2_;
-  char value3_;
+  int member1_;
+  double member2_;
+  char member3_;
 };
 
 int main() {

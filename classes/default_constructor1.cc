@@ -33,9 +33,10 @@ class Date {
 int main() {
   Date date1;   /// Compiler-provided default constructor is used
                 /// Here date1.? contains garbage
+  std::cout << "Día: " << date1.day() << " Mes: " << date1.month() << " Año: " << date1.year() << std::endl;
+
   Date date2{}; /// Value initialization. Calls implicit (default) constructor
                 /// Best practice: Favor value-initialization over default-initialization for class objects.
-  std::cout << "Día: " << date1.day() << " Mes: " << date1.month() << " Año: " << date1.year() << std::endl;
   std::cout << "Día: " << date2.day() << " Mes: " << date2.month() << " Año: " << date2.year() << std::endl;
   return 0;
 }
