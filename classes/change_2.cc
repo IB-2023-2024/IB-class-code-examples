@@ -7,7 +7,7 @@
  * @author F. de Sande
  * @date Jun 25 2020
  * @brief Encapsulated classes are easier to change
- *        This is an encapsulated version of this class that uses functions to access valueX_
+ *        This is an encapsulated version of this class that uses functions to access value1_
  *
  * @see https://www.learncpp.com/cpp-tutorial/84-access-functions-and-encapsulation/
  */

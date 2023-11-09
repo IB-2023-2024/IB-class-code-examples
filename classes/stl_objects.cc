@@ -28,6 +28,7 @@ int main() {
   std::array<int, 3> array{1, 2, 3};   /// instantiate an array class object
   std::vector<double> vector{1.1, 2.2, 3.3};   /// instantiate a vector class object
   std::cout << "length: " << string.length() << '\n';   /// call a member function
-  std::cout << "Capacity: " << vector.size() << '\n';   /// call a member function
+  std::cout << "Vector capacity: " << vector.size() << '\n';   /// call a member function
+  std::cout << "Array capacity: " << array.size() << '\n';   /// call a member function
   return 0;
 }

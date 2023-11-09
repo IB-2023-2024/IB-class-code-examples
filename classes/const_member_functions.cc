@@ -36,11 +36,12 @@ class Counter {
 };
 
 void Func() {
-  Counter my_counter{0};            // An instance of the class
-  int my_value = my_counter.count();
+  Counter counter{0};            // An instance of the class
+  int my_value = counter.count();
 
   const Counter another_counter(25);
   my_value = another_counter.count();      // If count() is not const you get an error: count() better be const!
+  std::cout << "Valor: " << my_value << std::endl;
 }
 
 int main() {
