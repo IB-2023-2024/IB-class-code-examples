@@ -12,7 +12,7 @@
  * Member functions always has object of class as implicit parameter
  * Implicit parameter passed in form of pointer using special variable called this
  *
- * @see https://stackoverflow.com/a/27087502/12791643
+ * @see https://stackoverflow.com/a/993385/12791643
  */
 
 #include <iostream>
