@@ -29,9 +29,9 @@ class Date {
   Date(const int year, const int month, const int day);
   void Print();
   void SetDate(const int year, const int month, const int day);
-  int getYear() { return year_; }
+  int getYear() { return year_; }     // "Traditional" getter
 
-  int year() const { return year_; }
+  int year() const { return year_; }  // Google style getter
 
   int getMonth() { return month_; }
   int getDay()  { return day_; }
