@@ -20,7 +20,7 @@
  * If no destructor is specified, destructor automatically provided that calls destructor for each data member of class type
  * Sometimes, automatically provided destructor will not have correct behavior
  *
- * In this example, if sendData() method is not called (for any reason) data would be lost
+ * In this example, two Simple objects are instantiated and they are destroyed when they finish their lifetime 
  * 
  * @see https://www.learncpp.com/cpp-tutorial/introduction-to-destructors/
  * @see http://www.cplusplus.com/doc/tutorial/classes2/#destructor
@@ -29,41 +29,28 @@
  */
 
 #include <iostream>
-#include <string>
-#include <vector>
 
-class NetworkData {
+class Simple {
  public:
-	NetworkData(std::string_view serverName) : serverName_ { serverName } { }
-	void addData(const std::string& data) {
-		data_.push_back(data);
-	}
-	void sendData() {
-		// connect to server
-		// send all data
-		// clear data
-	}
+  Simple(const int id) : identifier_{id} {
+    std::cout << "Constructing Simple " << identifier_ << '\n';
+  }
+
+  ~Simple() { // Destructor
+    std::cout << "Destructing Simple " << identifier_ << '\n';
+  }
+  
+  int getID() { return identifier_; }
  private:
-  std::string serverName_{};
-  std::vector<std::string> data_{};
+  int identifier_{};
 };
 
-bool someFunction() {
-  NetworkData network("someipAddress");
-  network.addData("somedata1");
-  network.addData("somedata2");
-  if (true) {
-    return false;
-  }
-  network.sendData();
-  return true;
-}
-
 int main() {
-  NetworkData network("someipAddress");
-  network.addData("somedata1");
-  network.addData("somedata2");
+    // Allocate a Simple
+    Simple simple1{1}; 
+    {
+      Simple simple2{2};
+    } // simple2 dies here
 
-  network.sendData();
-  return 0;
-}
+    return 0;
+} // simple1 dies here
