@@ -20,27 +20,27 @@
 
 class Point {
  public:
-  Point(double x = 0.0, double y = 0.0, double z = 0.0) : x_{x}, y_{y}, z_{z} { }
+  Point(double x = 0.0, double y = 0.0, double z = 0.0) : x_coordinate_{x}, y_coordinate_{y}, z_coordinate_{z} { }
   friend std::ostream& operator<<(std::ostream& out, const Point& point);
   friend std::istream& operator>>(std::istream& in, Point& point);
  private:
-  double x_{};
-  double y_{};
-  double z_{};
+  double x_coordinate_{};
+  double y_coordinate_{};
+  double z_coordinate_{};
 };
 
 // Since operator<< is a friend of the Point class, we can access Point's members directly.
 std::ostream& operator<<(std::ostream& out, const Point& point) {
-  out << "Point(" << point.x_ << ", " << point.y_ << ", " << point.z_ << ')';
+  out << "Point(" << point.x_coordinate_ << ", " << point.y_coordinate_ << ", " << point.z_coordinate_ << ')';
   return out;
 }
 
 // Again, since operator>> is a friend of the Point class, we can access Point's members directly.
 // note that parameter point must be non-const so we can modify the class members with the input values
 std::istream& operator>>(std::istream& in, Point& point) {
-  in >> point.x_;
-  in >> point.y_;
-  in >> point.z_;
+  in >> point.x_coordinate_;
+  in >> point.y_coordinate_;
+  in >> point.z_coordinate_;
   return in;
 }
 
