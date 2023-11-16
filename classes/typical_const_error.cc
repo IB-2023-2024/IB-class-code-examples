@@ -46,7 +46,7 @@ void Print(const Student& student) {
 }
 
 int main() {
-  Student my_student("Albert Einstein");
-  Print(my_student);
+  Student student("Albert Einstein");
+  Print(student);
   return 0;
 }
