@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 10 Dec 2020
+ * @date Dec 10 2020
  * @brief Friend functions 
  *        Normally, only class has access to its private members
  *        Sometimes, necessary to allow another class or function to have access to private members of class
@@ -31,22 +31,22 @@ class Humidity;
 
 class Temperature {
  public:
-  Temperature(int temp = 0) { temp_ = temp; }
+  Temperature(int temperature = 0) : temperature_{temperature} {}
   friend void PrintWeather(const Temperature& temperature, const Humidity& humidity);
  private:
-  int temp_;
+  int temperature_;
 };
 
 class Humidity {
  public:
-  Humidity(int humidity = 0) { humidity_ = humidity; }
+  Humidity(int humidity = 0) : humidity_{humidity} {}
   friend void PrintWeather(const Temperature& temperature, const Humidity& humidity);
  private:
   int humidity_;
 };
 
 void PrintWeather(const Temperature &temperature, const Humidity &humidity) {
-  std::cout << "The temperature is " << temperature.temp_ <<
+  std::cout << "The temperature is " << temperature.temperature_ <<
                " and the humidity is " << humidity.humidity_ << '\n';
 }
 
