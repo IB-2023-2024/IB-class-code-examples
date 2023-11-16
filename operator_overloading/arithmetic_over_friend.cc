@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 10 Dec 2020
+ * @date Dec 10 2020
  * @brief Overloading of arithmetic operators
  *        The Cents class hold an amount of cents (money)
  *        Overloading the plus operator (+) is as simple as: 
@@ -21,7 +21,7 @@
 
 class Cents {
  public:
-  Cents(const int cents) { cents_ = cents; }
+  Cents(const int cents) : cents_{cents} {}
 
   // Add Cents + Cents using a friend function
   friend Cents operator+(const Cents& c1, const Cents& c2);
