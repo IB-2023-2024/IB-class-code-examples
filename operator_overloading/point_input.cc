@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 10 Dec 2020
+ * @date Dec 10 2020
  * @brief Overloading operator>>
  *        It is also possible to overload the input operator
  *        This is done in a manner analogous to overloading the output operator

@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 10 Dec 2020
+ * @date Dec 10 2020
  * @brief Overloading operator<<
  *        Overloading operator<< is similar to overloading operator+ 
  *        (they are both binary operators), except that the parameter types are different.
