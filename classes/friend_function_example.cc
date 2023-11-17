@@ -46,13 +46,12 @@ class Humidity {
 };
 
 void PrintWeather(const Temperature &temperature, const Humidity &humidity) {
-  std::cout << "The temperature is " << temperature.temperature_ <<
-               " and the humidity is " << humidity.humidity_ << '\n';
+  std::cout << "The temperature is " << temperature.temperature_ << " and the humidity is " << humidity.humidity_ << '\n';
 }
 
 int main() {
-  Humidity humidity(10);
-  Temperature temperature(12);
+  Humidity humidity{10};
+  Temperature temperature{12};
   PrintWeather(temperature, humidity);
   return 0;
 }

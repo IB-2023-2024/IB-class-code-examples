@@ -28,7 +28,7 @@
 
 class Something {
  public:
-  Something() { id_ = id_generator_++; } // grab the next value from the id generator
+  Something() { id_ = id_generator_++; }  // grab the next value from the id generator
   int id() const { return id_; }
  private:
   static int id_generator_;
@@ -37,7 +37,7 @@ class Something {
 
 // Note that here we're defining and initializing id_generator_ even though it is declared as private above.
 // This is okay since the definition isn't subject to access controls.
-int Something::id_generator_ = 1; // start our ID generator with value 1
+int Something::id_generator_ = 1;  // start our ID generator with value 1
 
 int main() {
   Something first;

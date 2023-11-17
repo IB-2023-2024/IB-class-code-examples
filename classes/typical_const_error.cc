@@ -36,7 +36,7 @@
 class Student {
  public:
   Student(const std::string& name): name_{name} {}    // Constructor initializer list syntax (body is empty)
-  const std::string name() { return name_; }          // Getter
+  const std::string name() const { return name_; }          // Getter
  private:
   std::string name_{""};
 };
@@ -46,7 +46,7 @@ void Print(const Student& student) {
 }
 
 int main() {
-  Student student("Albert Einstein");
+  Student student{"Albert Einstein"};
   Print(student);
   return 0;
 }

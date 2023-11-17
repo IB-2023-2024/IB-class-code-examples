@@ -24,7 +24,7 @@
 
 class Counter {
  public:
-  Counter(const int new_count) : count_{new_count}  { }
+  Counter(const int new_count) : count_{new_count}  {}
   int count() const { return count_; }  // Getter. Note addition of const keyword after parameter list, but before function body
                                         // As it is a const function we can call it on any const object,
                                         // otherwise it would not be allowed

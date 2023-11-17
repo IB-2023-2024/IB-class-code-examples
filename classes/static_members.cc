@@ -46,7 +46,7 @@ int main() {
   Something first;
   Something second;
 
-  first.s_value_ = 1000;
+  // first.s_value_ = 1000;
 
   std::cout << first.s_value_ << '\n';
   std::cout << second.s_value_ << '\n';

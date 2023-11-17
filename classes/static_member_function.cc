@@ -35,7 +35,7 @@ int IDGenerator::nextID() { return nextID_++; }
 int main() {
   for (int count{0}; count < 5; ++count) {
     std::cout << "The next ID is: " << IDGenerator::nextID() << '\n';
-  // The method is called without any object instance
+    // The method is called without any object instance
 	}
   return 0;
 }
