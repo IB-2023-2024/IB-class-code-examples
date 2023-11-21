@@ -14,7 +14,7 @@
  * If you compile this example you'll obtain an error:
  *     typical-const-error.cc: In function ‘void Print(const Student&)’:
  *     typical-const-error.cc:46:39: error: passing ‘const Student’ as ‘this’ argument discards qualifiers [-fpermissive]
- *     45  cout << "Student: " << student.name() << endl;
+ *     44  cout << "Student: " << student.name() << endl;
  *
  * The problem is that the Print function parameter is a const reference
  * and Print calls student.name() (the getter) but it has to be guaranteed that the object will not be modified
@@ -25,9 +25,8 @@
  * It uses the uniform initializer syntax, using braces {} 
  * @see http://www.cplusplus.com/doc/tutorial/classes/#member_initialization
  *
- * @see http://www.cplusplus.com/doc/tutorial/templates/#this
  * @see https://stackoverflow.com/questions/5973427/error-passing-xxx-as-this-argument-of-xxx-discards-qualifiers
- * @see https://isocpp.org/wiki/faq/const-correctness
+ * @see https://isocpp.org/wiki/faq/const-correctness#const-member-fns
  */
 
 #include <string>
@@ -36,7 +35,7 @@
 class Student {
  public:
   Student(const std::string& name): name_{name} {}    // Constructor initializer list syntax (body is empty)
-  const std::string name() const { return name_; }          // Getter
+  std::string name() { return name_; }          // Getter
  private:
   std::string name_{""};
 };
