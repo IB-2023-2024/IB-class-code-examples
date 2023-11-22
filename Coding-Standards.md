@@ -4,6 +4,19 @@
 ### Informática Básica
 
 # C++ C++ Coding Standards: Rules, Guidelines, & Best Practices
+Buenas prácticas (Best practices) son acciones que se deben llevar a cabo porque esa forma de hacer las cosas se considera estándar o muy recomendable. 
+Es decir, o todo el mundo lo hace así (y si lo haces de otro modo, estarás haciendo algo que la gente no espera), o es mejor que hacerlo de otro modo
+
+#### Consejos preliminares para programadoras noveles
+* Revise los contenidos de
+[How to design your first programs](https://www.learncpp.com/cpp-tutorial/how-to-design-your-first-programs/) 
+* Los programadores noveles a menudo tratan de escribir un programa entero de una sola vez, y luego se sienten abrumados cuando produce un montón de errores. Una mejor estrategia es añadir una parte cada vez, asegurarse de que compila y probarla. Entonces, cuando tenga seguridad de que funciona, pase a la siguiente pieza.
+* **No comience a escribir código hasta que haya madurado “con lápiz y papel” el algoritmo que pretende implementar**.
+* **No intente escribir un programa completo partiendo desde cero: desarrolle su código de forma incremental**.
+* Escriba sus primeros programas “por imitación de otros”.
+* **Estudie, conozca y ponga en práctica las
+[reglas de estilo](https://google.github.io/styleguide/cppguide.html)
+que se utilicen en su organización**.
 
 #### Buenas prácticas de carácter general
 * **Cree un nuevo proyecto (y directorio) para cada nuevo programa que escriba.**
@@ -51,6 +64,15 @@ Evite el uso de directivas siempre que sea posible.
 * Un tipo definido por el usuario y utilizado en varios ficheros de código debe definirse en un fichero de cabecera con el mismo nombre que el tipo definido por el programa y luego `#incluirse` en cada fichero de código según sea necesario.
 * **Favorezca el uso de funciones de la librería estándar de algoritmos en lugar de escribir su propia funcionalidad para hacer lo mismo.**
 * Generalmente favorezca la iteración sobre la recursión, excepto cuando la recursión realmente tenga sentido.
+
+#### Formato del código
+El formato del código es importante. Demasiado importante para ignorarlo.
+El formato del código tiene que ver con la comunicación, y la comunicación es la primera tarea del desarrollador profesional.
+Tal vez Ud. pensaba que "hacer que funcione" era la primera tarea de un desarrollador profesional. No es cierto.
+* Utilice sólo espacios (nunca tabuladores) y sangrías de 2 en 2 espacios
+* El tipo de retorno en la misma línea que el nombre de la función, los parámetros en la misma línea si caben.
+Las funciones y métodos debieran tener
+[este formato][este formato](https://google.github.io/styleguide/cppguide.html#Function_Declarations_and_Definitions)
 
 #### Reglas de nombrado
 * **Nombre sus ficheros de código `algo.cc`, donde `algo` será un nombre significativo de su elección, y .cc es la extensión que indica que el fichero es un archivo fuente C++.**
