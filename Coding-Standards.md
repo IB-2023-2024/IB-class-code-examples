@@ -10,7 +10,8 @@ Es decir, o todo el mundo lo hace así (y si lo haces de otro modo, estarás hac
 #### Consejos preliminares para programadoras noveles
 * Revise los contenidos de
 [How to design your first programs](https://www.learncpp.com/cpp-tutorial/how-to-design-your-first-programs/) 
-* Los programadores noveles a menudo tratan de escribir un programa entero de una sola vez, y luego se sienten abrumados cuando produce un montón de errores. Una mejor estrategia es añadir una parte cada vez, asegurarse de que compila y probarla. Entonces, cuando tenga seguridad de que funciona, pase a la siguiente pieza.
+* **Los programadores noveles a menudo tratan de escribir un programa entero de una sola vez, y luego se sienten abrumados cuando produce un montón de errores. Una mejor estrategia es añadir una parte cada vez, asegurarse de que compila y probarlo. Entonces, cuando tenga seguridad de que funciona, pase a la siguiente pieza.**
+* **Escriba su programa en unidades pequeñas y bien definidas (funciones o clases), compile a menudo y pruebe su código sobre la marcha.**
 * **No comience a escribir código hasta que haya madurado “con lápiz y papel” el algoritmo que pretende implementar**.
 * **No intente escribir un programa completo partiendo desde cero: desarrolle su código de forma incremental**.
 * Escriba sus primeros programas “por imitación de otros”.
@@ -27,12 +28,10 @@ que se utilicen en su organización**.
 * Cuando trate errores de compilación en sus programas, resuelva siempre primero el primer error producido y luego vuelva a compilar.
 * **Escriba sus comentarios como si estuviera hablando con alguien que no tiene ni idea de lo que hace el código. No de por sentado que recordará por qué se tomaron determinadas decisiones.**
 * Aunque el lenguaje lo permita, evite definir múltiples variables del mismo tipo en una misma sentencia. En su lugar, defina cada variable en una sentencia separada en su propia línea.
-* **Inicialice las variables al crearlas.**
-* **Siempre que sea posible, utilice llaves (*brace initialization*) para inicializar las variables.**
+* **Inicialice las variables al declararlas.**
+* **Siempre que sea posible, utilice llaves (*brace initialization*) para inicializar las variables (y objetos)**.
 * Existe cierto debate sobre si es necesario inicializar una variable inmediatamente antes de darle un valor proporcionado por el usuario a través de otra fuente (por ejemplo, `std::cin`), ya que el valor proporcionado por el usuario simplemente sobrescribirá el valor de inicialización. En línea con la recomendación anterior de que las variables deben ser siempre inicializadas, la mejor práctica es inicializar la variable primero.
 * Prefiera `'\n'` a `std::endl` cuando envíe texto a la consola.
-* **Los programadores noveles a menudo tratan de escribir un programa entero de una sola vez, y luego se sienten abrumados cuando produce un montón de errores. Una mejor estrategia es añadir una parte cada vez, asegurarse de que compila y probarlo. Entonces, cuando tenga seguridad de que funciona, pase a la siguiente pieza.**
-* **Escriba su programa en unidades pequeñas y bien definidas (funciones o clases), compile a menudo y pruebe su código sobre la marcha.**
 * Su función `main()`debe devolver el valor 
 [`EXIT_SUCCESS`](https://en.cppreference.com/w/cpp/utility/program/EXIT_status)
 (`<cstdlib>`) si el programa se ejecuta normalmente
@@ -43,7 +42,9 @@ Si necesita hacer algo más de una vez, considere cómo modificar su código par
 Las variables pueden usarse para almacenar los resultados de cálculos que necesitan usarse más de una vez (para no tener que repetir el cálculo). 
 Las funciones pueden usarse para definir una secuencia de sentencias que se necesita ejecutar más de una vez. 
 Los bucles pueden usarse para ejecutar una sentencia más de una vez.
-* **Defina sus variables locales tan cerca de su primer uso como sea razonable.**
+* **Defina sus variables locales tan cerca de su primer uso como sea razonable.
+Las variables locales deben declararse justo encima de su primer uso y deben tener un ámbito vertical (scope) reducido**.
+* **Evite variables globales**.
 * **Utilice prefijos de espacio de nombres explícitos (*namespace*) para acceder a identificadores definidos en un espacio de nombres.**
 * Inicialice sus variables locales estáticas. Las variables locales estáticas sólo se inicializan la primera vez que se ejecuta el código, no en llamadas posteriores.
 * Evite las variables locales estáticas a menos que la variable nunca necesite ser reiniciada.
@@ -69,18 +70,31 @@ Evite el uso de directivas siempre que sea posible.
 El formato del código es importante. Demasiado importante para ignorarlo.
 El formato del código tiene que ver con la comunicación, y la comunicación es la primera tarea del desarrollador profesional.
 Tal vez Ud. pensaba que "hacer que funcione" era la primera tarea de un desarrollador profesional. No es cierto.
+
 * Utilice sólo espacios (nunca tabuladores) y sangrías de 2 en 2 espacios
 * El tipo de retorno en la misma línea que el nombre de la función, los parámetros en la misma línea si caben.
 Las funciones y métodos debieran tener
-[este formato][este formato](https://google.github.io/styleguide/cppguide.html#Function_Declarations_and_Definitions)
-
+[este formato](https://google.github.io/styleguide/cppguide.html#Function_Declarations_and_Definitions)
+### [Espaciado horizontal](https://google.github.io/styleguide/cppguide.html#Horizontal_Whitespace)
+* **Deje dos espacios al final de una línea antes de los comentarios**.
+* **Las llaves abiertas siemre deben tener un espacio antes de ellas**.
+* **El signo punto-y-coma habitualmente no lleva un espacio antes del mismo**.
+* **Deje un espacio antes de la palabra reservada (if, while, switch, for...) en bucles y condicionales**
+* **Escriba un espacio a ambos lados de cualquier operador binario (+ - * / == = ...)**
+  
 #### Reglas de nombrado
+* **No se apresure a la hora de elegir un identificador.
+Asegúrese de que sea descriptivo.
+Recuerde que los significados tienden a cambiar a medida que evoluciona el software, así que reevalúe con frecuencia la idoneidad de los identificadores que elija**.
+* **Evite identificadores "de una letra"**.
 * **Nombre sus ficheros de código `algo.cc`, donde `algo` será un nombre significativo de su elección, y .cc es la extensión que indica que el fichero es un archivo fuente C++.**
 * **Utilice la extensión `.h` cuando nombre sus ficheros de cabecera.**
 * Si un fichero de cabecera está emparejado con un fichero de código (por ejemplo, `add.h` con `add.cc`), ambos deben tener el mismo nombre base (`add`).
 * Los ficheros fuente deben #incluir el fichero de cabecera emparejado (si existe).
 * Nombre los tipos definidos por el usuario empezando con mayúscula y sin sufijo.
 * **Nombre sus clases empezando con mayúscula.**
+* **Los identificadores de clases y objetos deben ser sustantivos**.
+* **Los identificadores de métodos debieran ser verbos**.
 
 #### Ficheros de cabecera (`*.h`)
 * **Por lo general, los ficheros de cabecera no deben contener definiciones de funciones y variables, sino solo declaraciones.**
@@ -92,9 +106,9 @@ Las cabeceras definidas por el usuario deben seguir utilizando la extensión `.h
 2. Otras cabeceras de su proyecto
 3. Cabeceras de librerías de terceros
 4. Cabeceras de librerías estándar
-
-Las cabeceras de cada grupo deben ordenarse alfabéticamente.
-* Prefiera los guardianes de cabecera (*header guards*) a `#pragma once` para maximizar la portabilidad de su código.
+Los ficheros de cabeceras de cada grupo deben ordenarse alfabéticamente.
+* Utilice siempre "guardas de cabecera" para sus ficheros de cabecera.
+* Prefiera las guardas de cabecera (*header guards*) a `#pragma once` para maximizar la portabilidad de su código.
 
 #### Tipos de Datos
 * **Prefiera `double` a `float`, ya que la falta de precisión en un `float` a menudo conducirá a
@@ -143,6 +157,8 @@ Esto incluye las sentencias bajo la última etiqueta en el switch.
 * En las declaraciones de elementos de bucles `for-each`, si sus elementos son tipos no fundamentales, utilice referencias o referencias `const` por razones de rendimiento.
 
 #### Funciones
+* **El identificador de una función/método debe indicar lo que hace**.
+* **Una función/método debe hacer una única tarea**.
 * Mantenga el nivel de anidamiento de sus funciones en 3 o menos. 
 Si su función necesita más niveles de anidamiento, considere la posibilidad de refactorizarla en subfunciones.
 * **Defina las variables en el ámbito más limitado posible.**
@@ -156,6 +172,11 @@ En caso contrario, coloque el argumento por defecto en la definición de la func
 * Evite devolver referencias a variables estáticas locales no-`const`.
 
 #### Parámetros de funciones
+* **Las funciones deben tener un número reducido de parámetros.
+Lo mejor es que no tenga ningún parámetro, seguido de uno, dos y tres.
+Más de tres parámetros es muy cuestionable y debe evitarse.**
+* Mantenga los nombres de los parámetros en las declaraciones de las funciones.
+* **Pase los tipos fundamentales por valor y los tipos de clase (o estructura) por referencia constante**.
 * **Pase siempre `std::array` por referencia o referencia `const`.**
 * **Cualifique `const` todas las referencias que correspondan a parámetros solo de entrada a una función.**
 * Mantenga los nombres de los parámetros en las declaraciones de las funciones.
