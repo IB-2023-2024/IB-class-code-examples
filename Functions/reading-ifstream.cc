@@ -18,7 +18,7 @@
 using namespace std;    // Saving space
 
 int main() {
-  ifstream input_file{"test_cols.txt", ios_base::in};     // Create an input file stream
+  fstream input_file{"test_cols.txt", ios_base::in};     // Create an input file stream
   int my_var1;
   double my_var2, my_var3;
   string my_string;
@@ -28,7 +28,7 @@ int main() {
   }
 
   input_file.close();
-  return (0);
+  return 0;
 }
 
 

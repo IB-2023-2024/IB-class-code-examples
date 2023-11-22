@@ -31,7 +31,7 @@ double pow(double base, int exponent) {
 int main() {
   double base{2.0};
   int exponent{10};
-  double result = pow(base, exponent);
+  double result = std::pow(base, exponent);
   cout << base << " ^ " << exponent << " = " << result << endl;
   return 0;
 }
