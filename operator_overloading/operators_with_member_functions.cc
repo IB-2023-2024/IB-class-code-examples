@@ -20,27 +20,33 @@
 
 class Cents {
  public:
-  Cents(int cents) { cents_ = cents; }
-
-  // Overload Cents + int
-  Cents operator+(int value);
-  
-	// getter
-  int cents() const { return cents_; }
+  Cents(int cents) : cents_{cents} {}
+  Cents operator+(int value);  // Overload Cents + int
+  int cents() const { return cents_; }  // getter
  private:
   int cents_;
 };
 
-// note: this function is a member function!
-// the cents parameter we used in the friend version is now the implicit *this parameter
+/**
+ * operator+ overload Cents + int
+ *
+ * @param value: cents to add
+ * @return Cents. A new Cents objet is returned
+ *         note: this function is a member function!
+ *         the cents parameter we used in the friend version is now the implicit *this parameter
+ */
 Cents Cents::operator+(int value) {
   return Cents{cents_ + value};
 }
 
-// The expression cents1 + 2 becomes function call cents1.operator+(2). 
-// Note that there is now only one explicit function parameter, and cents1 has become an object prefix. 
-// However, we know that the compiler implicitly converts an object prefix into a hidden leftmost parameter named *this. 
-// So in actuality, cents1.operator+(2) becomes operator+(&cents1, 2).
+/**
+ * main()
+ *
+ * The expression cents1 + 2 becomes function call cents1.operator+(2). 
+ * Note that there is now only one explicit function parameter, and cents1 has become an object prefix. 
+ * However, we know that the compiler implicitly converts an object prefix into a hidden leftmost parameter named *this. 
+ * So in actuality, cents1.operator+(2) becomes operator+(&cents1, 2).
+ */
 int main() {
 	Cents cents1{6};
 	Cents cents2 = cents1 + 2;
