@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 15 Dec 2020
+ * @date Dec 15 2020
  * @brief Illustrate different initializations supported in C++
  *
  * @see https://www.learncpp.com/cpp-tutorial/the-copy-constructor/
@@ -17,7 +17,7 @@ class Point {
  public:
   // Default constructor
   // A default constructor is a constructor that either has no parameters, 
-  // or if it has parameters, all the parameters have default values. 
+  // or if it has parameters, all of them have default values. 
   Point(double x = 0.0, double y = 0.0, double z = 0.0): x_{x}, y_{y}, z_{z} { 
 		std::cout << "The default constructor has been called..." << std::endl;
 	}
@@ -25,15 +25,20 @@ class Point {
   double x() const { return x_; }
   double y() const { return y_; }
   double z() const { return z_; }
-  friend std::ostream& operator<<(std::ostream& out, const Point& point);
  private:
   double x_, y_, z_;    // 3D Point coordinates
 };
 
-// Overloaded operator << (insertion)
+/**
+ * operator << (insertion) overload as a normal function
+ *
+ * @param out: A reference (will be modified) to std::ostream
+ * @param point: A const reference to the point object to be printed
+ * @return out. A reference to std::ostream so we can chain calls to operator<<
+ */
 std::ostream& operator<<(std::ostream& out, const Point& point) {
-  out << "Point(" << point.x_ << ", " << point.y_ << ", " << point.z_ << ')'; // actual output done here
-  return out; // return std::ostream so we can chain calls to operator<<
+  out << "Point(" << point.x() << ", " << point.y() << ", " << point.z() << ')'; // actual output done here
+  return out; 
 }
 
 int main() {
