@@ -18,9 +18,7 @@
 
 class Vector {   /// Two-dimensional vector class
  public:
-  Vector() {     /// Default constructor
-    x_ = 0.0;
-    y_ = 0.0;
+  Vector() : x_{0.0}, y_{0.0} {     /// Default constructor
     std::cout << "Class default constructor has been called" << std::endl;
   }
 
