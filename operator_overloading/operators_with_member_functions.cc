@@ -32,7 +32,8 @@ class Cents {
  *
  * @param value: cents to add
  * @return Cents. A new Cents objet is returned
- *         note: this function is a member function!
+ *
+ *         note: operator+ is now a member function!
  *         the cents parameter we used in the friend version is now the implicit *this parameter
  */
 Cents Cents::operator+(int value) {
