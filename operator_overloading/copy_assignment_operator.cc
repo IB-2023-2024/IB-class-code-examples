@@ -42,18 +42,14 @@ std::ostream& operator<<(std::ostream& out, const Fraction& f1) {
 }
 
 // C++ allows self-assignment
-// So we need to deal (take care) with it
+// So we need to deal (take care of) with it
 Fraction& Fraction::operator=(const Fraction& other_fraction) {
-  // self-assignment guard
-  if (this == &other_fraction)
+  if (this == &other_fraction)  // self-assignment guard
     return *this;
-
   // do the copy
-  numerator_ = other_fraction.numerator_; // can handle self-assignment
-  denominator_ = other_fraction.denominator_; // can handle self-assignment
-
-  // return the existing object so we can chain this operator
-  return *this;
+  numerator_ = other_fraction.numerator_; 
+  denominator_ = other_fraction.denominator_; 
+  return *this;  // return the existing object so we can chain this operator
 }
 
 int main() {
