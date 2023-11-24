@@ -18,22 +18,22 @@
 
 class Array10 { // Ten-element real array class
  public:
-  static const int kArraySize = 10;
-  Array10 () {
-    for (auto element : data_) {  // Zero array
+  Array10() {
+    for (auto element : data_) {  // Constructs a "Zero array"
       element = 0;
     }
   }
   const double& operator[](int index) const { return data_[index]; }
   double& operator[](int index) { return data_[index]; }
  private:
+  static const int kArraySize = 10;
   std::array<double, kArraySize> data_;  // array data
 };
 
 void Func() {
-  Array10 my_vec;
-  my_vec[1] = 3.5;          // calls Array10::operator[](int)
-  double value = my_vec[1]; // calls Array10::operator[](int)
+  Array10 array;
+  array[1] = 3.5;          // calls Array10::operator[](int)
+  double value = array[1]; // calls Array10::operator[](int)
   const Array10 other;
   // other[1] = 2.5;           // ERROR: u[1] is const
   double third = other[1];  // calls Array10::operator[](int) const

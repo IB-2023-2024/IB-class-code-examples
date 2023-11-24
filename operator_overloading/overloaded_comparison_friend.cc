@@ -20,24 +20,24 @@
 class Coche {
  public:
   Coche(const std::string& marca, const std::string& modelo) : marca_{ marca }, modelo_{ modelo } { }
-  friend bool operator==(const Coche& c1, const Coche& c2);
-  friend bool operator!=(const Coche& c1, const Coche& c2);
+  friend bool operator==(const Coche& coche1, const Coche& coche2);
+  friend bool operator!=(const Coche& coche1, const Coche& coche2);
  private:
   std::string marca_;
   std::string modelo_;
 };
 
 // Dos coches son iguales si son de la misma marca y modelo
-bool operator==(const Coche& c1, const Coche& c2) {
-  return (c1.marca_ == c2.marca_ && c1.modelo_ == c2.modelo_);
+bool operator==(const Coche& coche1, const Coche& coche2) {
+  return (coche1.marca_ == coche2.marca_ && coche1.modelo_ == coche2.modelo_);
 }
 
 // Puesto que el resultado de operator!= es el opuesto de operator==, 
 // se definirá operator!= en función de operator==, esto es:
 // Dos coches son distinsot si no son iguales
 // Esta aproximación hace todo más simple, libre de error y reduce la cantidad de código a escribir.
-bool operator!=(const Coche& c1, const Coche& c2) {
-  return !(c1 == c2);
+bool operator!=(const Coche& coche1, const Coche& coche2) {
+  return !(coche1 == coche2);
 }
 
 int main() {

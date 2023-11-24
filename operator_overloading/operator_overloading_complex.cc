@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 01 Jul 2020
+ * @date Jul 1 2020
  * @brief Illustrate operator overloading for a User defined Type: Complex
  *        Considerations: access to private data; whether first operand has class type
  *        See the comments in the code
@@ -21,39 +21,39 @@
  */
 class Complex {
  public:
-  Complex(double re, double im) : real_(re), imag_(im) {}
+  Complex(double real, double imaginary) : real_(real), imag_(imaginary) {}
   double real() const { return real_; }
   double imag() const { return imag_; }
-  Complex operator+(const double&);
+  Complex operator+(const double real_number);
  private:
   double real_;       /// The real part
   double imag_;       /// The imaginary part
 };
 
-// Overload as global function
-Complex operator+(const Complex& a, const double& b) {
-  return Complex(a.real() + b, a.imag());
+// Overload as normal (global) function
+Complex operator+(const Complex& complex, const double real_number) {
+  return Complex(complex.real() + real_number, complex.imag());
 }
 
-// Overload as member function
-Complex Complex::operator+(const double& b) {
-  return Complex(real() + b, imag());
+// Overload as member function (method)
+Complex Complex::operator+(const double real_number) {
+  return Complex(real() + real_number, imag());
 }
 
-// This can only be accomplished with global function.
-Complex operator+(const double& b, const Complex& a) {
-  return Complex(b + a.real(), a.imag());
+// This can only be accomplished with global function
+Complex operator+(const double real_number, const Complex& complex) {
+  return Complex(real_number + complex.real(), complex.imag());
 }
 
 void Func() {
-  Complex a{1.0, 2.0};
-  Complex b{1.0, -2.0};
-  double r = 2.0;
-  Complex c = a + r;        // could use global or member function
-                            // operator+(a, r) or a.operator+(r)
-  Complex d = r + a;        // must use global function
-                            // operator+(r, a)
-                            // since r.operator+(a) will not work
+  Complex complex_a{1.0, 2.0};
+  Complex complex_b{1.0, -2.0};
+  double real_number = 2.0;
+  Complex complex_c = complex_a + real_number;  // could use global or member function
+                                                // operator+(a, r) or a.operator+(r)
+  Complex complex_d = real_number + complex_a;  // must use global function
+                                                // operator+(r, a)
+                                                // since r.operator+(a) will not work
 }
 
 int main () {

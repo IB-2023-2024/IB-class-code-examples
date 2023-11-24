@@ -18,11 +18,11 @@
 
 class Vector {   /// Two-dimensional vector class
  public:
-  Vector() : x_{0.0}, y_{0.0} {     /// Default constructor
-    std::cout << "Class default constructor has been called" << std::endl;
+  Vector() : x_{0.0}, y_{0.0} {
+    std::cout << "Default constructor has been called" << std::endl;
   }
 
-  Vector(const Vector& other) { /// Copy constructor
+  Vector(const Vector& other) {   /// Copy constructor
     x_ = other.x_; 
     y_ = other.y_;
     std::cout << "Copy constructor has been called" << std::endl;

@@ -17,7 +17,7 @@
 class Vector { // 2D vector class
  public:
   Vector() : x_{0.0}, y_{0.0} {}        // Initializer list
-  Vector(double x, double y) : x_{x}, y_{y} {}
+  Vector(double first, double second) : x_{first}, y_{second} {}
   double x() const { return x_; }
   double y() const { return y_; }
   friend std::ostream& operator<<(std::ostream& out, const Vector& vector);
@@ -27,18 +27,18 @@ class Vector { // 2D vector class
 };
 
 // Vector addition
-Vector operator+(const Vector& u, const Vector& v) {
-  return Vector (u.x() + v.x(), u.y() + v.y());
+Vector operator+(const Vector& first, const Vector& second) {
+  return Vector (first.x() + second.x(), first.y() + second.y());
 }
 
 // Dot product
-double operator*(const Vector& u, const Vector& v) {
-  return u.x() * v.x() + u.y() * v.y();
+double operator*(const Vector& first, const Vector& second) {
+  return first.x() * second.x() + first.y() * second.y();
 }
 
 /// Insertion overload
 std::ostream& operator<<(std::ostream& out, const Vector& vector) {
-  out << "(" << vector.x_ << ", " << vector.y_ << ")"; // actual output done here
+  out << "(" << vector.x_ << ", " << vector.y_ << ")";  // actual output done here
   return out;
 }
 
@@ -54,7 +54,7 @@ void Func() {
                                       // does not require function call
 }
 
-int main () {
+int main() {
   Func();
   return 0;
 }

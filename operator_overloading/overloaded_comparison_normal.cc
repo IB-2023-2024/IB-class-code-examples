@@ -27,8 +27,8 @@ class Coche {
   std::string modelo_;
 };
 
-bool operator==(const Coche& c1, const Coche& c2) {
-  return (c1.marca() == c2.marca() && c1.modelo() == c2.modelo());
+bool operator==(const Coche& coche1, const Coche& coche2) {
+  return (coche1.marca() == coche2.marca() && coche1.modelo() == coche2.modelo());
 }
 
 
@@ -36,8 +36,8 @@ bool operator==(const Coche& c1, const Coche& c2) {
 // se definirá operator!= en función de operator==, esto es:
 // Dos coches son distinsot si no son iguales
 // Esta aproximación hace todo más simple, libre de error y reduce la cantidad de código a escribir.
-bool operator!=(const Coche& c1, const Coche& c2) {
-  return !(c1 == c2);
+bool operator!=(const Coche& coche1, const Coche& coche2) {
+  return !(coche1 == coche2);
 }
 
 int main() {
