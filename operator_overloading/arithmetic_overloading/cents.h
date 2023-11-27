@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 10 Dec 2020
+ * @date Dec 10 2020
  * @brief Declaration of the Cent class
  */
 
@@ -26,6 +26,6 @@ class Cents {
 };
 
 // Need to explicitly provide prototype for operator+ so uses of operator+ in other files know this overload exists
-Cents operator+(const Cents& c1, const Cents& c2);
+Cents operator+(const Cents& cents1, const Cents& cents2);
 
 #endif

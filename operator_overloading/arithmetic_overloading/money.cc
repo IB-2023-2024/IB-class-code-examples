@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F. de Sande
- * @date 10 Dec 2020
+ * @date Dec 10 2020
  * @brief Overloading of arithmetic operators. Client code
  */
 
@@ -16,7 +16,7 @@
 int main() {
   Cents cents1{6};
   Cents cents2{8};
-  Cents total{cents1 + cents2}; // without the prototype in cents.h, this would fail to compile
+  Cents total{cents1 + cents2};  // without the prototype in cents.h, this would fail to compile
   std::cout << "I have " << total.cents() << " cents." << std::endl;
   return 0;
 }
