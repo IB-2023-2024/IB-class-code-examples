@@ -5,8 +5,12 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5 2021
  * @brief Patient class declaration
+ *        In C++ you can't store references in a vector because the component type in a std::vector
+ *        has to be 'assignable' and references are not assignable (you can only initialize them 
+ *        once when they are declared, and you cannot make them reference something else later). 
+ *        That's the reason why we use a std::reference_wrapper in this example.
  *
  * @see https://www.learncpp.com/cpp-tutorial/association/
  * @see https://en.cppreference.com/w/cpp/utility/functional/reference_wrapper
@@ -28,7 +32,7 @@ public:
   friend void Doctor::AddPatient(Patient& patient);
 private:
   std::string name_{};
-  std::vector<std::reference_wrapper<const Doctor>> doctors_{}; // so that we can use it here
+  std::vector<std::reference_wrapper<const Doctor>> doctors_{}; 
   // We're going to make AddDoctor private because we don't want the public to use it.
   // They should use Doctor::AddPatient() instead, which is publicly exposed
   void AddDoctor(const Doctor& doctor);

@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5 2021
  * @brief A simple example to illustrate association of objects
  *
  * @see https://www.learncpp.com/cpp-tutorial/association/

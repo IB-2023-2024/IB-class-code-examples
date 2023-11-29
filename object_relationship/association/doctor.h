@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5 2021
  * @brief Doctor class declaration
  *        A doctor holds a vector of patients
  *
