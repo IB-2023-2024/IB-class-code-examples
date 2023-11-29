@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5 2021
  * @brief A simple game using the Creature and Point2D classes
  *        Many games and simulations have creatures or objects 
  *        that move around a board, map, or screen. 
@@ -28,7 +28,6 @@ int main() {
   std::string name;
   std::cin >> name;
   Creature creature{name, {4, 7}};
-	
   while (true) {
     // print the creature's name and location
     std::cout << creature << '\n';
@@ -44,7 +43,6 @@ int main() {
     std::cin >> y;
     if (y == -1)
       break;
-		
     creature.moveTo(x, y);
   }
   return 0;
