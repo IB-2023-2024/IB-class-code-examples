@@ -5,11 +5,10 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5 2021
  * @brief Teacher class
- *        For the sake of keeping the example concise 
- *        we implement the class in this header file and therefore
- *        there is no teacher.cc file
+ *        For the sake of simplicity we implement the class in this header 
+ *        file and therefore there is no teacher.cc file
  *
  * @see https://www.learncpp.com/cpp-tutorial/aggregation/
  */
