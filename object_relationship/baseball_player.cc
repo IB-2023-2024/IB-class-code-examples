@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5 2021
  * @brief Example to illustrate inheritance
  * @see https://www.learncpp.com/cpp-tutorial/basic-inheritance-in-c/
  * @see https://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm
@@ -17,7 +17,7 @@
 class Person {
  public:
   Person(const std::string& name = "", int age = 0) : name_{name}, age_{age} { }
-  const std::string& name() const { return name_; }
+  std::string name() const { return name_; }
   int age() const { return age_; }
 
   std::string name_{};
