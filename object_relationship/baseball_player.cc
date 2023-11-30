@@ -27,6 +27,7 @@ class Person {
 class BaseballPlayer : public Person { // Publicly inheriting Person
 public:
   BaseballPlayer(double battingAverage = 0.0, int homeRuns = 0) : batting_average_{battingAverage}, home_runs_{homeRuns} { }
+
   double batting_average_{};
   int home_runs_{};
 };
@@ -37,7 +38,6 @@ int main() {
   // Assign it a name (we can do this directly because name_ is public. It should not be!)
   joe.name_ = "Joe";
   // Print out the name
-  std::cout << joe.name() << '\n'; // use the name() function we've acquired from the Person base class
-
+  std::cout << joe.name() << '\n'; // use the name() getter we've acquired from the Person base class
   return 0;
 }
