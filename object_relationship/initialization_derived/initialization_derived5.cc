@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5 2021
  * @brief Illustrates the role of constructors in the initialization of derived classes. 
  *        As we know how to initialize base class members, there’s no need to keep 
  *        our member variables public (they should be private!)

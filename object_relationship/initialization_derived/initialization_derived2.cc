@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5 2021
  * @brief Illustrates the role of constructors in the initialization of derived classes. 
  *        There is no way to initialize id_ when we create a Derived object
           What if we want to set both cost_ and id_ when we create a Derived object?
