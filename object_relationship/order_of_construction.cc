@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5 2021
  * @brief Example to illustrate the order of constructions of derived classes
  *        C++ constructs derived classes in phases, starting with the most-base 
  *        class (at the top of the inheritance tree) and finishing with the 
@@ -19,44 +19,44 @@
 #include <iostream>
 #include <string>
 
-class A {
+class classA {
  public:
-  A() {
-    std::cout << "A\n";
+  classA() {
+    std::cout << "classA constructor\n";
   }
 };
 
-class B: public A {
+class classB: public classA {
  public:
-  B() {
-    std::cout << "B\n";
+  classB() {
+    std::cout << "classB constructor\n";
   }
 };
 
-class C: public B {
+class classC: public classB {
  public:
-  C() {
-    std::cout << "C\n";
+  classC() {
+    std::cout << "classC constructor\n";
   }
 };
 
-class D: public C {
+class classD: public classC {
  public:
-  D() {
-    std::cout << "D\n";
+  classD() {
+    std::cout << "classD constructor\n";
   }
 };
 
 int main() {
-  std::cout << "Constructing A: \n";
-  A cA;
+  std::cout << "Constructing classA: \n";
+  classA object_A;
 
-  std::cout << "Constructing B: \n";
-  B cB;
+  std::cout << "Constructing classB: \n";
+  classB object_B;
 
-  std::cout << "Constructing C: \n";
-  C cC;
+  std::cout << "Constructing classC: \n";
+  classC object_C;
 
-  std::cout << "Constructing D: \n";
-  D cD;
+  std::cout << "Constructing classD: \n";
+  classD object_D;
 }
