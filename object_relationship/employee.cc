@@ -26,13 +26,13 @@ class Person {
 // Employee publicly inherits from Person
 class Employee: public Person {
  public:
-  Employee(double hourlySalary = 0.0, long employeeID = 0) : hourly_salary_{hourlySalary}, employee_id_{employeeID} { }
+  Employee(double hourlySalary = 0.0, int employeeID = 0) : hourly_salary_{hourlySalary}, employee_id_{employeeID} { }
   void PrintNameAndSalary() const {
     std::cout << name_ << ": " << hourly_salary_ << '\n';
   }
 
   double hourly_salary_{};
-  long employee_id_{};
+  int employee_id_{};
 };
 
 int main() {

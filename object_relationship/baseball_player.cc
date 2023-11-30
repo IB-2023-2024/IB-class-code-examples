@@ -24,7 +24,7 @@ class Person {
   int age_{};
 };
 
-class BaseballPlayer : public Person { // Publicly inheriting Person
+class BaseballPlayer : public Person {  // Publicly inheriting Person
 public:
   BaseballPlayer(double battingAverage = 0.0, int homeRuns = 0) : batting_average_{battingAverage}, home_runs_{homeRuns} { }
 
