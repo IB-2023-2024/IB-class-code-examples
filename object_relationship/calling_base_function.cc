@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5 2021
  * @brief Illustrates calling a base function from a derived class
  *        When derived.Identify() is called, the compiler looks to 
  *        see if function Identify() has been defined in the Derived class. 

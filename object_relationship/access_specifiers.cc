@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5 2021
  * @brief Illustrates the behaviour of access specifiers with inheritance
  *        Private members can only be accessed by member functions of the 
  *        same class or friends. 

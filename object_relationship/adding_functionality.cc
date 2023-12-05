@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5 2021
  * @brief Illustrates adding functionality to an ancestor class 
  *
  * @see https://www.learncpp.com/cpp-tutorial/calling-inherited-functions-and-overriding-behavior/
@@ -24,7 +24,7 @@ class Base {
 class Derived: public Base {
  public:
   Derived(int value) : Base(value) { }
-  int value() { return value_; }
+  int value() const { return value_; }
   void Identify() { 
     Base::Identify(); // call Base::Identify() first
     std::cout << "I am a Derived\n"; // then Identify ourselves

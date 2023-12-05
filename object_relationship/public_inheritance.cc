@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5 2021
  * @brief Illustrates public inheritance
  *        Public inheritance means:
  *        - Public inherited members stay public (so public_ is treated as public)
@@ -24,9 +24,9 @@ class Base {
   int private_;
 };
 
-class Pub: public Base { // note: public inheritance
+class Derived: public Base { // note: public inheritance
  public:
-  Pub() {
+  Derived() {
     public_ = 1; // okay: public_ was inherited as public
     protected_ = 2; // okay: protected_ was inherited as protected
     private_ = 3; // not okay: private_ is inaccessible from derived class
@@ -40,8 +40,8 @@ int main() {
   base.protected_ = 2; // not okay: protected_ is protected in Base
   base.private_ = 3; // not okay: private_ is private in Base
 
-  Pub pub;
-  pub.public_ = 1; // okay: public_ is public in Pub
-  pub.protected_ = 2; // not okay: protected_ is protected in Pub
-  pub.private_ = 3; // not okay: private_ is inaccessible in Pub
+  Derived derived;
+  derived.public_ = 1; // okay: public_ is public in Derived
+  derived.protected_ = 2; // not okay: protected_ is protected in Derived
+  derived.private_ = 3; // not okay: private_ is inaccessible in Derived
 }

@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author F.de Sande
- * @date 05 Jan 2021
+ * @date Jan 5 2021
  * @brief Illustrates Changing an inherited member’s access level
  *        C++ gives us the ability to change an inherited member’s 
  *        access specifier in the derived class.
@@ -41,16 +41,16 @@ class Base {
  */
 class Derived: public Base {
  public:
-  Derived(int value) : Base(value) { }
+  Derived(int value) : Base(value) {}
 
   // Base::PrintValue was inherited as protected, so the public has no access
   // But we're changing it to public via a using declaration
-  using Base::PrintValue; // note: no parenthesis here
+  using Base::PrintValue;  // note: no parenthesis here
 };
 
 int main() {
   Derived derived(7);
   // PrintValue is public in Derived, so this is okay
-  derived.PrintValue(); // prints 7
+  derived.PrintValue();  // prints 7
   return 0;
 }
